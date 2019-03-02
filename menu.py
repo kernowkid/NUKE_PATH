@@ -7,7 +7,7 @@ import backdropWithLabel
 import createProjectorCam
 import readLastRender
 import openDJV
-import setPathTab_v05
+import setPathTab
 import animatedSnap3D
 
 
@@ -19,7 +19,7 @@ primaryMenu = topMenu.addMenu("PrimaryVFX")
 
 primaryMenu.addCommand('Open Explorer', 'opendir.openInExplorer()', 'shift+e')
 primaryMenu.addCommand('Open DJV', 'openDJV.openReadInDJV()', 'shift+r')
-primaryMenu.addCommand('Render Path Tab', 'setPathTab_v05.setPathTab()', 'shift+w') 
+primaryMenu.addCommand('Render Path Tab', 'setPathTab.setPathTab()', 'shift+w') 
 #primaryMenu.addCommand('Load Render', 'readLastRender.getSequence()', 'alt+r')
 primaryMenu.addCommand('Utils/Backdrop With Label', 'backdropWithLabel.customBackdrop()', 'alt+b', icon='Backdrop.png')  
 primaryMenu.addCommand('Utils/Create Projector Camera', 'createProjectorCam.createProjectorCam()')
