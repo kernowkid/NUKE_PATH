@@ -35,7 +35,7 @@ if nuke.GUI:
   
   sharedToolSetsPaths = {
     "linux2" : "/mnt/some/nice/place/SharedToolSets",   #LINUX
-    "win32"  : "C:/appLibrary/nuke/SharedToolSets",     #WINDOWS
+    "win32"  : "C:/appLibrary/nuke/NUKE_PATH/SharedToolSets",     #WINDOWS
     "darwin" : "/Volume/some/nice/place/SharedToolSets" #MACOS
   }
 
