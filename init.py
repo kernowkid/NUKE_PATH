@@ -6,6 +6,9 @@ nuke.pluginAddPath("./python")
 nuke.pluginAddPath("./tcl")
 
 
+##rollingautosave
+import rollingAutoSave
+
 ###########SET NODE KNOB DEFAULTS##########
 ## default format and frame rate
 nuke.knobDefault('Root.fps', '25')
@@ -51,9 +54,5 @@ def killViewers():
     for v in nuke.allNodes("Viewer"):
         nuke.delete(v)
 nuke.addOnScriptLoad(killViewers)
-
-
-##rollingautosave
-import rollingAutoSave
 
 
