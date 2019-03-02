@@ -1,0 +1,101 @@
+#! /Applications/Nuke11.3v2/Nuke11.3v2.app/Contents/MacOS/libnuke-11.3.2.dylib -nx
+version 11.3 v2
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="2" y="24" w="2560" h="1318" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1794" stretch="1"/>
+            <splitter orientation="2">
+                <split size="1252"/>
+                <splitter orientation="1">
+                    <split size="1015"/>
+                    <splitter orientation="2">
+                        <split size="1127"/>
+                        <dock id="" activePageId="Viewer.1">
+                            <page id="Viewer.1"/>
+                        </dock>
+                        <split size="121"/>
+                        <dock id="" activePageId="DopeSheet.1">
+                            <page id="DopeSheet.1"/>
+                            <page id="Curve Editor.1"/>
+                        </dock>
+                    </splitter>
+                    <split size="775"/>
+                    <splitter orientation="2">
+                        <split size="1252"/>
+                        <dock id="" activePageId="DAG.1" focus="true">
+                            <page id="DAG.1"/>
+                        </dock>
+                    </splitter>
+                </splitter>
+                <split size="1"/>
+                <dock id=""/>
+                <split size="36"/>
+                <dock id=""/>
+            </splitter>
+            <split size="718"/>
+            <splitter orientation="2">
+                <split size="684"/>
+                <dock id="" activePageId="Properties.1">
+                    <page id="Properties.1"/>
+                </dock>
+                <split size="609"/>
+                <dock id="" activePageId="uk.co.thefoundry.backgroundrenderview.1">
+                    <page id="uk.co.thefoundry.scripteditor.1"/>
+                    <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+                </dock>
+            </splitter>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name "/Volumes/BDHJupiter/07 SOFTWARE/NUKE/library/SharedToolSets/General/utils/setPath.nk"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+NoOp {
+ inputs 0
+ name setPath
+ xpos -3434
+ ypos 5345
+ hide_input true
+ addUserKnob {20 User}
+ addUserKnob {26 info l " " T "Requires nuke script to named 'show_scene_shot_layer_version'\neg - '8D_Sc119-171_B014C003_A_v02.nk'"}
+ addUserKnob {26 ""}
+ addUserKnob {1 show}
+ addUserKnob {6 lockShow l lock -STARTLINE}
+ addUserKnob {1 scene}
+ addUserKnob {6 lockScene l lock -STARTLINE}
+ addUserKnob {1 shot}
+ addUserKnob {6 lockShot l lock -STARTLINE}
+ addUserKnob {1 layer}
+ addUserKnob {6 lockLayer l lock -STARTLINE}
+ addUserKnob {1 version}
+ addUserKnob {6 lockVersion l lock -STARTLINE}
+ addUserKnob {1 fileType l "file type"}
+ addUserKnob {6 lockFileType l lock -STARTLINE}
+ addUserKnob {4 folder M {none FRAMES MOV PRE_RENDERS}}
+ addUserKnob {6 lockFolder l lock -STARTLINE}
+ addUserKnob {6 subFolder l "Save in sub folder" +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {2 baseDir}
+ addUserKnob {6 lockDir l lock -STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {1 renderPath l path}
+ addUserKnob {6 lockPath l lock -STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {22 update T "import os\nimport os.path\n\n\n# get path fragments values from file name\ndef getFilePathInfo():\n\n\n    fullPath = nuke.Root().knob('name').getValue()\n    pathFragments = fullPath.split('/')\n    dir = '/'.join(pathFragments\[:-2])+'/RENDERS/'\n    basename = os.path.basename(fullPath)\n    name = os.path.splitext(basename)\[0]\n    nameFragments = name.split('_')\n\n\n    #get show,scene,shot,layer,version from script name\n    if len(nameFragments) == 4:\n        show,scene,shot,version = name.split('_')\n        layer = ''\n    elif len(nameFragments) == 5:\n        show,scene,shot,layer,version = name.split('_')\n\n\n    return dir,name,show,scene,shot,layer,version,name\n        \n# set path fragments \ndef setPathFragments():\n    dir,name,show,scene,shot,layer,version,name = getFilePathInfo()\n\n\n    # standard values for creation\n    numberFormat = \"%04d\"\n    extension = \"exr\"\n    folder = \"FRAMES/\"\n\n\n    # set path fragments values \n    n = nuke.thisNode()\n    #n=nuke.selectedNode()\n\n\n    if n\['lockShow'].value() == 0:\n        n\['show'].setValue(show)\n\n\n    if n\['lockScene'].value() == 0:\n        n\['scene'].setValue(scene)\n\n\n    if n\['lockShot'].value() == 0:\n        n\['shot'].setValue(shot)\n\n\n    if n\['lockLayer'].value() == 0:\n        n\['layer'].setValue(layer)\n\n\n    if n\['lockVersion'].value() == 0:\n        n\['version'].setValue(version)\n\n\n    if n\['lockFileType'].value() == 0:\n        n\['fileType'].setValue(extension)\n\n\n    if n\['lockFolder'].value() == 0:\n        n\['folder'].setValue(folder)\n    \n    if n\['lockDir'].value() == 0:\n        n\['baseDir'].setValue(dir)\n\n\n    renderDir = n\['baseDir'].value()\n\n\n    if n\['folder'].value() != 'none':\n        rFolder = n\['folder'].value()+'/'\n    else:\n        rFolder = ''\n\n\n    # check if path fragment is empty and assign value to render path fragment\n    #show\n    if n\['show'].value() != '':\n        rShow = n\['show'].value() + '_'\n    else:\n        rShow = n\['show'].value()\n\n\n    #scene\n    if n\['scene'].value() != '':\n        rScene = n\['scene'].value() + '_' \n    else:\n        rScene = n\['scene'].value()\n\n\n    #shot\n    if n\['shot'].value() != '':\n        rShot = n\['shot'].value() + '_' \n    else:\n        rShot = n\['shot'].value()\n\n\n    #layer\n    if n\['layer'].value() != '':\n        rLayer = n\['layer'].value() + '_' \n    else:\n        rLayer = n\['layer'].value()\n\n\n    #version\n    if n\['version'].value() != '' and n\['fileType'].value() !='mov':\n        rVersion = n\['version'].value() + '_' \n    else:\n        rVersion = n\['version'].value()\n\n    #version for folder path\n    rfVersion = n\['version'].value()\n    \n    #file type\n    rFileType = n\['fileType'].value()\n    \n\n\n    # build render path\n    if n\['lockPath'].value() == 0:\n        if n\['fileType'].value() != 'mov':\n            if n\['subFolder'].value() == 0:\n                rPath = renderDir + rFolder + rShow + rScene + rShot + rLayer + rVersion + numberFormat + '.' + rFileType\n            else:\n                rPath = renderDir + rFolder + rShow + rScene + rShot + rLayer + rfVersion + '/' + rShow + rScene + rShot + rLayer + rVersion + numberFormat + '.' + rFileType\n        else:\n            if n\['subFolder'].value() == 0:\n                rPath = renderDir + rFolder + rShow + rScene + rShot + rLayer + rVersion + '.' + rFileType\n            else:\n                rPath = renderDir + rFolder + rShow + rScene + rShot + rLayer + rFVersion + '/' + rShow + rScene + rShot + rLayer + rVersion + '.' + rFileType\n  \n    n\['renderPath'].setValue(rPath)\n    \nsetPathFragments()" +STARTLINE}
+ addUserKnob {22 setPath l "set Write path" -STARTLINE T "n = nuke.thisNode()\nsn = nuke.selectedNode()\n\nrPath = n\['renderPath'].value()\nrExt  = n\['fileType'].value()\n\ntry:\n    sn\['file'].setValue(rPath)\n    sn\['file_type'].setValue(rExt)\nexcept:\n    nuke.message('Please select a Write node')"}
+ addUserKnob {22 clear -STARTLINE T "n = nuke.thisNode()\n\nn\['lockShow'].setValue(False)\nn\['show'].setValue('')\n\nn\['lockScene'].setValue(False)\nn\['scene'].setValue('')\n\nn\['lockShot'].setValue(False)\nn\['shot'].setValue('')\n\nn\['lockLayer'].setValue(False)\nn\['layer'].setValue('')\n\nn\['lockVersion'].setValue(False)\nn\['version'].setValue('')\n\nn\['lockFileType'].setValue(False)\nn\['fileType'].setValue('')\n\nn\['lockFolder'].setValue(False)\nn\['folder'].setValue('none')\n\nn\['subFolder'].setValue(False)\n    \nn\['lockDir'].setValue(False)\nn\['baseDir'].setValue('')\n\nn\['lockPath'].setValue(False)    \nn\['renderPath'].setValue('')\n\n"}
+}

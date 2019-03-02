@@ -1,0 +1,178 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+push $cut_paste_input
+Dot {
+ name Dot57
+ label Layer
+ selected true
+ xpos -3530
+ ypos -186
+}
+Dot {
+ name Dot6
+ selected true
+ xpos -3530
+ ypos -102
+}
+set N35b0f000 [stack 0]
+push 0
+Dot {
+ name Dot56
+ label Plate
+ selected true
+ xpos -3310
+ ypos -248
+}
+Keyer {
+ operation "luminance key"
+ range {0.8227128103 1 1 1}
+ name Keyer1
+ label "luma tolerance"
+ selected true
+ xpos -3344
+ ypos -204
+}
+Premult {
+ name Premult1
+ selected true
+ xpos -3344
+ ypos -155
+}
+Merge2 {
+ inputs 2
+ operation stencil
+ name Merge4
+ selected true
+ xpos -3344
+ ypos -105
+}
+Dot {
+ name Dot13
+ selected true
+ xpos -3310
+ ypos -54
+}
+set N35b4fc00 [stack 0]
+Dot {
+ name Dot11
+ selected true
+ xpos -3194
+ ypos -54
+}
+Blur {
+ size 82
+ name Blur2
+ label "big diffusion"
+ selected true
+ xpos -3228
+ ypos -12
+}
+Grade {
+ multiply 0.8
+ name Grade15
+ selected true
+ xpos -3228
+ ypos 40
+}
+Dot {
+ name Dot12
+ selected true
+ xpos -3194
+ ypos 93
+}
+push $N35b4fc00
+Blur {
+ size 35.5
+ filter quadratic
+ name Blur1
+ label "small diffusion"
+ selected true
+ xpos -3344
+ ypos 7
+}
+Merge2 {
+ inputs 2
+ operation plus
+ mix 0.495
+ name Merge6
+ label bloom
+ selected true
+ xpos -3344
+ ypos 83
+}
+clone node35b4e000|Grade|13948 Grade {
+ multiply {2.293333769 0.5733335614 0.133333683 1}
+ name Grade1
+ label "light temperature adjustment"
+ selected true
+ xpos -3344
+ ypos 140
+}
+set C35b4e000 [stack 0]
+Dot {
+ name Dot10
+ selected true
+ xpos -3310
+ ypos 225
+}
+Dot {
+ name Dot5
+ selected true
+ xpos -3638
+ ypos 225
+}
+Dot {
+ name Dot7
+ selected true
+ xpos -3638
+ ypos 282
+}
+push $N35b4fc00
+Blur {
+ size 56.5
+ name Blur3
+ selected true
+ xpos -3478
+ ypos -64
+}
+Dot {
+ name Dot51
+ selected true
+ xpos -3609
+ ypos -54
+}
+clone $C35b4e000 {
+ xpos -3643
+ ypos 110
+ selected true
+}
+Dot {
+ name Dot52
+ selected true
+ xpos -3609
+ ypos 174
+}
+push $N35b0f000
+Merge2 {
+ inputs 2
+ operation plus
+ name Merge8
+ selected true
+ xpos -3564
+ ypos 171
+}
+Merge2 {
+ inputs 2
+ operation atop
+ name Merge3
+ label "Lightwrap Mix"
+ selected true
+ xpos -3564
+ ypos 272
+}
+Dot {
+ name Dot9
+ selected true
+ xpos -3530
+ ypos 345
+}

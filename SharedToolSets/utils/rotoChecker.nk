@@ -1,0 +1,299 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode5
+ tile_color 0
+ label "plate in"
+ note_font "Verdana Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 2365
+ ypos -621
+ bdwidth 226
+ bdheight 200
+}
+Constant {
+ inputs 0
+ channels rgb
+ color {{random(seedr)} {random(seedg)} {random(seedb)} {curve}}
+ name Constant5
+ selected true
+ xpos 2602
+ ypos 68
+ addUserKnob {20 User}
+ addUserKnob {7 seedr l "seed red" t "change seed to pick different random colour" R 0 10}
+ seedr 2.85
+ addUserKnob {7 seedg l "seed green" R 0 10}
+ seedg 3.85
+ addUserKnob {7 seedb l "seed blue" R 0 10}
+ seedb 1.6
+}
+Dot {
+ inputs 0
+ name Dot16
+ label "ROTO IN"
+ selected true
+ xpos 2935
+ ypos 144
+}
+Shuffle {
+ red alpha
+ green alpha
+ blue alpha
+ name Shuffle4
+ label "\[value red]/\[value green]/\[value blue]/\[value alpha]"
+ selected true
+ xpos 2746
+ ypos 134
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge18
+ selected true
+ xpos 2602
+ ypos 140
+}
+Constant {
+ inputs 0
+ channels rgb
+ color {{random(seedr)} {random(seedg)} {random(seedb)} {curve}}
+ name Constant4
+ selected true
+ xpos 2602
+ ypos -90
+ addUserKnob {20 User}
+ addUserKnob {7 seedr l "seed red" t "change seed to pick different random colour" R 0 10}
+ seedr 2.35
+ addUserKnob {7 seedg l "seed green" R 0 10}
+ seedg 2.2
+ addUserKnob {7 seedb l "seed blue" R 0 10}
+ seedb 5.6
+}
+push $cut_paste_input
+Dot {
+ name Dot15
+ label "ROTO IN"
+ selected true
+ xpos 2935
+ ypos -14
+}
+Shuffle {
+ red alpha
+ green alpha
+ blue alpha
+ name Shuffle3
+ label "\[value red]/\[value green]/\[value blue]/\[value alpha]"
+ selected true
+ xpos 2746
+ ypos -24
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge16
+ selected true
+ xpos 2602
+ ypos -18
+}
+Constant {
+ inputs 0
+ channels rgb
+ color {{random(seedr)} {random(seedg)} {random(seedb)} {curve}}
+ name Constant3
+ selected true
+ xpos 2602
+ ypos -251
+ addUserKnob {20 User}
+ addUserKnob {7 seedr l "seed red" t "change seed to pick different random colour" R 0 10}
+ seedr 1.55
+ addUserKnob {7 seedg l "seed green" R 0 10}
+ seedg 5.6
+ addUserKnob {7 seedb l "seed blue" R 0 10}
+ seedb 0.6
+}
+Read {
+ inputs 0
+ file S:/PROJECTS/flyride/Build/001/010/060/images/roto/plate_cropped_Matte_v02/plate_cropped_Matte_Ridge_v02/plate_cropped_Matte_Ridge_v02.%04d.tif
+ format "4713 4320 0 0 4713 4320 1 SFX_WORLD_RECT0"
+ last 2500
+ origlast 2500
+ origset true
+ name Read8
+ selected true
+ xpos 3045
+ ypos -209
+ addUserKnob {20 plus}
+ addUserKnob {26 PlusControl l "Plus Control"}
+ addUserKnob {22 PRX l "Create proxy" -STARTLINE T CreatePRX()}
+ addUserKnob {22 OPN l "Open Directory" T plusOpen() +STARTLINE}
+ addUserKnob {22 rltv l Relative T make_relative() +STARTLINE}
+ addUserKnob {22 obsl l obsolute -STARTLINE T make_obsolute()}
+}
+Dot {
+ name Dot14
+ label "ROTO IN"
+ selected true
+ xpos 2935
+ ypos -175
+}
+Shuffle {
+ red alpha
+ green alpha
+ blue alpha
+ name Shuffle2
+ label "\[value red]/\[value green]/\[value blue]/\[value alpha]"
+ selected true
+ xpos 2746
+ ypos -185
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge14
+ selected true
+ xpos 2602
+ ypos -179
+}
+Constant {
+ inputs 0
+ channels rgb
+ color {{random(seedr)} {random(seedg)} {random(seedb)} {curve}}
+ name Constant7
+ selected true
+ xpos 2604
+ ypos -405
+ addUserKnob {20 User}
+ addUserKnob {7 seedr l "seed red" t "change seed to pick different random colour" R 0 10}
+ seedr 6.7
+ addUserKnob {7 seedg l "seed green" R 0 10}
+ seedg 2.65
+ addUserKnob {7 seedb l "seed blue" R 0 10}
+ seedb 8.25
+}
+Read {
+ inputs 0
+ file S:/PROJECTS/flyride/Build/001/010/060/images/roto/plate_cropped_Matte_v02/plate_cropped_Matte_Trees_v02/plate_cropped_Matte_Trees_v02.%04d.tif
+ format "4713 4320 0 0 4713 4320 1 SFX_WORLD_RECT0"
+ last 2500
+ origlast 2500
+ origset true
+ name Read15
+ selected true
+ xpos 3030
+ ypos -363
+ addUserKnob {20 plus}
+ addUserKnob {26 PlusControl l "Plus Control"}
+ addUserKnob {22 PRX l "Create proxy" -STARTLINE T CreatePRX()}
+ addUserKnob {22 OPN l "Open Directory" T plusOpen() +STARTLINE}
+ addUserKnob {22 rltv l Relative T make_relative() +STARTLINE}
+ addUserKnob {22 obsl l obsolute -STARTLINE T make_obsolute()}
+}
+Dot {
+ name Dot13
+ label "ROTO IN"
+ selected true
+ xpos 2933
+ ypos -329
+}
+Shuffle {
+ red alpha
+ green alpha
+ blue alpha
+ name Shuffle1
+ label "\[value red]/\[value green]/\[value blue]/\[value alpha]"
+ selected true
+ xpos 2741
+ ypos -339
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge13
+ selected true
+ xpos 2604
+ ypos -333
+}
+Read {
+ inputs 0
+ file S:/PROJECTS/flyride/Build/001/010/060/reference/rotoPrep/plate/plate_cropped_001_010_060.####.jpg
+ format "4713 4320 0 0 4713 4320 1 SFX_WORLD_RECT0"
+ last 2500
+ origlast 2500
+ origset true
+ name Read7
+ selected true
+ xpos 2421
+ ypos -538
+ addUserKnob {20 plus}
+ addUserKnob {26 PlusControl l "Plus Control"}
+ addUserKnob {22 PRX l "Create proxy" -STARTLINE T CreatePRX()}
+ addUserKnob {22 OPN l "Open Directory" T plusOpen() +STARTLINE}
+ addUserKnob {22 rltv l Relative T make_relative() +STARTLINE}
+ addUserKnob {22 obsl l obsolute -STARTLINE T make_obsolute()}
+}
+Merge2 {
+ inputs 2
+ mix 0.06
+ name Merge12
+ selected true
+ xpos 2421
+ ypos -333
+}
+Merge2 {
+ inputs 2
+ mix 0.09
+ name Merge15
+ selected true
+ xpos 2421
+ ypos -179
+}
+Merge2 {
+ inputs 2
+ mix 0.06
+ name Merge17
+ selected true
+ xpos 2421
+ ypos -18
+}
+Merge2 {
+ inputs 2
+ mix 0.06
+ name Merge19
+ selected true
+ xpos 2421
+ ypos 140
+}
+Crop {
+ box {0 0 4713 4320}
+ reformat true
+ crop false
+ name Crop4
+ selected true
+ xpos 2421
+ ypos 344
+ disable true
+}
+Reformat {
+ type scale
+ scale 0.5
+ name Reformat4
+ selected true
+ xpos 2421
+ ypos 370
+}
+Write {
+ file_type jpeg
+ checkHashOnRead false
+ version 1
+ name lowres_roto_check
+ selected true
+ xpos 2421
+ ypos 408
+ addUserKnob {20 plus}
+ addUserKnob {26 PlusControl l "Plus Control"}
+ addUserKnob {22 OPN l "Open Directory" T plusOpen() +STARTLINE}
+ addUserKnob {22 rfw l "Read from write" T PlusRFW() +STARTLINE}
+ addUserKnob {6 lnk l Link -STARTLINE}
+}

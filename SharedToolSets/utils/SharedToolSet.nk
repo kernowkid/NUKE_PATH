@@ -1,0 +1,69 @@
+#! C:/Program Files/Nuke11.3v1/nuke-11.3.1.dll -nx
+version 11.3 v1
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="2544" h="1361" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="2500" stretch="1"/>
+            <splitter orientation="2">
+                <split size="1194"/>
+                <splitter orientation="1">
+                    <split size="1912"/>
+                    <dock id="" activePageId="Viewer.1">
+                        <page id="Viewer.1"/>
+                    </dock>
+                    <split size="584"/>
+                    <splitter orientation="2">
+                        <split size="958"/>
+                        <dock id="" activePageId="Properties.1" focus="true">
+                            <page id="Properties.1"/>
+                        </dock>
+                        <split size="232"/>
+                        <dock id="" activePageId="uk.co.thefoundry.scripteditor.1">
+                            <page id="uk.co.thefoundry.scripteditor.1"/>
+                        </dock>
+                    </splitter>
+                </splitter>
+                <split size="119"/>
+                <dock id="" activePageId="Curve Editor.1">
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+        </splitter>
+    </window>
+    <window x="2552" y="0" w="1920" h="1160" maximized="1" screen="1">
+        <splitter orientation="1">
+            <split size="1920"/>
+            <dock id="" activePageId="DAG.1">
+                <page id="DAG.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/appLibrary/nuke/SharedToolSets/SharedToolSet.nk
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+StickyNote {
+ inputs 0
+ name StickyNote1
+ tile_color 0xff9e0fff
+ label "SharedToolSets\nis working! toooot"
+ note_font_size 100
+ selected true
+ xpos -842
+ ypos -299
+}

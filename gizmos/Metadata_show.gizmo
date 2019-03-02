@@ -1,0 +1,42 @@
+#! C:/Program Files/Nuke9.0v6/nuke-9.0.6.dll -nx
+version 9.0 v6
+Gizmo {
+ addUserKnob {20 User}
+ addUserKnob {26 meta l metadata T "Here you have your metadata"}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 548
+  ypos 70
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[metadata input/timecode]"
+  old_message {{91 109 101 116 97 100 97 116 97 32 105 110 112 117 116 47 116 105 109 101 99 111 100 101 93}
+    }
+  box {27 577.5 533 678.5}
+  transforms {{0 2}
+    }
+  cursor_position 25
+  scale {1 1}
+  center {960 540}
+  cursor_initialised true
+  initial_cursor_position {{27 678.5}
+    }
+  group_animations {{0} imported: 0 selected: 0 items: "root transform/"}
+  animation_layers {{1 11 960 540 0 0 1 1 0 0 0 0}
+    }
+  name Text12
+  selected true
+  xpos 548
+  ypos 114
+ }
+ Output {
+  name Output1
+  xpos 548
+  ypos 210
+ }
+end_group

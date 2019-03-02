@@ -1,0 +1,157 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+push $cut_paste_input
+Group {
+name noiseGeo
+selected true
+xpos 22255
+ypos 904
+addUserKnob {20 User}
+addUserKnob {41 type T Noise5.type}
+addUserKnob {41 size l x/ysize T Noise5.size}
+addUserKnob {41 zoffset l z T Noise5.zoffset}
+addUserKnob {41 octaves T Noise5.octaves}
+addUserKnob {41 nyquist l "clip at Nyquist limit" -STARTLINE T Noise5.nyquist}
+addUserKnob {41 lacunarity T Noise5.lacunarity}
+addUserKnob {41 gain T Noise5.gain}
+addUserKnob {41 gamma T Noise5.gamma}
+addUserKnob {6 neg_val l "negative values" +STARTLINE}
+addUserKnob {26 ""}
+addUserKnob {41 motion_vectors_type l "motion vectors" T ScanlineRender2.motion_vectors_type}
+addUserKnob {41 overscan T ScanlineRender2.overscan}
+addUserKnob {26 ""}
+addUserKnob {41 uv_offset l "UV offset" T IDistort3.uv_offset}
+addUserKnob {41 uv_scale l "UV scale" T IDistort3.uv_scale}
+}
+Input {
+inputs 0
+name Inputcam
+xpos 429
+ypos 487
+number 2
+}
+Dot {
+name Dot13
+xpos 463
+ypos 525
+}
+Input {
+inputs 0
+name Inputmat
+xpos 785
+ypos 102
+}
+Dot {
+name Dot15
+xpos 819
+ypos 187
+}
+set Nd0b11800 [stack 0]
+Remove {
+name Remove3
+xpos 639
+ypos 177
+}
+set Nd0b10800 [stack 0]
+Noise {
+output {forward.u -forward.v none -backward.u}
+center {1024 768}
+name Noise5
+xpos 639
+ypos 226
+postage_stamp_frame 1017
+}
+Noise {
+output {-forward.u forward.v none -backward.u}
+size {{parent.Noise5.size} {parent.Noise5.size}}
+zoffset {{parent.Noise5.zoffset+999}}
+octaves {{parent.Noise5.octaves}}
+lacunarity {{parent.Noise5.lacunarity}}
+gain {{parent.Noise5.gain}}
+gamma {{parent.Noise5.gamma}}
+center {1024 768}
+name Noise6
+xpos 639
+ypos 266
+postage_stamp_frame 1017
+}
+set Nd0b11000 [stack 0]
+Transform {
+translate {2 -2}
+center {960 540}
+name Transform1
+xpos 693
+ypos 320
+}
+push $Nd0b11000
+Merge2 {
+inputs 2
+operation minus
+bbox B
+also_merge forward
+name Merge1
+xpos 639
+ypos 366
+disable {{!parent.neg_val}}
+}
+Input {
+inputs 0
+name Inputgeo
+xpos 430
+ypos 395
+number 1
+}
+Dot {
+name Dot16
+xpos 464
+ypos 436
+}
+ApplyMaterial {
+inputs 2
+name ApplyMaterial3
+xpos 639
+ypos 433
+}
+push $Nd0b10800
+Dot {
+name Dot2
+xpos 592
+ypos 187
+}
+Dot {
+name Dot1
+xpos 592
+ypos 501
+}
+ScanlineRender {
+inputs 3
+conservative_shader_sampling false
+motion_vectors_type off
+name ScanlineRender2
+xpos 639
+ypos 522
+}
+push $Nd0b11800
+Copy {
+inputs 2
+from0 -rgba.alpha
+to0 -rgba.alpha
+channels forward
+name Copy4
+xpos 785
+ypos 509
+}
+IDistort {
+channels rgba
+uv forward
+blur_scale 0
+name IDistort3
+xpos 785
+ypos 567
+}
+Output {
+name Output1
+xpos 785
+ypos 667
+}
+end_group

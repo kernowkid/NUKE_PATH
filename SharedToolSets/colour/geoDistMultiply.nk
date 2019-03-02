@@ -1,0 +1,15 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+push $cut_paste_input
+Multiply {
+value {{"clamp(  (  sqrt(  pow(geo1Pos.x-geo2Pos.x, 2) + pow(geo1Pos.y-geo2Pos.y, 2) + pow(geo1Pos.z-geo2Pos.z, 2)  ) - 0.48355027 ) * dist   )"}}
+name geoDistMultiply
+selected true
+xpos 17210
+ypos -6646
+addUserKnob {20 User}
+addUserKnob {13 geo1Pos l "Geo 1 position"}
+addUserKnob {13 geo2Pos l "Geo 2 position"}
+addUserKnob {7 dist l "Dist from cam" R 1 5}
+dist 5
+}

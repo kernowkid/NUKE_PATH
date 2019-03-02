@@ -1,0 +1,290 @@
+#! C:/Program Files/Nuke10.5v5/nuke-10.5.5.dll -nx
+version 10.5 v5
+Gizmo {
+ help "<b>P_Matte</b> creates a sphere or cube shaped 3D matte based on a pass/layer containing position data"
+ knobChanged "\nn = nuke.thisNode()\nk = nuke.thisKnob()\ns = nuke.toNode('SphereMatte')\nr = nuke.toNode('Start_End')\n\nif k.name() == \"falloffType\":\n    n\['falloff'].setVisible( k.value() != 'None' )\n    n\['exp'].setVisible( k.value() == 'Exponential' )\n\n"
+ addUserKnob {20 User}
+ addUserKnob {41 in l "position data" t "Choose a layer from the input that contains position data" T Shuffle_Input_Channels.in}
+ addUserKnob {41 output t "Resulting matte will be written to this layer only" T OutChannel.out}
+ addUserKnob {6 preview l "preview (Use Ctrl+Alt to pick position)" t "Show alpha as a red overlay on plate.\nUse Ctrl+Alt to pick position" +STARTLINE}
+ preview true
+ addUserKnob {6 unpremultiply t "Check if your position layer is premultiplied" +STARTLINE}
+ addUserKnob {6 useAlpha l "ignore outside alpha" t "If your input has an alpha channel, checking this will force everything outside that alpha channel to be black" -STARTLINE}
+ useAlpha true
+ addUserKnob {26 ""}
+ addUserKnob {4 matteShape t "Choose the shape of the 3D matte. Current options are \"Sphere\" and \"Cube\"" M {Sphere Cube ""}}
+ addUserKnob {41 center t "Sample the viewer or copy XYZ coordinates here to choose the center of the 3D sphere or cube" T Center.center}
+ addUserKnob {26 ""}
+ addUserKnob {41 rot_order l "rotation order" T Axis1.rot_order}
+ addUserKnob {41 rotate T Axis1.rotate}
+ addUserKnob {41 scaling l scale T Axis1.scaling}
+ addUserKnob {41 uniform_scale l "uniform scale" T Axis1.uniform_scale}
+ addUserKnob {41 skew T Axis1.skew}
+ addUserKnob {41 pivot T Axis1.pivot}
+ addUserKnob {26 ""}
+ addUserKnob {4 falloffType M {None Linear Smooth Quadratic Cubic Exponential ""}}
+ falloffType Linear
+ addUserKnob {7 falloff}
+ falloff 1
+ addUserKnob {7 exp +HIDDEN R 0.1 10}
+ exp 8
+}
+ Axis2 {
+  inputs 0
+  xform_order STR
+  rot_order ZYX
+  name Axis1
+  xpos -86
+  ypos -102
+ }
+ Input {
+  inputs 0
+  name img
+  xpos -828
+  ypos -379
+ }
+ Dot {
+  name Dot5
+  xpos -794
+  ypos -329
+ }
+set N62e62c00 [stack 0]
+ AddChannels {
+  channels alpha
+  color 1
+  name AddChannels1
+  xpos -828
+  ypos -254
+  disable true
+ }
+ Shuffle {
+  in none
+  alpha white
+  name Shuffle_Input_Channels
+  xpos -828
+  ypos -198
+ }
+set N62e62400 [stack 0]
+ Unpremult {
+  name Unpremult1
+  xpos -592
+  ypos -198
+  disable {{!parent.unpremultiply i}}
+ }
+ Dot {
+  name Dot2
+  xpos -326
+  ypos -193
+ }
+ Add {
+  channels rgb
+  value {{-center} {-center} {-center} {curve}}
+  name Center
+  xpos -360
+  ypos -161
+  addUserKnob {20 User}
+  addUserKnob {18 center}
+  center {0 0 0}
+  addUserKnob {6 center_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+ }
+ Add {
+  channels rgb
+  value {{-Axis1.world_matrix.3} {-Axis1.world_matrix.7} {-Axis1.world_matrix.11} {curve}}
+  name Translate_Pivot
+  xpos -360
+  ypos -122
+ }
+ ColorMatrix {
+  matrix {
+      {{Axis1.world_matrix.0} {Axis1.world_matrix.1} {Axis1.world_matrix.2}}
+      {{Axis1.world_matrix.4} {Axis1.world_matrix.5} {Axis1.world_matrix.6}}
+      {{Axis1.world_matrix.8} {Axis1.world_matrix.9} {Axis1.world_matrix.10}}
+    }
+  invert true
+  name Rotate_Scale_Skew
+  xpos -360
+  ypos -83
+  disable {{hasError x200 1}}
+ }
+set N62eb1000 [stack 0]
+ Expression {
+  expr3 "(parent.useAlpha &&  a == 0.0 )? 0 : 1-max(abs(r),abs(g),abs(b))"
+  name CubeMatte
+  xpos -285
+  ypos -11
+ }
+push $N62eb1000
+ Expression {
+  expr3 "(parent.useAlpha &&  a == 0.0 )? 0 : 1-(sqrt((r*r)+(g*g)+(b*b)))"
+  name SphereMatte
+  xpos -442
+  ypos -12
+ }
+ Switch {
+  inputs 2
+  which {{matteShape i}}
+  name Switch1
+  xpos -366
+  ypos 57
+ }
+ Grade {
+  channels alpha
+  whitepoint {{falloffType?falloff:0}}
+  white_clamp true
+  name Falloff
+  xpos -366
+  ypos 127
+ }
+set N62ee9c00 [stack 0]
+ Expression {
+  expr3 pow(a,parent.exp)
+  name Exponential
+  xpos -130
+  ypos 205
+ }
+push $N62ee9c00
+ Expression {
+  expr3 clamp((a**3),0,1)
+  name Cubic
+  xpos -224
+  ypos 204
+ }
+push $N62ee9c00
+ Expression {
+  expr3 clamp(pow2(a),0,1)
+  name Quadratic
+  xpos -318
+  ypos 203
+ }
+push $N62ee9c00
+ Expression {
+  expr3 smoothstep(0,1,a)
+  name Smooth
+  xpos -415
+  ypos 206
+ }
+push $N62ee9c00
+ NoOp {
+  name Linear
+  xpos -506
+  ypos 208
+ }
+push $N62ee9c00
+ NoOp {
+  name None
+  xpos -606
+  ypos 207
+ }
+ Switch {
+  inputs 6
+  which {{falloffType i}}
+  name Switch2
+  xpos -366
+  ypos 271
+ }
+ Remove {
+  operation keep
+  channels alpha
+  name Remove1
+  xpos -366
+  ypos 303
+ }
+ Shuffle {
+  in alpha
+  out alpha
+  name OutChannel
+  xpos -366
+  ypos 347
+ }
+push $N62e62400
+ Dot {
+  name Dot1
+  xpos -794
+  ypos 396
+ }
+ Copy {
+  inputs 2
+  from0 -rgba.alpha
+  to0 -rgba.alpha
+  channels all
+  name Copy1
+  xpos -366
+  ypos 380
+ }
+ Dot {
+  name Dot6
+  xpos -332
+  ypos 501
+ }
+set N634a4000 [stack 0]
+ Dot {
+  name Dot7
+  xpos -458
+  ypos 501
+ }
+set N38cee000 [stack 0]
+push $N38cee000
+ Shuffle {
+  red alpha
+  green black
+  blue black
+  alpha black
+  name Shuffle1
+  label "\[value red]/\[value green]/\[value blue]/\[value alpha]"
+  xpos -625
+  ypos 491
+ }
+set N634dbc00 [stack 0]
+push $N62e62c00
+ Dot {
+  name Dot3
+  xpos -932
+  ypos -329
+ }
+ Dot {
+  name Dot4
+  xpos -932
+  ypos 622
+ }
+ Merge2 {
+  inputs 2
+  name Merge1
+  xpos -625
+  ypos 620
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy2
+  xpos -492
+  ypos 613
+ }
+push $N634a4000
+ Switch {
+  inputs 2
+  which {{parent.preview}}
+  name Switch3
+  label "\[value which]"
+  xpos -366
+  ypos 613
+ }
+set N634b5180 [stack 0]
+ Output {
+  name Output1
+  xpos -366
+  ypos 727
+ }
+push $N634dbc00
+push $N634b5180
+ Viewer {
+  inputs 2
+  frame_range 4900-7400
+  fps 60
+  colour_sample_bbox {-0.12890625 -0.25390625 -0.126953125 -0.251953125}
+  gl_lighting true
+  name Viewer1
+  xpos -196
+  ypos 480
+ }
+end_group

@@ -1,0 +1,72 @@
+#! C:/Program Files/Nuke10.5v5/nuke-10.5.5.dll -nx
+version 10.5 v5
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1920" h="1200" screen="0">
+        <splitter orientation="1">
+            <split size="0"/>
+            <dock id="" hideTitles="1"/>
+            <split size="1900" stretch="1"/>
+            <splitter orientation="1">
+                <split size="40"/>
+                <dock id="" activePageId="Toolbar.1">
+                    <page id="Toolbar.1"/>
+                </dock>
+                <split size="1257"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                </dock>
+                <split size="595"/>
+                <splitter orientation="2">
+                    <split size="630"/>
+                    <dock id="" activePageId="Properties.1">
+                        <page id="Properties.1"/>
+                    </dock>
+                    <split size="504"/>
+                    <dock id="" activePageId="uk.co.thefoundry.scripteditor.1">
+                        <page id="uk.co.thefoundry.scripteditor.1"/>
+                    </dock>
+                </splitter>
+            </splitter>
+        </splitter>
+    </window>
+    <window x="1920" y="0" w="1920" h="1200" fullscreen="1" screen="1">
+        <splitter orientation="2">
+            <split size="979"/>
+            <dock id="" activePageId="Viewer.1">
+                <page id="Viewer.1"/>
+            </dock>
+            <split size="115"/>
+            <dock id="" activePageId="DopeSheet.1">
+                <page id="DopeSheet.1"/>
+            </dock>
+            <split size="98"/>
+            <dock id="" activePageId="Curve Editor.1">
+                <page id="Curve Editor.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name //Brsserver/brspipe/Nuke/Templates/util/upstreamReadPaths.nk
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+NoOp {
+ inputs 0
+ name UpstreamReads
+ xpos -171
+ ypos -505
+ addUserKnob {20 User}
+ addUserKnob {1 filterPath}
+ addUserKnob {6 selectNodes l "Select nodes" +STARTLINE}
+ addUserKnob {6 showReadName l "show Read Name" -STARTLINE}
+ addUserKnob {22 listNodes l "List Read Paths" T "def upstreamNodes(startNode, maxDepth=-1, found=set(\[])):\n    if maxDepth != 0:\n        newDeps = set(\[n for n in nuke.dependencies(startNode) if n not in found])\n        found |= newDeps\n        for dep in newDeps:\n            upstreamNodes(dep, maxDepth - 1, found)\n    return found   \n\nnodeList = upstreamNodes(nuke.selectedNode())\nsp = nuke.thisNode().knob('filterPath').getValue()\nsn = nuke.thisNode().knob('selectNodes').getValue()\nrn = nuke.thisNode().knob('showReadName').getValue()\nprint #spacer\nprint #spacer\nfor i in nodeList:\n    if i.Class() == 'Read':\n        if sp in i\['file'].value():\n            # set select to True    \n            if sn == True: \n                # print Read node's name\n                if rn ==True:\n                    print i\['name'].value() + ' : ' + i\['file'].value()\n                    i.setSelected(True)\n                # dont print Read node's name\n                else:\n                    print i\['file'].value()\n                    i.setSelected(True)\n            #dont select to True\n            else: \n                # print Read node's name\n                if rn ==True:\n                    print i\['name'].value() + ' : ' + i\['file'].value()           \n                # dont print Read node's name\n                else:\n                    print i\['file'].value()" +STARTLINE}
+}

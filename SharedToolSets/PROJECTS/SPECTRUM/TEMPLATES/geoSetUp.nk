@@ -1,0 +1,159 @@
+#! C:/Program Files/Nuke11.3v2/nuke-11.3.2.dll -nx
+version 11.3 v2
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="2512" h="1283" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="2468" stretch="1"/>
+            <splitter orientation="2">
+                <split size="1124"/>
+                <splitter orientation="1">
+                    <split size="1360"/>
+                    <dock id="" activePageId="Viewer.1">
+                        <page id="Viewer.1"/>
+                    </dock>
+                    <split size="1104"/>
+                    <splitter orientation="2">
+                        <split size="902"/>
+                        <dock id="" activePageId="Properties.1" focus="true">
+                            <page id="Properties.1"/>
+                        </dock>
+                        <split size="218"/>
+                        <dock id=""/>
+                    </splitter>
+                </splitter>
+                <split size="111"/>
+                <dock id="" activePageId="Curve Editor.1">
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+        </splitter>
+    </window>
+    <window x="2552" y="0" w="1920" h="1160" maximized="1" screen="1">
+        <splitter orientation="1">
+            <split size="1266"/>
+            <dock id="" activePageId="DAG.1">
+                <page id="DAG.1"/>
+            </dock>
+            <split size="650"/>
+            <dock id="" activePageId="uk.co.thefoundry.scripteditor.1">
+                <page id="uk.co.thefoundry.scripteditor.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/appLibrary/nuke/SharedToolSets/PROJECTS/SPECTRUM/TEMPLATES/geoSetUp.nk
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Axis2 {
+ inputs 0
+ read_from_file true
+ translate {0.1883250169 110.008464 540}
+ scaling {9.27 9.27 9.27}
+ file F:/primaryVFX/projects/SPECTRUM/2_assets/3d/camera/spec_shoot01_camera_locator_v01.abc
+ version 1
+ name Axis2
+ xpos 1540
+ ypos 1291
+}
+Camera2 {
+ frame_rate 25
+ name Camera1
+ xpos 1531
+ ypos 1375
+}
+Light2 {
+ inputs 0
+ light_type directional
+ intensity 2
+ rotate {-60 -90 0}
+ depthmap_slope_bias 0.01
+ name Light2
+ xpos 1694
+ ypos 1135
+}
+Light2 {
+ inputs 0
+ light_type directional
+ intensity 5
+ rotate {-40 90 0}
+ depthmap_slope_bias 0.01
+ name Light1
+ xpos 1678
+ ypos 1047
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.185
+ name Constant1
+ xpos 1383
+ ypos 884
+}
+Shuffle {
+ alpha white
+ name Shuffle1
+ label "\[value in]"
+ xpos 1383
+ ypos 956
+}
+set N6e42b000 [stack 0]
+ReadGeo2 {
+ file F:/primaryVFX/projects/SPECTRUM/3_shots/sh01/3d/dancer_matchmove/spec_shoot01_sh01_dancerMatchmove_01.abc
+ read_on_each_frame true
+ frame_rate 25
+ use_geometry_colors false
+ range_last 300
+ scene_view {{0} imported: 0 selected: 0 items: /root/dancer_matchmove_sh01/Dummy_Mesh/Dummy_MeshShape}
+ name ReadGeo5
+ xpos 1454
+ ypos 1079
+}
+push $N6e42b000
+ReadGeo2 {
+ file F:/primaryVFX/projects/SPECTRUM/2_assets/3d/arches/spec_shoot01_archesOption01_01.abc
+ read_on_each_frame true
+ use_geometry_colors false
+ range_first 0
+ range_last 134
+ scene_view {{0} imported: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 selected: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 items: /root/ARCHES_OPTION_01/segment_05/arch_01/arch_01Shape /root/ARCHES_OPTION_01/segment_05/corinthCol_01/Capital1/Capital1Shape /root/ARCHES_OPTION_01/segment_05/corinthCol_01/slab1/slab1Shape /root/ARCHES_OPTION_01/segment_05/corinthCol_01/Shaft1/Shaft1Shape /root/ARCHES_OPTION_01/segment_05/corinthCol_01/base1/base1Shape /root/ARCHES_OPTION_01/segment_05/steps_01/step_01/step_0Shape1 /root/ARCHES_OPTION_01/segment_05/steps_01/step_02/step_0Shape2 /root/ARCHES_OPTION_01/segment_05/steps_01/step_03/step_0Shape3 /root/ARCHES_OPTION_01/segment_05/steps_01/step_04/step_0Shape4 /root/ARCHES_OPTION_01/segment_06/arch_01/arch_01Shape /root/ARCHES_OPTION_01/segment_06/corinthCol_01/Capital1/Capital1Shape /root/ARCHES_OPTION_01/segment_06/corinthCol_01/slab1/slab1Shape /root/ARCHES_OPTION_01/segment_06/corinthCol_01/Shaft1/Shaft1Shape /root/ARCHES_OPTION_01/segment_06/corinthCol_01/base1/base1Shape /root/ARCHES_OPTION_01/segment_06/steps_01/step_01/step_0Shape1 /root/ARCHES_OPTION_01/segment_06/steps_01/step_02/step_0Shape2 /root/ARCHES_OPTION_01/segment_06/steps_01/step_03/step_0Shape3 /root/ARCHES_OPTION_01/segment_06/steps_01/step_05/step_0Shape5 /root/ARCHES_OPTION_01/segment_07/arch_01/arch_01Shape /root/ARCHES_OPTION_01/segment_07/corinthCol_01/Capital1/Capital1Shape /root/ARCHES_OPTION_01/segment_07/corinthCol_01/slab1/slab1Shape /root/ARCHES_OPTION_01/segment_07/corinthCol_01/Shaft1/Shaft1Shape /root/ARCHES_OPTION_01/segment_07/corinthCol_01/base1/base1Shape /root/ARCHES_OPTION_01/segment_07/steps_01/step_01/step_0Shape1 /root/ARCHES_OPTION_01/segment_07/steps_01/step_02/step_0Shape2 /root/ARCHES_OPTION_01/segment_07/steps_01/step_03/step_0Shape3 /root/ARCHES_OPTION_01/segment_07/steps_01/step_06/step_0Shape6 /root/ARCHES_OPTION_01/segment_08/arch_01/arch_01Shape /root/ARCHES_OPTION_01/segment_08/corinthCol_01/Capital1/Capital1Shape /root/ARCHES_OPTION_01/segment_08/corinthCol_01/slab1/slab1Shape /root/ARCHES_OPTION_01/segment_08/corinthCol_01/Shaft1/Shaft1Shape /root/ARCHES_OPTION_01/segment_08/corinthCol_01/base1/base1Shape /root/ARCHES_OPTION_01/segment_08/steps_01/step_01/step_0Shape1 /root/ARCHES_OPTION_01/segment_08/steps_01/step_02/step_0Shape2 /root/ARCHES_OPTION_01/segment_08/steps_01/step_03/step_0Shape3 /root/ARCHES_OPTION_01/segment_08/steps_01/step_07/step_0Shape7 /root/ARCHES_OPTION_01/segment_09/arch_01/arch_01Shape /root/ARCHES_OPTION_01/segment_09/corinthCol_01/Capital1/Capital1Shape /root/ARCHES_OPTION_01/segment_09/corinthCol_01/slab1/slab1Shape /root/ARCHES_OPTION_01/segment_09/corinthCol_01/Shaft1/Shaft1Shape /root/ARCHES_OPTION_01/segment_09/corinthCol_01/base1/base1Shape /root/ARCHES_OPTION_01/segment_09/steps_01/step_01/step_0Shape1 /root/ARCHES_OPTION_01/segment_09/steps_01/step_02/step_0Shape2 /root/ARCHES_OPTION_01/segment_09/steps_01/step_03/step_0Shape3 /root/ARCHES_OPTION_01/segment_09/steps_01/step_08/step_0Shape8 /root/ARCHES_OPTION_01/segment_010/arch_01/arch_01Shape /root/ARCHES_OPTION_01/segment_010/corinthCol_01/Capital1/Capital1Shape /root/ARCHES_OPTION_01/segment_010/corinthCol_01/slab1/slab1Shape /root/ARCHES_OPTION_01/segment_010/corinthCol_01/Shaft1/Shaft1Shape /root/ARCHES_OPTION_01/segment_010/corinthCol_01/base1/base1Shape /root/ARCHES_OPTION_01/segment_010/steps_01/step_01/step_0Shape1 /root/ARCHES_OPTION_01/segment_010/steps_01/step_02/step_0Shape2 /root/ARCHES_OPTION_01/segment_010/steps_01/step_03/step_0Shape3 /root/ARCHES_OPTION_01/segment_010/steps_01/step_09/step_0Shape9}
+ name ReadGeo4
+ xpos 1316
+ ypos 1079
+}
+Scene {
+ inputs 4
+ name Scene1
+ xpos 1393
+ ypos 1250
+}
+Reformat {
+ inputs 0
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ name Reformat1
+ xpos 1202
+ ypos 1395
+}
+ScanlineRender {
+ inputs 3
+ conservative_shader_sampling false
+ motion_vectors_type distance
+ name ScanlineRender1
+ xpos 1383
+ ypos 1395
+}

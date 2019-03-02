@@ -1,0 +1,52 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+push $cut_paste_input
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[lindex \[split \[metadata input/filename] \"/\"] 5]"
+ old_expression_markers {{0 -1}
+   }
+ box {50 137.5 51 138.5}
+ transforms {{0 2}
+   }
+ cursor_position 48
+ scale {1 1}
+ cursor_initialised true
+ initial_cursor_position {{50 138.5}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1188 452 0 0 1 1 0 0 0 0}
+   }
+ name Text2
+ selected true
+ xpos -2554
+ ypos -2001
+ postage_stamp_frame 1007
+}
+Text2 {
+ inputs 0
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[python \{nuke.thisNode().input(0).knob('in').value()\}]"
+ old_message {{91 112 121 116 104 111 110 32 123 110 117 107 101 46 116 104 105 115 78 111 100 101 40 41 46 105 110 112 117 116 40 48 41 46 107 110 111 98 40 39 105 110 39 41 46 118 97 108 117 101 40 41 125 93}
+   }
+ box {1510.5 10.5 3937.5 111.5}
+ transforms {{0 2}
+   }
+ cursor_position 19
+ scale {1 1}
+ cursor_initialised true
+ initial_cursor_position {{1510.5 111.5}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 1188 452 0 0 1 1 0 0 0 0}
+   }
+ name Text1
+ selected true
+ xpos -2560
+ ypos -1931
+ postage_stamp_frame 1007
+}
