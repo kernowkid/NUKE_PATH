@@ -28,7 +28,6 @@ primaryMenu.addCommand('Utils/Create Projector Camera', 'createProjectorCam.crea
 # SharedToolSets setup folder
 
 import sys
-
 if nuke.GUI:
 
   import shared_toolsets
