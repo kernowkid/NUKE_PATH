@@ -1,0 +1,395 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+push $cut_paste_input
+Group {
+name heatdistortv05
+selected true
+xpos 8097
+ypos -3284
+postage_stamp_frame 1017
+addUserKnob {20 User}
+addUserKnob {6 usematte l "use mask" +STARTLINE}
+addUserKnob {26 ""}
+addUserKnob {26 distort l "distort control" T "   "}
+addUserKnob {41 uv_offset_1 l "UV offset" T IDistort1.uv_offset}
+addUserKnob {41 uv_scale_1 l "UV scale" T IDistort1.uv_scale}
+addUserKnob {26 ""}
+addUserKnob {26 noisecontrol l "noise control" -STARTLINE T "    "}
+addUserKnob {41 size l x/ysize T Noise12.size}
+addUserKnob {41 speed l "noise speed" T Noise12.speed}
+addUserKnob {6 static +STARTLINE}
+static true
+addUserKnob {41 first_frame l "   z frame" -STARTLINE T FrameHold1.first_frame}
+addUserKnob {26 ""}
+addUserKnob {41 size_1 l "post blur" T Blur12.size}
+addUserKnob {41 size_3 l "blur map" T Blur2.size}
+addUserKnob {41 mix l "mult blur matte" T Merge73.mix}
+addUserKnob {41 translate_1 l "translate map" T Transform1.translate}
+addUserKnob {26 ""}
+addUserKnob {6 distortmap l "use distort map" +STARTLINE}
+addUserKnob {6 negdistvalues l "negative distort values" -STARTLINE}
+negdistvalues true
+addUserKnob {41 size_2 l "blur map" T Blur1.size}
+addUserKnob {41 translate l "neg values" T Transform17.translate}
+addUserKnob {26 ""}
+addUserKnob {41 black l lift T Grade1.black}
+addUserKnob {41 multiply T Grade1.multiply}
+addUserKnob {41 gamma T Grade1.gamma}
+addUserKnob {6 unpremultiply +STARTLINE}
+}
+Input {
+inputs 0
+name distortmap
+xpos 58
+ypos 493
+number 1
+}
+Blur {
+channels rgba
+name Blur1
+xpos 58
+ypos 538
+postage_stamp_frame 1017
+}
+Dot {
+name Dot2
+xpos 92
+ypos 572
+}
+set Nb21f9800 [stack 0]
+Input {
+inputs 0
+name plate
+xpos -540
+ypos 274
+}
+Dot {
+name Dot112
+xpos -506
+ypos 314
+}
+Dot {
+name Dot109
+xpos -506
+ypos 417
+}
+set N4dc75000 [stack 0]
+Remove {
+name Remove1
+xpos -192
+ypos 407
+postage_stamp_frame 1017
+}
+set N607f0400 [stack 0]
+Noise {
+output {-rgba.red rgba.green -rgba.blue -rgba.alpha}
+cliptype none
+size {{parent.Noise12.size*2}}
+zoffset {{frame/speed}}
+translate {4.599999905 13.5}
+center {1024 778}
+name Noise2
+selected true
+xpos -244
+ypos 464
+postage_stamp_frame 1017
+addUserKnob {20 User}
+addUserKnob {7 speed l "noise speed" R 0 10}
+speed 1
+}
+Noise {
+output {rgba.red -rgba.green -rgba.blue -rgba.alpha}
+cliptype none
+size 5
+zoffset {{frame/speed}}
+translate {4.599999905 13.5}
+center {1024 778}
+name Noise12
+selected true
+xpos -244
+ypos 496
+postage_stamp_frame 1017
+addUserKnob {20 User}
+addUserKnob {7 speed l "noise speed" R 0 10}
+speed 5
+}
+FrameHold {
+first_frame 106
+name FrameHold1
+xpos -244
+ypos 546
+disable {{!parent.static}}
+addUserKnob {20 plus}
+addUserKnob {22 STCF l "Set To Current Frame" -STARTLINE T "pfh = nuke.thisNode().knob('first_frame').setValue(nuke.frame())"}
+}
+Switch {
+inputs 2
+which {{heatdistortv05.distortmap}}
+name Switch1
+xpos -244
+ypos 621
+postage_stamp_frame 1017
+}
+Transform {
+translate {50 50}
+center {1024 778}
+black_outside false
+name Transform17
+xpos -244
+ypos 658
+postage_stamp_frame 1017
+}
+Crop {
+box {0 0 2076 1337}
+name Crop1
+xpos -244
+ypos 694
+postage_stamp_frame 1001
+}
+push $Nb21f9800
+push $N607f0400
+Noise {
+output {rgba.red -rgba.green -rgba.blue -rgba.alpha}
+cliptype none
+size {{parent.Noise2.size}}
+zoffset {{frame/speed}}
+translate {4.599999905 13.5}
+center {1024 778}
+name Noise1
+xpos -119
+ypos 465
+postage_stamp_frame 1017
+addUserKnob {20 User}
+addUserKnob {7 speed l "noise speed" R 0 10}
+speed 1
+}
+Noise {
+output {-rgba.red rgba.green -rgba.blue -rgba.alpha}
+cliptype none
+size {{parent.Noise12.size}}
+zoffset {{parent.Noise12.zoffset}}
+center {1024 778}
+name Noise13
+xpos -119
+ypos 493
+postage_stamp_frame 1017
+}
+FrameHold {
+first_frame {{FrameHold1.knob.first_frame}}
+name FrameHold2
+xpos -119
+ypos 543
+disable {{parent.FrameHold1.disable}}
+addUserKnob {20 plus}
+addUserKnob {22 STCF l "Set To Current Frame" -STARTLINE T "pfh = nuke.thisNode().knob('first_frame').setValue(nuke.frame())"}
+}
+Switch {
+inputs 2
+which {{heatdistortv05.distortmap}}
+name Switch2
+xpos -119
+ypos 620
+postage_stamp_frame 1017
+}
+Merge2 {
+inputs 2
+operation minus
+mix 0.86
+name Merge72
+xpos -119
+ypos 694
+disable {{"1 - heatdistortv05.negdistvalues"}}
+postage_stamp_frame 1017
+}
+Blur {
+channels rgba
+name Blur2
+xpos -119
+ypos 738
+postage_stamp_frame 1001
+}
+Transform {
+center {1038 668.5}
+name Transform1
+xpos -119
+ypos 774
+postage_stamp_frame 1001
+}
+set N3b2c6c00 [stack 0]
+Dot {
+name Dot110
+xpos -85
+ypos 816
+}
+set Nb391a000 [stack 0]
+Clamp {
+channels rgba
+name Clamp1
+xpos -119
+ypos 863
+postage_stamp_frame 1017
+}
+set N50093000 [stack 0]
+Input {
+inputs 0
+name mask
+xpos -367
+ypos 273
+number 2
+}
+Clamp {
+channels rgba
+name Clamp2
+xpos -367
+ypos 481
+postage_stamp_frame 1017
+}
+Dot {
+name Dot1
+xpos -333
+ypos 606
+}
+Dot {
+name Dot111
+xpos -333
+ypos 747
+}
+set N1f50f000 [stack 0]
+Merge2 {
+inputs 2
+operation multiply
+mix 0
+name Merge73
+xpos -292
+ypos 925
+disable {{1-heatdistortv05.usematte}}
+postage_stamp_frame 1017
+}
+push $N50093000
+Constant {
+inputs 0
+color 1
+first 1017
+last 1329
+name Constant1
+xpos 23
+ypos 961
+postage_stamp_frame 1017
+}
+Merge2 {
+inputs 2
+operation multiply
+mix {{parent.Merge73.mix}}
+name Merge1
+xpos -119
+ypos 984
+disable {{heatdistortv05.usematte}}
+postage_stamp_frame 1017
+}
+Switch {
+inputs 2
+which {{heatdistortv05.usematte}}
+name Switch3
+xpos -292
+ypos 984
+postage_stamp_frame 1017
+}
+set Nc10cd680 [stack 0]
+push $Nc10cd680
+push $Nc10cd680
+push $N1f50f000
+push $Nb391a000
+Merge2 {
+inputs 2
+operation multiply
+name Merge74
+xpos -406
+ypos 812
+disable {{1-heatdistortv05.usematte}}
+postage_stamp_frame 1017
+}
+push $N4dc75000
+ShuffleCopy {
+inputs 2
+alpha alpha2
+black red
+white green
+out2 forward
+name ShuffleCopy3
+xpos -540
+ypos 812
+postage_stamp_frame 1001
+}
+IDistort {
+channels rgba
+uv forward
+uv_scale 10
+name IDistort1
+xpos -540
+ypos 845
+postage_stamp_frame 1001
+}
+Blur {
+inputs 1+1
+channels rgba
+name Blur12
+xpos -540
+ypos 984
+postage_stamp_frame 1017
+}
+Unpremult {
+name Unpremult43
+xpos -540
+ypos 1028
+disable {{1-heatdistortv05.unpremultiply}}
+postage_stamp_frame 1017
+}
+Grade {
+inputs 1+1
+name Grade1
+xpos -540
+ypos 1066
+postage_stamp_frame 1017
+}
+Premult {
+name Premult66
+xpos -540
+ypos 1102
+disable {{1-heatdistortv05.unpremultiply}}
+postage_stamp_frame 1017
+}
+add_layer {heatdistortmatte heatdistortmatte.red heatdistortmatte.green heatdistortmatte.blue heatdistortmatte.alpha}
+ShuffleCopy {
+inputs 2
+alpha alpha2
+black red
+white green
+red2 blue
+green2 alpha
+out2 heatdistortmatte
+name ShuffleCopy1
+xpos -540
+ypos 1155
+postage_stamp_frame 1001
+}
+Dot {
+name Dot114
+xpos -506
+ypos 1240
+}
+Output {
+name Output1
+xpos -540
+ypos 1279
+}
+push $N3b2c6c00
+Viewer {
+frame 1014
+frame_range 1001-1058
+center_fstop 0
+input_process false
+name Viewer2
+xpos 109
+ypos 1158
+}
+end_group

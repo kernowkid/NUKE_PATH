@@ -1,0 +1,73 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+push 0
+push $cut_paste_input
+Group {
+ inputs 2
+ name tex_res_control
+ selected true
+ xpos 1957
+ ypos -2026
+ addUserKnob {20 User}
+ addUserKnob {41 scale l "scale res" T Reformat_scale_comp.scale}
+ addUserKnob {26 ""}
+ addUserKnob {41 mix T Merge175.mix}
+}
+ Input {
+  inputs 0
+  name Input2
+  selected true
+  xpos 480
+  ypos -579
+  number 1
+ }
+ Reformat {
+  type scale
+  scale {{Reformat_scale_comp.scale}}
+  name Reformat_scale_plate
+  xpos 480
+  ypos -539
+ }
+ Transform {
+  translate {{"curent_format.curFormat.x - (width/2)"} {"curent_format.curFormat.y - (height/2)"}}
+  center {2464 1640}
+  name Transform50
+  xpos 480
+  ypos -500
+ }
+ Input {
+  inputs 0
+  name Input1
+  selected true
+  xpos 288
+  ypos -605
+ }
+ Reformat {
+  type scale
+  scale 2.04
+  name Reformat_scale_comp
+  xpos 288
+  ypos -565
+ }
+ Dot {
+  name curent_format
+  label "current format"
+  note_font "Verdana Bold Bold Bold Bold Bold"
+  xpos 322
+  ypos -528
+  addUserKnob {20 User}
+  addUserKnob {12 curFormat l format}
+  curFormat {{width/2} {height/2}}
+ }
+ Merge2 {
+  inputs 2
+  name Merge175
+  xpos 288
+  ypos -500
+ }
+ Output {
+  name Output1
+  xpos 288
+  ypos -400
+ }
+end_group

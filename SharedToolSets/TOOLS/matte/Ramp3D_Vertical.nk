@@ -1,0 +1,410 @@
+set cut_paste_input [stack 0]
+version 9.0 v6
+push $cut_paste_input
+add_layer {P P.X P.Y P.Z}
+Group {
+name Ramp3D_Vertical10
+help "Creates a gradient between two 3D positions sampled from a point \npass."
+knobChanged "\nn = nuke.thisNode()\nk = nuke.thisKnob()\ns = \nnuke.toNode('SphereMatte')\nr = nuke.toNode('Start_End')\n\nif k.name() \n== \"falloffType\":\n n\['falloff'].setVisible( k.value() != 'None' )\n \nn\['exp'].setVisible( k.value() == 'Exponential' )\n\nif k.name() == \n\"rampDirection\":\n for knob in \[n\['rotDivider'], n\['rotateAround'], \nn\['rot_order'], n\['rotate']]:\n knob.setVisible(k.value() == \n'Custom')\n\n"
+note_font "Bitstream Vera Sans"
+selected true
+xpos 13303
+ypos 1259
+mapsize {0.15 0.15}
+addUserKnob {20 Ramp3D}
+addUserKnob {41 in l "position data" t "Choose a layer from the input \nthat contains position data" T Shuffle_Input_Channels.in}
+addUserKnob {41 to0 l output T Copy1.to0}
+addUserKnob {6 unpremultiply t "Unpremultiplies the incoming position \ndata by the alpha channel." +STARTLINE}
+unpremultiply true
+addUserKnob {6 useAlpha l "ignore outside alpha" t "If your input has an \nalpha channel, checking this will force everything outside that alpha \nchannel to be black." -STARTLINE}
+useAlpha true
+addUserKnob {26 ""}
+addUserKnob {4 rampDirection t "Choose the axis/direction of the \nramp\n\nX : ramp along the X axis\nY : ramp along the Y axis\nZ : ramp \nalong the Z axis\nCustom : starting with a ramp along the Z axis, rotate \nthe ramp at will using the rotation controls\nStart to End: ramp along \nthe vector that goes from start to end points" M {X Y Z Custom "Start to \nEnd" "" "" "" "" "" "" "" ""}}
+rampDirection Y
+addUserKnob {22 reverse l "swap start and end points" t "Swap the start \nand end postions in order to reverse the ramp direction." -STARTLINE T "start = nuke.thisGroup()\['start']\nend = \nnuke.thisGroup()\['end']\ntemp = start.value()\nprint \ntemp\nstart.setValue( end.value() )\nend.setValue( temp )"}
+addUserKnob {41 start T Start_End.start}
+addUserKnob {41 end T Start_End.end}
+addUserKnob {26 rotDivider l "" +STARTLINE +HIDDEN}
+addUserKnob {4 rotateAround l "rotate around" +HIDDEN M {"start\t" center end}}
+rotateAround center
+addUserKnob {4 rot_order l "rotation order" +HIDDEN M {XYZ XZY YXZ YZX ZXY ZYX "" "" ""}}
+rot_order ZYX
+addUserKnob {13 rotate +HIDDEN}
+addUserKnob {26 ""}
+addUserKnob {4 falloffType t "Type of falloff used in the ramp." M {None Linear Smooth Quadratic Cubic Exponential "" ""}}
+falloffType Smooth
+addUserKnob {6 insideRamp l inside t "Instead of creating a linear ramp \nfrom black to white, fill only the area between the two points, going \nfrom black to white at the centre and back." -STARTLINE}
+addUserKnob {7 falloff}
+falloff 3
+addUserKnob {7 exp +HIDDEN R 0.1 10}
+exp 4.5
+addUserKnob {20 previewTab l "3D Preview"}
+addUserKnob {22 activate l Activate t "Activates the 3D preview. Please \nnote that this adds a number of internal nodes to the gizmo so it's \nuseful to deactivate the preview (which removes the nodes again) once \nyou're done with it." T "node = nuke.toNode( 'Ramp3DInternal1' )\nif \nnode:\n\tnuke.thisNode().knob( 'activate' ).setLabel( 'Activate' \n)\n\tnuke.thisNode().knob( 'quality' ).setFlag( nuke.INVISIBLE \n)\n\tnuke.thisNode().knob( 'rampScale' ).setFlag( nuke.INVISIBLE \n)\n\tnuke.delete( node )\n\n\tnuke.toNode( 'Output1' ).connectInput( 0, \nnuke.toNode( 'Copy1' ) )\n\nelse:\n\tfor node in nuke.selectedNodes(): \nnode.setSelected( 0 )\n\tpreviewNode = nuke.createNode( \n'Ramp3DInternal', inpanel = False )\n\tpreviewNode.connectInput( 0, \nnuke.toNode( 'img' ) )\n\tpreviewNode.connectInput( 1, nuke.toNode( \n'Shuffle_Input_Channels' ) )\n\tpreviewNode.connectInput( 2, \nnuke.toNode( 'Copy1' ) )\n\tnuke.toNode( 'Output1' ).connectInput( 0, \npreviewNode )\n\n\t#previewNode\['quality'].setExpression( \n'parent.quality' )\n\t#previewNode\['rampScale'].setExpression( \n'parent.rampScale' )\n\t#previewNode\['rampDirection'].setExpression( \n'parent.rampDirection' )\n\t#previewNode\['insideRamp'].setExpression( \n'parent.insideRamp' )\n\t#previewNode\['blackPoint'].setExpression( \n'parent.Start_End.blackpoint' \n)\n\t#previewNode\['whitePoint'].setExpression( \n'parent.Start_End.whitepoint' \n)\n\t#previewNode\['rot_order'].setExpression( 'parent.Axis1.rot_order' \n)\n\t#previewNode\['pivot'].setExpression( 'parent.Axis1.pivot' \n)\n\t#previewNode\['rotate'].setExpression( 'parent.Axis1.rotate' \n)\n\n\tnuke.thisNode().knob( 'activate' ).setLabel( 'Deactivate' \n)\n\tnuke.thisNode().knob( 'quality' ).clearFlag( nuke.INVISIBLE \n)\n\tnuke.thisNode().knob( 'rampScale' ).clearFlag( nuke.INVISIBLE \n)\n\tnuke.thisNode().knob( 'quality' ).setLabel( 'quality' \n)\n\tnuke.thisNode().knob( 'rampScale' ).setLabel( 'rampScale' )" +STARTLINE}
+addUserKnob {6 activatePreview l INVISIBLE t "This will load a point \ncloud of the scene and the matte geometry into the 3D viewer." +INVISIBLE +STARTLINE}
+addUserKnob {7 quality t "Point cloud resolution." +INVISIBLE R 0.01 1}
+quality 0.25
+addUserKnob {7 rampScale t "Size of the ramp geometry." +INVISIBLE R 0 100}
+rampScale 25
+}
+Axis2 {
+inputs 0
+rot_order {{parent.rot_order x1 3 x1001 4}}
+rotate {{parent.rotate} {parent.rotate} {parent.rotate}}
+pivot {{parent.rotateAround/2} {parent.rotateAround/2} {parent.rotateAround/2}}
+name Axis1
+label "Creates axis from user values in \"custom\" ramp direction"
+xpos -229
+ypos 38
+addUserKnob {20 ivy_data +INVISIBLE}
+addUserKnob {1 data +INVISIBLE}
+data "\{\}"
+addUserKnob {20 ivytab l Ivy}
+addUserKnob {26 spiderlabel l "Spider Query"}
+addUserKnob {1 ivy_job l Job}
+addUserKnob {1 ivy_shot l Shot -STARTLINE}
+addUserKnob {22 ivy_selectshot l "Select shot..." -STARTLINE T __import__('spiderKnobs').selectShot()}
+addUserKnob {1 ivy_type l Type}
+addUserKnob {22 ivy_selecttype l "Select type..." -STARTLINE T __import__('spiderKnobs').selectType()}
+addUserKnob {1 ivy_name l Name}
+addUserKnob {6 ivy_regex l regex -STARTLINE}
+addUserKnob {4 ivy_versionquery l Version M {"" latest "latest approved" "latest pending" "latest WIP" specific}}
+addUserKnob {3 ivy_vnum l vnum -STARTLINE +DISABLED}
+addUserKnob {22 ivy_autofill l Autofill T __import__('spiderKnobs').autofill() +STARTLINE}
+addUserKnob {22 ivy_clear l Clear -STARTLINE T __import__('spiderKnobs').clearFields()}
+addUserKnob {26 divider3 l "" +STARTLINE}
+addUserKnob {6 ivy_usemanualuri l "Use manual URI (clears individual \nfields)" +STARTLINE}
+addUserKnob {43 spider_uri l "Spider URI" +DISABLED}
+addUserKnob {22 updateButton l Update T "__import__(\"publishing.template\").template.updateNode(nuke.thisNode())" +STARTLINE}
+addUserKnob {22 testButton l Test -STARTLINE T "__import__(\"publishing.template\").template.test(nuke.thisNode()\[\"spider_uri\"].value())"}
+addUserKnob {22 resetButton l "Reset non-spider knobs" -STARTLINE T "__import__(\"publishing.template\").template.resetNode(nuke.thisNode())"}
+addUserKnob {22 copyButton l "Copy URI" -STARTLINE T "__import__(\"spiderKnobs\").copyUri()"}
+addUserKnob {26 divider0 l "" +STARTLINE}
+addUserKnob {20 dbinfo l "DB Info" n 1}
+addUserKnob {1 twig_dnuuid l "Twig Id"}
+addUserKnob {1 stalk_dnuuid l "Stalk Id"}
+addUserKnob {1 twigtype_dnuuid l "Twig Type Id"}
+addUserKnob {1 leaf_dnuuid l "Leaf Id"}
+addUserKnob {26 divider1 l "" +STARTLINE}
+addUserKnob {1 twigtype l "Twig Type"}
+addUserKnob {1 leaf_label l Leaf}
+addUserKnob {1 ivy_version l Version}
+addUserKnob {43 ivy_notes l Notes}
+addUserKnob {26 divider2 l "" +STARTLINE}
+addUserKnob {1 build_label l "Build Label"}
+}
+Input {
+inputs 0
+name img
+xpos -790
+ypos -425
+}
+Dot {
+name Dot2
+xpos -756
+ypos -302
+}
+set N5a15ac00 [stack 0]
+AddChannels {
+channels alpha
+color 1
+name AddChannels1
+xpos -646
+ypos -312
+}
+Shuffle {
+in P
+alpha blue
+out rgb
+name Shuffle_Input_Channels
+xpos -646
+ypos -274
+}
+Unpremult {
+name Unpremult1
+xpos -646
+ypos -224
+disable {{!parent.unpremultiply i}}
+}
+set N5a15a000 [stack 0]
+Add {
+channels rgb
+value {{-parent.start i} {-parent.start i} {-parent.start i} {curve i}}
+name Set_Origin
+label "Ramp direction \"start to end\""
+xpos -111
+ypos -230
+}
+ColorMatrix {
+matrix {
+    {{xAxis.x} {xAxis.y} {xAxis.z}}
+    {{zAxis.x} {zAxis.y} {zAxis.z}}
+    {{-yAxis.x} {-yAxis.y} {-yAxis.z}}
+  }
+name ColorMatrix1
+xpos -111
+ypos -192
+addUserKnob {20 User}
+addUserKnob {7 dirVectorLength}
+dirVectorLength {{"sqrt ( ( (parent.end.r - parent.start.r) ** 2 ) + ( \n(parent.end.g - parent.start.g) ** 2 ) + ( (parent.end.b - \nparent.start.b) ** 2 ))"}}
+addUserKnob {13 zAxis}
+zAxis {{"(parent.end - parent.start) / dirVectorLength"} {"(parent.end - \nparent.start) / dirVectorLength"} {"(parent.end - parent.start) / \ndirVectorLength"}}
+addUserKnob {13 initialYAxis}
+initialYAxis {0 {"\[python nuke.thisNode()\\\['zAxis'\\].value(1)\\ <\\ \n1.0]"} {"\[python (nuke.thisNode()\\\['zAxis'\\].value(1)\\ >=\\ 1.0)\\ \n*\\ -1.0]"}}
+addUserKnob {13 foundXAxis}
+foundXAxis {{"initialYAxis.y * zAxis.z - initialYAxis.z * zAxis.y"} {"initialYAxis.z * zAxis.x - initialYAxis.x * zAxis.z"} {"initialYAxis.x \n* zAxis.y - initialYAxis.y * zAxis.x"}}
+addUserKnob {7 xAxisLength}
+xAxisLength {{sqrt(foundXAxis.x**2+foundXAxis.y**2+foundXAxis.z**2)}}
+addUserKnob {13 xAxis}
+xAxis {{"foundXAxis / xAxisLength"} {"foundXAxis / xAxisLength"} {"foundXAxis / xAxisLength"}}
+addUserKnob {13 yAxis}
+yAxis {{"zAxis.y * xAxis.z - zAxis.z * xAxis.y"} {"zAxis.z * xAxis.x - \nzAxis.x * xAxis.z"} {"zAxis.x * xAxis.y - zAxis.y * xAxis.x"}}
+}
+Multiply {
+channels rgb
+value {{1/ColorMatrix1.dirVectorLength}}
+name Multiply1
+label "Scale based on the start and end points"
+xpos -111
+ypos -166
+}
+Clamp {
+channels rgb
+name Clamp1
+label "Clamp all values to the calculated range"
+xpos -111
+ypos -128
+}
+Expression {
+expr0 "parent.useAlpha && a==0.0 ? 0 : r"
+expr1 "parent.useAlpha && a==0.0 ? 0 : g"
+expr2 "parent.useAlpha && a==0.0 ? 0 : b"
+name IgnoreOutsideAlpha1
+label "Ignore areas where alpha == 0"
+xpos -111
+ypos -90
+}
+Shuffle {
+alpha green
+name Shuffle3
+label "USE GREEN CHANNEL AS ALPHA?"
+xpos -111
+ypos -52
+}
+push $N5a15a000
+Grade {
+blackpoint {{start} {start} {start} {curve}}
+whitepoint {{end} {end} {end} {curve}}
+black_clamp false
+maskChannelInput -rgba.alpha
+unpremult -rgba.alpha
+name Start_End
+label "Ramp direction \"X/Y/Z axis\"\nUses start and end points as white \nand black points"
+xpos -646
+ypos -198
+addUserKnob {20 User}
+addUserKnob {18 start}
+start {13.66782093 16.00387573 8.094159126}
+addUserKnob {6 start_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {18 end}
+end {14.76887608 20.81903648 7.569765091}
+addUserKnob {6 end_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+}
+set N5a190000 [stack 0]
+Add {
+channels rgb
+value {{-Axis1.world_matrix.3 i} {-Axis1.world_matrix.7 i} {-Axis1.world_matrix.11 i} {curve i}}
+name Translate1
+label "Ramp direction \"custom\"\nTakes the direction from the custom \nmatrix"
+xpos -351
+ypos -198
+}
+ColorMatrix {
+matrix {
+    {{Axis1.world_matrix.0 i} {Axis1.world_matrix.1 i} {Axis1.world_matrix.2 i}}
+    {{Axis1.world_matrix.4 i} {Axis1.world_matrix.5 i} {Axis1.world_matrix.6 i}}
+    {{Axis1.world_matrix.8 i} {Axis1.world_matrix.9 i} {Axis1.world_matrix.10 i}}
+  }
+invert true
+name Rotate_Scale_Skew3
+label "The matrix for the chosen 3D direction"
+xpos -351
+ypos -148
+disable {{hasError i x200 1}}
+}
+Expression {
+expr0 "parent.useAlpha && a==0.0 ? 0 : r"
+expr1 "parent.useAlpha && a==0.0 ? 0 : g"
+expr2 "parent.useAlpha && a==0.0 ? 0 : b"
+name IgnoreOutsideAlpha3
+label "Ignore areas where alpha == 0"
+xpos -351
+ypos -110
+}
+Shuffle {
+alpha blue
+name Shuffle4
+label "USE BLUE AS ALPHA?"
+xpos -351
+ypos -72
+}
+push $N5a190000
+Expression {
+expr0 "parent.useAlpha && a==0.0 ? 0 : r"
+expr1 "parent.useAlpha && a==0.0 ? 0 : g"
+expr2 "parent.useAlpha && a==0.0 ? 0 : b"
+name IgnoreOutsideAlpha
+label "Ingore areas where alpha == 0"
+xpos -646
+ypos -148
+}
+set N61a34800 [stack 0]
+Shuffle {
+alpha blue
+name Z
+xpos -474
+ypos -85
+}
+push $N61a34800
+Shuffle {
+alpha green
+name Y
+xpos -560
+ypos -84
+}
+push $N61a34800
+Shuffle {
+alpha red
+name X
+xpos -646
+ypos -84
+}
+Switch {
+inputs 5
+which {{parent.rampDirection i}}
+name Switch3
+label "Switch between ramp directions"
+xpos -646
+ypos 22
+}
+set N61a69400 [stack 0]
+Clamp {
+channels alpha
+name Clamp2
+xpos -506
+ypos 16
+}
+set N61a69000 [stack 0]
+push $N61a69000
+Expression {
+channel0 alpha
+expr0 abs(1-a)
+channel1 none
+channel2 none
+channel3 none
+name Expression1
+xpos -506
+ypos 54
+}
+ChannelMerge {
+inputs 2
+operation absminus
+name ChannelMerge1
+xpos -396
+ypos 10
+}
+Invert {
+channels alpha
+name Invert1
+xpos -396
+ypos 82
+}
+push $N61a69400
+Switch {
+inputs 2
+which {{parent.insideRamp}}
+name Switch1
+xpos -646
+ypos 88
+}
+Grade {
+channels alpha
+whitepoint {{falloffType?falloff:0}}
+white_clamp true
+name Falloff
+xpos -646
+ypos 114
+}
+set N61a9f800 [stack 0]
+Expression {
+expr3 pow(a,parent.exp)
+name Exponential
+xpos -141
+ypos 169
+}
+push $N61a9f800
+Expression {
+expr3 clamp((a**3),0,1)
+name Cubic
+xpos -265
+ypos 170
+}
+push $N61a9f800
+Expression {
+expr3 clamp(pow2(a),0,1)
+name Quadratic
+xpos -358
+ypos 170
+}
+push $N61a9f800
+Expression {
+expr3 smoothstep(0,1,a)
+name Smooth
+xpos -457
+ypos 171
+}
+push $N61a9f800
+NoOp {
+name Linear
+xpos -544
+ypos 172
+}
+push $N61a9f800
+NoOp {
+name None
+xpos -646
+ypos 172
+}
+Switch {
+inputs 6
+which {{falloffType i}}
+name Switch2
+xpos -646
+ypos 229
+}
+Remove {
+operation keep
+channels alpha
+name Remove1
+xpos -646
+ypos 255
+}
+push $N5a15ac00
+Dot {
+name Dot1
+xpos -756
+ypos 299
+}
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+name Copy1
+xpos -646
+ypos 293
+}
+Output {
+name Output1
+xpos -646
+ypos 418
+}
+end_group

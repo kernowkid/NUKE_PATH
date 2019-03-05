@@ -1,0 +1,81 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+push $cut_paste_input
+Group {
+ name LuminanceKeyer
+ label (alpha)
+ selected true
+ xpos -2152
+ ypos -591
+ addUserKnob {20 User}
+ addUserKnob {41 blackpoint T Grade2.blackpoint}
+ addUserKnob {41 whitepoint T Grade2.whitepoint}
+ addUserKnob {41 gamma T Grade2.gamma}
+}
+ Input {
+  inputs 0
+  name Input
+  xpos -908
+  ypos -369
+ }
+ Dot {
+  name Dot14
+  selected true
+  xpos -874
+  ypos -311
+ }
+set N24cad800 [stack 0]
+ Saturation {
+  saturation 0
+  name Saturation1
+  selected true
+  xpos -1030
+  ypos -314
+ }
+ Shuffle {
+  alpha red
+  name Shuffle1
+  selected true
+  xpos -1030
+  ypos -290
+ }
+ Remove {
+  operation keep
+  channels alpha
+  name Remove1
+  selected true
+  xpos -1030
+  ypos -266
+ }
+ Grade {
+  channels alpha
+  white_clamp true
+  name Grade2
+  selected true
+  xpos -1030
+  ypos -234
+ }
+set N24cac800 [stack 0]
+push $N24cad800
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy1
+  selected true
+  xpos -908
+  ypos -234
+ }
+ Output {
+  name Output1
+  xpos -908
+  ypos -153
+ }
+push $N24cac800
+ Viewer {
+  frame_range 1-100
+  name Viewer1
+  xpos -1180
+  ypos -314
+ }
+end_group

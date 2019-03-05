@@ -1,0 +1,26 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+push $cut_paste_input
+Reformat {
+type scale
+box_width 8000
+box_height 8000
+scale 1.54
+resize none
+name Reformat3
+selected true
+xpos 7263
+ypos -1097
+}
+Camera2 {
+inputs 0
+focal {{1/Reformat3.scale*58.86}}
+frame_rate 25
+name Camera4
+selected true
+xpos 7379
+ypos -1118
+addUserKnob {20 plus}
+addUserKnob {22 BKUP l Bake -STARTLINE T BakeUnderParent()}
+addUserKnob {22 stereoRig l "Stereo Rig" T stereoRig() +STARTLINE}
+}

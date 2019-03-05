@@ -6,7 +6,6 @@ import opendir
 import backdropWithLabel
 import createProjectorCam
 import readLastRender
-import openDJV
 import setPathTab
 import animatedSnap3D
 
@@ -18,11 +17,17 @@ primaryMenu = topMenu.addMenu("PrimaryVFX")
 ##PrimaryVFX plugz
 
 primaryMenu.addCommand('Open Explorer', 'opendir.openInExplorer()', 'shift+e')
-primaryMenu.addCommand('Open DJV', 'openDJV.openReadInDJV()', 'shift+r')
 primaryMenu.addCommand('Render Path Tab', 'setPathTab.setPathTab()', 'shift+w') 
 #primaryMenu.addCommand('Load Render', 'readLastRender.getSequence()', 'alt+r')
 primaryMenu.addCommand('Utils/Backdrop With Label', 'backdropWithLabel.customBackdrop()', 'alt+b', icon='Backdrop.png')  
 primaryMenu.addCommand('Utils/Create Projector Camera', 'createProjectorCam.createProjectorCam()')
+
+
+# DJV is a copyleft flipbook
+os.environ['DJV_VIEW_EXECUTABLE'] = 'C:/Program Files/DJV-1.2.5-win64/bin/djv_view.exe'
+import DJV
+nukescripts.setFlipbookDefaultOption('flipbook', 'DJV')
+
 
 ## shared_toolsets
 # SharedToolSets setup folder

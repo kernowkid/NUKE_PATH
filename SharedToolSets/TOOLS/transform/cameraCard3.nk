@@ -1,0 +1,210 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+push 0
+push 0
+push 0
+push $cut_paste_input
+Group {
+inputs 4
+name CameraCard
+help "This gizmo projects a 2d image onto an image plane at the specified depth, from the camera at a locked frame. The image plane is then captured by the camera.\n\nThe \"proj\" input is optional and allows you to specify a diffrent camera for the projecttion. This can be used for stereo cameras where you'd want to project from a single camera and capture from 2 discreet camera positions."
+selected true
+xpos 22190
+ypos -366
+postage_stamp_frame 1017
+addUserKnob {20 CameraCard}
+addUserKnob {22 connect_to_camera_button l " Connect to Camera " T "camera_selector_panel = nuke.Panel('Camera Selector')\ncameras = \[]\nfor node_iter in \[node for node in nuke.root().nodes() if node.Class() in \[\"SpCamera2\", \"Camera2\"]]:\n    cameras.append(node_iter.name())\ncamera_selector_panel.addEnumerationPulldown(\"Cameras:\", \" \".join(cameras))\n#camera_selector_panel.addBooleanCheckBox(\"Add dot inbetween\", True)\n#camera_selector_panel.addBooleanCheckBox(\"Hide dot input\", True)\n\ncamera_selector_panel.show()\nselected_camera = camera_selector_panel.value('Cameras:')\nif selected_camera:\n    nuke.thisNode().setInput(1, None) \n    nuke.thisNode().connectInput(1, nuke.toNode(selected_camera))" +STARTLINE}
+addUserKnob {26 ""}
+addUserKnob {41 format l "output format" T Reformat1.format}
+addUserKnob {26 ""}
+addUserKnob {4 mode M {matchmove stabilize}}
+addUserKnob {3 projection_frame l "projection frame"}
+projection_frame 1080
+addUserKnob {22 currentframe l " current frame " -STARTLINE T "nuke.thisNode()\['projection_frame'].setValue(nuke.frame())"}
+addUserKnob {8 depth l "card depth" R 0 100}
+depth 100
+addUserKnob {26 ""}
+addUserKnob {14 overscan R 0 100}
+addUserKnob {26 ""}
+addUserKnob {41 samples l "motion blur samples" T ScanlineRender1.samples}
+addUserKnob {41 shutter T ScanlineRender1.shutter}
+addUserKnob {41 shutteroffset l "shutter offset" T ScanlineRender1.shutteroffset}
+addUserKnob {41 shuttercustomoffset l "" -STARTLINE T ScanlineRender1.shuttercustomoffset}
+addUserKnob {26 ""}
+addUserKnob {41 motion_vectors_type l "motion vectors" T ScanlineRender1.motion_vectors_type}
+addUserKnob {41 MB_channel l "motion vector channels" T ScanlineRender1.MB_channel}
+addUserKnob {41 output_shader_vectors l "output vectors" T ScanlineRender1.output_shader_vectors}
+addUserKnob {41 P_channel l "surface point" T ScanlineRender1.P_channel}
+addUserKnob {41 N_channel l "surface normal" T ScanlineRender1.N_channel}
+}
+Input {
+inputs 0
+name img
+xpos -746
+ypos -439
+}
+Dot {
+name Dot3
+xpos -565
+ypos -436
+}
+set N14f04000 [stack 0]
+Dot {
+name Dot1
+xpos -565
+ypos -262
+}
+set Ndd7ca400 [stack 0]
+Dot {
+name Dot2
+xpos -565
+ypos -190
+}
+push $Ndd7ca400
+Input {
+inputs 0
+name cam
+xpos -23
+ypos -587
+number 1
+}
+set N6bfb3c00 [stack 0]
+FrameHold {
+first_frame {{parent.projection_frame}}
+name FrameHold1
+xpos -23
+ypos -472
+disable {{1-mode}}
+}
+Input {
+inputs 0
+name proj
+xpos -510
+ypos -650
+number 2
+}
+push $N6bfb3c00
+Switch {
+inputs 2
+which {{"\[exists parent.input2]"}}
+name Switch2
+xpos -510
+ypos -587
+postage_stamp_frame 1001
+}
+FrameHold {
+first_frame {{parent.projection_frame}}
+name FrameHold
+xpos -510
+ypos -537
+disable {{mode}}
+}
+push $N14f04000
+Project3D {
+inputs 2
+crop false
+name Project3D1
+xpos -510
+ypos -439
+}
+set N6619c800 [stack 0]
+Input {
+inputs 0
+name geo
+xpos -176
+ypos -532
+number 3
+}
+ApplyMaterial {
+inputs 2
+name ApplyMaterial1
+xpos -176
+ypos -439
+}
+push $N6619c800
+Dot {
+name Dot4
+xpos -476
+ypos -367
+}
+Card2 {
+z {{parent.depth}}
+lens_in_focal {{"\[topnode parent.input1].focal(parent.projection_frame)"}}
+lens_in_haperture {{"\[topnode parent.input1].haperture(parent.projection_frame)"}}
+scaling {{((ScanlineRender1.overscan.w*2)+input0.width)/input0.width} {((ScanlineRender1.overscan.h*2)+input0.height)/input0.height} 1}
+matrix {
+    {0 0 0 0}
+    {0 0 0 0}
+    {0 0 0 0}
+    {0 0 0 0}
+  }
+control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+name Card1
+xpos -394
+ypos -370
+}
+TransformGeo {
+useMatrix true
+matrix {
+    {{"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"}}
+    {{"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"}}
+    {{"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"}}
+    {{"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"} {"\[topnode parent.input1].world_matrix(parent.projection_frame)"}}
+  }
+name TransformGeo1
+xpos -291
+ypos -370
+}
+Switch {
+inputs 2
+which {{"\[exists parent.input3]"}}
+name Switch3
+xpos -176
+ypos -370
+postage_stamp_frame 1001
+}
+Reformat {
+inputs 0
+name Reformat1
+xpos 117
+ypos -370
+}
+ScanlineRender {
+inputs 3
+overscan {{parent.overscan.w} {parent.overscan.h}}
+shutteroffset centred
+motion_vectors_type off
+name ScanlineRender1
+xpos -23
+ypos -370
+}
+Merge2 {
+inputs 2
+name Merge1
+xpos -23
+ypos -265
+disable true
+}
+Switch {
+inputs 2
+which {{parent.disable}}
+name Switch1
+xpos -23
+ypos -193
+}
+Output {
+name Output
+xpos -23
+ypos -126
+}
+end_group

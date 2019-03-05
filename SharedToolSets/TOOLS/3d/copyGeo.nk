@@ -1,0 +1,2399 @@
+set cut_paste_input [stack 0]
+version 9.0 v6
+push $cut_paste_input
+Group {
+ name CopyGeo1
+ selected true
+ xpos 6309
+ ypos -239
+ addUserKnob {20 "" l User}
+ addUserKnob {3 iterations}
+ iterations 1
+ addUserKnob {6 look_at_previous l "look at parent copy (overrides look input)" -STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {41 display T tg1.display}
+ addUserKnob {41 gl_render_mode l "knob display \$value" +INVISIBLE T tg1.gl_render_mode}
+ addUserKnob {41 gl_wireframe_overlay +INVISIBLE T tg1.gl_wireframe_overlay}
+ addUserKnob {41 gl_display l "knob display 0" +INVISIBLE T tg1.gl_display}
+ addUserKnob {41 selectable T tg1.selectable}
+ addUserKnob {41 gl_selectable l "knob selectable \$value" +INVISIBLE T tg1.gl_selectable}
+ addUserKnob {41 render +INVISIBLE T tg1.render}
+ addUserKnob {41 transform T tg1.transform}
+ addUserKnob {26 "" l " "}
+ addUserKnob {41 import_chan l "import chan file" +INVISIBLE T tg1.import_chan}
+ addUserKnob {41 export_chan l "export chan file" +INVISIBLE T tg1.export_chan}
+ addUserKnob {41 xform_order l "transform order" T tg1.xform_order}
+ addUserKnob {41 rot_order l "rotation order" T tg1.rot_order}
+ addUserKnob {41 translate T tg1.translate}
+ addUserKnob {41 rotate T tg1.rotate}
+ addUserKnob {41 scaling l scale T tg1.scaling}
+ addUserKnob {41 uniform_scale l "uniform scale" T tg1.uniform_scale}
+ addUserKnob {41 skew T tg1.skew}
+ addUserKnob {41 pivot T tg1.pivot}
+ addUserKnob {20 "" l Look}
+ addUserKnob {41 look_axis l "look axis" T tg1.look_axis}
+ addUserKnob {41 rotate_x l "rotate X" +INVISIBLE T tg1.rotate_x}
+ addUserKnob {41 rotate_y l "rotate Y" +INVISIBLE T tg1.rotate_y}
+ addUserKnob {41 rotate_z l "rotate Z" +INVISIBLE T tg1.rotate_z}
+ addUserKnob {41 look_strength l "look strength" T tg1.look_strength}
+ addUserKnob {26 "" l " "}
+ addUserKnob {41 use_quaternions l "use quaternions" +INVISIBLE T tg1.use_quaternions}
+}
+ Input {
+  inputs 0
+  name look
+  xpos -447
+  ypos -429
+  number 1
+ }
+set Naff12400 [stack 0]
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push $Naff12400
+push 0
+ Switch {
+  inputs 2
+  which {{look_at_previous?0:1}}
+  name LookAtSwitch
+  xpos -114
+  ypos -429
+ }
+ set Caff12800 [stack 0]
+push 0
+ Input {
+  inputs 0
+  name geom
+  xpos 235
+  ypos -523
+ }
+ TransformGeo {
+  inputs 3
+  name TransformGeo1
+  xpos 214
+  ypos -429
+ }
+set Naff13000 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -112
+  ypos -373
+  selected false
+ }
+push 0
+push $Naff13000
+ TransformGeo {
+  inputs 3
+  look_strength 0.55
+  name tg1
+  xpos 80
+  ypos -373
+ }
+ set Caff13800 [stack 0]
+set Naff13800 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -109
+  ypos -330
+  selected false
+ }
+push 0
+push $Naff13800
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos -330
+  selected false
+ }
+set Nafee7c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -113
+  ypos -290
+  selected false
+ }
+push 0
+push $Nafee7c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos -291
+  selected false
+ }
+set Nafee4400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -104
+  ypos -249
+  selected false
+ }
+push 0
+push $Nafee4400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos -254
+  selected false
+ }
+set Nafee4c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -110
+  ypos -204
+  selected false
+ }
+push 0
+push $Nafee4c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos -216
+  selected false
+ }
+set Nafee5400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -107
+  ypos -162
+  selected false
+ }
+push 0
+push $Nafee5400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos -178
+  selected false
+ }
+set Nafee5c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -108
+  ypos -125
+  selected false
+ }
+push 0
+push $Nafee5c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos -140
+  selected false
+ }
+set Nafee2400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -108
+  ypos -93
+  selected false
+ }
+push 0
+push $Nafee2400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos -102
+  selected false
+ }
+set Nafee2c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -102
+  ypos -65
+  selected false
+ }
+push 0
+push $Nafee2c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos -64
+  selected false
+ }
+set Nafee3400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -106
+  ypos -31
+  selected false
+ }
+push 0
+push $Nafee3400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos -26
+  selected false
+ }
+set Nafee3c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -96
+  ypos 7
+  selected false
+ }
+push 0
+push $Nafee3c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 12
+  selected false
+ }
+set Nafee0400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -102
+  ypos 46
+  selected false
+ }
+push 0
+push $Nafee0400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 50
+  selected false
+ }
+set Nafee0c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -97
+  ypos 84
+  selected false
+ }
+push 0
+push $Nafee0c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 88
+  selected false
+ }
+set Nafee1400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -106
+  ypos 121
+  selected false
+ }
+push 0
+push $Nafee1400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 121
+  selected false
+ }
+set Nafee1c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -99
+  ypos 158
+  selected false
+ }
+push 0
+push $Nafee1c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 164
+  selected false
+ }
+set Nafede400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -108
+  ypos 203
+  selected false
+ }
+push 0
+push $Nafede400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 203
+  selected false
+ }
+set Nafedec00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -115
+  ypos 236
+  selected false
+ }
+push 0
+push $Nafedec00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 240
+  selected false
+ }
+set Nafedf400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -119
+  ypos 277
+  selected false
+ }
+push 0
+push $Nafedf400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 278
+  selected false
+ }
+set Nafedfc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -116
+  ypos 313
+  selected false
+ }
+push 0
+push $Nafedfc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 316
+  selected false
+ }
+set Nafedc400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -111
+  ypos 354
+  selected true
+ }
+push 0
+push $Nafedc400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 354
+  selected false
+ }
+set Nafedcc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -123
+  ypos 388
+  selected false
+ }
+push 0
+push $Nafedcc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 392
+  selected false
+ }
+set Nafedd400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -122
+  ypos 429
+  selected false
+ }
+push 0
+push $Nafedd400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 430
+  selected false
+ }
+set Nafeddc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -128
+  ypos 464
+  selected false
+ }
+push 0
+push $Nafeddc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 468
+  selected false
+ }
+set Nafeda400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -112
+  ypos 502
+  selected false
+ }
+push 0
+push $Nafeda400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 506
+  selected false
+ }
+set Nafedac00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -113
+  ypos 541
+  selected false
+ }
+push 0
+push $Nafedac00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 544
+  selected false
+ }
+set Nafedb400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -107
+  ypos 578
+  selected false
+ }
+push 0
+push $Nafedb400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 582
+  selected false
+ }
+set Nafedbc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -120
+  ypos 615
+  selected false
+ }
+push 0
+push $Nafedbc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 620
+  selected false
+ }
+set Nafed8400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -116
+  ypos 657
+  selected false
+ }
+push 0
+push $Nafed8400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 658
+  selected false
+ }
+set Nafed8c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -109
+  ypos 694
+  selected false
+ }
+push 0
+push $Nafed8c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 696
+  selected false
+ }
+set Nafed9400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -114
+  ypos 731
+  selected false
+ }
+push 0
+push $Nafed9400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 734
+  selected false
+ }
+set Nafed9c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -105
+  ypos 774
+  selected false
+ }
+push 0
+push $Nafed9c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 772
+  selected false
+ }
+set Nafed6400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -100
+  ypos 810
+  selected false
+ }
+push 0
+push $Nafed6400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 810
+  selected false
+ }
+set Nafed6c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -103
+  ypos 847
+  selected false
+ }
+push 0
+push $Nafed6c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 848
+  selected false
+ }
+set Nafed7400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -121
+  ypos 886
+  selected false
+ }
+push 0
+push $Nafed7400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 886
+  selected false
+ }
+set Nafed7c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -112
+  ypos 924
+  selected false
+ }
+push 0
+push $Nafed7c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 924
+  selected false
+ }
+set Nafed4400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -116
+  ypos 962
+  selected false
+ }
+push 0
+push $Nafed4400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 962
+  selected false
+ }
+set Nafed4c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -110
+  ypos 1000
+  selected false
+ }
+push 0
+push $Nafed4c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1000
+  selected false
+ }
+set Nafed5400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -97
+  ypos 1039
+  selected false
+ }
+push 0
+push $Nafed5400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1038
+  selected false
+ }
+set Nafed5c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -111
+  ypos 1076
+  selected false
+ }
+push 0
+push $Nafed5c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1076
+  selected false
+ }
+set Nafed2400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -102
+  ypos 1114
+  selected false
+ }
+push 0
+push $Nafed2400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1114
+  selected false
+ }
+set Nafed2c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -97
+  ypos 1152
+  selected false
+ }
+push 0
+push $Nafed2c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1152
+  selected false
+ }
+set Nafed3400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -113
+  ypos 1188
+  selected false
+ }
+push 0
+push $Nafed3400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1190
+  selected false
+ }
+set Nafed3c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -108
+  ypos 1228
+  selected false
+ }
+push 0
+push $Nafed3c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1228
+  selected false
+ }
+set Nafed0400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -116
+  ypos 1266
+  selected false
+ }
+push 0
+push $Nafed0400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1266
+  selected false
+ }
+set Nafed0c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -112
+  ypos 1306
+  selected false
+ }
+push 0
+push $Nafed0c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1304
+  selected false
+ }
+set Nafed1400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -104
+  ypos 1338
+  selected false
+ }
+push 0
+push $Nafed1400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1342
+  selected false
+ }
+set Nafed1c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -109
+  ypos 1380
+  selected false
+ }
+push 0
+push $Nafed1c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1380
+  selected false
+ }
+set Nafece400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -97
+  ypos 1420
+  selected false
+ }
+push 0
+push $Nafece400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1418
+  selected false
+ }
+set Nafecec00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -110
+  ypos 1453
+  selected false
+ }
+push 0
+push $Nafecec00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1456
+  selected false
+ }
+set Nafecf400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -97
+  ypos 1497
+  selected false
+ }
+push 0
+push $Nafecf400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1494
+  selected false
+ }
+set Nafecfc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -92
+  ypos 1530
+  selected false
+ }
+push 0
+push $Nafecfc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1532
+  selected false
+ }
+set Nafecc400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -100
+  ypos 1570
+  selected false
+ }
+push 0
+push $Nafecc400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1570
+  selected false
+ }
+set Nafeccc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -122
+  ypos 1608
+  selected false
+ }
+push 0
+push $Nafeccc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1608
+  selected false
+ }
+set Nafecd400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -118
+  ypos 1646
+  selected false
+ }
+push 0
+push $Nafecd400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1646
+  selected false
+ }
+set Nafecdc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -128
+  ypos 1684
+  selected false
+ }
+push 0
+push $Nafecdc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1684
+  selected false
+ }
+set Nafeca400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -136
+  ypos 1736
+  selected false
+ }
+push 0
+push $Nafeca400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1722
+  selected false
+ }
+set Nafecac00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -142
+  ypos 1767
+  selected false
+ }
+push 0
+push $Nafecac00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1760
+  selected false
+ }
+set Nafecb400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -139
+  ypos 1798
+  selected false
+ }
+push 0
+push $Nafecb400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1798
+  selected false
+ }
+set Nafe9fc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -140
+  ypos 1836
+  selected false
+ }
+push 0
+push $Nafe9fc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1836
+  selected false
+ }
+set Nafe9c400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -145
+  ypos 1880
+  selected false
+ }
+push 0
+push $Nafe9c400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1874
+  selected false
+ }
+set Nafe9cc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -132
+  ypos 1913
+  selected false
+ }
+push 0
+push $Nafe9cc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1912
+  selected false
+ }
+set Nafe9d400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -146
+  ypos 1949
+  selected false
+ }
+push 0
+push $Nafe9d400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1950
+  selected false
+ }
+set Nafe9dc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -172
+  ypos 1983
+  selected false
+ }
+push 0
+push $Nafe9dc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 1988
+  selected false
+ }
+set Nafe9a400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -165
+  ypos 2021
+  selected false
+ }
+push 0
+push $Nafe9a400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2026
+  selected false
+ }
+set Nafe9ac00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -175
+  ypos 2062
+  selected false
+ }
+push 0
+push $Nafe9ac00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2064
+  selected false
+ }
+set Nafe98c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -170
+  ypos 2103
+  selected false
+ }
+push 0
+push $Nafe98c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2102
+  selected false
+ }
+set Nafe99400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -158
+  ypos 2142
+  selected false
+ }
+push 0
+push $Nafe99400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2140
+  selected false
+ }
+set Nafe99c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -142
+  ypos 2180
+  selected false
+ }
+push 0
+push $Nafe99c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2178
+  selected false
+ }
+set Nafe96400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -143
+  ypos 2216
+  selected false
+ }
+push 0
+push $Nafe96400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2216
+  selected false
+ }
+set Nafe96c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -138
+  ypos 2258
+  selected false
+ }
+push 0
+push $Nafe96c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2254
+  selected false
+ }
+set Nafe97400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -155
+  ypos 2299
+  selected false
+ }
+push 0
+push $Nafe97400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2292
+  selected false
+ }
+set Nafe97c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -162
+  ypos 2336
+  selected false
+ }
+push 0
+push $Nafe97c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2330
+  selected false
+ }
+set Nafe94400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -143
+  ypos 2370
+  selected false
+ }
+push 0
+push $Nafe94400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2368
+  selected false
+ }
+set Nafe94c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -121
+  ypos 2412
+  selected false
+ }
+push 0
+push $Nafe94c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2406
+  selected false
+ }
+set Nafe95400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -142
+  ypos 2448
+  selected false
+ }
+push 0
+push $Nafe95400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2444
+  selected false
+ }
+set Nafe95c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -148
+  ypos 2484
+  selected false
+ }
+push 0
+push $Nafe95c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2482
+  selected false
+ }
+set Nafe92400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -140
+  ypos 2523
+  selected false
+ }
+push 0
+push $Nafe92400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2520
+  selected false
+ }
+set Nafe92c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -160
+  ypos 2558
+  selected false
+ }
+push 0
+push $Nafe92c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2558
+  selected false
+ }
+set Nafe93400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -142
+  ypos 2603
+  selected false
+ }
+push 0
+push $Nafe93400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2596
+  selected false
+ }
+set Nafe93c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -136
+  ypos 2641
+  selected false
+ }
+push 0
+push $Nafe93c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2634
+  selected false
+ }
+set Nafe90400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -125
+  ypos 2675
+  selected false
+ }
+push 0
+push $Nafe90400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2672
+  selected false
+ }
+set Nafe90c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -106
+  ypos 2709
+  selected false
+ }
+push 0
+push $Nafe90c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2710
+  selected false
+ }
+set Nafe91400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -96
+  ypos 2749
+  selected false
+ }
+push 0
+push $Nafe91400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2748
+  selected false
+ }
+set Nafe91c00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -91
+  ypos 2790
+  selected false
+ }
+push 0
+push $Nafe91c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2786
+  selected false
+ }
+set Nafe8e400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -131
+  ypos 2820
+  selected false
+ }
+push 0
+push $Nafe8e400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2824
+  selected false
+ }
+set Nafe8ec00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -130
+  ypos 2858
+  selected false
+ }
+push 0
+push $Nafe8ec00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2862
+  selected false
+ }
+set Nafe8f400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -96
+  ypos 2898
+  selected false
+ }
+push 0
+push $Nafe8f400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2900
+  selected false
+ }
+set Nafe8fc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -106
+  ypos 2938
+  selected false
+ }
+push 0
+push $Nafe8fc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2938
+  selected false
+ }
+set Nafe8c400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -63
+  ypos 2976
+  selected false
+ }
+push 0
+push $Nafe8c400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 2976
+  selected false
+ }
+set Nafe8cc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -120
+  ypos 3012
+  selected false
+ }
+push 0
+push $Nafe8cc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3014
+  selected false
+ }
+set Nafe8d400 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -112
+  ypos 3052
+  selected false
+ }
+push 0
+push $Nafe8d400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3052
+  selected false
+ }
+set Nafe8dc00 [stack 0]
+clone $Caff12800 {
+  inputs 2
+  xpos -120
+  ypos 3089
+  selected false
+ }
+push 0
+push $Nafe8dc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3090
+  selected false
+ }
+set Nafe8a400 [stack 0]
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch92
+  xpos 513
+  ypos 3090
+ }
+push $Naff12400
+push $Nafe8a400
+clone $Caff12800 {
+  inputs 2
+  xpos -150
+  ypos 3123
+  selected false
+ }
+push 0
+push $Nafe8a400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3128
+  selected false
+ }
+set Nafe8b000 [stack 0]
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch93
+  xpos 513
+  ypos 3128
+ }
+push $Naff12400
+push $Nafe8b000
+clone $Caff12800 {
+  inputs 2
+  xpos -129
+  ypos 3166
+  selected false
+ }
+push 0
+push $Nafe8b000
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3166
+  selected false
+ }
+set Nafe8bc00 [stack 0]
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch94
+  xpos 513
+  ypos 3166
+ }
+push $Naff12400
+push $Nafe8bc00
+clone $Caff12800 {
+  inputs 2
+  xpos -109
+  ypos 3196
+  selected false
+ }
+push 0
+push $Nafe8bc00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3204
+  selected false
+ }
+set Nafe88800 [stack 0]
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch95
+  xpos 513
+  ypos 3204
+ }
+push $Naff12400
+push $Nafe88800
+clone $Caff12800 {
+  inputs 2
+  xpos -112
+  ypos 3239
+  selected false
+ }
+push 0
+push $Nafe88800
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3242
+  selected false
+ }
+set Nafe89400 [stack 0]
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch96
+  xpos 513
+  ypos 3242
+ }
+push $Naff12400
+push $Nafe89400
+clone $Caff12800 {
+  inputs 2
+  xpos -122
+  ypos 3275
+  selected false
+ }
+push 0
+push $Nafe89400
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3280
+  selected false
+ }
+set Nafe86000 [stack 0]
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch97
+  xpos 513
+  ypos 3280
+ }
+push $Naff12400
+push $Nafe86000
+clone $Caff12800 {
+  inputs 2
+  xpos -122
+  ypos 3314
+  selected false
+ }
+push 0
+push $Nafe86000
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3318
+  selected false
+ }
+set Nafe86c00 [stack 0]
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch98
+  xpos 513
+  ypos 3318
+ }
+push $Naff12400
+push $Nafe86c00
+clone $Caff12800 {
+  inputs 2
+  xpos -134
+  ypos 3351
+  selected false
+ }
+push 0
+push $Nafe86c00
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3356
+  selected false
+ }
+set Nafe87800 [stack 0]
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch99
+  xpos 513
+  ypos 3356
+ }
+push $Naff12400
+push $Nafe87800
+clone $Caff12800 {
+  inputs 2
+  xpos -112
+  ypos 3389
+  selected false
+ }
+push 0
+push $Nafe87800
+clone $Caff13800 {
+  inputs 3
+  xpos 80
+  ypos 3394
+  selected false
+ }
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch100
+  xpos 513
+  ypos 3394
+ }
+push $Nafe91c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch83
+  xpos 513
+  ypos 2748
+ }
+push $Nafe8e400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch84
+  xpos 513
+  ypos 2786
+ }
+push $Nafe8ec00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch85
+  xpos 513
+  ypos 2824
+ }
+push $Nafe8f400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch86
+  xpos 513
+  ypos 2862
+ }
+push $Nafe8fc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch87
+  xpos 513
+  ypos 2900
+ }
+push $Nafe8c400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch88
+  xpos 513
+  ypos 2938
+ }
+push $Nafe8cc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch89
+  xpos 513
+  ypos 2976
+ }
+push $Nafe8d400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch90
+  xpos 513
+  ypos 3014
+ }
+push $Nafe8dc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch91
+  xpos 513
+  ypos 3052
+ }
+push $Nafe94400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch72
+  xpos 513
+  ypos 2330
+ }
+push $Nafe94c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch73
+  xpos 513
+  ypos 2368
+ }
+push $Nafe95400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch74
+  xpos 513
+  ypos 2406
+ }
+push $Nafe95c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch75
+  xpos 513
+  ypos 2444
+ }
+push $Nafe92400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch76
+  xpos 513
+  ypos 2482
+ }
+push $Nafe92c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch77
+  xpos 513
+  ypos 2520
+ }
+push $Nafe93400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch78
+  xpos 513
+  ypos 2558
+ }
+push $Nafe93c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch79
+  xpos 513
+  ypos 2596
+ }
+push $Nafe90400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch80
+  xpos 513
+  ypos 2634
+ }
+push $Nafe90c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch81
+  xpos 513
+  ypos 2672
+ }
+push $Nafe91400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch82
+  xpos 513
+  ypos 2710
+ }
+push $Nafe9d400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch61
+  xpos 513
+  ypos 1912
+ }
+push $Nafe9dc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch62
+  xpos 513
+  ypos 1950
+ }
+push $Nafe9a400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch63
+  xpos 513
+  ypos 1988
+ }
+push $Nafe9ac00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch64
+  xpos 513
+  ypos 2026
+ }
+push $Nafe98c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch65
+  xpos 513
+  ypos 2064
+ }
+push $Nafe99400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch66
+  xpos 513
+  ypos 2102
+ }
+push $Nafe99c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch67
+  xpos 513
+  ypos 2140
+ }
+push $Nafe96400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch68
+  xpos 513
+  ypos 2178
+ }
+push $Nafe96c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch69
+  xpos 513
+  ypos 2216
+ }
+push $Nafe97400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch70
+  xpos 513
+  ypos 2254
+ }
+push $Nafe97c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch71
+  xpos 513
+  ypos 2292
+ }
+push $Nafed3c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch42
+  xpos 513
+  ypos 1190
+ }
+push $Nafed0400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch43
+  xpos 513
+  ypos 1228
+ }
+push $Nafed0c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch44
+  xpos 513
+  ypos 1266
+ }
+push $Nafed1400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch45
+  xpos 513
+  ypos 1304
+ }
+push $Nafed1c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch46
+  xpos 513
+  ypos 1342
+ }
+push $Nafece400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch47
+  xpos 513
+  ypos 1380
+ }
+push $Nafecec00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch48
+  xpos 513
+  ypos 1418
+ }
+push $Nafecf400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch49
+  xpos 513
+  ypos 1456
+ }
+push $Nafecfc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch50
+  xpos 513
+  ypos 1494
+ }
+push $Nafecc400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch51
+  xpos 513
+  ypos 1532
+ }
+push $Nafeccc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch52
+  xpos 513
+  ypos 1570
+ }
+push $Nafecd400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch53
+  xpos 513
+  ypos 1608
+ }
+push $Nafecdc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch54
+  xpos 513
+  ypos 1646
+ }
+push $Nafecac00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch56
+  xpos 513
+  ypos 1722
+ }
+push $Nafecb400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch57
+  xpos 513
+  ypos 1760
+ }
+push $Nafe9fc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch58
+  xpos 513
+  ypos 1798
+ }
+push $Nafe9c400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch59
+  xpos 513
+  ypos 1836
+ }
+push $Nafe9cc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch60
+  xpos 513
+  ypos 1874
+ }
+push $Nafeca400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch55
+  xpos 513
+  ypos 1684
+ }
+push $Nafeda400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch23
+  xpos 513
+  ypos 468
+ }
+push $Nafedac00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch24
+  xpos 513
+  ypos 506
+ }
+push $Nafedbc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch26
+  xpos 513
+  ypos 582
+ }
+push $Nafed8400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch27
+  xpos 513
+  ypos 620
+ }
+push $Nafed8c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch28
+  xpos 513
+  ypos 658
+ }
+push $Nafed9400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch29
+  xpos 513
+  ypos 696
+ }
+push $Nafed9c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch30
+  xpos 513
+  ypos 734
+ }
+push $Nafed6400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch31
+  xpos 513
+  ypos 772
+ }
+push $Nafed6c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch32
+  xpos 513
+  ypos 810
+ }
+push $Nafed7400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch33
+  xpos 513
+  ypos 848
+ }
+push $Nafed7c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch34
+  xpos 513
+  ypos 886
+ }
+push $Nafed4400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch35
+  xpos 513
+  ypos 924
+ }
+push $Nafed4c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch36
+  xpos 513
+  ypos 962
+ }
+push $Nafed5c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch38
+  xpos 513
+  ypos 1038
+ }
+push $Nafed2400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch39
+  xpos 513
+  ypos 1076
+ }
+push $Nafed2c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch40
+  xpos 513
+  ypos 1114
+ }
+push $Nafed3400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch41
+  xpos 513
+  ypos 1152
+ }
+push $Nafedb400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch25
+  xpos 513
+  ypos 544
+ }
+push $Nafed5400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch37
+  xpos 513
+  ypos 1000
+ }
+push $Nafee2c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch8
+  xpos 513
+  ypos -102
+ }
+push $Nafee3400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch9
+  xpos 513
+  ypos -64
+ }
+push $Nafee3c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch10
+  xpos 513
+  ypos -26
+ }
+push $Nafee0c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch12
+  xpos 513
+  ypos 50
+ }
+push $Nafee1400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch13
+  xpos 513
+  ypos 88
+ }
+push $Nafee1c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch14
+  xpos 513
+  ypos 126
+ }
+push $Nafede400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch15
+  xpos 513
+  ypos 164
+ }
+push $Nafedec00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch16
+  xpos 513
+  ypos 202
+ }
+push $Nafedf400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch17
+  xpos 513
+  ypos 240
+ }
+push $Nafedfc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch18
+  xpos 513
+  ypos 278
+ }
+push $Nafedc400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch19
+  xpos 513
+  ypos 316
+ }
+push $Nafedcc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch20
+  xpos 513
+  ypos 354
+ }
+push $Nafedd400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch21
+  xpos 513
+  ypos 392
+ }
+push $Nafeddc00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch22
+  xpos 513
+  ypos 430
+ }
+push $Nafee0400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch11
+  xpos 513
+  ypos 12
+ }
+push $Nafee4400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch3
+  xpos 507
+  ypos -290
+ }
+push $Nafee5c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch6
+  xpos 513
+  ypos -178
+ }
+push $Nafee2400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch7
+  xpos 513
+  ypos -140
+ }
+push $Nafee7c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch2
+  xpos 507
+  ypos -328
+ }
+push $Nafee5400
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch5
+  xpos 510
+  ypos -213
+ }
+push $Nafee4c00
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch4
+  xpos 507
+  ypos -254
+ }
+push $Naff13800
+ Switch {
+  which {{"iterations >= \[string range \[value name] 6 end]?0:1"}}
+  name Switch1
+  xpos 503
+  ypos -373
+ }
+push $Naff13000
+ Dot {
+  name Dot1
+  tile_color 0xc0c0c000
+  xpos 585
+  ypos -423
+ }
+ Scene {
+  inputs 101
+  name Scene1
+  xpos 2640
+  ypos 1245
+ }
+ Output {
+  name Output1
+  xpos 3323
+  ypos 1265
+ }
+ StickyNote {
+  inputs 0
+  name StickyNote1
+  label "CopyGeo by Charles Savoie (chuckies@d2.com)\nSupports a maximum of 100 iterations.\nThis group is pretty ugly, but fun..."
+  note_font_size 70
+  xpos -494
+  ypos -898
+ }
+end_group

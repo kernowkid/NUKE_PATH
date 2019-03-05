@@ -1,0 +1,339 @@
+set cut_paste_input [stack 0]
+version 10.5 v5
+push 0
+push 0
+push 0
+push 0
+push $cut_paste_input
+Group {
+ inputs 5
+ name placeImage
+ knobChanged "\n\nn = nuke.thisKnob().name()\n\nv = nuke.thisNode()\['view'].value()\ni =  nuke.thisNode()\['imgOp']\n\nif n=='view':\n    if v==1:\n        i.setVisible(False)\n    else:\n        i.setVisible(True)\n\npg = int(nuke.thisNode()\['placeGeo'].getValue())\nax =  nuke.thisNode()\['addAxis']\n\nif pg==0:\n  ax.setVisible(False)\nelse:\n  ax.setVisible(True)\n\n"
+ selected true
+ xpos 10686
+ ypos -1102
+ addUserKnob {20 User}
+ addUserKnob {52 hideknobcallback l hideknob -STARTLINE T "nuke.thisNode().knob('knobChanged').setValue('''\n\nn = nuke.thisKnob().name()\n\nv = nuke.thisNode()\['view'].value()\ni =  nuke.thisNode()\['imgOp']\n\nif n=='view':\n    if v==1:\n        i.setVisible(False)\n    else:\n        i.setVisible(True)\n\npg = int(nuke.thisNode()\['placeGeo'].getValue())\nax =  nuke.thisNode()\['addAxis']\n\nif pg==0:\n  ax.setVisible(False)\nelse:\n  ax.setVisible(True)\n\n''')\n"}
+ addUserKnob {4 view M {image "sample image" "" "" ""}}
+ addUserKnob {4 imgOp l "image options" M {image "image over plate" plate}}
+ imgOp "image over plate"
+ addUserKnob {26 ""}
+ addUserKnob {4 sample M {"p pass" geo ""}}
+ addUserKnob {26 tip l "" +STARTLINE T "Use Ctrl + Alt to sample xyz position"}
+ addUserKnob {41 center_1 l center T NoOp1.center}
+ addUserKnob {26 ""}
+ addUserKnob {41 scaling l scale T Card2.scaling}
+ addUserKnob {41 rotate T Card2.rotate}
+ addUserKnob {41 uniform_scale l "uniform scale" T Card2.uniform_scale}
+ addUserKnob {6 lookCam l "look at camera" +STARTLINE}
+ addUserKnob {6 fishEye l "output fish eye" -STARTLINE}
+ addUserKnob {6 placeGeo l INVISIBLE t "  " -STARTLINE +INVISIBLE}
+ addUserKnob {26 "" +STARTLINE}
+ addUserKnob {41 addAxis l Axis T NoOp1.addAxis}
+ addUserKnob {41 addCard l Card -STARTLINE T NoOp1.addCard}
+ addUserKnob {41 addSphere l Sphere -STARTLINE T NoOp1.addSphere}
+ addUserKnob {41 addCube l Cube -STARTLINE T NoOp1.addCube}
+ addUserKnob {41 addCylinder l Cylinder -STARTLINE T NoOp1.addCylinder}
+ addUserKnob {26 ""}
+ addUserKnob {41 format l "output format" T Reformat1.format}
+ addUserKnob {41 type T Reformat1.type}
+ addUserKnob {26 ""}
+ addUserKnob {41 resize l "resize type" T Reformat1.resize}
+ addUserKnob {41 center -STARTLINE T Reformat1.center}
+ addUserKnob {41 flip -STARTLINE T Reformat1.flip}
+ addUserKnob {41 flop -STARTLINE T Reformat1.flop}
+ addUserKnob {41 turn -STARTLINE T Reformat1.turn}
+ addUserKnob {41 filter T Reformat1.filter}
+ addUserKnob {41 clamp -STARTLINE T Reformat1.clamp}
+ addUserKnob {41 black_outside l "black outside" -STARTLINE T Reformat1.black_outside}
+ addUserKnob {41 pbb l "preserve bounding box" -STARTLINE T Reformat1.pbb}
+}
+ Input {
+  inputs 0
+  name cam
+  xpos -658
+  ypos 35
+  number 2
+ }
+ Dot {
+  name Dot3
+  xpos -624
+  ypos 112
+ }
+set N62c23000 [stack 0]
+ Dot {
+  name Dot11
+  xpos -624
+  ypos 179
+ }
+set N62c22c00 [stack 0]
+ Dot {
+  name Dot10
+  xpos -861
+  ypos 179
+ }
+set N62c22800 [stack 0]
+ Dot {
+  name Dot12
+  xpos -971
+  ypos 179
+ }
+push $N62c23000
+ Switch {
+  which {{!parent.lookCam}}
+  name Switch5
+  label "\[value which]"
+  xpos -858
+  ypos 102
+ }
+push 0
+ Input {
+  inputs 0
+  name imgInput
+  xpos -996
+  ypos -10
+  number 4
+ }
+ Card2 {
+  pivot {-0.004924040288 0.07999999821 -0.07413175702}
+  control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+  name Card2
+  xpos -996
+  ypos 40
+ }
+ TransformGeo {
+  inputs 3
+  translate {{parent.NoOp1.geopos} {parent.NoOp1.geopos} {parent.NoOp1.geopos}}
+  uniform_scale 10
+  pivot {0 -0.27 0}
+  name TransformGeo1
+  xpos -996
+  ypos 109
+ }
+set N62c5f800 [stack 0]
+ Reformat {
+  inputs 0
+  format "1024 1024 0 0 1024 1024 1 square_1K"
+  name Reformat1
+  xpos -780
+  ypos -126
+ }
+set N62c5f400 [stack 0]
+ Dot {
+  name Dot9
+  xpos -1038
+  ypos -116
+ }
+ ScanlineRender {
+  inputs 3
+  conservative_shader_sampling false
+  projection_mode spherical
+  motion_vectors_type distance
+  MB_channel forward
+  name ScanlineRender2
+  xpos -1072
+  ypos 238
+ }
+ SphericalTransform {
+  input "Lat Long map"
+  output "Light Probe"
+  format {{{Reformat1.format}}}
+  fix true
+  name SphericalTransform2
+  xpos -1072
+  ypos 314
+ }
+push $N62c22800
+push $N62c5f800
+push $N62c5f400
+ Dot {
+  name Dot8
+  xpos -746
+  ypos 235
+ }
+set N62cb1c00 [stack 0]
+ ScanlineRender {
+  inputs 3
+  shutteroffset centred
+  motion_vectors_type off
+  MB_channel none
+  output_shader_vectors true
+  P_channel motion
+  name ScanlineRender1
+  xpos -948
+  ypos 232
+ }
+ Switch {
+  inputs 2
+  which {{parent.fishEye}}
+  name Switch4
+  label "\[value which]"
+  xpos -948
+  ypos 314
+ }
+ Dot {
+  name Dot4
+  xpos -914
+  ypos 388
+ }
+set N62cb1400 [stack 0]
+ Dot {
+  name Dot2
+  xpos -914
+  ypos 527
+ }
+push $N62c22c00
+ Input {
+  inputs 0
+  name Geo
+  xpos -511
+  ypos 34
+  number 1
+ }
+push $N62cb1c00
+ ScanlineRender {
+  inputs 3
+  shutteroffset centred
+  MB_channel rgba
+  output_shader_vectors true
+  P_channel motion
+  name ScanlineRender6
+  xpos -511
+  ypos 232
+ }
+ Shuffle {
+  in motion
+  name Shuffle6
+  xpos -511
+  ypos 272
+ }
+ Input {
+  inputs 0
+  name p
+  xpos -381
+  ypos 32
+  number 3
+ }
+ Dot {
+  name Dot1
+  xpos -347
+  ypos 216
+ }
+ Switch {
+  inputs 2
+  which {{parent.sample}}
+  name Switch1
+  xpos -466
+  ypos 330
+  postage_stamp_frame 1001
+ }
+ Dot {
+  name Dot13
+  xpos -432
+  ypos 475
+ }
+set N62df7800 [stack 0]
+ Input {
+  inputs 0
+  name Plate
+  xpos -237
+  ypos 34
+ }
+ Dot {
+  name Dot5
+  xpos -203
+  ypos 331
+ }
+set N62df7000 [stack 0]
+push $N62cb1400
+ Dot {
+  name Dot6
+  xpos -345
+  ypos 388
+ }
+set N62df6c00 [stack 0]
+push $N62df7000
+ Merge2 {
+  inputs 2
+  name Merge1
+  xpos -295
+  ypos 385
+ }
+push $N62df6c00
+ Dot {
+  name Dot7
+  xpos -345
+  ypos 445
+ }
+ Switch {
+  inputs 3
+  which {{parent.imgOp}}
+  name Switch3
+  label "\[value which]"
+  xpos -237
+  ypos 435
+ }
+ Switch {
+  inputs 3
+  which {{parent.view}}
+  name Switch2
+  xpos -237
+  ypos 524
+  postage_stamp_frame 1001
+ }
+ Output {
+  name Output1
+  xpos -237
+  ypos 591
+ }
+ Viewer {
+  inputs 0
+  frame_range 4900-7400
+  fps 60
+  name Viewer1
+  xpos -619
+  ypos 689
+ }
+push $N62df7800
+ Add {
+  channels rgb
+  value {{-center} {-center} {-center} {curve}}
+  name Center
+  xpos -572
+  ypos 611
+  addUserKnob {20 User}
+  addUserKnob {18 center}
+  center {-79.4375 -21.46875 -42.84375}
+  addUserKnob {6 center_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+ }
+push $N62df7800
+ NoOp {
+  name NoOp1
+  selected true
+  xpos -466
+  ypos 610
+  addUserKnob {20 User}
+  addUserKnob {18 center}
+  center {0 0 0}
+  addUserKnob {6 center_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+  addUserKnob {18 geopos l "geo pos"}
+  geopos {{Switch1.which==0?center:center} {Switch1.which==0?center:center} {Switch1.which==0?-center:center}}
+  addUserKnob {6 geopos_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+  addUserKnob {26 ""}
+  addUserKnob {22 addAxis l Axis t "Creates a axis at the sampled xyz values" +HIDDEN T "n = nuke.thisNode()\nnewPos = n.knob('geopos').getValue()\nr=newPos\[0]\ng=newPos\[1]\nb=newPos\[2]\n\nnuke.root().begin()\nc = nuke.createNode('Axis2')\nc\['translate'].setValue(r, 0)\nc\['translate'].setValue(g, 1)\nc\['translate'].setValue(b, 2)" +STARTLINE}
+  addUserKnob {22 addCard l Card t "Creates a card at the sampled xyz values" -STARTLINE +HIDDEN T "n = nuke.thisNode()\nnewPos = n.knob('geopos').getValue()\nr=newPos\[0]\ng=newPos\[1]\nb=newPos\[2]\n\nnuke.root().begin()\nc = nuke.createNode('Card2')\nc\['translate'].setValue(r, 0)\nc\['translate'].setValue(g, 1)\nc\['translate'].setValue(b, 2)\nc\['uniform_scale'].setValue(100)"}
+  addUserKnob {22 addSphere l Sphere t "Creates a Sphere at the sampled xyz values" -STARTLINE T "n = nuke.thisNode()\nnewPos = n.knob('geopos').getValue()\nr=newPos\[0]\ng=newPos\[1]\nb=newPos\[2]\n\nnuke.root().begin()\nc = nuke.createNode('Sphere')\nc\['translate'].setValue(r, 0)\nc\['translate'].setValue(g, 1)\nc\['translate'].setValue(b, 2)"}
+  addUserKnob {22 addCube l Cube t "Creates a cube at the sampled xyz values" -STARTLINE T "n = nuke.thisNode()\nnewPos = n.knob('geopos').getValue()\nr=newPos\[0]\ng=newPos\[1]\nb=newPos\[2]\n\nnuke.root().begin()\nc = nuke.createNode('Cube')\nc\['translate'].setValue(r, 0)\nc\['translate'].setValue(g, 1)\nc\['translate'].setValue(b, 2)"}
+  addUserKnob {22 addCylinder l Cylinder t "Creates a cylinder at the sampled xyz values" -STARTLINE T "n = nuke.thisNode()\nnewPos = n.knob('geopos').getValue()\nr=newPos\[0]\ng=newPos\[1]\nb=newPos\[2]\n\nnuke.root().begin()\nc = nuke.createNode('Cylinder')\nc\['translate'].setValue(r, 0)\nc\['translate'].setValue(g, 1)\nc\['translate'].setValue(b, 2)"}
+ }
+end_group
