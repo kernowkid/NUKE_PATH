@@ -1,0 +1,11 @@
+set cut_paste_input [stack 0]
+version 11.3 v2
+push $cut_paste_input
+NoOp {
+ name setReads
+ selected true
+ xpos -359
+ ypos -412
+ addUserKnob {20 User}
+ addUserKnob {22 setKnobs l "Set reads" T "n = nuke.selectedNodes('Read')\nfor node in n:\n    node\['colorspace'].setValue('Cineon')\n    node\['frame_mode'].setValue('start at')\n    node\['frame'].setValue('1')\n" +STARTLINE}
+}
