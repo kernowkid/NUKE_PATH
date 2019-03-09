@@ -18,6 +18,6 @@ def openInExplorer(platform = sys.platform):
        os.system('nautilus %s' % path)
     if platform == 'win32':
        path = path.replace('/','\\')
-       os.system('start %s' % path)
+       os.system('start "" "%s"' % path)
 
 
