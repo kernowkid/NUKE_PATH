@@ -11,7 +11,7 @@ def openInExplorer(platform = sys.platform):
     except:
        nuke.message('No read/write selected')
        return
-    
+    print path
     if platform == 'darwin':
        os.system('open %s' % path)
     if platform == 'linux2':
@@ -19,5 +19,3 @@ def openInExplorer(platform = sys.platform):
     if platform == 'win32':
        path = path.replace('/','\\')
        os.system('start "" "%s"' % path)
-
-
