@@ -66,7 +66,7 @@ def createPathTab(selection):
             dividerFolderKnob = nuke.Text_Knob('','<b>folder options','')
             dividerPathKnob = nuke.Text_Knob('','<b>generated path','')
     
-            for k in [tabKnob, showKnob, lockShow, sceneKnob, lockScene, shotKnob, lockShot, layerKnob, lockLayer, versionKnob, lockVersion, fileTypeKnob, lockFileType, dividerFolderKnob, folderKnob, customFolderKnob, lockFolder, subFolder, baseDirKnob, dividerPathKnob, lockDir, pathKnob, lockPath, resetButtonKnob]:
+            for k in [tabKnob, showKnob, lockShow, sceneKnob, lockScene, shotKnob, lockShot, layerKnob, lockLayer, versionKnob, lockVersion, fileTypeKnob, lockFileType, dividerFolderKnob, folderKnob, customFolderKnob, lockFolder, subFolder, baseDirKnob, lockDir, dividerPathKnob, pathKnob, lockPath, resetButtonKnob]:
                 n.addKnob(k)
 
             #make custom folder knob invisible. Made visible if folderKnob is set to 'CUSTOM'
