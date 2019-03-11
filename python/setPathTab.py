@@ -14,7 +14,6 @@ def getFilePathInfo():
     basename = os.path.basename(fullPath)
     name = os.path.splitext(basename)[0]
     nameFragments = name.split('_')
-    numberFormat = "%04d"
 
     #get show,scene,shot,layer,version from script name
     try:
@@ -210,7 +209,6 @@ def updatePathFragments():
 
 def autoUpdatePath():
     n = nuke.thisNode()
-    nn = n.name()
     tk = nuke.thisKnob().name()
     pathFrags = ['showKnob', 'sceneKnob', 'shotKnob', 'layerKnob', 'versionKnob',  'fileTypeKnob', 'folderKnob', 'customFolderKnob', 'subFolder', 'baseDirKnob', 'lockDir']
     if tk in pathFrags:

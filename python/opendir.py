@@ -13,7 +13,7 @@ def openInExplorer(platform = sys.platform):
        return
     print path
     if platform == 'darwin':
-       os.system('open "%s"' % path
+       os.system('open "%s"' % path)
     if platform == 'linux2':
        os.system('nautilus %s' % path)
     if platform == 'win32':
