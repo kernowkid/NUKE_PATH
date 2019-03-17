@@ -1,0 +1,9304 @@
+set cut_paste_input [stack 0]
+version 11.3 v2
+BackdropNode {
+ inputs 0
+ name BackdropNode45
+ tile_color 0x26262600
+ label <center>ENVIRONMENT
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 100
+ selected true
+ xpos 7478
+ ypos -3122
+ bdwidth 6371
+ bdheight 6803
+ z_order -3
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode11
+ tile_color 0x162b2d00
+ label "UTIL PASSES"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 10310
+ ypos -1261
+ bdwidth 882
+ bdheight 616
+ z_order -1
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode13
+ tile_color 0x162b2d00
+ label "UTIL PASSES"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 12911
+ ypos -1283
+ bdwidth 882
+ bdheight 616
+ z_order -1
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x232f46ff
+ label "<center>SHOT CAM"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 7322
+ ypos -3514
+ bdwidth 373
+ bdheight 266
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode10
+ tile_color 0x33425400
+ label <center>N
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 36
+ selected true
+ xpos 10909
+ ypos -1141
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode12
+ tile_color 0x35603eff
+ label "<center>ENV FG"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 11801
+ ypos -3042
+ bdwidth 292
+ bdheight 278
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode14
+ tile_color 0x33425400
+ label <center>N
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 36
+ selected true
+ xpos 13510
+ ypos -1163
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode15
+ tile_color 0x33425400
+ label <center>DIFFUSE
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 11830
+ ypos -1158
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode16
+ tile_color 0x33425400
+ label <center>SSS
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 12195
+ ypos -1165
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode17
+ tile_color 0x33425400
+ label <center>SPEC
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 12547
+ ypos -1167
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode18
+ tile_color 0x33425400
+ label <center>Z
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 36
+ selected true
+ xpos 12921
+ ypos -1163
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode19
+ tile_color 0x33425400
+ label <center>P
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 36
+ selected true
+ xpos 13219
+ ypos -1165
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode2
+ tile_color 0x35603eff
+ label "<center>ENV BG"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 9191
+ ypos -2994
+ bdwidth 292
+ bdheight 278
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode20
+ tile_color 0x33425400
+ label <center>ALPHA
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 11496
+ ypos -1158
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode21
+ tile_color 0x4c353000
+ label "<center>SL SECTION"
+ note_font "Verdana Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 9267
+ ypos 4181
+ bdwidth 223
+ bdheight 413
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode22
+ tile_color 0x4c353000
+ label "<center>SR SECTION"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 10162
+ ypos 4197
+ bdwidth 223
+ bdheight 413
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode23
+ tile_color 0x4c353000
+ label "<center>SL CENTER SECTION"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 9555
+ ypos 4182
+ bdwidth 223
+ bdheight 413
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode24
+ tile_color 0x33425400
+ label <center>ALPHA
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 8870
+ ypos -1136
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode25
+ tile_color 0x1e263000
+ label "<center>GLOBAL GRADE"
+ note_font "Verdana Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 9220
+ ypos -16
+ bdwidth 304
+ bdheight 1073
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode26
+ tile_color 0x1e263000
+ label "<center>GLOBAL GRADE"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 11821
+ bdwidth 321
+ bdheight 1035
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode27
+ tile_color 0x35422b00
+ label <center>GAP
+ note_font "Verdana Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 1392
+ ypos 5204
+ bdwidth 337
+ bdheight 207
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode28
+ tile_color 0x35422b00
+ label <center>GAP
+ note_font "Verdana Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 9253
+ ypos 5213
+ bdwidth 337
+ bdheight 207
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode29
+ tile_color 0x35422b00
+ label <center>GAP
+ note_font "Verdana Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 11862
+ ypos 5189
+ bdwidth 337
+ bdheight 207
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode3
+ tile_color 0x33425400
+ label <center>DIFFUSE
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 9229
+ ypos -1136
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode30
+ tile_color 0x35603eff
+ label <center>ELEMENTS
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 5680
+ ypos -3027
+ bdwidth 1376
+ bdheight 400
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode31
+ tile_color 0x4c353000
+ label "<center>SR CENTER SECTION"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 9843
+ ypos 4183
+ bdwidth 223
+ bdheight 413
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode32
+ tile_color 0x4c353000
+ label "<center>SL SECTION"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 11868
+ ypos 4122
+ bdwidth 223
+ bdheight 413
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode33
+ tile_color 0x4c353000
+ label "<center>SR SECTION"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 12763
+ ypos 4138
+ bdwidth 223
+ bdheight 413
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode34
+ tile_color 0x4c353000
+ label "<center>SL CENTER SECTION"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 12156
+ ypos 4123
+ bdwidth 223
+ bdheight 413
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode35
+ tile_color 0x4c353000
+ label "<center>SR CENTER SECTION"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 12444
+ ypos 4124
+ bdwidth 223
+ bdheight 413
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode36
+ tile_color 0x35603eff
+ label "<center>BG COLOUR"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 4717
+ ypos -2988
+ bdwidth 357
+ bdheight 355
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode37
+ tile_color 0x3a3a3f00
+ label "<center>OFFSET TO START AT FR1"
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 1352
+ ypos -2811
+ bdwidth 1055
+ bdheight 137
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode38
+ tile_color 0x273c43ff
+ label "<center>ASSEMBLE FLOOR LAYOUT"
+ note_font "Verdana Bold Bold"
+ note_font_size 200
+ selected true
+ xpos 1064
+ ypos 3716
+ bdwidth 12787
+ bdheight 4020
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode39
+ tile_color 0x303f3f00
+ label "<center>ENVIRONMENT LAYERS OUT"
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 3714
+ ypos 8139
+ bdwidth 775
+ bdheight 265
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode4
+ tile_color 0x33425400
+ label <center>SSS
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 9594
+ ypos -1143
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode40
+ tile_color 0x283a3f00
+ label <center>JPGs
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 4746
+ ypos 8135
+ bdwidth 268
+ bdheight 258
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode41
+ tile_color 0x3a4c2d00
+ label "<center>DANCER LAYERS OUT"
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos -966
+ ypos 1815
+ bdwidth 1635
+ bdheight 233
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode42
+ tile_color 0x422f48ff
+ label "<center>VIEW COMPED LAYERS HERE"
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 1395
+ ypos 2875
+ bdwidth 981
+ bdheight 194
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode43
+ tile_color 0x49235600
+ label "<center>VIEW IN LAYOUT HERE"
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 4548
+ ypos 7765
+ bdwidth 725
+ bdheight 222
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode44
+ tile_color 0x2d2b2300
+ label "<center>DANCER CC"
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 1220
+ ypos -2243
+ bdwidth 1440
+ bdheight 3675
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode5
+ tile_color 0x33425400
+ label <center>SPEC
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 9946
+ ypos -1145
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode6
+ tile_color 0x35603eff
+ label <center>PLATES
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 1352
+ ypos -3058
+ bdwidth 1052
+ bdheight 248
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode7
+ tile_color 0x3f3f4400
+ label "<center>COMP LIGHTS"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 7664
+ ypos -2211
+ bdwidth 911
+ bdheight 1226
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode8
+ tile_color 0x33425400
+ label <center>Z
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 36
+ selected true
+ xpos 10320
+ ypos -1141
+ bdwidth 273
+ bdheight 487
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode9
+ tile_color 0x33425400
+ label <center>P
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 36
+ selected true
+ xpos 10618
+ ypos -1143
+ bdwidth 273
+ bdheight 487
+}
+Read {
+ inputs 0
+ file_type exr
+ file F:/primaryVFX/PROJECTS/SPECTRUM/2_assets/3d/renders/shoot02_lookdev/arch_lookdev_newlightRig_nuetral_v14.exr
+ format "2432 1088 0 0 2432 1088 1 "
+ origset true
+ name Read9
+ selected true
+ xpos 9312
+ ypos -2884
+}
+Dot {
+ name Dot51
+ selected true
+ xpos 9346
+ ypos -2656
+}
+Dot {
+ name Dot8
+ selected true
+ xpos 9346
+ ypos -2092
+}
+set Nd5d85800 [stack 0]
+Dot {
+ name Dot14
+ selected true
+ xpos 9346
+ ypos -1499
+}
+set Nd5d85400 [stack 0]
+Unpremult {
+ channels all
+ name Unpremult2
+ selected true
+ xpos 9312
+ ypos -1323
+}
+Dot {
+ name Dot2
+ selected true
+ xpos 9346
+ ypos -1176
+}
+set Nd5d84c00 [stack 0]
+Dot {
+ name Dot4
+ selected true
+ xpos 9729
+ ypos -1181
+}
+set Nd5d84800 [stack 0]
+Dot {
+ name Dot3
+ selected true
+ xpos 10070
+ ypos -1181
+}
+set Nd5d84400 [stack 0]
+Dot {
+ name Dot16
+ selected true
+ xpos 10444
+ ypos -1181
+}
+set Nd5d84000 [stack 0]
+Dot {
+ name Dot23
+ selected true
+ xpos 10698
+ ypos -1181
+}
+set Nd5d9fc00 [stack 0]
+Dot {
+ name Dot20
+ selected true
+ xpos 10773
+ ypos -1181
+}
+set Nd5d9f800 [stack 0]
+add_layer {P P.red P.green P.blue}
+Shuffle {
+ in P
+ name Shuffle7
+ label "\[value in]"
+ selected true
+ xpos 10739
+ ypos -952
+}
+Read {
+ inputs 0
+ file_type exr
+ file F:/primaryVFX/PROJECTS/SPECTRUM/2_assets/3d/renders/shoot02_lookdev/arch_lookdev_newlightRig_nuetral_v14_FG.exr
+ format "2432 1088 0 0 2432 1088 1 "
+ origset true
+ name Read10
+ selected true
+ xpos 11913
+ ypos -2926
+}
+Unpremult {
+ channels all
+ name Unpremult1
+ selected true
+ xpos 11913
+ ypos -1383
+}
+Dot {
+ name Dot25
+ selected true
+ xpos 11947
+ ypos -1198
+}
+set Nd5d9e800 [stack 0]
+Dot {
+ name Dot26
+ selected true
+ xpos 12330
+ ypos -1203
+}
+set Nd5d9e400 [stack 0]
+Dot {
+ name Dot27
+ selected true
+ xpos 12671
+ ypos -1203
+}
+set Nd5d9e000 [stack 0]
+Dot {
+ name Dot28
+ selected true
+ xpos 13045
+ ypos -1203
+}
+set Nd5dbfc00 [stack 0]
+add_layer {Z Z.red Z.green Z.blue}
+Shuffle {
+ in Z
+ name Shuffle9
+ label "\[value in]"
+ selected true
+ xpos 13011
+ ypos -981
+}
+set Nd5dbf800 [stack 0]
+Grade {
+ blackpoint {1082.225708 1082.225708 1082.225708 1082.225708}
+ whitepoint {599.7185059 599.7185059 599.7185059 599.7185059}
+ name Grade3
+ label FG
+ selected true
+ xpos 12949
+ ypos -907
+}
+push $Nd5dbf800
+Grade {
+ blackpoint {599.7131958 599.7131958 599.7131958 599.7131958}
+ whitepoint {1082.226074 1082.226074 1082.226074 1082.226074}
+ name Grade4
+ label BG
+ selected true
+ xpos 13074
+ ypos -902
+}
+push $Nd5dbfc00
+Dot {
+ name Dot29
+ selected true
+ xpos 13299
+ ypos -1203
+}
+set Nd5dbec00 [stack 0]
+Dot {
+ name Dot30
+ selected true
+ xpos 13374
+ ypos -1203
+}
+set Nd5dbe800 [stack 0]
+Dot {
+ name Dot31
+ selected true
+ xpos 13634
+ ypos -1203
+}
+add_layer {N N.red N.green N.blue}
+Shuffle {
+ in N
+ name Shuffle10
+ label "\[value in]"
+ selected true
+ xpos 13600
+ ypos -980
+}
+push $Nd5dbe800
+Shuffle {
+ in P
+ name Shuffle11
+ label "\[value in]"
+ selected true
+ xpos 13340
+ ypos -974
+}
+push $Nd5d9f800
+Dot {
+ name Dot21
+ selected true
+ xpos 11033
+ ypos -1181
+}
+Shuffle {
+ in N
+ name Shuffle8
+ label "\[value in]"
+ selected true
+ xpos 10999
+ ypos -957
+}
+Phong {
+ inputs 0
+ color 10
+ diffuse 0.2
+ specular 4
+ min_shininess 20
+ max_shininess 100
+ name Phong1
+ selected true
+ xpos 7980
+ ypos -1351
+}
+Camera2 {
+ inputs 0
+ translate {-48 112 437}
+ focal 35
+ frame_rate 25
+ name Camera1
+ selected true
+ xpos 7474
+ ypos -3360
+}
+Dot {
+ name Dot13
+ selected true
+ xpos 7498
+ ypos -1499
+}
+set Ndfcba800 [stack 0]
+Dot {
+ name Dot18
+ selected true
+ xpos 7498
+ ypos -1262
+}
+Light2 {
+ inputs 0
+ light_type spot
+ color 10
+ intensity 10
+ cone_angle 75.5
+ cone_penumbra_angle -30.6
+ cone_falloff 56
+ falloff_type Linear
+ translate {363.2099609 125.0334473 -455.4721375}
+ rotate {-14.28827165 118.183173 -2.826353196}
+ depthmap_slope_bias 0.01
+ name Light2
+ selected true
+ xpos 7746
+ ypos -2114
+}
+push $cut_paste_input
+Light2 {
+ light_type spot
+ color 10
+ intensity 5
+ cone_angle 75.5
+ cone_penumbra_angle -30.6
+ cone_falloff 56
+ falloff_type Linear
+ translate {-244.8057861 319.1653137 -304.5022278}
+ rotate {-62.28827165 -118.183173 -2.826353196}
+ depthmap_slope_bias 0.01
+ name Light3
+ selected true
+ xpos 7876
+ ypos -2116
+}
+Scene {
+ inputs 2
+ name Scene2
+ selected true
+ xpos 7815
+ ypos -2027
+}
+Dot {
+ name Dot10
+ selected true
+ xpos 7839
+ ypos -1930
+}
+set Nc6f67400 [stack 0]
+Dot {
+ name Dot12
+ selected true
+ xpos 7839
+ ypos -1311
+}
+Dot {
+ name Dot19
+ selected true
+ xpos 7959
+ ypos -1311
+}
+push $Nd5d85800
+Dot {
+ name Dot9
+ selected true
+ xpos 8429
+ ypos -2092
+}
+set Nc6f66800 [stack 0]
+Dot {
+ name Dot7
+ selected true
+ xpos 8306
+ ypos -2092
+}
+set Nc6f66400 [stack 0]
+Dot {
+ name Dot11
+ selected true
+ xpos 8186
+ ypos -2092
+}
+set Nc6f66000 [stack 0]
+Dot {
+ name Dot15
+ selected true
+ xpos 8113
+ ypos -2092
+}
+Dot {
+ name Dot1
+ selected true
+ xpos 8113
+ ypos -1325
+}
+set Nc6f89800 [stack 0]
+ReLight {
+ inputs 4
+ use_alpha true
+ normal N
+ position P
+ name ReLight1
+ selected true
+ xpos 7980
+ ypos -1266
+}
+set Nc6f89400 [stack 0]
+push $Nc6f89800
+Merge2 {
+ inputs 2
+ operation plus
+ name Merge1
+ selected true
+ xpos 8079
+ ypos -1209
+}
+push $Nd5d84000
+Shuffle {
+ in Z
+ green red
+ blue red
+ alpha red
+ name Shuffle6
+ label "\[value in]"
+ selected true
+ xpos 10410
+ ypos -958
+}
+set Nc6f88c00 [stack 0]
+Grade {
+ blackpoint {864.8556519 864.8556519 864.8556519 864.8556519}
+ whitepoint {599.7185059 599.7185059 599.7185059 599.7185059}
+ name Grade1
+ label FG
+ selected true
+ xpos 10349
+ ypos -883
+}
+push $Nd5dbec00
+pmatte {
+ name pmatte2
+ selected true
+ xpos 13265
+ ypos -866
+ in P
+ output alpha
+ center {-56.0893364 118.1047897 -526.744812}
+ uniform_scale 100
+}
+push $Ndfcba800
+Light2 {
+ inputs 0
+ translate {0 292 -251}
+ depthmap_slope_bias 0.01
+ name Light1
+ selected true
+ xpos 8392
+ ypos -1954
+}
+push $Nc6f67400
+push $Nc6f66800
+Shuffle {
+ in N
+ name Shuffle4
+ label "\[value in]"
+ selected true
+ xpos 8395
+ ypos -2046
+}
+push $Nc6f66000
+Shuffle {
+ in P
+ name Shuffle5
+ label "\[value in]"
+ selected true
+ xpos 8152
+ ypos -2046
+}
+push $Nc6f66400
+PositionToPoints2 {
+ inputs 3
+ display textured
+ render_mode textured
+ P_channel P
+ N_channel N
+ name PositionToPoints1
+ selected true
+ xpos 8272
+ ypos -2040
+}
+Scene {
+ inputs 3
+ name Scene1
+ selected true
+ xpos 8282
+ ypos -1954
+}
+push $Nd5d85400
+Remove {
+ name Remove1
+ selected true
+ xpos 8421
+ ypos -1509
+}
+ScanlineRender {
+ inputs 3
+ conservative_shader_sampling false
+ motion_vectors_type distance
+ name ScanlineRender1
+ selected true
+ xpos 8272
+ ypos -1503
+}
+RotoPaint {
+ inputs 0
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x45070000 x43ca8000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Rectangle1 512 bezier
+     {{cc
+       {f 8192}
+       {px x43b80000
+        {0 xc33c5554}
+        {xc365fff0 x43cd0000}
+        {x44d7d556 0}
+        {xc4d7d552 0}
+        {x459b2801 x43d20000}
+        {0 xc33c5554}
+        {0 x433c5555}
+        {x459ad800 xc2be0000}
+        {xc4d7d554 0}
+        {x44d7d555 0}
+        {xc3610000 xc2be0000}
+        {0 x433c5555}}}
+      {cc
+       {f 8192}
+       {p
+        {{{x43b80000 0}}
+	 {{x43b80000 xc33c5554}}}
+        {{{x43b80000 x4054ec40}}
+	 {{x43b80000 x4330ac24}}}
+        {{{x43b80000 x44d7d55c}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 xc4d7d552}}
+      {{x43b80000 0}}}
+        {{{x43b80000 x40d5a800}}
+      {{x43b80000 x432bab9c}}}
+        {{{x43b80000 0}}
+      {{x43b80000 xc33c555c}}}
+        {{{x43b80000 0}}
+      {{x43b80000 x433c5555}}}
+        {{{x43b80000 0}}
+      {{x43b80000 0}}}
+        {{{x43b80000 xc4d7d554}}
+      {{x43b80000 0}}}
+        {{{x43b80000 x44d7d555}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 0}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 0}}
+	 {{x43b80000 x433c5555}}}}}}
+     {tx x43b80000 x4513d000 x433b8000}
+     {a osw x41200000 osf 0 str 1 spx x45070000 spy x43ca8000 sb 1 ltn x43b80000 ltm x43b80000 tt x41000000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 tt 8 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {2160 405}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 368
+ lifetime_end 368
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name RotoPaint5
+ selected true
+ xpos 2169
+ ypos -2481
+}
+Read {
+ inputs 0
+ file_type exr
+ file F:/primaryVFX/PROJECTS/SPECTRUM/1_ingest/plates/shoot02/Scene_22_Andre_Shot_08/Scene_22_Andre_Shot_08_A020_C009_EXR/A020_03051150_C009.%08d.exr
+ format "4608 2592 0 0 4608 2592 1 "
+ first 1066354
+ last 1068386
+ origfirst 1066354
+ origlast 1068386
+ origset true
+ colorspace Cineon
+ name Read2
+ selected true
+ xpos 2264
+ ypos -2957
+}
+Dot {
+ name Dot89
+ label "DANCER PLATE IN"
+ selected true
+ xpos 2298
+ ypos -2843
+}
+TimeOffset {
+ time_offset {{"-\[value \[topnode].first]"}}
+ time ""
+ name TimeOffset5
+ label "start at fr1"
+ selected true
+ xpos 2264
+ ypos -2729
+}
+Dot {
+ name Dot82
+ selected true
+ xpos 2297
+ ypos -2561
+}
+set Ndf953000 [stack 0]
+Group {
+ name EdgeFill_achang5
+ selected true
+ xpos 2310
+ ypos -2530
+ addUserKnob {20 EdgeFill}
+ addUserKnob {4 view M {result "healthy source" "fill only" ""}}
+ addUserKnob {7 EatIn l "Eat In" R 0 50}
+ EatIn 4
+ addUserKnob {7 Quality R 1 10}
+ Quality 10
+ addUserKnob {26 ""}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 289
+  ypos 413
+ }
+ Dot {
+  name Dot30
+  xpos 323
+  ypos 441
+ }
+set Ndf952800 [stack 0]
+push $Ndf952800
+ Unpremult {
+  name Unpremult6
+  xpos -26
+  ypos 436
+ }
+ Dilate {
+  channels alpha
+  size {{-parent.EatIn i}}
+  name Dilate1
+  xpos -26
+  ypos 464
+ }
+ Premult {
+  name Premult3
+  xpos -26
+  ypos 506
+ }
+set Nd5e09c00 [stack 0]
+ Dot {
+  name Dot29
+  xpos 213
+  ypos 546
+ }
+ Dot {
+  name Dot22
+  xpos 213
+  ypos 3003
+ }
+set Nd5e09400 [stack 0]
+push $Nd5e09c00
+ Dot {
+  name Dot14
+  xpos -248
+  ypos 509
+ }
+set Nd5e09000 [stack 0]
+push $Nd5e09000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode3
+  xpos -381
+  ypos 558
+ }
+push $Nd5e09000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur1
+  xpos -483
+  ypos 504
+ }
+ Unpremult {
+  name Unpremult3
+  xpos -483
+  ypos 532
+ }
+ Copy {
+  inputs 2
+  from0 -rgba.alpha
+  to0 -rgba.alpha
+  channels alpha
+  name Copy1
+  xpos -483
+  ypos 560
+ }
+ Premult {
+  name Premult1
+  xpos -483
+  ypos 616
+ }
+ Merge2 {
+  inputs 2
+  name Merge1
+  xpos -282
+  ypos 616
+ }
+ Dot {
+  name Dot1
+  xpos -248
+  ypos 656
+ }
+set Nd5e35400 [stack 0]
+push $Nd5e35400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode2
+  xpos -385
+  ypos 707
+ }
+push $Nd5e35400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur2
+  xpos -479
+  ypos 651
+ }
+ Unpremult {
+  name Unpremult4
+  xpos -479
+  ypos 679
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy2
+  xpos -479
+  ypos 707
+ }
+ Premult {
+  name Premult2
+  xpos -479
+  ypos 749
+ }
+ Merge2 {
+  inputs 2
+  name Merge2
+  xpos -282
+  ypos 749
+ }
+ Dot {
+  name Dot2
+  xpos -248
+  ypos 777
+ }
+set Ndfbff800 [stack 0]
+push $Ndfbff800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode4
+  xpos -382
+  ypos 828
+ }
+push $Ndfbff800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur3
+  xpos -479
+  ypos 772
+ }
+ Unpremult {
+  name Unpremult7
+  xpos -479
+  ypos 800
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy5
+  xpos -479
+  ypos 828
+ }
+ Premult {
+  name Premult4
+  xpos -479
+  ypos 870
+ }
+ Merge2 {
+  inputs 2
+  name Merge3
+  xpos -282
+  ypos 870
+ }
+ Dot {
+  name Dot3
+  xpos -248
+  ypos 898
+ }
+set Ndfc2fc00 [stack 0]
+push $Ndfc2fc00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode5
+  xpos -381
+  ypos 949
+ }
+push $Ndfc2fc00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur4
+  xpos -479
+  ypos 893
+ }
+ Unpremult {
+  name Unpremult8
+  xpos -479
+  ypos 921
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy6
+  xpos -479
+  ypos 949
+ }
+ Premult {
+  name Premult7
+  xpos -479
+  ypos 991
+ }
+ Merge2 {
+  inputs 2
+  name Merge4
+  xpos -282
+  ypos 991
+ }
+ Dot {
+  name Dot4
+  xpos -248
+  ypos 1019
+ }
+set Ndfc2e000 [stack 0]
+push $Ndfc2e000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode6
+  xpos -380
+  ypos 1070
+ }
+push $Ndfc2e000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur5
+  xpos -479
+  ypos 1014
+ }
+ Unpremult {
+  name Unpremult9
+  xpos -479
+  ypos 1042
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy7
+  xpos -479
+  ypos 1070
+ }
+ Premult {
+  name Premult8
+  xpos -479
+  ypos 1112
+ }
+ Merge2 {
+  inputs 2
+  name Merge5
+  xpos -282
+  ypos 1112
+ }
+ Dot {
+  name Dot5
+  xpos -248
+  ypos 1140
+ }
+set Ndfc64400 [stack 0]
+push $Ndfc64400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode7
+  xpos -382
+  ypos 1191
+ }
+push $Ndfc64400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur7
+  xpos -479
+  ypos 1135
+ }
+ Unpremult {
+  name Unpremult10
+  xpos -479
+  ypos 1163
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy8
+  xpos -479
+  ypos 1191
+ }
+ Premult {
+  name Premult9
+  xpos -479
+  ypos 1233
+ }
+ Merge2 {
+  inputs 2
+  name Merge6
+  xpos -282
+  ypos 1233
+ }
+ Dot {
+  name Dot6
+  xpos -248
+  ypos 1261
+ }
+set Ndfae2800 [stack 0]
+push $Ndfae2800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1)}}
+  blur 1
+  name Erode8
+  xpos -382
+  ypos 1312
+ }
+push $Ndfae2800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur8
+  xpos -479
+  ypos 1256
+ }
+ Unpremult {
+  name Unpremult11
+  xpos -479
+  ypos 1284
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy9
+  xpos -479
+  ypos 1312
+ }
+ Premult {
+  name Premult10
+  xpos -479
+  ypos 1354
+ }
+ Merge2 {
+  inputs 2
+  name Merge7
+  xpos -282
+  ypos 1354
+ }
+ Dot {
+  name Dot7
+  xpos -248
+  ypos 1382
+ }
+set Ndfb14c00 [stack 0]
+push $Ndfb14c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode9
+  xpos -380
+  ypos 1433
+ }
+push $Ndfb14c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur10
+  xpos -479
+  ypos 1377
+ }
+ Unpremult {
+  name Unpremult12
+  xpos -479
+  ypos 1405
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy10
+  xpos -479
+  ypos 1433
+ }
+ Premult {
+  name Premult11
+  xpos -479
+  ypos 1475
+ }
+ Merge2 {
+  inputs 2
+  name Merge8
+  xpos -282
+  ypos 1475
+ }
+ Dot {
+  name Dot8
+  xpos -248
+  ypos 1503
+ }
+set Ndfb41000 [stack 0]
+push $Ndfb41000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode10
+  xpos -381
+  ypos 1554
+ }
+push $Ndfb41000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur11
+  xpos -479
+  ypos 1498
+ }
+ Unpremult {
+  name Unpremult13
+  xpos -479
+  ypos 1526
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy11
+  xpos -479
+  ypos 1554
+ }
+ Premult {
+  name Premult12
+  xpos -479
+  ypos 1596
+ }
+ Merge2 {
+  inputs 2
+  name Merge10
+  xpos -282
+  ypos 1596
+ }
+ Dot {
+  name Dot9
+  xpos -248
+  ypos 1624
+ }
+set Ndfb75400 [stack 0]
+push $Ndfb75400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode11
+  xpos -381
+  ypos 1675
+ }
+push $Ndfb75400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur12
+  xpos -479
+  ypos 1619
+ }
+ Unpremult {
+  name Unpremult14
+  xpos -479
+  ypos 1647
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy12
+  xpos -479
+  ypos 1675
+ }
+ Premult {
+  name Premult13
+  xpos -479
+  ypos 1717
+ }
+ Merge2 {
+  inputs 2
+  name Merge11
+  xpos -282
+  ypos 1717
+ }
+ Dot {
+  name Dot10
+  xpos -248
+  ypos 1745
+ }
+set Ndf843800 [stack 0]
+push $Ndf843800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode12
+  xpos -381
+  ypos 1796
+ }
+push $Ndf843800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur13
+  xpos -479
+  ypos 1740
+ }
+ Unpremult {
+  name Unpremult15
+  xpos -479
+  ypos 1768
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy13
+  xpos -479
+  ypos 1796
+ }
+ Premult {
+  name Premult14
+  xpos -479
+  ypos 1838
+ }
+ Merge2 {
+  inputs 2
+  name Merge14
+  xpos -282
+  ypos 1838
+ }
+ Dot {
+  name Dot11
+  xpos -248
+  ypos 1866
+ }
+set Ndf875c00 [stack 0]
+push $Ndf875c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode13
+  xpos -382
+  ypos 1917
+ }
+push $Ndf875c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur14
+  xpos -479
+  ypos 1861
+ }
+ Unpremult {
+  name Unpremult16
+  xpos -479
+  ypos 1889
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy14
+  xpos -479
+  ypos 1917
+ }
+ Premult {
+  name Premult15
+  xpos -479
+  ypos 1959
+ }
+ Merge2 {
+  inputs 2
+  name Merge15
+  xpos -282
+  ypos 1959
+ }
+ Dot {
+  name Dot12
+  xpos -248
+  ypos 1987
+ }
+set Ndf874000 [stack 0]
+push $Ndf874000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode14
+  xpos -381
+  ypos 2038
+ }
+push $Ndf874000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur15
+  xpos -479
+  ypos 1982
+ }
+ Unpremult {
+  name Unpremult17
+  xpos -479
+  ypos 2010
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy15
+  xpos -479
+  ypos 2038
+ }
+ Premult {
+  name Premult16
+  xpos -479
+  ypos 2080
+ }
+ Merge2 {
+  inputs 2
+  name Merge16
+  xpos -282
+  ypos 2080
+ }
+ Dot {
+  name Dot13
+  xpos -248
+  ypos 2108
+ }
+set Ndf8a0400 [stack 0]
+push $Ndf8a0400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1)}}
+  blur 1
+  name Erode15
+  xpos -380
+  ypos 2159
+ }
+push $Ndf8a0400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur16
+  xpos -479
+  ypos 2103
+ }
+ Unpremult {
+  name Unpremult18
+  xpos -479
+  ypos 2131
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy16
+  xpos -479
+  ypos 2159
+ }
+ Premult {
+  name Premult17
+  xpos -479
+  ypos 2201
+ }
+ Merge2 {
+  inputs 2
+  name Merge17
+  xpos -282
+  ypos 2201
+ }
+ Dot {
+  name Dot15
+  xpos -248
+  ypos 2229
+ }
+set Ndf8d2800 [stack 0]
+push $Ndf8d2800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode16
+  xpos -380
+  ypos 2280
+ }
+push $Ndf8d2800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur17
+  xpos -479
+  ypos 2224
+ }
+ Unpremult {
+  name Unpremult19
+  xpos -479
+  ypos 2252
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy17
+  xpos -479
+  ypos 2280
+ }
+ Premult {
+  name Premult18
+  xpos -479
+  ypos 2322
+ }
+ Merge2 {
+  inputs 2
+  name Merge18
+  xpos -282
+  ypos 2322
+ }
+ Dot {
+  name Dot16
+  xpos -248
+  ypos 2350
+ }
+set Ndf994c00 [stack 0]
+push $Ndf994c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode17
+  xpos -383
+  ypos 2401
+ }
+push $Ndf994c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur18
+  xpos -479
+  ypos 2345
+ }
+ Unpremult {
+  name Unpremult20
+  xpos -479
+  ypos 2373
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy18
+  xpos -479
+  ypos 2401
+ }
+ Premult {
+  name Premult19
+  xpos -479
+  ypos 2443
+ }
+ Merge2 {
+  inputs 2
+  name Merge19
+  xpos -282
+  ypos 2443
+ }
+ Dot {
+  name Dot17
+  xpos -248
+  ypos 2471
+ }
+set Ndf9c9000 [stack 0]
+push $Ndf9c9000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode1
+  xpos -381
+  ypos 2522
+ }
+push $Ndf9c9000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur6
+  xpos -479
+  ypos 2466
+ }
+ Unpremult {
+  name Unpremult2
+  xpos -479
+  ypos 2494
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy4
+  xpos -479
+  ypos 2522
+ }
+ Premult {
+  name Premult6
+  xpos -479
+  ypos 2564
+ }
+ Merge2 {
+  inputs 2
+  name Merge9
+  xpos -282
+  ypos 2564
+ }
+ Dot {
+  name Dot18
+  xpos -248
+  ypos 2592
+ }
+set Ndf9f9400 [stack 0]
+push $Ndf9f9400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode18
+  xpos -380
+  ypos 2643
+ }
+push $Ndf9f9400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur19
+  xpos -479
+  ypos 2587
+ }
+ Unpremult {
+  name Unpremult21
+  xpos -479
+  ypos 2615
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy19
+  xpos -479
+  ypos 2643
+ }
+ Premult {
+  name Premult20
+  xpos -479
+  ypos 2685
+ }
+ Merge2 {
+  inputs 2
+  name Merge20
+  xpos -282
+  ypos 2685
+ }
+ Dot {
+  name Dot19
+  xpos -248
+  ypos 2713
+ }
+set Ndfa23800 [stack 0]
+push $Ndfa23800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode19
+  xpos -379
+  ypos 2764
+ }
+push $Ndfa23800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur20
+  xpos -479
+  ypos 2708
+ }
+ Unpremult {
+  name Unpremult22
+  xpos -479
+  ypos 2736
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy20
+  xpos -479
+  ypos 2764
+ }
+ Premult {
+  name Premult21
+  xpos -479
+  ypos 2806
+ }
+ Merge2 {
+  inputs 2
+  name Merge21
+  xpos -282
+  ypos 2806
+ }
+ Dot {
+  name Dot20
+  xpos -248
+  ypos 2834
+ }
+set Nddd63c00 [stack 0]
+push $Nddd63c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode20
+  xpos -381
+  ypos 2885
+ }
+push $Nddd63c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur21
+  xpos -479
+  ypos 2829
+ }
+ Unpremult {
+  name Unpremult23
+  xpos -479
+  ypos 2857
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy21
+  xpos -479
+  ypos 2885
+ }
+ Premult {
+  name Premult22
+  xpos -479
+  ypos 2927
+ }
+ Merge2 {
+  inputs 2
+  name Merge22
+  xpos -282
+  ypos 2927
+ }
+ Dot {
+  name Dot21
+  xpos -248
+  ypos 2955
+ }
+push $Nddd63c00
+push $Ndfa23800
+push $Ndf9f9400
+push $Ndf9c9000
+push $Ndf994c00
+push $Ndf8d2800
+push $Ndf8a0400
+push $Ndf874000
+push $Ndf875c00
+push $Ndf843800
+push $Ndfb75400
+push $Ndfb41000
+push $Ndfb14c00
+push $Ndfae2800
+push $Ndfc64400
+push $Ndfc2e000
+push $Ndfc2fc00
+push $Ndfbff800
+push $Nd5e35400
+push $Nd5e09000
+ Switch {
+  inputs 21
+  which {{parent.Quality*2 i}}
+  name Switch2
+  xpos -47
+  ypos 2950
+ }
+set Nddd8fc00 [stack 0]
+push $Nddd8fc00
+ Dot {
+  name Dot28
+  xpos 63
+  ypos 2955
+ }
+ Blur {
+  channels rgba
+  size {{parent.EatIn}}
+  name Blur9
+  xpos 29
+  ypos 2973
+ }
+ Unpremult {
+  name Unpremult5
+  xpos 29
+  ypos 3001
+ }
+ Merge2 {
+  inputs 2
+  name Merge12
+  xpos 29
+  ypos 3054
+ }
+set Nddd8ec00 [stack 0]
+ Dot {
+  name Dot23
+  xpos 63
+  ypos 3096
+ }
+set Nddd8e800 [stack 0]
+ Merge2 {
+  inputs 2
+  name Merge13
+  xpos 179
+  ypos 3082
+ }
+ Shuffle {
+  alpha black
+  name Shuffle1
+  xpos 179
+  ypos 3110
+ }
+ Copy {
+  inputs 2
+  from0 -rgba.alpha
+  to0 -rgba.alpha
+  channels alpha
+  bbox A
+  name Copy3
+  xpos 289
+  ypos 3096
+ }
+set Ndddbdc00 [stack 0]
+push $Nd5e09400
+push $Nddd8e800
+ Merge2 {
+  inputs 2
+  operation stencil
+  name Merge23
+  xpos 29
+  ypos 3152
+ }
+ Merge2 {
+  inputs 2
+  operation mask
+  name Merge24
+  xpos 29
+  ypos 3180
+ }
+push $Nd5e09c00
+ Unpremult {
+  name Unpremult1
+  xpos 406
+  ypos 506
+ }
+push $Ndddbdc00
+ Premult {
+  name Premult5
+  xpos 289
+  ypos 3159
+ }
+ Switch {
+  inputs 3
+  which {{parent.view}}
+  name Switch1
+  xpos 406
+  ypos 3180
+ }
+ Output {
+  name Output1
+  xpos 406
+  ypos 3226
+ }
+push $Nddd8ec00
+ woz_SampledGrain {  name woz_SampledGrain1
+  note_font "Bitstream Vera Sans"
+  selected true
+  xpos -93
+  ypos 3092
+  disable true
+  amount {0.8 0.6 1}
+  response_curve 0
+  weight {master {curve C 1 1}
+    red {curve C k 0.06825351715 s0 S x0.02038915828 0.06825351715 x0.05301605165 0.146532774 x0.113490358 0.2028177977 x0.2067675591 0.2327821851 x0.3377979398 0.3559696674 x0.4516678154 0.3959222734 x2.575448513 0.7209094763 s0}
+    green {curve C k 0.08652031422 s0 S x0.01975706592 0.08652031422 x0.06002568454 0.1404064894 x0.1249111295 0.2418224514 x0.2272428274 0.3004345894 x0.3713901937 0.3502374291 x0.5080040097 0.4315089881 x2.590501308 1.0420928 s0}
+    blue {curve x0.001219927799 0.06949198246 s0 x0.007348543033 0.07457503676 x0.02075427771 0.1140499115 x0.06008252501 0.1341432631 x0.124676384 0.1596879959 x0.2256324887 0.2218938619 x0.3742266893 0.2554758787 x0.5137215257 0.2946259379 x2.652164459 0.5604643822 s0}}
+  maskChannelMask rgba.alpha
+  maskChannelInput none
+  unpremult none
+
+  xpos -93
+  ypos 3092
+  selected true
+  disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+ xpos -135
+ ypos 3066
+ selected false
+ disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+xpos -135
+ypos 3066
+selected false
+disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ }
+end_group
+push $Ndf953000
+Keymix {
+ inputs 3
+ name Keymix5
+ selected true
+ xpos 2263
+ ypos -2487
+}
+Reformat {
+ type scale
+ scale 0.35
+ name Reformat4
+ selected true
+ xpos 2263
+ ypos -2415
+}
+Reformat {
+ format "2432 1088 0 0 2432 1088 1 "
+ resize none
+ center false
+ name Reformat6
+ selected true
+ xpos 2261
+ ypos -2389
+}
+Transform {
+ translate {440 20}
+ center {1216 544}
+ black_outside false
+ name Transform6
+ selected true
+ xpos 2261
+ ypos -2351
+}
+Clamp {
+ maximum_enable false
+ name Clamp4
+ label "fix neg values\n"
+ note_font "Verdana Bold Bold Bold Bold Bold"
+ selected true
+ xpos 2261
+ ypos -2308
+}
+Dot {
+ name Dot72
+ selected true
+ xpos 2293
+ ypos 1603
+}
+set Nddde6000 [stack 0]
+Dot {
+ name Dot73
+ selected true
+ xpos 501
+ ypos 1603
+}
+Crop {
+ box {0 0 2432 1088}
+ name Crop1
+ selected true
+ xpos 467
+ ypos 1682
+}
+Reformat {
+ format "2432 1088 0 0 2432 1088 1 "
+ name Reformat14
+ selected true
+ xpos 467
+ ypos 1708
+}
+Remove {
+ operation keep
+ channels rgba
+ name Remove2
+ selected true
+ xpos 467
+ ypos 1746
+}
+Write {
+ channels rgba
+ file "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/DANCER_04/spectrum_deck3Abstract_sh11A_DANCER_04_v02/spectrum_deck3Abstract_sh11A_DANCER_04_v02_%04d.exr"
+ file_type exr
+ first_part none
+ create_directories true
+ checkHashOnRead false
+ in_colorspace linear
+ out_colorspace linear
+ name Write_Dancer4
+ selected true
+ xpos 467
+ ypos 1944
+ addUserKnob {20 "Render Path"}
+ addUserKnob {1 showKnob l show}
+ showKnob spectrum
+ addUserKnob {6 lockShow l lock -STARTLINE}
+ addUserKnob {1 sceneKnob l scene}
+ sceneKnob deck3Abstract
+ addUserKnob {6 lockScene l lock -STARTLINE}
+ addUserKnob {1 shotKnob l shot}
+ shotKnob sh11A
+ addUserKnob {6 lockShot l lock -STARTLINE}
+ addUserKnob {1 layerKnob l layer}
+ layerKnob DANCER_04
+ addUserKnob {6 lockLayer l lock -STARTLINE}
+ lockLayer true
+ addUserKnob {1 versionKnob l version}
+ versionKnob v02
+ addUserKnob {6 lockVersion l lock -STARTLINE}
+ addUserKnob {4 fileTypeKnob l "file type" M {cin dpx exr hdr jpeg mov null pic png sgi targa tiff xpm yuv}}
+ fileTypeKnob exr
+ addUserKnob {6 lockFileType l lock -STARTLINE}
+ lockFileType true
+ addUserKnob {26 "" l "<b>folder options"}
+ addUserKnob {4 folderKnob l folder M {none OUT WIP PRECOMP PLATES CUSTOM}}
+ folderKnob CUSTOM
+ addUserKnob {1 customFolderKnob l custom}
+ customFolderKnob DANCER_04
+ addUserKnob {6 lockFolder l lock -STARTLINE}
+ lockFolder true
+ addUserKnob {6 subFolder l "save in sub folder" +STARTLINE}
+ subFolder true
+ addUserKnob {2 baseDirKnob l "base directory"}
+ baseDirKnob "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/"
+ addUserKnob {6 lockDir l lock -STARTLINE}
+ addUserKnob {26 "" l "<b>generated path"}
+ addUserKnob {1 pathKnob l path}
+ pathKnob "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/DANCER_04/spectrum_deck3Abstract_sh11A_DANCER_04_v02/spectrum_deck3Abstract_sh11A_DANCER_04_v02_%04d.exr"
+ addUserKnob {6 lockPath l lock -STARTLINE}
+ addUserKnob {22 resetButton l reset T setPathTab.updatePathFragments() +STARTLINE}
+}
+Roto {
+ inputs 0
+ output alpha
+ cliptype none
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x45070000 x43ca8000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Rectangle1 512 bezier
+     {{cc
+       {f 8192}
+       {px x42e40000
+        {0 xc3b6aaac}
+        {x45b61948 x44887ffe}
+        {x43c16e10 0}
+        {xc3c16e00 0}
+        {x45da5de8 x44887ffe}
+        {0 xc3b6aaac}
+        {0 x43b6aaab}
+        {x45da5de8 xc0800000}
+        {xc3c16e00 0}
+        {x43c16e10 0}
+        {x45b61948 xc0800000}
+        {0 x43b6aaab}}}     idem}
+     {tx x42e40000 x45c82000 x44080000}
+     {a ft x40400000 osw x41200000 osf 0 str 1 spx x45070000 spy x43ca8000 sb 1 ltn x42e40000 ltm x42e40000 tt x41000000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 tt 8 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {2160 405}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 114
+ lifetime_end 114
+ motionblur_shutter_offset_type centred
+ feather_type smooth
+ source_black_outside true
+ name Roto2
+ selected true
+ xpos 12457
+ ypos 5407
+}
+Dot {
+ name Dot34
+ selected true
+ xpos 12491
+ ypos 5476
+}
+Dot {
+ name Dot76
+ selected true
+ xpos 12013
+ ypos 5476
+}
+set Ndde59c00 [stack 0]
+push $Nd5d9e800
+Dot {
+ name Dot38
+ selected true
+ xpos 11613
+ ypos -1198
+}
+Shuffle {
+ in alpha
+ name Shuffle15
+ label "\[value in]"
+ selected true
+ xpos 11579
+ ypos -978
+}
+Dot {
+ name Dot39
+ selected true
+ xpos 11613
+ ypos 1071
+}
+push $Nc6f89400
+Dot {
+ name Dot56
+ selected true
+ xpos 8014
+ ypos -345
+}
+set Ndde58c00 [stack 0]
+Dot {
+ name Dot52
+ selected true
+ xpos 10003
+ ypos -345
+}
+set Ndde58800 [stack 0]
+Blur {
+ size {2 10}
+ name Blur2
+ selected true
+ xpos 12425
+ ypos -355
+}
+Dot {
+ name Dot53
+ selected true
+ xpos 12599
+ ypos -345
+}
+push $Nd5d9e000
+add_layer {specular specular.red specular.green specular.blue}
+Shuffle {
+ in specular
+ name Shuffle12
+ label "\[value in]"
+ selected true
+ xpos 12637
+ ypos -988
+}
+Merge2 {
+ inputs 2
+ operation plus
+ output {rgba.red rgba.green rgba.blue -rgba.alpha}
+ mix 0.3
+ name Merge25
+ label "Add extra spec"
+ selected true
+ xpos 12637
+ ypos -301
+}
+Dot {
+ name Dot32
+ selected true
+ xpos 12671
+ ypos -156
+}
+push $Nd5d9e400
+add_layer {sss sss.red sss.green sss.blue}
+Shuffle {
+ in sss
+ name Shuffle13
+ label "\[value in]"
+ selected true
+ xpos 12296
+ ypos -984
+}
+Dot {
+ name Dot33
+ selected true
+ xpos 12330
+ ypos -521
+}
+push $Nd5d9e800
+add_layer {diffuse diffuse.red diffuse.green diffuse.blue}
+Shuffle {
+ in diffuse
+ name Shuffle14
+ label "\[value in]"
+ selected true
+ xpos 11913
+ ypos -978
+}
+Merge2 {
+ inputs 2
+ operation plus
+ output {rgba.red rgba.green rgba.blue -rgba.alpha}
+ name Merge6
+ label SSS
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+ selected true
+ xpos 11913
+ ypos -530
+}
+Merge2 {
+ inputs 2
+ operation plus
+ output {rgba.red rgba.green rgba.blue -rgba.alpha}
+ name Merge7
+ label SPEC
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold"
+ selected true
+ xpos 11913
+ ypos -160
+}
+Dot {
+ name Dot48
+ selected true
+ xpos 11947
+ ypos -37
+}
+set Nddea7c00 [stack 0]
+Dot {
+ name Dot49
+ selected true
+ xpos 12217
+ ypos -37
+}
+Keyer {
+ invert true
+ operation "luminance key"
+ range {0 0.0004040302013 1 1}
+ name Keyer2
+ selected true
+ xpos 12183
+ ypos 12
+}
+Dot {
+ name Dot50
+ selected true
+ xpos 12217
+ ypos 1008
+}
+push $Nddea7c00
+ColorCorrect {
+ name ColorCorrect2
+ selected true
+ xpos 11913
+ ypos 77
+}
+Grade {
+ inputs 1+1
+ black 0.003
+ name BLACKS1
+ selected true
+ xpos 11913
+ ypos 1004
+}
+ShuffleCopy {
+ inputs 2
+ name ShuffleCopy1
+ selected true
+ xpos 11913
+ ypos 1067
+}
+Premult {
+ name Premult1
+ selected true
+ xpos 11913
+ ypos 1105
+}
+Dot {
+ name Dot102
+ selected true
+ xpos 11947
+ ypos 2955
+}
+set Nddedfc00 [stack 0]
+Dot {
+ name Dot62
+ selected true
+ xpos 11947
+ ypos 4082
+}
+set Nddedf800 [stack 0]
+Dot {
+ name Dot63
+ selected true
+ xpos 12243
+ ypos 4082
+}
+set Nddedf400 [stack 0]
+Dot {
+ name Dot64
+ selected true
+ xpos 12534
+ ypos 4082
+}
+set Nddedf000 [stack 0]
+Dot {
+ name Dot65
+ selected true
+ xpos 12857
+ ypos 4082
+}
+Merge2 {
+ operation plus
+ name Merge18
+ label "light trail"
+ selected true
+ xpos 12823
+ ypos 4190
+}
+Grade {
+ name Grade7
+ selected true
+ xpos 12823
+ ypos 4625
+}
+Transform {
+ translate {6992 0}
+ center {960 540}
+ name Transform10
+ selected true
+ xpos 12823
+ ypos 4771
+}
+Dot {
+ name Dot66
+ selected true
+ xpos 12857
+ ypos 4976
+}
+push $Nddedf000
+Merge2 {
+ operation plus
+ name Merge19
+ label "light trail"
+ selected true
+ xpos 12500
+ ypos 4196
+}
+Mirror2 {
+ flop true
+ name Mirror2_3
+ selected true
+ xpos 12500
+ ypos 4818
+ disable true
+}
+Transform {
+ translate {3884 0}
+ center {960 540}
+ name Transform11
+ selected true
+ xpos 12500
+ ypos 4855
+}
+Dot {
+ name Dot67
+ selected true
+ xpos 12534
+ ypos 4900
+}
+push $Nddedf400
+Merge2 {
+ operation plus
+ name Merge20
+ label "light trail"
+ selected true
+ xpos 12209
+ ypos 4196
+}
+Mirror2 {
+ flop true
+ name Mirror2_4
+ selected true
+ xpos 12209
+ ypos 4740
+ disable true
+}
+Transform {
+ translate {1943 0}
+ center {960 540}
+ name Transform12
+ selected true
+ xpos 12209
+ ypos 4778
+}
+Dot {
+ name Dot68
+ selected true
+ xpos 12243
+ ypos 4822
+}
+push $Nddedf800
+Merge2 {
+ operation plus
+ name Merge21
+ label "light trail"
+ selected true
+ xpos 11913
+ ypos 4182
+}
+Reformat {
+ type "to box"
+ box_width 9425
+ box_height 1088
+ resize none
+ center false
+ black_outside true
+ name Reformat9
+ selected true
+ xpos 11913
+ ypos 4781
+}
+Merge2 {
+ inputs 2
+ operation under
+ name Merge22
+ selected true
+ xpos 11913
+ ypos 4818
+}
+Merge2 {
+ inputs 2
+ operation under
+ name Merge23
+ selected true
+ xpos 11913
+ ypos 4896
+}
+Merge2 {
+ inputs 2
+ operation under
+ name Merge24
+ selected true
+ xpos 11913
+ ypos 4972
+}
+Merge2 {
+ inputs 2
+ operation stencil
+ name Merge8
+ selected true
+ xpos 11913
+ ypos 5537
+}
+Dot {
+ name Dot58
+ selected true
+ xpos 11947
+ ypos 6758
+}
+set Nddf63c00 [stack 0]
+Dot {
+ name Dot37
+ selected true
+ xpos 11947
+ ypos 6941
+}
+push $Ndde59c00
+Dot {
+ name Dot77
+ selected true
+ xpos 9409
+ ypos 5476
+}
+set Nddf63400 [stack 0]
+Dot {
+ name Dot78
+ selected true
+ xpos 1505
+ ypos 5476
+}
+push $Nddedfc00
+Dot {
+ name Dot95
+ selected true
+ xpos 2335
+ ypos 2955
+}
+set Nddf62c00 [stack 0]
+push $Nd5d84c00
+Dot {
+ name Dot43
+ selected true
+ xpos 8987
+ ypos -1176
+}
+Shuffle {
+ in alpha
+ name Shuffle16
+ label "\[value in]"
+ selected true
+ xpos 8953
+ ypos -956
+}
+Dot {
+ name Dot44
+ selected true
+ xpos 8987
+ ypos 1112
+}
+push $Ndde58800
+push $Nd5d84400
+Shuffle {
+ in specular
+ name Shuffle2
+ label "\[value in]"
+ selected true
+ xpos 10036
+ ypos -966
+}
+Merge2 {
+ inputs 2
+ operation plus
+ output {rgba.red rgba.green rgba.blue -rgba.alpha}
+ mix 0.2
+ name Merge13
+ selected true
+ xpos 10036
+ ypos -304
+}
+Dot {
+ name Dot5
+ selected true
+ xpos 10070
+ ypos -134
+}
+push $Nd5d84800
+Shuffle {
+ in sss
+ name Shuffle3
+ label "\[value in]"
+ selected true
+ xpos 9695
+ ypos -962
+}
+Dot {
+ name Dot6
+ selected true
+ xpos 9729
+ ypos -499
+}
+push $Nd5d84c00
+Shuffle {
+ in diffuse
+ name Shuffle1
+ label "\[value in]"
+ selected true
+ xpos 9312
+ ypos -954
+}
+Merge2 {
+ inputs 2
+ operation plus
+ output {rgba.red rgba.green rgba.blue -rgba.alpha}
+ name Merge3
+ label SSS
+ note_font "Verdana Bold Bold Bold Bold Bold Bold"
+ selected true
+ xpos 9312
+ ypos -508
+}
+Merge2 {
+ inputs 2
+ operation plus
+ output {rgba.red rgba.green rgba.blue -rgba.alpha}
+ name Merge2
+ label SPEC
+ note_font "Verdana Bold Bold Bold Bold Bold Bold"
+ selected true
+ xpos 9312
+ ypos -138
+}
+Dot {
+ name Dot45
+ selected true
+ xpos 9346
+ ypos -53
+}
+set Nddfadc00 [stack 0]
+Dot {
+ name Dot46
+ selected true
+ xpos 9616
+ ypos -53
+}
+Keyer {
+ invert true
+ operation "luminance key"
+ range {0 0.0004040302013 1 1}
+ name Keyer3
+ selected true
+ xpos 9582
+ ypos -7
+}
+Dot {
+ name Dot47
+ selected true
+ xpos 9616
+ ypos 1019
+}
+Roto {
+ inputs 0
+ output alpha
+ cliptype bbox
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097664}
+    {t x45070000 x43ca8000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Bezier2 512 bezier
+     {{cc
+       {f 8192}
+       {px x43e90000
+        {x4204d200 xc105c9c0}
+        {x450a2c66 x446427c5}
+        {xc204d200 x4105c9c0}
+        {x42198300 x41c2d4e0}
+        {x44f690c1 x4452b0e7}
+        {xc2198340 xc1c2d500}
+        {xc1a23c80 x41e08a40}
+        {x44f584d0 x44276803}
+        {x41a23cc0 xc1e08a20}
+        {xc2336040 xc155e380}
+        {x4503ee38 x44227360}
+        {x42336100 x4155e3c0}
+        {xc1045700 xc1dc47c0}
+        {x450d8dc6 x444ff682}
+        {x41045800 x41dc47c0}}}
+      {cc
+       {f 8192}
+       {px x43e90000
+        {x4204d240 xc105c980}
+        {x41ca4900 x42524230}
+        {xc204d200 x4105ca00}
+        {x4264dea0 x41323e40}
+        {xc48b0976 x42a151b0}
+        {xc1aff9c0 xc1ebae40}
+        {xc302f73c x43165da8}
+        {xc457f5aa xc3ad9ec7}
+        {x42dc0e68 xc2e61e5e}
+        {xc2552c20 xc10191a0}
+        {xc38c8af8 xc41dfdf4}
+        {x41f6b880 x41f35f5c}
+        {xc1045800 xc1dc47e0}
+        {x43052480 xc29087b8}
+        {x41045600 x41dc47a0}}}}
+     {tx x43e90000 x4583c000 x43f23333}
+     {a ft 1 osw x41200000 osf 0 str 1 spx x45070000 spy x43ca8000 sb 1 ltn x43e90000 ltm x43e90000 tt x40800000}}
+    {curvegroup Bezier1 512 bezier
+     {{cc
+       {f 8192}
+       {px x43e90000
+        {x4159cb00 x41fb5c00}
+        {x43c6355c x449e7da6}
+        {xc159caa0 xc1fb5bc0}
+        {xc18eb740 x42273900}
+        {x441c3992 x4486f729}
+        {x418eb780 xc2273980}
+        {xc1f7c8c0 xc177ba80}
+        {x444c810e x4488dd33}
+        {x41f7c840 x4177ba00}
+        {x40be8600 xc239a7c0}
+        {x444ea430 x449490d8}
+        {xc0be8900 x4239a880}
+        {x41ceb5c0 xc149b880}
+        {x4424b6e5 x44a8ebb3}
+        {xc1ceb5c0 x4149b900}}}
+      {cc
+       {f 8192}
+       {px x43e90000
+        {x4159cb40 x41fb5cc0}
+        {xc2af6348 x41e84ec0}
+        {xc159cb80 xc1fb5b80}
+        {xbfe10800 x42690fa4}
+        {x42d01a70 xc47418e2}
+        {x41cc2f10 xc1d3b618}
+        {xc32988c8 xc2d1f3d5}
+        {x43c63914 xc45abd8c}
+        {x43034fa0 x42b40656}
+        {xbf1c5000 xc2579b00}
+        {x442bad42 xc3919b14}
+        {xc1c85ac0 x420d6290}
+        {x41ceb5c0 xc149b900}
+        {x41d412e0 x42b8dd00}
+        {xc1ceb5c0 x4149b700}}}}
+     {tx x43e90000 x4583c000 x43f23333}
+     {a ft 1 osw x41200000 osf 0 str 1 spx x45070000 spy x43ca8000 sb 1 ltn x43e90000 ltm x43e90000 tt x40800000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {2160 405}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 466
+ lifetime_end 466
+ motionblur_shutter_offset_type centred
+ feather_type smooth0
+ source_black_outside true
+ name Roto1
+ label "SR SPOT"
+ selected true
+ xpos 10151
+ ypos 822
+}
+Constant {
+ inputs 0
+ channels rgb
+ color {1.025250077 1 0.9747501016 0.1447281092}
+ format "1440 810 0 0 1440 810 1 "
+ name Constant1
+ selected true
+ xpos 9960
+ ypos 703
+}
+Shuffle {
+ alpha white
+ name Shuffle17
+ label "\[value in]"
+ selected true
+ xpos 9960
+ ypos 775
+}
+Merge2 {
+ inputs 2
+ operation mask
+ name Merge14
+ selected true
+ xpos 9960
+ ypos 835
+}
+Dot {
+ name Dot59
+ selected true
+ xpos 9994
+ ypos 896
+}
+push $Nd5d9fc00
+pmatte {
+ name pmatte1
+ selected true
+ xpos 10664
+ ypos -843
+ in P
+ output alpha
+ center {183.2858276 83.434875 -526.7335205}
+ uniform_scale 250
+ falloffType Cubic
+}
+Grade {
+ channels alpha
+ white 3.05
+ gamma 0.7
+ name Grade9
+ selected true
+ xpos 10664
+ ypos 361
+}
+Dot {
+ name Dot35
+ selected true
+ xpos 10698
+ ypos 625
+}
+push $Ndde58c00
+Shuffle {
+ alpha red
+ name Shuffle18
+ label "\[value in]"
+ selected true
+ xpos 7980
+ ypos 390
+}
+Dot {
+ name Dot17
+ selected true
+ xpos 8014
+ ypos 476
+}
+push $Nc6f88c00
+Grade {
+ channels rgba
+ blackpoint {905.536499 905.536499 905.536499 905.536499}
+ whitepoint {1082.226074 1082.226074 1082.226074 1082.226074}
+ name Grade2
+ label BG
+ selected true
+ xpos 10473
+ ypos -879
+}
+Grade {
+ channels rgba
+ blackpoint 0.006
+ gamma 1.04
+ white_clamp true
+ name Grade5
+ selected true
+ xpos 10473
+ ypos -802
+}
+Blur {
+ channels alpha
+ size 5
+ name Blur1
+ selected true
+ xpos 10473
+ ypos -776
+}
+Grade {
+ channels alpha
+ white 1.5
+ white_clamp true
+ name Grade10
+ selected true
+ xpos 10473
+ ypos -738
+}
+Dot {
+ name Dot55
+ selected true
+ xpos 10507
+ ypos 374
+}
+push $Nddfadc00
+ColorCorrect {
+ name ColorCorrect1
+ selected true
+ xpos 9312
+ ypos 61
+}
+Grade {
+ inputs 1+1
+ white 0.26
+ name Grade6
+ label "darken bg"
+ selected true
+ xpos 9312
+ ypos 370
+}
+Grade {
+ inputs 1+1
+ white {2.871999979 2.789999962 2.707999945 2.789999962}
+ gamma 0.53
+ name Grade11
+ label "cc light on floor"
+ selected true
+ xpos 9312
+ ypos 472
+}
+Grade {
+ inputs 1+1
+ white 2.12
+ name Grade8
+ label "add light on SR wall"
+ selected true
+ xpos 9312
+ ypos 621
+}
+Merge2 {
+ inputs 2
+ operation plus
+ mix 0.05
+ name Merge15
+ selected true
+ xpos 9312
+ ypos 892
+}
+Grade {
+ inputs 1+1
+ black 0.003
+ name BLACKS
+ selected true
+ xpos 9312
+ ypos 1015
+}
+ShuffleCopy {
+ inputs 2
+ name ShuffleCopy2
+ selected true
+ xpos 9312
+ ypos 1108
+}
+Premult {
+ name Premult2
+ selected true
+ xpos 9312
+ ypos 1154
+}
+Crop {
+ box {{0-this.exp} {0-this.exp} {width+this.exp} {height+this.exp}}
+ name CropExpand3
+ selected true
+ xpos 9312
+ ypos 1200
+ addUserKnob {20 User}
+ addUserKnob {7 exp l expand R 0 100}
+ exp 44.6
+}
+Dot {
+ name Dot93
+ selected true
+ xpos 9346
+ ypos 1961
+}
+set Nde130400 [stack 0]
+Dot {
+ name Dot98
+ selected true
+ xpos 2332
+ ypos 1961
+}
+set Nde130000 [stack 0]
+push $Nddde6000
+Transform {
+ translate {-440 0}
+ center {2160 405}
+ name Transform18
+ selected true
+ xpos 2259
+ ypos 1815
+}
+add_layer {dancer04 dancer04.red dancer04.green dancer04.blue dancer04.alpha}
+Shuffle {
+ black red
+ white green
+ red2 blue
+ green2 alpha
+ out2 dancer04
+ name Shuffle22
+ label "\[value in]\nshuffle rgba in to channel"
+ selected true
+ xpos 2259
+ ypos 1841
+}
+Merge2 {
+ inputs 2
+ operation under
+ name Merge33
+ selected true
+ xpos 2259
+ ypos 1996
+}
+Merge2 {
+ inputs 2
+ name Merge37
+ selected true
+ xpos 2259
+ ypos 2991
+}
+Shuffle {
+ in dancer04
+ name Shuffle26
+ label "\[value in]"
+ selected true
+ xpos 2261
+ ypos 4057
+}
+Transform {
+ translate {425 20}
+ center {{width/2 x201 0 x3122 0} {height/2 x201 0 x3122 0}}
+ name Transform14
+ selected true
+ xpos 2261
+ ypos 4212
+}
+TimeOffset {
+ time_offset {{"\[value Dot104.last]-(-\[value TimeOffset1.time_offset])+\[value TimeOffset6.time_offset]+\[value TimeOffset7.time_offset]"}}
+ time ""
+ name TimeOffset8
+ label "retime to start at fr1"
+ selected true
+ xpos 2260
+ ypos 4263
+}
+Dot {
+ name Dot81
+ selected true
+ xpos 2294
+ ypos 4527
+}
+push $Nddf62c00
+Dot {
+ name Dot99
+ selected true
+ xpos 2061
+ ypos 2955
+}
+set Nde160000 [stack 0]
+push $Nde130000
+Dot {
+ name Dot97
+ selected true
+ xpos 2056
+ ypos 1961
+}
+set Nde193c00 [stack 0]
+RotoPaint {
+ inputs 0
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x45070000 x43ca8000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Rectangle1 512 bezier
+     {{cc
+       {f 8192}
+       {px x43b80000
+        {0 xc33c5554}
+        {xc365fff0 x43cd0000}
+        {x44d7d556 0}
+        {xc4d7d552 0}
+        {x459b2801 x43d20000}
+        {0 xc33c5554}
+        {0 x433c5555}
+        {x459ad800 xc2be0000}
+        {xc4d7d554 0}
+        {x44d7d555 0}
+        {xc3610000 xc2be0000}
+        {0 x433c5555}}}
+      {cc
+       {f 8192}
+       {p
+        {{{x43b80000 0}}
+	 {{x43b80000 xc33c5554}}}
+        {{{x43b80000 x4054ec40}}
+	 {{x43b80000 x4330ac24}}}
+        {{{x43b80000 x44d7d55c}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 xc4d7d552}}
+      {{x43b80000 0}}}
+        {{{x43b80000 x40d5a800}}
+      {{x43b80000 x432bab9c}}}
+        {{{x43b80000 0}}
+      {{x43b80000 xc33c555c}}}
+        {{{x43b80000 0}}
+      {{x43b80000 x433c5555}}}
+        {{{x43b80000 0}}
+      {{x43b80000 0}}}
+        {{{x43b80000 xc4d7d554}}
+      {{x43b80000 0}}}
+        {{{x43b80000 x44d7d555}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 0}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 0}}
+	 {{x43b80000 x433c5555}}}}}}
+     {tx x43b80000 x4513d000 x433b8000}
+     {a osw x41200000 osf 0 str 1 spx x45070000 spy x43ca8000 sb 1 ltn x43b80000 ltm x43b80000 tt x41000000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 tt 8 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {2160 405}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 368
+ lifetime_end 368
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name RotoPaint6
+ selected true
+ xpos 1893
+ ypos -2483
+}
+Read {
+ inputs 0
+ file_type exr
+ file F:/primaryVFX/PROJECTS/SPECTRUM/1_ingest/plates/shoot02/Scene_22_Andre_Shot_08/Scene_22_Andre_Shot_08_A020_C006_EXR/A020_03051146_C006.%08d.exr
+ format "4608 2592 0 0 4608 2592 1 "
+ first 1060590
+ last 1061272
+ origfirst 1060590
+ origlast 1061272
+ origset true
+ colorspace Cineon
+ name Read4
+ selected true
+ xpos 1989
+ ypos -2964
+}
+Dot {
+ name Dot88
+ label "DANCER PLATE IN"
+ selected true
+ xpos 2023
+ ypos -2851
+}
+TimeOffset {
+ time_offset {{"-\[value \[topnode].first]"}}
+ time ""
+ name TimeOffset4
+ label "start at fr1"
+ selected true
+ xpos 1989
+ ypos -2732
+}
+Dot {
+ name Dot83
+ selected true
+ xpos 2021
+ ypos -2563
+}
+set Nde192c00 [stack 0]
+Group {
+ name EdgeFill_achang6
+ selected true
+ xpos 2034
+ ypos -2532
+ addUserKnob {20 EdgeFill}
+ addUserKnob {4 view M {result "healthy source" "fill only" ""}}
+ addUserKnob {7 EatIn l "Eat In" R 0 50}
+ EatIn 4
+ addUserKnob {7 Quality R 1 10}
+ Quality 10
+ addUserKnob {26 ""}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 289
+  ypos 413
+ }
+ Dot {
+  name Dot30
+  xpos 323
+  ypos 441
+ }
+set Nde192400 [stack 0]
+push $Nde192400
+ Unpremult {
+  name Unpremult6
+  xpos -26
+  ypos 436
+ }
+ Dilate {
+  channels alpha
+  size {{-parent.EatIn i}}
+  name Dilate1
+  xpos -26
+  ypos 464
+ }
+ Premult {
+  name Premult3
+  xpos -26
+  ypos 506
+ }
+set Nde1dd800 [stack 0]
+ Dot {
+  name Dot29
+  xpos 213
+  ypos 546
+ }
+ Dot {
+  name Dot22
+  xpos 213
+  ypos 3003
+ }
+set Nde1dd000 [stack 0]
+push $Nde1dd800
+ Dot {
+  name Dot14
+  xpos -248
+  ypos 509
+ }
+set Nde1dcc00 [stack 0]
+push $Nde1dcc00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode3
+  xpos -381
+  ypos 558
+ }
+push $Nde1dcc00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur1
+  xpos -483
+  ypos 504
+ }
+ Unpremult {
+  name Unpremult3
+  xpos -483
+  ypos 532
+ }
+ Copy {
+  inputs 2
+  from0 -rgba.alpha
+  to0 -rgba.alpha
+  channels alpha
+  name Copy1
+  xpos -483
+  ypos 560
+ }
+ Premult {
+  name Premult1
+  xpos -483
+  ypos 616
+ }
+ Merge2 {
+  inputs 2
+  name Merge1
+  xpos -282
+  ypos 616
+ }
+ Dot {
+  name Dot1
+  xpos -248
+  ypos 656
+ }
+set Nde203000 [stack 0]
+push $Nde203000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode2
+  xpos -385
+  ypos 707
+ }
+push $Nde203000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur2
+  xpos -479
+  ypos 651
+ }
+ Unpremult {
+  name Unpremult4
+  xpos -479
+  ypos 679
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy2
+  xpos -479
+  ypos 707
+ }
+ Premult {
+  name Premult2
+  xpos -479
+  ypos 749
+ }
+ Merge2 {
+  inputs 2
+  name Merge2
+  xpos -282
+  ypos 749
+ }
+ Dot {
+  name Dot2
+  xpos -248
+  ypos 777
+ }
+set Nde233400 [stack 0]
+push $Nde233400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode4
+  xpos -382
+  ypos 828
+ }
+push $Nde233400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur3
+  xpos -479
+  ypos 772
+ }
+ Unpremult {
+  name Unpremult7
+  xpos -479
+  ypos 800
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy5
+  xpos -479
+  ypos 828
+ }
+ Premult {
+  name Premult4
+  xpos -479
+  ypos 870
+ }
+ Merge2 {
+  inputs 2
+  name Merge3
+  xpos -282
+  ypos 870
+ }
+ Dot {
+  name Dot3
+  xpos -248
+  ypos 898
+ }
+set Nde265800 [stack 0]
+push $Nde265800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode5
+  xpos -381
+  ypos 949
+ }
+push $Nde265800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur4
+  xpos -479
+  ypos 893
+ }
+ Unpremult {
+  name Unpremult8
+  xpos -479
+  ypos 921
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy6
+  xpos -479
+  ypos 949
+ }
+ Premult {
+  name Premult7
+  xpos -479
+  ypos 991
+ }
+ Merge2 {
+  inputs 2
+  name Merge4
+  xpos -282
+  ypos 991
+ }
+ Dot {
+  name Dot4
+  xpos -248
+  ypos 1019
+ }
+set Nde295c00 [stack 0]
+push $Nde295c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode6
+  xpos -380
+  ypos 1070
+ }
+push $Nde295c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur5
+  xpos -479
+  ypos 1014
+ }
+ Unpremult {
+  name Unpremult9
+  xpos -479
+  ypos 1042
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy7
+  xpos -479
+  ypos 1070
+ }
+ Premult {
+  name Premult8
+  xpos -479
+  ypos 1112
+ }
+ Merge2 {
+  inputs 2
+  name Merge5
+  xpos -282
+  ypos 1112
+ }
+ Dot {
+  name Dot5
+  xpos -248
+  ypos 1140
+ }
+set Nde294000 [stack 0]
+push $Nde294000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode7
+  xpos -382
+  ypos 1191
+ }
+push $Nde294000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur7
+  xpos -479
+  ypos 1135
+ }
+ Unpremult {
+  name Unpremult10
+  xpos -479
+  ypos 1163
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy8
+  xpos -479
+  ypos 1191
+ }
+ Premult {
+  name Premult9
+  xpos -479
+  ypos 1233
+ }
+ Merge2 {
+  inputs 2
+  name Merge6
+  xpos -282
+  ypos 1233
+ }
+ Dot {
+  name Dot6
+  xpos -248
+  ypos 1261
+ }
+set Nde2c0400 [stack 0]
+push $Nde2c0400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1)}}
+  blur 1
+  name Erode8
+  xpos -382
+  ypos 1312
+ }
+push $Nde2c0400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur8
+  xpos -479
+  ypos 1256
+ }
+ Unpremult {
+  name Unpremult11
+  xpos -479
+  ypos 1284
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy9
+  xpos -479
+  ypos 1312
+ }
+ Premult {
+  name Premult10
+  xpos -479
+  ypos 1354
+ }
+ Merge2 {
+  inputs 2
+  name Merge7
+  xpos -282
+  ypos 1354
+ }
+ Dot {
+  name Dot7
+  xpos -248
+  ypos 1382
+ }
+set Nde2f4800 [stack 0]
+push $Nde2f4800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode9
+  xpos -380
+  ypos 1433
+ }
+push $Nde2f4800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur10
+  xpos -479
+  ypos 1377
+ }
+ Unpremult {
+  name Unpremult12
+  xpos -479
+  ypos 1405
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy10
+  xpos -479
+  ypos 1433
+ }
+ Premult {
+  name Premult11
+  xpos -479
+  ypos 1475
+ }
+ Merge2 {
+  inputs 2
+  name Merge8
+  xpos -282
+  ypos 1475
+ }
+ Dot {
+  name Dot8
+  xpos -248
+  ypos 1503
+ }
+set Nde324c00 [stack 0]
+push $Nde324c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode10
+  xpos -381
+  ypos 1554
+ }
+push $Nde324c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur11
+  xpos -479
+  ypos 1498
+ }
+ Unpremult {
+  name Unpremult13
+  xpos -479
+  ypos 1526
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy11
+  xpos -479
+  ypos 1554
+ }
+ Premult {
+  name Premult12
+  xpos -479
+  ypos 1596
+ }
+ Merge2 {
+  inputs 2
+  name Merge10
+  xpos -282
+  ypos 1596
+ }
+ Dot {
+  name Dot9
+  xpos -248
+  ypos 1624
+ }
+set Nde355000 [stack 0]
+push $Nde355000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode11
+  xpos -381
+  ypos 1675
+ }
+push $Nde355000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur12
+  xpos -479
+  ypos 1619
+ }
+ Unpremult {
+  name Unpremult14
+  xpos -479
+  ypos 1647
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy12
+  xpos -479
+  ypos 1675
+ }
+ Premult {
+  name Premult13
+  xpos -479
+  ypos 1717
+ }
+ Merge2 {
+  inputs 2
+  name Merge11
+  xpos -282
+  ypos 1717
+ }
+ Dot {
+  name Dot10
+  xpos -248
+  ypos 1745
+ }
+set Nde385400 [stack 0]
+push $Nde385400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode12
+  xpos -381
+  ypos 1796
+ }
+push $Nde385400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur13
+  xpos -479
+  ypos 1740
+ }
+ Unpremult {
+  name Unpremult15
+  xpos -479
+  ypos 1768
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy13
+  xpos -479
+  ypos 1796
+ }
+ Premult {
+  name Premult14
+  xpos -479
+  ypos 1838
+ }
+ Merge2 {
+  inputs 2
+  name Merge14
+  xpos -282
+  ypos 1838
+ }
+ Dot {
+  name Dot11
+  xpos -248
+  ypos 1866
+ }
+set Nde3b1800 [stack 0]
+push $Nde3b1800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode13
+  xpos -382
+  ypos 1917
+ }
+push $Nde3b1800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur14
+  xpos -479
+  ypos 1861
+ }
+ Unpremult {
+  name Unpremult16
+  xpos -479
+  ypos 1889
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy14
+  xpos -479
+  ypos 1917
+ }
+ Premult {
+  name Premult15
+  xpos -479
+  ypos 1959
+ }
+ Merge2 {
+  inputs 2
+  name Merge15
+  xpos -282
+  ypos 1959
+ }
+ Dot {
+  name Dot12
+  xpos -248
+  ypos 1987
+ }
+set Nde3e7c00 [stack 0]
+push $Nde3e7c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode14
+  xpos -381
+  ypos 2038
+ }
+push $Nde3e7c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur15
+  xpos -479
+  ypos 1982
+ }
+ Unpremult {
+  name Unpremult17
+  xpos -479
+  ypos 2010
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy15
+  xpos -479
+  ypos 2038
+ }
+ Premult {
+  name Premult16
+  xpos -479
+  ypos 2080
+ }
+ Merge2 {
+  inputs 2
+  name Merge16
+  xpos -282
+  ypos 2080
+ }
+ Dot {
+  name Dot13
+  xpos -248
+  ypos 2108
+ }
+set Nde3e6000 [stack 0]
+push $Nde3e6000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1)}}
+  blur 1
+  name Erode15
+  xpos -380
+  ypos 2159
+ }
+push $Nde3e6000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur16
+  xpos -479
+  ypos 2103
+ }
+ Unpremult {
+  name Unpremult18
+  xpos -479
+  ypos 2131
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy16
+  xpos -479
+  ypos 2159
+ }
+ Premult {
+  name Premult17
+  xpos -479
+  ypos 2201
+ }
+ Merge2 {
+  inputs 2
+  name Merge17
+  xpos -282
+  ypos 2201
+ }
+ Dot {
+  name Dot15
+  xpos -248
+  ypos 2229
+ }
+set Nde414400 [stack 0]
+push $Nde414400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode16
+  xpos -380
+  ypos 2280
+ }
+push $Nde414400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur17
+  xpos -479
+  ypos 2224
+ }
+ Unpremult {
+  name Unpremult19
+  xpos -479
+  ypos 2252
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy17
+  xpos -479
+  ypos 2280
+ }
+ Premult {
+  name Premult18
+  xpos -479
+  ypos 2322
+ }
+ Merge2 {
+  inputs 2
+  name Merge18
+  xpos -282
+  ypos 2322
+ }
+ Dot {
+  name Dot16
+  xpos -248
+  ypos 2350
+ }
+set Nde444800 [stack 0]
+push $Nde444800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode17
+  xpos -383
+  ypos 2401
+ }
+push $Nde444800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur18
+  xpos -479
+  ypos 2345
+ }
+ Unpremult {
+  name Unpremult20
+  xpos -479
+  ypos 2373
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy18
+  xpos -479
+  ypos 2401
+ }
+ Premult {
+  name Premult19
+  xpos -479
+  ypos 2443
+ }
+ Merge2 {
+  inputs 2
+  name Merge19
+  xpos -282
+  ypos 2443
+ }
+ Dot {
+  name Dot17
+  xpos -248
+  ypos 2471
+ }
+set Ndff46c00 [stack 0]
+push $Ndff46c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode1
+  xpos -381
+  ypos 2522
+ }
+push $Ndff46c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur6
+  xpos -479
+  ypos 2466
+ }
+ Unpremult {
+  name Unpremult2
+  xpos -479
+  ypos 2494
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy4
+  xpos -479
+  ypos 2522
+ }
+ Premult {
+  name Premult6
+  xpos -479
+  ypos 2564
+ }
+ Merge2 {
+  inputs 2
+  name Merge9
+  xpos -282
+  ypos 2564
+ }
+ Dot {
+  name Dot18
+  xpos -248
+  ypos 2592
+ }
+set Ndff77000 [stack 0]
+push $Ndff77000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode18
+  xpos -380
+  ypos 2643
+ }
+push $Ndff77000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur19
+  xpos -479
+  ypos 2587
+ }
+ Unpremult {
+  name Unpremult21
+  xpos -479
+  ypos 2615
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy19
+  xpos -479
+  ypos 2643
+ }
+ Premult {
+  name Premult20
+  xpos -479
+  ypos 2685
+ }
+ Merge2 {
+  inputs 2
+  name Merge20
+  xpos -282
+  ypos 2685
+ }
+ Dot {
+  name Dot19
+  xpos -248
+  ypos 2713
+ }
+set Ndffa9400 [stack 0]
+push $Ndffa9400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode19
+  xpos -379
+  ypos 2764
+ }
+push $Ndffa9400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur20
+  xpos -479
+  ypos 2708
+ }
+ Unpremult {
+  name Unpremult22
+  xpos -479
+  ypos 2736
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy20
+  xpos -479
+  ypos 2764
+ }
+ Premult {
+  name Premult21
+  xpos -479
+  ypos 2806
+ }
+ Merge2 {
+  inputs 2
+  name Merge21
+  xpos -282
+  ypos 2806
+ }
+ Dot {
+  name Dot20
+  xpos -248
+  ypos 2834
+ }
+set Ndffd5800 [stack 0]
+push $Ndffd5800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode20
+  xpos -381
+  ypos 2885
+ }
+push $Ndffd5800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur21
+  xpos -479
+  ypos 2829
+ }
+ Unpremult {
+  name Unpremult23
+  xpos -479
+  ypos 2857
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy21
+  xpos -479
+  ypos 2885
+ }
+ Premult {
+  name Premult22
+  xpos -479
+  ypos 2927
+ }
+ Merge2 {
+  inputs 2
+  name Merge22
+  xpos -282
+  ypos 2927
+ }
+ Dot {
+  name Dot21
+  xpos -248
+  ypos 2955
+ }
+push $Ndffd5800
+push $Ndffa9400
+push $Ndff77000
+push $Ndff46c00
+push $Nde444800
+push $Nde414400
+push $Nde3e6000
+push $Nde3e7c00
+push $Nde3b1800
+push $Nde385400
+push $Nde355000
+push $Nde324c00
+push $Nde2f4800
+push $Nde2c0400
+push $Nde294000
+push $Nde295c00
+push $Nde265800
+push $Nde233400
+push $Nde203000
+push $Nde1dcc00
+ Switch {
+  inputs 21
+  which {{parent.Quality*2 i}}
+  name Switch2
+  xpos -47
+  ypos 2950
+ }
+set Ne0003800 [stack 0]
+push $Ne0003800
+ Dot {
+  name Dot28
+  xpos 63
+  ypos 2955
+ }
+ Blur {
+  channels rgba
+  size {{parent.EatIn}}
+  name Blur9
+  xpos 29
+  ypos 2973
+ }
+ Unpremult {
+  name Unpremult5
+  xpos 29
+  ypos 3001
+ }
+ Merge2 {
+  inputs 2
+  name Merge12
+  xpos 29
+  ypos 3054
+ }
+set Ne0002800 [stack 0]
+ Dot {
+  name Dot23
+  xpos 63
+  ypos 3096
+ }
+set Ne0002400 [stack 0]
+ Merge2 {
+  inputs 2
+  name Merge13
+  xpos 179
+  ypos 3082
+ }
+ Shuffle {
+  alpha black
+  name Shuffle1
+  xpos 179
+  ypos 3110
+ }
+ Copy {
+  inputs 2
+  from0 -rgba.alpha
+  to0 -rgba.alpha
+  channels alpha
+  bbox A
+  name Copy3
+  xpos 289
+  ypos 3096
+ }
+set Ne002f800 [stack 0]
+push $Nde1dd000
+push $Ne0002400
+ Merge2 {
+  inputs 2
+  operation stencil
+  name Merge23
+  xpos 29
+  ypos 3152
+ }
+ Merge2 {
+  inputs 2
+  operation mask
+  name Merge24
+  xpos 29
+  ypos 3180
+ }
+push $Nde1dd800
+ Unpremult {
+  name Unpremult1
+  xpos 406
+  ypos 506
+ }
+push $Ne002f800
+ Premult {
+  name Premult5
+  xpos 289
+  ypos 3159
+ }
+ Switch {
+  inputs 3
+  which {{parent.view}}
+  name Switch1
+  xpos 406
+  ypos 3180
+ }
+ Output {
+  name Output1
+  xpos 406
+  ypos 3226
+ }
+push $Ne0002800
+ woz_SampledGrain {  name woz_SampledGrain1
+  note_font "Bitstream Vera Sans"
+  selected true
+  xpos -93
+  ypos 3092
+  disable true
+  amount {0.8 0.6 1}
+  response_curve 0
+  weight {master {curve C 1 1}
+    red {curve C k 0.06825351715 s0 S x0.02038915828 0.06825351715 x0.05301605165 0.146532774 x0.113490358 0.2028177977 x0.2067675591 0.2327821851 x0.3377979398 0.3559696674 x0.4516678154 0.3959222734 x2.575448513 0.7209094763 s0}
+    green {curve C k 0.08652031422 s0 S x0.01975706592 0.08652031422 x0.06002568454 0.1404064894 x0.1249111295 0.2418224514 x0.2272428274 0.3004345894 x0.3713901937 0.3502374291 x0.5080040097 0.4315089881 x2.590501308 1.0420928 s0}
+    blue {curve x0.001219927799 0.06949198246 s0 x0.007348543033 0.07457503676 x0.02075427771 0.1140499115 x0.06008252501 0.1341432631 x0.124676384 0.1596879959 x0.2256324887 0.2218938619 x0.3742266893 0.2554758787 x0.5137215257 0.2946259379 x2.652164459 0.5604643822 s0}}
+  maskChannelMask rgba.alpha
+  maskChannelInput none
+  unpremult none
+
+  xpos -93
+  ypos 3092
+  selected true
+  disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+ xpos -135
+ ypos 3066
+ selected false
+ disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+xpos -135
+ypos 3066
+selected false
+disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ }
+end_group
+push $Nde192c00
+Keymix {
+ inputs 3
+ name Keymix6
+ selected true
+ xpos 1987
+ ypos -2489
+}
+Reformat {
+ type scale
+ scale 0.35
+ name Reformat10
+ selected true
+ xpos 1985
+ ypos -2417
+}
+Reformat {
+ format "2432 1088 0 0 2432 1088 1 "
+ resize none
+ center false
+ name Reformat5
+ selected true
+ xpos 1985
+ ypos -2391
+}
+Transform {
+ translate {440 20}
+ center {1216 544}
+ black_outside false
+ name Transform5
+ selected true
+ xpos 1985
+ ypos -2353
+}
+Clamp {
+ maximum_enable false
+ name Clamp3
+ label "fix neg values\n"
+ note_font "Verdana Bold Bold Bold Bold Bold"
+ selected true
+ xpos 1985
+ ypos -2310
+}
+Dot {
+ name Dot71
+ selected true
+ xpos 2017
+ ypos 1563
+}
+set Ne008fc00 [stack 0]
+Transform {
+ translate {-440 0}
+ center {2160 405}
+ name Transform17
+ selected true
+ xpos 1983
+ ypos 1815
+}
+add_layer {dancer03 dancer03.red dancer03.green dancer03.blue dancer03.alpha}
+Shuffle {
+ black red
+ white green
+ red2 blue
+ green2 alpha
+ out2 dancer03
+ name Shuffle21
+ label "\[value in]\nshuffle rgba in to channel"
+ selected true
+ xpos 1983
+ ypos 1841
+}
+Merge2 {
+ inputs 2
+ operation under
+ name Merge32
+ selected true
+ xpos 1983
+ ypos 1996
+}
+Merge2 {
+ inputs 2
+ name Merge36
+ selected true
+ xpos 1985
+ ypos 2994
+}
+Shuffle {
+ in dancer03
+ name Shuffle25
+ label "\[value in]"
+ selected true
+ xpos 1985
+ ypos 4054
+}
+Transform {
+ translate {2350 20}
+ center {{width/2 x201 0 x1917 0} {height/2 x201 0 x1917 0}}
+ name Transform13
+ selected true
+ xpos 1985
+ ypos 4210
+}
+TimeOffset {
+ time_offset {{"\[value Dot104.last]-(-\[value TimeOffset1.time_offset])+\[value TimeOffset6.time_offset]"}}
+ time ""
+ name TimeOffset7
+ label "retime to start at fr1"
+ selected true
+ xpos 1984
+ ypos 4263
+}
+Dot {
+ name Dot80
+ selected true
+ xpos 2018
+ ypos 4456
+}
+push $Nde160000
+Dot {
+ name Dot100
+ selected true
+ xpos 1785
+ ypos 2955
+}
+set Ne00bfc00 [stack 0]
+push $Nde193c00
+Dot {
+ name Dot96
+ selected true
+ xpos 1782
+ ypos 1961
+}
+set Ne00bf800 [stack 0]
+RotoPaint {
+ inputs 0
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x45070000 x43ca8000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Rectangle1 512 bezier
+     {{cc
+       {f 8192}
+       {px x43b80000
+        {0 xc33c5554}
+        {xc365fff0 x43cd0000}
+        {x44d7d556 0}
+        {xc4d7d552 0}
+        {x459b2801 x43d20000}
+        {0 xc33c5554}
+        {0 x433c5555}
+        {x459ad800 xc2be0000}
+        {xc4d7d554 0}
+        {x44d7d555 0}
+        {xc3610000 xc2be0000}
+        {0 x433c5555}}}
+      {cc
+       {f 8192}
+       {p
+        {{{x43b80000 0}}
+	 {{x43b80000 xc33c5554}}}
+        {{{x43b80000 x4054ec40}}
+	 {{x43b80000 x4330ac24}}}
+        {{{x43b80000 x44d7d55c}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 xc4d7d552}}
+      {{x43b80000 0}}}
+        {{{x43b80000 x40d5a800}}
+      {{x43b80000 x432bab9c}}}
+        {{{x43b80000 0}}
+      {{x43b80000 xc33c555c}}}
+        {{{x43b80000 0}}
+      {{x43b80000 x433c5555}}}
+        {{{x43b80000 0}}
+      {{x43b80000 0}}}
+        {{{x43b80000 xc4d7d554}}
+      {{x43b80000 0}}}
+        {{{x43b80000 x44d7d555}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 0}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 0}}
+	 {{x43b80000 x433c5555}}}}}}
+     {tx x43b80000 x4513d000 x433b8000}
+     {a osw x41200000 osf 0 str 1 spx x45070000 spy x43ca8000 sb 1 ltn x43b80000 ltm x43b80000 tt x41000000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 tt 8 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {2160 405}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 368
+ lifetime_end 368
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name RotoPaint7
+ selected true
+ xpos 1618
+ ypos -2487
+}
+Read {
+ inputs 0
+ file_type exr
+ file F:/primaryVFX/PROJECTS/SPECTRUM/1_ingest/plates/shoot02/Scene_22_Andre_Shot_08/Scene_22_Andre_Shot_08_A020_C004_EXR/A020_03051132_C004.%08d.exr
+ format "4608 2592 0 0 4608 2592 1 "
+ first 1039538
+ last 1040040
+ frame_mode offset
+ origfirst 1039538
+ origlast 1040040
+ origset true
+ colorspace Cineon
+ name Read5
+ selected true
+ xpos 1713
+ ypos -2971
+}
+Dot {
+ name Dot87
+ label "DANCER PLATE IN"
+ selected true
+ xpos 1747
+ ypos -2849
+}
+TimeOffset {
+ time_offset {{"-\[value \[topnode].first]"}}
+ time ""
+ name TimeOffset3
+ label "start at fr1"
+ selected true
+ xpos 1712
+ ypos -2727
+}
+Dot {
+ name Dot84
+ selected true
+ xpos 1746
+ ypos -2567
+}
+set Ne00be800 [stack 0]
+Group {
+ name EdgeFill_achang7
+ selected true
+ xpos 1759
+ ypos -2536
+ addUserKnob {20 EdgeFill}
+ addUserKnob {4 view M {result "healthy source" "fill only" ""}}
+ addUserKnob {7 EatIn l "Eat In" R 0 50}
+ EatIn 4
+ addUserKnob {7 Quality R 1 10}
+ Quality 10
+ addUserKnob {26 ""}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 289
+  ypos 413
+ }
+ Dot {
+  name Dot30
+  xpos 323
+  ypos 441
+ }
+set Ne00be000 [stack 0]
+push $Ne00be000
+ Unpremult {
+  name Unpremult6
+  xpos -26
+  ypos 436
+ }
+ Dilate {
+  channels alpha
+  size {{-parent.EatIn i}}
+  name Dilate1
+  xpos -26
+  ypos 464
+ }
+ Premult {
+  name Premult3
+  xpos -26
+  ypos 506
+ }
+set Ne0111400 [stack 0]
+ Dot {
+  name Dot29
+  xpos 213
+  ypos 546
+ }
+ Dot {
+  name Dot22
+  xpos 213
+  ypos 3003
+ }
+set Ne0110c00 [stack 0]
+push $Ne0111400
+ Dot {
+  name Dot14
+  xpos -248
+  ypos 509
+ }
+set Ne0110800 [stack 0]
+push $Ne0110800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode3
+  xpos -381
+  ypos 558
+ }
+push $Ne0110800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur1
+  xpos -483
+  ypos 504
+ }
+ Unpremult {
+  name Unpremult3
+  xpos -483
+  ypos 532
+ }
+ Copy {
+  inputs 2
+  from0 -rgba.alpha
+  to0 -rgba.alpha
+  channels alpha
+  name Copy1
+  xpos -483
+  ypos 560
+ }
+ Premult {
+  name Premult1
+  xpos -483
+  ypos 616
+ }
+ Merge2 {
+  inputs 2
+  name Merge1
+  xpos -282
+  ypos 616
+ }
+ Dot {
+  name Dot1
+  xpos -248
+  ypos 656
+ }
+set Ne1106c00 [stack 0]
+push $Ne1106c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode2
+  xpos -385
+  ypos 707
+ }
+push $Ne1106c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur2
+  xpos -479
+  ypos 651
+ }
+ Unpremult {
+  name Unpremult4
+  xpos -479
+  ypos 679
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy2
+  xpos -479
+  ypos 707
+ }
+ Premult {
+  name Premult2
+  xpos -479
+  ypos 749
+ }
+ Merge2 {
+  inputs 2
+  name Merge2
+  xpos -282
+  ypos 749
+ }
+ Dot {
+  name Dot2
+  xpos -248
+  ypos 777
+ }
+set Ne1139000 [stack 0]
+push $Ne1139000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode4
+  xpos -382
+  ypos 828
+ }
+push $Ne1139000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur3
+  xpos -479
+  ypos 772
+ }
+ Unpremult {
+  name Unpremult7
+  xpos -479
+  ypos 800
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy5
+  xpos -479
+  ypos 828
+ }
+ Premult {
+  name Premult4
+  xpos -479
+  ypos 870
+ }
+ Merge2 {
+  inputs 2
+  name Merge3
+  xpos -282
+  ypos 870
+ }
+ Dot {
+  name Dot3
+  xpos -248
+  ypos 898
+ }
+set Ne1169400 [stack 0]
+push $Ne1169400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode5
+  xpos -381
+  ypos 949
+ }
+push $Ne1169400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur4
+  xpos -479
+  ypos 893
+ }
+ Unpremult {
+  name Unpremult8
+  xpos -479
+  ypos 921
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy6
+  xpos -479
+  ypos 949
+ }
+ Premult {
+  name Premult7
+  xpos -479
+  ypos 991
+ }
+ Merge2 {
+  inputs 2
+  name Merge4
+  xpos -282
+  ypos 991
+ }
+ Dot {
+  name Dot4
+  xpos -248
+  ypos 1019
+ }
+set Ne1199800 [stack 0]
+push $Ne1199800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode6
+  xpos -380
+  ypos 1070
+ }
+push $Ne1199800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur5
+  xpos -479
+  ypos 1014
+ }
+ Unpremult {
+  name Unpremult9
+  xpos -479
+  ypos 1042
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy7
+  xpos -479
+  ypos 1070
+ }
+ Premult {
+  name Premult8
+  xpos -479
+  ypos 1112
+ }
+ Merge2 {
+  inputs 2
+  name Merge5
+  xpos -282
+  ypos 1112
+ }
+ Dot {
+  name Dot5
+  xpos -248
+  ypos 1140
+ }
+set Ne11c9c00 [stack 0]
+push $Ne11c9c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode7
+  xpos -382
+  ypos 1191
+ }
+push $Ne11c9c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur7
+  xpos -479
+  ypos 1135
+ }
+ Unpremult {
+  name Unpremult10
+  xpos -479
+  ypos 1163
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy8
+  xpos -479
+  ypos 1191
+ }
+ Premult {
+  name Premult9
+  xpos -479
+  ypos 1233
+ }
+ Merge2 {
+  inputs 2
+  name Merge6
+  xpos -282
+  ypos 1233
+ }
+ Dot {
+  name Dot6
+  xpos -248
+  ypos 1261
+ }
+set Ne11c8000 [stack 0]
+push $Ne11c8000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1)}}
+  blur 1
+  name Erode8
+  xpos -382
+  ypos 1312
+ }
+push $Ne11c8000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur8
+  xpos -479
+  ypos 1256
+ }
+ Unpremult {
+  name Unpremult11
+  xpos -479
+  ypos 1284
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy9
+  xpos -479
+  ypos 1312
+ }
+ Premult {
+  name Premult10
+  xpos -479
+  ypos 1354
+ }
+ Merge2 {
+  inputs 2
+  name Merge7
+  xpos -282
+  ypos 1354
+ }
+ Dot {
+  name Dot7
+  xpos -248
+  ypos 1382
+ }
+set Ne11f2400 [stack 0]
+push $Ne11f2400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode9
+  xpos -380
+  ypos 1433
+ }
+push $Ne11f2400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur10
+  xpos -479
+  ypos 1377
+ }
+ Unpremult {
+  name Unpremult12
+  xpos -479
+  ypos 1405
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy10
+  xpos -479
+  ypos 1433
+ }
+ Premult {
+  name Premult11
+  xpos -479
+  ypos 1475
+ }
+ Merge2 {
+  inputs 2
+  name Merge8
+  xpos -282
+  ypos 1475
+ }
+ Dot {
+  name Dot8
+  xpos -248
+  ypos 1503
+ }
+set Ne122a800 [stack 0]
+push $Ne122a800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode10
+  xpos -381
+  ypos 1554
+ }
+push $Ne122a800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur11
+  xpos -479
+  ypos 1498
+ }
+ Unpremult {
+  name Unpremult13
+  xpos -479
+  ypos 1526
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy11
+  xpos -479
+  ypos 1554
+ }
+ Premult {
+  name Premult12
+  xpos -479
+  ypos 1596
+ }
+ Merge2 {
+  inputs 2
+  name Merge10
+  xpos -282
+  ypos 1596
+ }
+ Dot {
+  name Dot9
+  xpos -248
+  ypos 1624
+ }
+set Ne125ac00 [stack 0]
+push $Ne125ac00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode11
+  xpos -381
+  ypos 1675
+ }
+push $Ne125ac00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur12
+  xpos -479
+  ypos 1619
+ }
+ Unpremult {
+  name Unpremult14
+  xpos -479
+  ypos 1647
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy12
+  xpos -479
+  ypos 1675
+ }
+ Premult {
+  name Premult13
+  xpos -479
+  ypos 1717
+ }
+ Merge2 {
+  inputs 2
+  name Merge11
+  xpos -282
+  ypos 1717
+ }
+ Dot {
+  name Dot10
+  xpos -248
+  ypos 1745
+ }
+set Ne128b000 [stack 0]
+push $Ne128b000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode12
+  xpos -381
+  ypos 1796
+ }
+push $Ne128b000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur13
+  xpos -479
+  ypos 1740
+ }
+ Unpremult {
+  name Unpremult15
+  xpos -479
+  ypos 1768
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy13
+  xpos -479
+  ypos 1796
+ }
+ Premult {
+  name Premult14
+  xpos -479
+  ypos 1838
+ }
+ Merge2 {
+  inputs 2
+  name Merge14
+  xpos -282
+  ypos 1838
+ }
+ Dot {
+  name Dot11
+  xpos -248
+  ypos 1866
+ }
+set Ne12b9400 [stack 0]
+push $Ne12b9400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode13
+  xpos -382
+  ypos 1917
+ }
+push $Ne12b9400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur14
+  xpos -479
+  ypos 1861
+ }
+ Unpremult {
+  name Unpremult16
+  xpos -479
+  ypos 1889
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy14
+  xpos -479
+  ypos 1917
+ }
+ Premult {
+  name Premult15
+  xpos -479
+  ypos 1959
+ }
+ Merge2 {
+  inputs 2
+  name Merge15
+  xpos -282
+  ypos 1959
+ }
+ Dot {
+  name Dot12
+  xpos -248
+  ypos 1987
+ }
+set Ne12e7800 [stack 0]
+push $Ne12e7800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode14
+  xpos -381
+  ypos 2038
+ }
+push $Ne12e7800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur15
+  xpos -479
+  ypos 1982
+ }
+ Unpremult {
+  name Unpremult17
+  xpos -479
+  ypos 2010
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy15
+  xpos -479
+  ypos 2038
+ }
+ Premult {
+  name Premult16
+  xpos -479
+  ypos 2080
+ }
+ Merge2 {
+  inputs 2
+  name Merge16
+  xpos -282
+  ypos 2080
+ }
+ Dot {
+  name Dot13
+  xpos -248
+  ypos 2108
+ }
+set Ne131bc00 [stack 0]
+push $Ne131bc00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1)}}
+  blur 1
+  name Erode15
+  xpos -380
+  ypos 2159
+ }
+push $Ne131bc00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur16
+  xpos -479
+  ypos 2103
+ }
+ Unpremult {
+  name Unpremult18
+  xpos -479
+  ypos 2131
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy16
+  xpos -479
+  ypos 2159
+ }
+ Premult {
+  name Premult17
+  xpos -479
+  ypos 2201
+ }
+ Merge2 {
+  inputs 2
+  name Merge17
+  xpos -282
+  ypos 2201
+ }
+ Dot {
+  name Dot15
+  xpos -248
+  ypos 2229
+ }
+set Ne131a000 [stack 0]
+push $Ne131a000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode16
+  xpos -380
+  ypos 2280
+ }
+push $Ne131a000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur17
+  xpos -479
+  ypos 2224
+ }
+ Unpremult {
+  name Unpremult19
+  xpos -479
+  ypos 2252
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy17
+  xpos -479
+  ypos 2280
+ }
+ Premult {
+  name Premult18
+  xpos -479
+  ypos 2322
+ }
+ Merge2 {
+  inputs 2
+  name Merge18
+  xpos -282
+  ypos 2322
+ }
+ Dot {
+  name Dot16
+  xpos -248
+  ypos 2350
+ }
+set Ne1348400 [stack 0]
+push $Ne1348400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode17
+  xpos -383
+  ypos 2401
+ }
+push $Ne1348400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur18
+  xpos -479
+  ypos 2345
+ }
+ Unpremult {
+  name Unpremult20
+  xpos -479
+  ypos 2373
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy18
+  xpos -479
+  ypos 2401
+ }
+ Premult {
+  name Premult19
+  xpos -479
+  ypos 2443
+ }
+ Merge2 {
+  inputs 2
+  name Merge19
+  xpos -282
+  ypos 2443
+ }
+ Dot {
+  name Dot17
+  xpos -248
+  ypos 2471
+ }
+set Ne137e800 [stack 0]
+push $Ne137e800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode1
+  xpos -381
+  ypos 2522
+ }
+push $Ne137e800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur6
+  xpos -479
+  ypos 2466
+ }
+ Unpremult {
+  name Unpremult2
+  xpos -479
+  ypos 2494
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy4
+  xpos -479
+  ypos 2522
+ }
+ Premult {
+  name Premult6
+  xpos -479
+  ypos 2564
+ }
+ Merge2 {
+  inputs 2
+  name Merge9
+  xpos -282
+  ypos 2564
+ }
+ Dot {
+  name Dot18
+  xpos -248
+  ypos 2592
+ }
+set Ne13a8c00 [stack 0]
+push $Ne13a8c00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode18
+  xpos -380
+  ypos 2643
+ }
+push $Ne13a8c00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur19
+  xpos -479
+  ypos 2587
+ }
+ Unpremult {
+  name Unpremult21
+  xpos -479
+  ypos 2615
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy19
+  xpos -479
+  ypos 2643
+ }
+ Premult {
+  name Premult20
+  xpos -479
+  ypos 2685
+ }
+ Merge2 {
+  inputs 2
+  name Merge20
+  xpos -282
+  ypos 2685
+ }
+ Dot {
+  name Dot19
+  xpos -248
+  ypos 2713
+ }
+set Ne13d9000 [stack 0]
+push $Ne13d9000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode19
+  xpos -379
+  ypos 2764
+ }
+push $Ne13d9000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur20
+  xpos -479
+  ypos 2708
+ }
+ Unpremult {
+  name Unpremult22
+  xpos -479
+  ypos 2736
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy20
+  xpos -479
+  ypos 2764
+ }
+ Premult {
+  name Premult21
+  xpos -479
+  ypos 2806
+ }
+ Merge2 {
+  inputs 2
+  name Merge21
+  xpos -282
+  ypos 2806
+ }
+ Dot {
+  name Dot20
+  xpos -248
+  ypos 2834
+ }
+set Ne140d400 [stack 0]
+push $Ne140d400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode20
+  xpos -381
+  ypos 2885
+ }
+push $Ne140d400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur21
+  xpos -479
+  ypos 2829
+ }
+ Unpremult {
+  name Unpremult23
+  xpos -479
+  ypos 2857
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy21
+  xpos -479
+  ypos 2885
+ }
+ Premult {
+  name Premult22
+  xpos -479
+  ypos 2927
+ }
+ Merge2 {
+  inputs 2
+  name Merge22
+  xpos -282
+  ypos 2927
+ }
+ Dot {
+  name Dot21
+  xpos -248
+  ypos 2955
+ }
+push $Ne140d400
+push $Ne13d9000
+push $Ne13a8c00
+push $Ne137e800
+push $Ne1348400
+push $Ne131a000
+push $Ne131bc00
+push $Ne12e7800
+push $Ne12b9400
+push $Ne128b000
+push $Ne125ac00
+push $Ne122a800
+push $Ne11f2400
+push $Ne11c8000
+push $Ne11c9c00
+push $Ne1199800
+push $Ne1169400
+push $Ne1139000
+push $Ne1106c00
+push $Ne0110800
+ Switch {
+  inputs 21
+  which {{parent.Quality*2 i}}
+  name Switch2
+  xpos -47
+  ypos 2950
+ }
+set Ne143f400 [stack 0]
+push $Ne143f400
+ Dot {
+  name Dot28
+  xpos 63
+  ypos 2955
+ }
+ Blur {
+  channels rgba
+  size {{parent.EatIn}}
+  name Blur9
+  xpos 29
+  ypos 2973
+ }
+ Unpremult {
+  name Unpremult5
+  xpos 29
+  ypos 3001
+ }
+ Merge2 {
+  inputs 2
+  name Merge12
+  xpos 29
+  ypos 3054
+ }
+set Ne143e400 [stack 0]
+ Dot {
+  name Dot23
+  xpos 63
+  ypos 3096
+ }
+set Ne143e000 [stack 0]
+ Merge2 {
+  inputs 2
+  name Merge13
+  xpos 179
+  ypos 3082
+ }
+ Shuffle {
+  alpha black
+  name Shuffle1
+  xpos 179
+  ypos 3110
+ }
+ Copy {
+  inputs 2
+  from0 -rgba.alpha
+  to0 -rgba.alpha
+  channels alpha
+  bbox A
+  name Copy3
+  xpos 289
+  ypos 3096
+ }
+set Ne1463400 [stack 0]
+push $Ne0110c00
+push $Ne143e000
+ Merge2 {
+  inputs 2
+  operation stencil
+  name Merge23
+  xpos 29
+  ypos 3152
+ }
+ Merge2 {
+  inputs 2
+  operation mask
+  name Merge24
+  xpos 29
+  ypos 3180
+ }
+push $Ne0111400
+ Unpremult {
+  name Unpremult1
+  xpos 406
+  ypos 506
+ }
+push $Ne1463400
+ Premult {
+  name Premult5
+  xpos 289
+  ypos 3159
+ }
+ Switch {
+  inputs 3
+  which {{parent.view}}
+  name Switch1
+  xpos 406
+  ypos 3180
+ }
+ Output {
+  name Output1
+  xpos 406
+  ypos 3226
+ }
+push $Ne143e400
+ woz_SampledGrain {  name woz_SampledGrain1
+  note_font "Bitstream Vera Sans"
+  selected true
+  xpos -93
+  ypos 3092
+  disable true
+  amount {0.8 0.6 1}
+  response_curve 0
+  weight {master {curve C 1 1}
+    red {curve C k 0.06825351715 s0 S x0.02038915828 0.06825351715 x0.05301605165 0.146532774 x0.113490358 0.2028177977 x0.2067675591 0.2327821851 x0.3377979398 0.3559696674 x0.4516678154 0.3959222734 x2.575448513 0.7209094763 s0}
+    green {curve C k 0.08652031422 s0 S x0.01975706592 0.08652031422 x0.06002568454 0.1404064894 x0.1249111295 0.2418224514 x0.2272428274 0.3004345894 x0.3713901937 0.3502374291 x0.5080040097 0.4315089881 x2.590501308 1.0420928 s0}
+    blue {curve x0.001219927799 0.06949198246 s0 x0.007348543033 0.07457503676 x0.02075427771 0.1140499115 x0.06008252501 0.1341432631 x0.124676384 0.1596879959 x0.2256324887 0.2218938619 x0.3742266893 0.2554758787 x0.5137215257 0.2946259379 x2.652164459 0.5604643822 s0}}
+  maskChannelMask rgba.alpha
+  maskChannelInput none
+  unpremult none
+
+  xpos -93
+  ypos 3092
+  selected true
+  disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+ xpos -135
+ ypos 3066
+ selected false
+ disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+xpos -135
+ypos 3066
+selected false
+disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ }
+end_group
+push $Ne00be800
+Keymix {
+ inputs 3
+ name Keymix7
+ selected true
+ xpos 1712
+ ypos -2493
+}
+Reformat {
+ type scale
+ scale 0.35
+ name Reformat11
+ selected true
+ xpos 1712
+ ypos -2418
+}
+Reformat {
+ format "2432 1088 0 0 2432 1088 1 "
+ resize none
+ center false
+ name Reformat3
+ selected true
+ xpos 1712
+ ypos -2392
+}
+Transform {
+ translate {440 20}
+ center {1216 544}
+ black_outside false
+ name Transform3
+ selected true
+ xpos 1712
+ ypos -2354
+}
+Clamp {
+ maximum_enable false
+ name Clamp2
+ label "fix neg values\n"
+ note_font "Verdana Bold Bold Bold Bold Bold"
+ selected true
+ xpos 1712
+ ypos -2308
+}
+Dot {
+ name Dot70
+ selected true
+ xpos 1744
+ ypos 1515
+}
+set Ne14bb800 [stack 0]
+Transform {
+ translate {-440 0}
+ center {2160 405}
+ name Transform16
+ selected true
+ xpos 1710
+ ypos 1819
+}
+add_layer {dancer02 dancer02.red dancer02.green dancer02.blue dancer02.alpha}
+Shuffle {
+ black red
+ white green
+ red2 blue
+ green2 alpha
+ out2 dancer02
+ name Shuffle19
+ label "\[value in]\nshuffle rgba in to channel"
+ selected true
+ xpos 1710
+ ypos 1845
+}
+Merge2 {
+ inputs 2
+ operation under
+ name Merge31
+ selected true
+ xpos 1712
+ ypos 1996
+}
+Merge2 {
+ inputs 2
+ name Merge35
+ selected true
+ xpos 1712
+ ypos 2990
+}
+Shuffle {
+ in dancer02
+ name Shuffle24
+ label "\[value in]"
+ selected true
+ xpos 1712
+ ypos 4056
+}
+Transform {
+ translate {4294 20}
+ center {{width/2 x201 0 x1170 798} {height/2 x201 0 x1170 470}}
+ name Transform8
+ selected true
+ xpos 1709
+ ypos 4211
+}
+TimeOffset {
+ time_offset {{"\[value Dot104.last]-(-\[value TimeOffset1.time_offset])"}}
+ time ""
+ name TimeOffset6
+ label "retime to start at fr1"
+ selected true
+ xpos 1709
+ ypos 4264
+}
+Dot {
+ name Dot54
+ selected true
+ xpos 1743
+ ypos 4390
+}
+push $Ne00bfc00
+Dot {
+ name Dot101
+ selected true
+ xpos 1481
+ ypos 2955
+}
+push $Ne00bf800
+Dot {
+ name Dot94
+ selected true
+ xpos 1478
+ ypos 1961
+}
+RotoPaint {
+ inputs 0
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x45070000 x43ca8000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Rectangle1 512 bezier
+     {{cc
+       {f 8192}
+       {px x43b80000
+        {0 xc33c5554}
+        {xc365fff0 x43cd0000}
+        {x44d7d556 0}
+        {xc4d7d552 0}
+        {x459b2801 x43d20000}
+        {0 xc33c5554}
+        {0 x433c5555}
+        {x459ad800 xc2be0000}
+        {xc4d7d554 0}
+        {x44d7d555 0}
+        {xc3610000 xc2be0000}
+        {0 x433c5555}}}
+      {cc
+       {f 8192}
+       {p
+        {{{x43b80000 0}}
+	 {{x43b80000 xc33c5554}}}
+        {{{x43b80000 x4054ec40}}
+	 {{x43b80000 x4330ac24}}}
+        {{{x43b80000 x44d7d55c}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 xc4d7d552}}
+      {{x43b80000 0}}}
+        {{{x43b80000 x40d5a800}}
+      {{x43b80000 x432bab9c}}}
+        {{{x43b80000 0}}
+      {{x43b80000 xc33c555c}}}
+        {{{x43b80000 0}}
+      {{x43b80000 x433c5555}}}
+        {{{x43b80000 0}}
+      {{x43b80000 0}}}
+        {{{x43b80000 xc4d7d554}}
+      {{x43b80000 0}}}
+        {{{x43b80000 x44d7d555}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 0}}
+	 {{x43b80000 0}}}
+        {{{x43b80000 0}}
+	 {{x43b80000 x433c5555}}}}}}
+     {tx x43b80000 x4513d000 x433b8000}
+     {a osw x41200000 osf 0 str 1 spx x45070000 spy x43ca8000 sb 1 ltn x43b80000 ltm x43b80000 tt x41000000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 tt 8 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {2160 405}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 368
+ lifetime_end 368
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name RotoPaint8
+ selected true
+ xpos 1313
+ ypos -2493
+}
+Read {
+ inputs 0
+ file_type exr
+ file F:/primaryVFX/PROJECTS/SPECTRUM/1_ingest/plates/shoot02/Scene_22_Andre_Shot_08/Scene_22_Andre_Shot_08_A020_C003_EXR/A020_03051131_C003.%08d.exr
+ format "4608 2592 0 0 4608 2592 1 "
+ first 1036923
+ last 1037942
+ origfirst 1036923
+ origlast 1037942
+ origset true
+ colorspace Cineon
+ name Read1
+ selected true
+ xpos 1408
+ ypos -2979
+}
+Dot {
+ name Dot86
+ label "DANCER PLATE IN"
+ selected true
+ xpos 1442
+ ypos -2852
+}
+Dot {
+ name Dot104
+ label "DO NOT DELETE"
+ note_font "Verdana Bold"
+ selected true
+ xpos 1442
+ ypos -2784
+ addUserKnob {20 User}
+ addUserKnob {3 last l lastFrame}
+ last {{"\[value \[topnode].last]"}}
+}
+TimeOffset {
+ time_offset {{"-\[value \[topnode].first]"}}
+ time ""
+ name TimeOffset1
+ label "start at fr1"
+ selected true
+ xpos 1408
+ ypos -2731
+}
+Dot {
+ name Dot85
+ selected true
+ xpos 1441
+ ypos -2573
+}
+set Ne14f0400 [stack 0]
+Group {
+ name EdgeFill_achang8
+ selected true
+ xpos 1454
+ ypos -2542
+ addUserKnob {20 EdgeFill}
+ addUserKnob {4 view M {result "healthy source" "fill only" ""}}
+ addUserKnob {7 EatIn l "Eat In" R 0 50}
+ EatIn 4
+ addUserKnob {7 Quality R 1 10}
+ Quality 10
+ addUserKnob {26 ""}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 289
+  ypos 413
+ }
+ Dot {
+  name Dot30
+  xpos 323
+  ypos 441
+ }
+set Ne1545c00 [stack 0]
+push $Ne1545c00
+ Unpremult {
+  name Unpremult6
+  xpos -26
+  ypos 436
+ }
+ Dilate {
+  channels alpha
+  size {{-parent.EatIn i}}
+  name Dilate1
+  xpos -26
+  ypos 464
+ }
+ Premult {
+  name Premult3
+  xpos -26
+  ypos 506
+ }
+set Ne1545000 [stack 0]
+ Dot {
+  name Dot29
+  xpos 213
+  ypos 546
+ }
+ Dot {
+  name Dot22
+  xpos 213
+  ypos 3003
+ }
+set Ne1544800 [stack 0]
+push $Ne1545000
+ Dot {
+  name Dot14
+  xpos -248
+  ypos 509
+ }
+set Ne1544400 [stack 0]
+push $Ne1544400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode3
+  xpos -381
+  ypos 558
+ }
+push $Ne1544400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur1
+  xpos -483
+  ypos 504
+ }
+ Unpremult {
+  name Unpremult3
+  xpos -483
+  ypos 532
+ }
+ Copy {
+  inputs 2
+  from0 -rgba.alpha
+  to0 -rgba.alpha
+  channels alpha
+  name Copy1
+  xpos -483
+  ypos 560
+ }
+ Premult {
+  name Premult1
+  xpos -483
+  ypos 616
+ }
+ Merge2 {
+  inputs 2
+  name Merge1
+  xpos -282
+  ypos 616
+ }
+ Dot {
+  name Dot1
+  xpos -248
+  ypos 656
+ }
+set Ne156a800 [stack 0]
+push $Ne156a800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode2
+  xpos -385
+  ypos 707
+ }
+push $Ne156a800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur2
+  xpos -479
+  ypos 651
+ }
+ Unpremult {
+  name Unpremult4
+  xpos -479
+  ypos 679
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy2
+  xpos -479
+  ypos 707
+ }
+ Premult {
+  name Premult2
+  xpos -479
+  ypos 749
+ }
+ Merge2 {
+  inputs 2
+  name Merge2
+  xpos -282
+  ypos 749
+ }
+ Dot {
+  name Dot2
+  xpos -248
+  ypos 777
+ }
+set Ne159ac00 [stack 0]
+push $Ne159ac00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode4
+  xpos -382
+  ypos 828
+ }
+push $Ne159ac00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur3
+  xpos -479
+  ypos 772
+ }
+ Unpremult {
+  name Unpremult7
+  xpos -479
+  ypos 800
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy5
+  xpos -479
+  ypos 828
+ }
+ Premult {
+  name Premult4
+  xpos -479
+  ypos 870
+ }
+ Merge2 {
+  inputs 2
+  name Merge3
+  xpos -282
+  ypos 870
+ }
+ Dot {
+  name Dot3
+  xpos -248
+  ypos 898
+ }
+set Ne15cb000 [stack 0]
+push $Ne15cb000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode5
+  xpos -381
+  ypos 949
+ }
+push $Ne15cb000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur4
+  xpos -479
+  ypos 893
+ }
+ Unpremult {
+  name Unpremult8
+  xpos -479
+  ypos 921
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy6
+  xpos -479
+  ypos 949
+ }
+ Premult {
+  name Premult7
+  xpos -479
+  ypos 991
+ }
+ Merge2 {
+  inputs 2
+  name Merge4
+  xpos -282
+  ypos 991
+ }
+ Dot {
+  name Dot4
+  xpos -248
+  ypos 1019
+ }
+set Ne15ff400 [stack 0]
+push $Ne15ff400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode6
+  xpos -380
+  ypos 1070
+ }
+push $Ne15ff400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur5
+  xpos -479
+  ypos 1014
+ }
+ Unpremult {
+  name Unpremult9
+  xpos -479
+  ypos 1042
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy7
+  xpos -479
+  ypos 1070
+ }
+ Premult {
+  name Premult8
+  xpos -479
+  ypos 1112
+ }
+ Merge2 {
+  inputs 2
+  name Merge5
+  xpos -282
+  ypos 1112
+ }
+ Dot {
+  name Dot5
+  xpos -248
+  ypos 1140
+ }
+set Ne1629800 [stack 0]
+push $Ne1629800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode7
+  xpos -382
+  ypos 1191
+ }
+push $Ne1629800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur7
+  xpos -479
+  ypos 1135
+ }
+ Unpremult {
+  name Unpremult10
+  xpos -479
+  ypos 1163
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy8
+  xpos -479
+  ypos 1191
+ }
+ Premult {
+  name Premult9
+  xpos -479
+  ypos 1233
+ }
+ Merge2 {
+  inputs 2
+  name Merge6
+  xpos -282
+  ypos 1233
+ }
+ Dot {
+  name Dot6
+  xpos -248
+  ypos 1261
+ }
+set Ne165bc00 [stack 0]
+push $Ne165bc00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1)}}
+  blur 1
+  name Erode8
+  xpos -382
+  ypos 1312
+ }
+push $Ne165bc00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur8
+  xpos -479
+  ypos 1256
+ }
+ Unpremult {
+  name Unpremult11
+  xpos -479
+  ypos 1284
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy9
+  xpos -479
+  ypos 1312
+ }
+ Premult {
+  name Premult10
+  xpos -479
+  ypos 1354
+ }
+ Merge2 {
+  inputs 2
+  name Merge7
+  xpos -282
+  ypos 1354
+ }
+ Dot {
+  name Dot7
+  xpos -248
+  ypos 1382
+ }
+set Ne165a000 [stack 0]
+push $Ne165a000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode9
+  xpos -380
+  ypos 1433
+ }
+push $Ne165a000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur10
+  xpos -479
+  ypos 1377
+ }
+ Unpremult {
+  name Unpremult12
+  xpos -479
+  ypos 1405
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy10
+  xpos -479
+  ypos 1433
+ }
+ Premult {
+  name Premult11
+  xpos -479
+  ypos 1475
+ }
+ Merge2 {
+  inputs 2
+  name Merge8
+  xpos -282
+  ypos 1475
+ }
+ Dot {
+  name Dot8
+  xpos -248
+  ypos 1503
+ }
+set Ne168c400 [stack 0]
+push $Ne168c400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode10
+  xpos -381
+  ypos 1554
+ }
+push $Ne168c400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur11
+  xpos -479
+  ypos 1498
+ }
+ Unpremult {
+  name Unpremult13
+  xpos -479
+  ypos 1526
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy11
+  xpos -479
+  ypos 1554
+ }
+ Premult {
+  name Premult12
+  xpos -479
+  ypos 1596
+ }
+ Merge2 {
+  inputs 2
+  name Merge10
+  xpos -282
+  ypos 1596
+ }
+ Dot {
+  name Dot9
+  xpos -248
+  ypos 1624
+ }
+set Ne16ba800 [stack 0]
+push $Ne16ba800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode11
+  xpos -381
+  ypos 1675
+ }
+push $Ne16ba800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur12
+  xpos -479
+  ypos 1619
+ }
+ Unpremult {
+  name Unpremult14
+  xpos -479
+  ypos 1647
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy12
+  xpos -479
+  ypos 1675
+ }
+ Premult {
+  name Premult13
+  xpos -479
+  ypos 1717
+ }
+ Merge2 {
+  inputs 2
+  name Merge11
+  xpos -282
+  ypos 1717
+ }
+ Dot {
+  name Dot10
+  xpos -248
+  ypos 1745
+ }
+set Ne16eec00 [stack 0]
+push $Ne16eec00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode12
+  xpos -381
+  ypos 1796
+ }
+push $Ne16eec00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur13
+  xpos -479
+  ypos 1740
+ }
+ Unpremult {
+  name Unpremult15
+  xpos -479
+  ypos 1768
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy13
+  xpos -479
+  ypos 1796
+ }
+ Premult {
+  name Premult14
+  xpos -479
+  ypos 1838
+ }
+ Merge2 {
+  inputs 2
+  name Merge14
+  xpos -282
+  ypos 1838
+ }
+ Dot {
+  name Dot11
+  xpos -248
+  ypos 1866
+ }
+set Ne173f000 [stack 0]
+push $Ne173f000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode13
+  xpos -382
+  ypos 1917
+ }
+push $Ne173f000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur14
+  xpos -479
+  ypos 1861
+ }
+ Unpremult {
+  name Unpremult16
+  xpos -479
+  ypos 1889
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy14
+  xpos -479
+  ypos 1917
+ }
+ Premult {
+  name Premult15
+  xpos -479
+  ypos 1959
+ }
+ Merge2 {
+  inputs 2
+  name Merge15
+  xpos -282
+  ypos 1959
+ }
+ Dot {
+  name Dot12
+  xpos -248
+  ypos 1987
+ }
+set Ne176f400 [stack 0]
+push $Ne176f400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode14
+  xpos -381
+  ypos 2038
+ }
+push $Ne176f400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur15
+  xpos -479
+  ypos 1982
+ }
+ Unpremult {
+  name Unpremult17
+  xpos -479
+  ypos 2010
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy15
+  xpos -479
+  ypos 2038
+ }
+ Premult {
+  name Premult16
+  xpos -479
+  ypos 2080
+ }
+ Merge2 {
+  inputs 2
+  name Merge16
+  xpos -282
+  ypos 2080
+ }
+ Dot {
+  name Dot13
+  xpos -248
+  ypos 2108
+ }
+set Ne17a1800 [stack 0]
+push $Ne17a1800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1)}}
+  blur 1
+  name Erode15
+  xpos -380
+  ypos 2159
+ }
+push $Ne17a1800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur16
+  xpos -479
+  ypos 2103
+ }
+ Unpremult {
+  name Unpremult18
+  xpos -479
+  ypos 2131
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy16
+  xpos -479
+  ypos 2159
+ }
+ Premult {
+  name Premult17
+  xpos -479
+  ypos 2201
+ }
+ Merge2 {
+  inputs 2
+  name Merge17
+  xpos -282
+  ypos 2201
+ }
+ Dot {
+  name Dot15
+  xpos -248
+  ypos 2229
+ }
+set Ne17cdc00 [stack 0]
+push $Ne17cdc00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode16
+  xpos -380
+  ypos 2280
+ }
+push $Ne17cdc00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur17
+  xpos -479
+  ypos 2224
+ }
+ Unpremult {
+  name Unpremult19
+  xpos -479
+  ypos 2252
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy17
+  xpos -479
+  ypos 2280
+ }
+ Premult {
+  name Premult18
+  xpos -479
+  ypos 2322
+ }
+ Merge2 {
+  inputs 2
+  name Merge18
+  xpos -282
+  ypos 2322
+ }
+ Dot {
+  name Dot16
+  xpos -248
+  ypos 2350
+ }
+set Ne17cc000 [stack 0]
+push $Ne17cc000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode17
+  xpos -383
+  ypos 2401
+ }
+push $Ne17cc000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur18
+  xpos -479
+  ypos 2345
+ }
+ Unpremult {
+  name Unpremult20
+  xpos -479
+  ypos 2373
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy18
+  xpos -479
+  ypos 2401
+ }
+ Premult {
+  name Premult19
+  xpos -479
+  ypos 2443
+ }
+ Merge2 {
+  inputs 2
+  name Merge19
+  xpos -282
+  ypos 2443
+ }
+ Dot {
+  name Dot17
+  xpos -248
+  ypos 2471
+ }
+set Ne17fa400 [stack 0]
+push $Ne17fa400
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode1
+  xpos -381
+  ypos 2522
+ }
+push $Ne17fa400
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur6
+  xpos -479
+  ypos 2466
+ }
+ Unpremult {
+  name Unpremult2
+  xpos -479
+  ypos 2494
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy4
+  xpos -479
+  ypos 2522
+ }
+ Premult {
+  name Premult6
+  xpos -479
+  ypos 2564
+ }
+ Merge2 {
+  inputs 2
+  name Merge9
+  xpos -282
+  ypos 2564
+ }
+ Dot {
+  name Dot18
+  xpos -248
+  ypos 2592
+ }
+set Ne182e800 [stack 0]
+push $Ne182e800
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode18
+  xpos -380
+  ypos 2643
+ }
+push $Ne182e800
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur19
+  xpos -479
+  ypos 2587
+ }
+ Unpremult {
+  name Unpremult21
+  xpos -479
+  ypos 2615
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy19
+  xpos -479
+  ypos 2643
+ }
+ Premult {
+  name Premult20
+  xpos -479
+  ypos 2685
+ }
+ Merge2 {
+  inputs 2
+  name Merge20
+  xpos -282
+  ypos 2685
+ }
+ Dot {
+  name Dot19
+  xpos -248
+  ypos 2713
+ }
+set Ne185cc00 [stack 0]
+push $Ne185cc00
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode19
+  xpos -379
+  ypos 2764
+ }
+push $Ne185cc00
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur20
+  xpos -479
+  ypos 2708
+ }
+ Unpremult {
+  name Unpremult22
+  xpos -479
+  ypos 2736
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy20
+  xpos -479
+  ypos 2764
+ }
+ Premult {
+  name Premult21
+  xpos -479
+  ypos 2806
+ }
+ Merge2 {
+  inputs 2
+  name Merge21
+  xpos -282
+  ypos 2806
+ }
+ Dot {
+  name Dot20
+  xpos -248
+  ypos 2834
+ }
+set Ne1893000 [stack 0]
+push $Ne1893000
+ Erode {
+  size {{-((parent.EatIn/parent.Quality)+1) i}}
+  blur 1
+  name Erode20
+  xpos -381
+  ypos 2885
+ }
+push $Ne1893000
+ Blur {
+  channels rgba
+  size {{(parent.EatIn/parent.Quality)+1 i}}
+  name Blur21
+  xpos -479
+  ypos 2829
+ }
+ Unpremult {
+  name Unpremult23
+  xpos -479
+  ypos 2857
+ }
+ Copy {
+  inputs 2
+  from0 rgba.alpha
+  to0 rgba.alpha
+  name Copy21
+  xpos -479
+  ypos 2885
+ }
+ Premult {
+  name Premult22
+  xpos -479
+  ypos 2927
+ }
+ Merge2 {
+  inputs 2
+  name Merge22
+  xpos -282
+  ypos 2927
+ }
+ Dot {
+  name Dot21
+  xpos -248
+  ypos 2955
+ }
+push $Ne1893000
+push $Ne185cc00
+push $Ne182e800
+push $Ne17fa400
+push $Ne17cc000
+push $Ne17cdc00
+push $Ne17a1800
+push $Ne176f400
+push $Ne173f000
+push $Ne16eec00
+push $Ne16ba800
+push $Ne168c400
+push $Ne165a000
+push $Ne165bc00
+push $Ne1629800
+push $Ne15ff400
+push $Ne15cb000
+push $Ne159ac00
+push $Ne156a800
+push $Ne1544400
+ Switch {
+  inputs 21
+  which {{parent.Quality*2 i}}
+  name Switch2
+  xpos -47
+  ypos 2950
+ }
+set Ne18c3000 [stack 0]
+push $Ne18c3000
+ Dot {
+  name Dot28
+  xpos 63
+  ypos 2955
+ }
+ Blur {
+  channels rgba
+  size {{parent.EatIn}}
+  name Blur9
+  xpos 29
+  ypos 2973
+ }
+ Unpremult {
+  name Unpremult5
+  xpos 29
+  ypos 3001
+ }
+ Merge2 {
+  inputs 2
+  name Merge12
+  xpos 29
+  ypos 3054
+ }
+set Ne18c2000 [stack 0]
+ Dot {
+  name Dot23
+  xpos 63
+  ypos 3096
+ }
+set Ne18ebc00 [stack 0]
+ Merge2 {
+  inputs 2
+  name Merge13
+  xpos 179
+  ypos 3082
+ }
+ Shuffle {
+  alpha black
+  name Shuffle1
+  xpos 179
+  ypos 3110
+ }
+ Copy {
+  inputs 2
+  from0 -rgba.alpha
+  to0 -rgba.alpha
+  channels alpha
+  bbox A
+  name Copy3
+  xpos 289
+  ypos 3096
+ }
+set Ne18eb000 [stack 0]
+push $Ne1544800
+push $Ne18ebc00
+ Merge2 {
+  inputs 2
+  operation stencil
+  name Merge23
+  xpos 29
+  ypos 3152
+ }
+ Merge2 {
+  inputs 2
+  operation mask
+  name Merge24
+  xpos 29
+  ypos 3180
+ }
+push $Ne1545000
+ Unpremult {
+  name Unpremult1
+  xpos 406
+  ypos 506
+ }
+push $Ne18eb000
+ Premult {
+  name Premult5
+  xpos 289
+  ypos 3159
+ }
+ Switch {
+  inputs 3
+  which {{parent.view}}
+  name Switch1
+  xpos 406
+  ypos 3180
+ }
+ Output {
+  name Output1
+  xpos 406
+  ypos 3226
+ }
+push $Ne18c2000
+ woz_SampledGrain {  name woz_SampledGrain1
+  note_font "Bitstream Vera Sans"
+  selected true
+  xpos -93
+  ypos 3092
+  disable true
+  amount {0.8 0.6 1}
+  response_curve 0
+  weight {master {curve C 1 1}
+    red {curve C k 0.06825351715 s0 S x0.02038915828 0.06825351715 x0.05301605165 0.146532774 x0.113490358 0.2028177977 x0.2067675591 0.2327821851 x0.3377979398 0.3559696674 x0.4516678154 0.3959222734 x2.575448513 0.7209094763 s0}
+    green {curve C k 0.08652031422 s0 S x0.01975706592 0.08652031422 x0.06002568454 0.1404064894 x0.1249111295 0.2418224514 x0.2272428274 0.3004345894 x0.3713901937 0.3502374291 x0.5080040097 0.4315089881 x2.590501308 1.0420928 s0}
+    blue {curve x0.001219927799 0.06949198246 s0 x0.007348543033 0.07457503676 x0.02075427771 0.1140499115 x0.06008252501 0.1341432631 x0.124676384 0.1596879959 x0.2256324887 0.2218938619 x0.3742266893 0.2554758787 x0.5137215257 0.2946259379 x2.652164459 0.5604643822 s0}}
+  maskChannelMask rgba.alpha
+  maskChannelInput none
+  unpremult none
+
+  xpos -93
+  ypos 3092
+  selected true
+  disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+ xpos -135
+ ypos 3066
+ selected false
+ disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+xpos -135
+ypos 3066
+selected false
+disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+xpos -135
+ypos 3066
+selected false
+disable true
+
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ 
+  xpos -135
+  ypos 3066
+  selected false
+  disable true
+ }
+end_group
+push $Ne14f0400
+Keymix {
+ inputs 3
+ name Keymix8
+ selected true
+ xpos 1407
+ ypos -2499
+}
+Reformat {
+ type scale
+ scale 0.35
+ name Reformat12
+ selected true
+ xpos 1407
+ ypos -2414
+}
+Reformat {
+ format "2432 1088 0 0 2432 1088 1 "
+ resize none
+ center false
+ name Reformat2
+ selected true
+ xpos 1407
+ ypos -2388
+}
+Transform {
+ translate {440 20}
+ center {1216 544}
+ black_outside false
+ name Transform2
+ selected true
+ xpos 1407
+ ypos -2350
+}
+Clamp {
+ maximum_enable false
+ name Clamp1
+ label "fix neg values\n"
+ note_font "Verdana Bold Bold Bold Bold"
+ selected true
+ xpos 1407
+ ypos -2299
+}
+Dot {
+ name Dot69
+ selected true
+ xpos 1439
+ ypos 1458
+}
+set Ne193b400 [stack 0]
+Transform {
+ translate {-440 0}
+ center {2160 405}
+ name Transform15
+ selected true
+ xpos 1405
+ ypos 1820
+}
+add_layer {dancer01 dancer01.red dancer01.green dancer01.blue dancer01.alpha}
+Shuffle {
+ black red
+ white green
+ red2 blue
+ green2 alpha
+ out2 dancer01
+ name Shuffle20
+ label "\[value in]\nshuffle rgba in to channel"
+ selected true
+ xpos 1405
+ ypos 1846
+}
+Merge2 {
+ inputs 2
+ operation under
+ name Merge30
+ selected true
+ xpos 1405
+ ypos 1995
+}
+Merge2 {
+ inputs 2
+ name Merge34
+ selected true
+ xpos 1405
+ ypos 2996
+}
+Shuffle {
+ in dancer01
+ name Shuffle23
+ label "\[value in]"
+ selected true
+ xpos 1405
+ ypos 4055
+}
+Transform {
+ translate {7460 0}
+ center {{width/2 x201 0} {height/2 x201 0}}
+ name Transform7
+ selected true
+ xpos 1405
+ ypos 4216
+}
+Merge2 {
+ inputs 2
+ name Merge27
+ selected true
+ xpos 1405
+ ypos 4386
+}
+Merge2 {
+ inputs 2
+ name Merge28
+ selected true
+ xpos 1405
+ ypos 4452
+}
+Merge2 {
+ inputs 2
+ name Merge29
+ selected true
+ xpos 1405
+ ypos 4523
+}
+Reformat {
+ format "9425 1088 0 0 9425 1088 1 fullCorridor"
+ resize none
+ center false
+ name Reformat13
+ selected true
+ xpos 1405
+ ypos 4663
+}
+Reformat {
+ format "9425 1088 0 0 9425 1088 1 fullCorridor"
+ resize none
+ center false
+ name Reformat7
+ selected true
+ xpos 1405
+ ypos 5041
+}
+Merge2 {
+ inputs 2
+ operation stencil
+ name Merge26
+ selected true
+ xpos 1405
+ ypos 5537
+}
+Dot {
+ name Dot36
+ selected true
+ xpos 1439
+ ypos 6110
+}
+push $Nddf63400
+push $Nde130400
+Dot {
+ name Dot22
+ selected true
+ xpos 9346
+ ypos 4141
+}
+set Ne199d400 [stack 0]
+Dot {
+ name Dot24
+ selected true
+ xpos 9642
+ ypos 4141
+}
+set Ne199d000 [stack 0]
+Dot {
+ name Dot60
+ selected true
+ xpos 9933
+ ypos 4141
+}
+set Ne199cc00 [stack 0]
+Dot {
+ name Dot41
+ selected true
+ xpos 10256
+ ypos 4141
+}
+Merge2 {
+ operation plus
+ name Merge11
+ label "light trail"
+ selected true
+ xpos 10222
+ ypos 4249
+}
+Transform {
+ translate {6992 0}
+ center {960 540}
+ name Transform9
+ selected true
+ xpos 10222
+ ypos 4832
+}
+Dot {
+ name Dot42
+ selected true
+ xpos 10256
+ ypos 5035
+}
+push $Ne199cc00
+Merge2 {
+ operation plus
+ name Merge16
+ label "light trail"
+ selected true
+ xpos 9899
+ ypos 4255
+}
+Mirror2 {
+ flop true
+ name Mirror2_2
+ selected true
+ xpos 9899
+ ypos 4877
+ disable true
+}
+Transform {
+ translate {3884 0}
+ center {960 540}
+ name Transform4
+ selected true
+ xpos 9899
+ ypos 4914
+}
+Dot {
+ name Dot61
+ selected true
+ xpos 9933
+ ypos 4959
+}
+push $Ne199d000
+Merge2 {
+ operation plus
+ name Merge10
+ label "light trail"
+ selected true
+ xpos 9608
+ ypos 4255
+}
+Mirror2 {
+ flop true
+ name Mirror2_1
+ selected true
+ xpos 9608
+ ypos 4799
+ disable true
+}
+Transform {
+ translate {1943 0}
+ center {960 540}
+ name Transform1
+ selected true
+ xpos 9608
+ ypos 4837
+}
+Dot {
+ name Dot40
+ selected true
+ xpos 9642
+ ypos 4881
+}
+push $Ne199d400
+Merge2 {
+ operation plus
+ name Merge12
+ label "light trail"
+ selected true
+ xpos 9312
+ ypos 4241
+}
+Reformat {
+ type "to box"
+ box_width 9425
+ box_height 1088
+ resize none
+ center false
+ black_outside true
+ name Reformat1
+ selected true
+ xpos 9312
+ ypos 4832
+}
+Merge2 {
+ inputs 2
+ operation under
+ name Merge4
+ selected true
+ xpos 9312
+ ypos 4877
+}
+Merge2 {
+ inputs 2
+ operation under
+ name Merge17
+ selected true
+ xpos 9312
+ ypos 4955
+}
+Merge2 {
+ inputs 2
+ operation under
+ name Merge5
+ selected true
+ xpos 9312
+ ypos 5031
+}
+Merge2 {
+ inputs 2
+ operation stencil
+ name Merge9
+ selected true
+ xpos 9309
+ ypos 5537
+}
+Dot {
+ name Dot79
+ selected true
+ xpos 9343
+ ypos 5760
+}
+set Ne1a1dc00 [stack 0]
+Dot {
+ name Dot57
+ selected true
+ xpos 9343
+ ypos 5882
+}
+Constant {
+ inputs 0
+ format "9425 1088 0 0 9425 1088 1 fullCorridor"
+ name Constant2
+ selected true
+ xpos 4835
+ ypos -2813
+}
+Merge2 {
+ inputs 2
+ name Merge_DANCER_OVER2
+ tile_color 0xff0000ff
+ note_font "Verdana Bold Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 4832
+ ypos 5871
+}
+Merge2 {
+ inputs 2
+ name Merge_DANCER_OVER
+ tile_color 0xff0000ff
+ note_font "Verdana Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 4832
+ ypos 6099
+}
+Merge2 {
+ inputs 2
+ name Merge_DANCER_OVER1
+ tile_color 0xff0000ff
+ note_font "Verdana Bold Bold Bold Bold Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 4832
+ ypos 6930
+}
+Dot {
+ name Dot103
+ selected true
+ xpos 4866
+ ypos 7899
+}
+Reformat {
+ type scale
+ scale 0.5
+ name Reformat8
+ selected true
+ xpos 4829
+ ypos 8231
+}
+Write {
+ file "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/WIP/spectrum_deck3Abstract_sh11A_comp_v01/spectrum_deck3Abstract_sh11A_comp_v01_%04d.jpeg"
+ file_type jpeg
+ create_directories true
+ checkHashOnRead false
+ version 2
+ in_colorspace linear
+ out_colorspace linear
+ name Write1
+ selected true
+ xpos 4829
+ ypos 8257
+ disable true
+ addUserKnob {20 "Render Path"}
+ addUserKnob {1 showKnob l show}
+ showKnob spectrum
+ addUserKnob {6 lockShow l lock -STARTLINE}
+ addUserKnob {1 sceneKnob l scene}
+ sceneKnob deck3Abstract
+ addUserKnob {6 lockScene l lock -STARTLINE}
+ addUserKnob {1 shotKnob l shot}
+ shotKnob sh11A
+ addUserKnob {6 lockShot l lock -STARTLINE}
+ addUserKnob {1 layerKnob l layer}
+ layerKnob comp
+ addUserKnob {6 lockLayer l lock -STARTLINE}
+ addUserKnob {1 versionKnob l version}
+ versionKnob v01
+ addUserKnob {6 lockVersion l lock -STARTLINE}
+ addUserKnob {4 fileTypeKnob l "file type" M {cin dpx exr hdr jpeg mov null pic png sgi targa tiff xpm yuv}}
+ fileTypeKnob jpeg
+ addUserKnob {6 lockFileType l lock -STARTLINE}
+ lockFileType true
+ addUserKnob {26 "" l "<b>folder options"}
+ addUserKnob {4 folderKnob l folder M {none OUT WIP PRECOMP PLATES CUSTOM}}
+ folderKnob WIP
+ addUserKnob {1 customFolderKnob l custom -STARTLINE +HIDDEN}
+ addUserKnob {6 lockFolder l lock -STARTLINE}
+ lockFolder true
+ addUserKnob {6 subFolder l "save in sub folder" +STARTLINE}
+ subFolder true
+ addUserKnob {2 baseDirKnob l "base directory"}
+ baseDirKnob "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/"
+ addUserKnob {6 lockDir l lock -STARTLINE}
+ addUserKnob {26 "" l "<b>generated path"}
+ addUserKnob {1 pathKnob l path}
+ pathKnob "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/WIP/spectrum_deck3Abstract_sh11A_comp_v01/spectrum_deck3Abstract_sh11A_comp_v01_%04d.jpeg"
+ addUserKnob {6 lockPath l lock -STARTLINE}
+ addUserKnob {22 resetButton l reset T setPathTab.updatePathFragments() +STARTLINE}
+}
+push $Ne008fc00
+Dot {
+ name Dot90
+ selected true
+ xpos 40
+ ypos 1563
+}
+Crop {
+ box {0 0 2432 1088}
+ name Crop2
+ selected true
+ xpos 6
+ ypos 1652
+}
+Reformat {
+ format "2432 1088 0 0 2432 1088 1 "
+ name Reformat15
+ selected true
+ xpos 6
+ ypos 1678
+}
+Remove {
+ operation keep
+ channels rgba
+ name Remove3
+ selected true
+ xpos 6
+ ypos 1716
+}
+Write {
+ channels rgba
+ file "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/DANCER_03/spectrum_deck3Abstract_sh11A_DANCER_03_v02/spectrum_deck3Abstract_sh11A_DANCER_03_v02_%04d.exr"
+ file_type exr
+ first_part none
+ create_directories true
+ checkHashOnRead false
+ in_colorspace linear
+ out_colorspace linear
+ name Write_Dancer3
+ selected true
+ xpos 6
+ ypos 1949
+ addUserKnob {20 "Render Path"}
+ addUserKnob {1 showKnob l show}
+ showKnob spectrum
+ addUserKnob {6 lockShow l lock -STARTLINE}
+ addUserKnob {1 sceneKnob l scene}
+ sceneKnob deck3Abstract
+ addUserKnob {6 lockScene l lock -STARTLINE}
+ addUserKnob {1 shotKnob l shot}
+ shotKnob sh11A
+ addUserKnob {6 lockShot l lock -STARTLINE}
+ addUserKnob {1 layerKnob l layer}
+ layerKnob DANCER_03
+ addUserKnob {6 lockLayer l lock -STARTLINE}
+ lockLayer true
+ addUserKnob {1 versionKnob l version}
+ versionKnob v02
+ addUserKnob {6 lockVersion l lock -STARTLINE}
+ addUserKnob {4 fileTypeKnob l "file type" M {cin dpx exr hdr jpeg mov null pic png sgi targa tiff xpm yuv}}
+ fileTypeKnob exr
+ addUserKnob {6 lockFileType l lock -STARTLINE}
+ lockFileType true
+ addUserKnob {26 "" l "<b>folder options"}
+ addUserKnob {4 folderKnob l folder M {none OUT WIP PRECOMP PLATES CUSTOM}}
+ folderKnob CUSTOM
+ addUserKnob {1 customFolderKnob l custom}
+ customFolderKnob DANCER_03
+ addUserKnob {6 lockFolder l lock -STARTLINE}
+ lockFolder true
+ addUserKnob {6 subFolder l "save in sub folder" +STARTLINE}
+ subFolder true
+ addUserKnob {2 baseDirKnob l "base directory"}
+ baseDirKnob "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/"
+ addUserKnob {6 lockDir l lock -STARTLINE}
+ addUserKnob {26 "" l "<b>generated path"}
+ addUserKnob {1 pathKnob l path}
+ pathKnob "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/DANCER_03/spectrum_deck3Abstract_sh11A_DANCER_03_v02/spectrum_deck3Abstract_sh11A_DANCER_03_v02_%04d.exr"
+ addUserKnob {6 lockPath l lock -STARTLINE}
+ addUserKnob {22 resetButton l reset T setPathTab.updatePathFragments() +STARTLINE}
+}
+push $Ne14bb800
+Dot {
+ name Dot91
+ selected true
+ xpos -351
+ ypos 1515
+}
+Crop {
+ box {0 0 2432 1088}
+ name Crop3
+ selected true
+ xpos -385
+ ypos 1660
+}
+Reformat {
+ format "2432 1088 0 0 2432 1088 1 "
+ name Reformat16
+ selected true
+ xpos -385
+ ypos 1686
+}
+Remove {
+ operation keep
+ channels rgba
+ name Remove4
+ selected true
+ xpos -385
+ ypos 1724
+}
+Write {
+ channels rgba
+ file "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/DANCER_02/spectrum_deck3Abstract_sh11A_DANCER_02_v02/spectrum_deck3Abstract_sh11A_DANCER_02_v02_%04d.exr"
+ file_type exr
+ first_part none
+ create_directories true
+ checkHashOnRead false
+ in_colorspace linear
+ out_colorspace linear
+ name Write_Dancer2
+ selected true
+ xpos -385
+ ypos 1954
+ addUserKnob {20 "Render Path"}
+ addUserKnob {1 showKnob l show}
+ showKnob spectrum
+ addUserKnob {6 lockShow l lock -STARTLINE}
+ addUserKnob {1 sceneKnob l scene}
+ sceneKnob deck3Abstract
+ addUserKnob {6 lockScene l lock -STARTLINE}
+ addUserKnob {1 shotKnob l shot}
+ shotKnob sh11A
+ addUserKnob {6 lockShot l lock -STARTLINE}
+ addUserKnob {1 layerKnob l layer}
+ layerKnob DANCER_02
+ addUserKnob {6 lockLayer l lock -STARTLINE}
+ lockLayer true
+ addUserKnob {1 versionKnob l version}
+ versionKnob v02
+ addUserKnob {6 lockVersion l lock -STARTLINE}
+ addUserKnob {4 fileTypeKnob l "file type" M {cin dpx exr hdr jpeg mov null pic png sgi targa tiff xpm yuv}}
+ fileTypeKnob exr
+ addUserKnob {6 lockFileType l lock -STARTLINE}
+ lockFileType true
+ addUserKnob {26 "" l "<b>folder options"}
+ addUserKnob {4 folderKnob l folder M {none OUT WIP PRECOMP PLATES CUSTOM}}
+ folderKnob CUSTOM
+ addUserKnob {1 customFolderKnob l custom}
+ customFolderKnob DANCER_02
+ addUserKnob {6 lockFolder l lock -STARTLINE}
+ lockFolder true
+ addUserKnob {6 subFolder l "save in sub folder" +STARTLINE}
+ subFolder true
+ addUserKnob {2 baseDirKnob l "base directory"}
+ baseDirKnob "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/"
+ addUserKnob {6 lockDir l lock -STARTLINE}
+ addUserKnob {26 "" l "<b>generated path"}
+ addUserKnob {1 pathKnob l path}
+ pathKnob "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/DANCER_02/spectrum_deck3Abstract_sh11A_DANCER_02_v02/spectrum_deck3Abstract_sh11A_DANCER_02_v02_%04d.exr"
+ addUserKnob {6 lockPath l lock -STARTLINE}
+ addUserKnob {22 resetButton l reset T setPathTab.updatePathFragments() +STARTLINE}
+}
+push $Ne193b400
+Dot {
+ name Dot92
+ selected true
+ xpos -829
+ ypos 1458
+}
+Crop {
+ box {0 0 2432 1088}
+ name Crop4
+ selected true
+ xpos -863
+ ypos 1667
+}
+Reformat {
+ format "2432 1088 0 0 2432 1088 1 "
+ name Reformat17
+ selected true
+ xpos -863
+ ypos 1693
+}
+Remove {
+ operation keep
+ channels rgba
+ name Remove5
+ selected true
+ xpos -863
+ ypos 1731
+}
+Write {
+ channels rgba
+ file "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/DANCER_01/spectrum_deck3Abstract_sh11A_DANCER_01_v02/spectrum_deck3Abstract_sh11A_DANCER_01_v02_%04d.exr"
+ file_type exr
+ first_part none
+ create_directories true
+ checkHashOnRead false
+ in_colorspace linear
+ out_colorspace linear
+ name Write_Dancer1
+ selected true
+ xpos -863
+ ypos 1952
+ addUserKnob {20 "Render Path"}
+ addUserKnob {1 showKnob l show}
+ showKnob spectrum
+ addUserKnob {6 lockShow l lock -STARTLINE}
+ addUserKnob {1 sceneKnob l scene}
+ sceneKnob deck3Abstract
+ addUserKnob {6 lockScene l lock -STARTLINE}
+ addUserKnob {1 shotKnob l shot}
+ shotKnob sh11A
+ addUserKnob {6 lockShot l lock -STARTLINE}
+ addUserKnob {1 layerKnob l layer}
+ layerKnob DANCER_01
+ addUserKnob {6 lockLayer l lock -STARTLINE}
+ lockLayer true
+ addUserKnob {1 versionKnob l version}
+ versionKnob v02
+ addUserKnob {6 lockVersion l lock -STARTLINE}
+ addUserKnob {4 fileTypeKnob l "file type" M {cin dpx exr hdr jpeg mov null pic png sgi targa tiff xpm yuv}}
+ fileTypeKnob exr
+ addUserKnob {6 lockFileType l lock -STARTLINE}
+ lockFileType true
+ addUserKnob {26 "" l "<b>folder options"}
+ addUserKnob {4 folderKnob l folder M {none OUT WIP PRECOMP PLATES CUSTOM}}
+ folderKnob CUSTOM
+ addUserKnob {1 customFolderKnob l custom}
+ customFolderKnob DANCER_01
+ addUserKnob {6 lockFolder l lock -STARTLINE}
+ lockFolder true
+ addUserKnob {6 subFolder l "save in sub folder" +STARTLINE}
+ subFolder true
+ addUserKnob {2 baseDirKnob l "base directory"}
+ baseDirKnob "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/"
+ addUserKnob {6 lockDir l lock -STARTLINE}
+ addUserKnob {26 "" l "<b>generated path"}
+ addUserKnob {1 pathKnob l path}
+ pathKnob "F:/primaryVFX/PROJECTS/SPECTRUM/3_shots/deck 3_abstract/shot_11A/2d/renders/DANCER_01/spectrum_deck3Abstract_sh11A_DANCER_01_v02/spectrum_deck3Abstract_sh11A_DANCER_01_v02_%04d.exr"
+ addUserKnob {6 lockPath l lock -STARTLINE}
+ addUserKnob {22 resetButton l reset T setPathTab.updatePathFragments() +STARTLINE}
+}
+push $Nddf63c00
+Dot {
+ name Dot75
+ selected true
+ xpos 4276
+ ypos 6758
+}
+Crop {
+ box {0 0 2432 1088}
+ name Crop5
+ selected true
+ xpos 4239
+ ypos 8017
+}
+Reformat {
+ format "9425 1088 0 0 9425 1088 1 fullCorridor"
+ name Reformat18
+ selected true
+ xpos 4239
+ ypos 8043
+}
+Remove {
+ operation keep
+ channels rgba
+ name Remove6
+ selected true
+ xpos 4239
+ ypos 8081
+}
+Write {
+ channels rgba
+ file F:/primaryVFX/PROJECTS/SPECTRUM/2_assets/2d/renders/PRECOMP_FG/spectrum_sh01_ENV_FG_v03/spectrum_sh01_ENV_FG_v03_%04d.exr
+ file_type exr
+ first_part none
+ create_directories true
+ checkHashOnRead false
+ version 7
+ in_colorspace linear
+ out_colorspace linear
+ name Write_FG
+ selected true
+ xpos 4239
+ ypos 8290
+ disable true
+ addUserKnob {20 "Render Path"}
+ addUserKnob {1 showKnob l show}
+ showKnob spectrum
+ addUserKnob {6 lockShow l lock -STARTLINE}
+ addUserKnob {1 sceneKnob l scene}
+ addUserKnob {6 lockScene l lock -STARTLINE}
+ addUserKnob {1 shotKnob l shot}
+ shotKnob sh01
+ addUserKnob {6 lockShot l lock -STARTLINE}
+ addUserKnob {1 layerKnob l layer}
+ layerKnob ENV_FG
+ addUserKnob {6 lockLayer l lock -STARTLINE}
+ lockLayer true
+ addUserKnob {1 versionKnob l version}
+ versionKnob v03
+ addUserKnob {6 lockVersion l lock -STARTLINE}
+ addUserKnob {4 fileTypeKnob l "file type" M {cin dpx exr hdr jpeg mov null pic png sgi targa tiff xpm yuv}}
+ fileTypeKnob exr
+ addUserKnob {6 lockFileType l lock -STARTLINE}
+ lockFileType true
+ addUserKnob {26 "" l "<b>folder options"}
+ addUserKnob {4 folderKnob l folder M {none OUT WIP PRECOMP PLATES CUSTOM}}
+ folderKnob CUSTOM
+ addUserKnob {1 customFolderKnob l custom}
+ customFolderKnob PRECOMP_FG
+ addUserKnob {6 lockFolder l lock -STARTLINE}
+ lockFolder true
+ addUserKnob {6 subFolder l "save in sub folder" +STARTLINE}
+ subFolder true
+ addUserKnob {2 baseDirKnob l "base directory"}
+ baseDirKnob F:/primaryVFX/PROJECTS/SPECTRUM/2_assets/2d/renders/
+ addUserKnob {6 lockDir l lock -STARTLINE}
+ lockDir true
+ addUserKnob {26 "" l "<b>generated path"}
+ addUserKnob {1 pathKnob l path}
+ pathKnob F:/primaryVFX/PROJECTS/SPECTRUM/2_assets/2d/renders/PRECOMP_FG/spectrum_sh01_ENV_FG_v03/spectrum_sh01_ENV_FG_v03_%04d.exr
+ addUserKnob {6 lockPath l lock -STARTLINE}
+ addUserKnob {22 resetButton l reset T setPathTab.updatePathFragments() +STARTLINE}
+}
+push $Ne1a1dc00
+Dot {
+ name Dot74
+ selected true
+ xpos 3913
+ ypos 5760
+}
+Crop {
+ box {0 0 2432 1088}
+ name Crop6
+ selected true
+ xpos 3876
+ ypos 8013
+}
+Reformat {
+ format "9425 1088 0 0 9425 1088 1 fullCorridor"
+ name Reformat19
+ selected true
+ xpos 3876
+ ypos 8039
+}
+Remove {
+ operation keep
+ channels rgba
+ name Remove7
+ selected true
+ xpos 3876
+ ypos 8077
+}
+Write {
+ channels rgba
+ file F:/primaryVFX/PROJECTS/SPECTRUM/2_assets/2d/renders/PRECOMP_BG/spectrum_sh01_ENV_BG_v03/spectrum_sh01_ENV_BG_v03_%04d.exr
+ file_type exr
+ compression none
+ first_part none
+ create_directories true
+ checkHashOnRead false
+ version 5
+ in_colorspace linear
+ out_colorspace linear
+ name Write_BG
+ selected true
+ xpos 3876
+ ypos 8287
+ disable true
+ addUserKnob {20 "Render Path"}
+ addUserKnob {1 showKnob l show}
+ showKnob spectrum
+ addUserKnob {6 lockShow l lock -STARTLINE}
+ addUserKnob {1 sceneKnob l scene}
+ addUserKnob {6 lockScene l lock -STARTLINE}
+ addUserKnob {1 shotKnob l shot}
+ shotKnob sh01
+ addUserKnob {6 lockShot l lock -STARTLINE}
+ addUserKnob {1 layerKnob l layer}
+ layerKnob ENV_BG
+ addUserKnob {6 lockLayer l lock -STARTLINE}
+ lockLayer true
+ addUserKnob {1 versionKnob l version}
+ versionKnob v03
+ addUserKnob {6 lockVersion l lock -STARTLINE}
+ addUserKnob {4 fileTypeKnob l "file type" M {cin dpx exr hdr jpeg mov null pic png sgi targa tiff xpm yuv}}
+ fileTypeKnob exr
+ addUserKnob {6 lockFileType l lock -STARTLINE}
+ lockFileType true
+ addUserKnob {26 "" l "<b>folder options"}
+ addUserKnob {4 folderKnob l folder M {none OUT WIP PRECOMP PLATES CUSTOM}}
+ folderKnob CUSTOM
+ addUserKnob {1 customFolderKnob l custom}
+ customFolderKnob PRECOMP_BG
+ addUserKnob {6 lockFolder l lock -STARTLINE}
+ lockFolder true
+ addUserKnob {6 subFolder l "save in sub folder" +STARTLINE}
+ subFolder true
+ addUserKnob {2 baseDirKnob l "base directory"}
+ baseDirKnob F:/primaryVFX/PROJECTS/SPECTRUM/2_assets/2d/renders/
+ addUserKnob {6 lockDir l lock -STARTLINE}
+ lockDir true
+ addUserKnob {26 "" l "<b>generated path"}
+ addUserKnob {1 pathKnob l path}
+ pathKnob F:/primaryVFX/PROJECTS/SPECTRUM/2_assets/2d/renders/PRECOMP_BG/spectrum_sh01_ENV_BG_v03/spectrum_sh01_ENV_BG_v03_%04d.exr
+ addUserKnob {6 lockPath l lock -STARTLINE}
+ addUserKnob {22 resetButton l reset T setPathTab.updatePathFragments() +STARTLINE}
+}
+Read {
+ inputs 0
+ file_type exr
+ file F:/primaryVFX/PROJECTS/SPECTRUM/2_assets/3d/renders/shoot02_lookdev/arch_lookdev_newlightRig_nuetral_v##.exr
+ format "1440 810 0 0 1440 810 1 "
+ last 2
+ origlast 2
+ origset true
+ name Read3
+ selected true
+ xpos 6307
+ ypos -2893
+}

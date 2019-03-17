@@ -1,13 +1,72 @@
-set cut_paste_input [stack 0]
-version 9.0 v6
-push $cut_paste_input
+#! C:/Program Files/Nuke11.3v2/nuke-11.3.2.dll -nx
+version 11.3 v2
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="2512" h="1283" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="2468" stretch="1"/>
+            <splitter orientation="2">
+                <split size="1124"/>
+                <splitter orientation="1">
+                    <split size="1360"/>
+                    <dock id="" activePageId="Viewer.1">
+                        <page id="Viewer.1"/>
+                    </dock>
+                    <split size="1104"/>
+                    <splitter orientation="2">
+                        <split size="902"/>
+                        <dock id="" activePageId="Properties.1" focus="true">
+                            <page id="Properties.1"/>
+                        </dock>
+                        <split size="218"/>
+                        <dock id=""/>
+                    </splitter>
+                </splitter>
+                <split size="111"/>
+                <dock id="" activePageId="Curve Editor.1">
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+        </splitter>
+    </window>
+    <window x="2552" y="0" w="1920" h="1160" maximized="1" screen="1">
+        <splitter orientation="1">
+            <split size="1266"/>
+            <dock id="" activePageId="DAG.1">
+                <page id="DAG.1"/>
+            </dock>
+            <split size="650"/>
+            <dock id="" activePageId="uk.co.thefoundry.scripteditor.1">
+                <page id="uk.co.thefoundry.scripteditor.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/appLibrary/nuke/NUKE_PATH/SharedToolSets/TOOLS/utils/cropExpand.nk
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
 Crop {
-box {{box.x-this.exp} {box.y-this.exp} {width+this.exp} {height+this.exp}}
-name CropExpand3
-selected true
-xpos 9315
-ypos -3157
-addUserKnob {20 User}
-addUserKnob {7 exp l expand R 0 100}
-exp 50
+ inputs 0
+ box {{0-this.exp} {0-this.exp} {width+this.exp} {height+this.exp}}
+ name CropExpand3
+ xpos 9316
+ ypos -3157
+ addUserKnob {20 User}
+ addUserKnob {7 exp l expand R 0 100}
+ exp 50
 }

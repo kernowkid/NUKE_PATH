@@ -1,0 +1,236 @@
+set cut_paste_input [stack 0]
+version 11.3 v2
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x44234c00
+ label "redshift aov breakout"
+ note_font "Verdana Bold Bold"
+ note_font_size 24
+ selected true
+ xpos 8199
+ ypos -3722
+ bdwidth 661
+ bdheight 448
+}
+push $cut_paste_input
+Dot {
+ name Dot31
+ selected true
+ xpos 8243
+ ypos -3757
+}
+Dot {
+ name Dot80
+ selected true
+ xpos 8243
+ ypos -3642
+}
+set N79050000 [stack 0]
+Dot {
+ name Dot81
+ selected true
+ xpos 8344
+ ypos -3642
+}
+set N790a1c00 [stack 0]
+Dot {
+ name Dot82
+ selected true
+ xpos 8454
+ ypos -3642
+}
+set N790a1800 [stack 0]
+Dot {
+ name Dot94
+ selected true
+ xpos 8570
+ ypos -3642
+}
+set N790a1400 [stack 0]
+Dot {
+ name Dot83
+ selected true
+ xpos 8694
+ ypos -3642
+}
+set N790a1000 [stack 0]
+Dot {
+ name Dot86
+ selected true
+ xpos 8804
+ ypos -3642
+}
+add_layer {Reflections Reflections.red Reflections.green Reflections.blue Reflections.alpha}
+Shuffle {
+ in Reflections
+ name Shuffle26
+ label "\[value in]"
+ selected true
+ xpos 8770
+ ypos -3608
+}
+Dot {
+ name Dot95
+ selected true
+ xpos 8804
+ ypos -3300
+}
+push $N790a1000
+add_layer {SpecularLighting SpecularLighting.red SpecularLighting.green SpecularLighting.blue SpecularLighting.alpha}
+Shuffle {
+ in SpecularLighting
+ name Shuffle22
+ label "\[value in]"
+ selected true
+ xpos 8660
+ ypos -3610
+}
+Dot {
+ name Dot85
+ selected true
+ xpos 8694
+ ypos -3351
+}
+push $N79050000
+add_layer {Diffuse Diffuse.red Diffuse.green Diffuse.blue Diffuse.alpha}
+Shuffle {
+ in Diffuse
+ name Shuffle19
+ label "\[value in]"
+ selected true
+ xpos 8209
+ ypos -3605
+}
+Dot {
+ name Dot90
+ selected true
+ xpos 8243
+ ypos -3511
+}
+Dot {
+ name Dot91
+ selected true
+ xpos 8321
+ ypos -3511
+}
+set N790bf000 [stack 0]
+Dot {
+ name Dot92
+ selected true
+ xpos 8431
+ ypos -3511
+}
+set N790bec00 [stack 0]
+Dot {
+ name Dot93
+ selected true
+ xpos 8547
+ ypos -3511
+}
+push $N790a1400
+add_layer {SSSRaw SSSRaw.red SSSRaw.green SSSRaw.blue SSSRaw.alpha}
+Shuffle {
+ in SSSRaw
+ name Shuffle25
+ label "\[value in]"
+ selected true
+ xpos 8536
+ ypos -3606
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge33
+ selected true
+ xpos 8536
+ ypos -3483
+}
+Dot {
+ name Dot3
+ selected true
+ xpos 8570
+ ypos -3395
+}
+push $N790bec00
+push $N790a1800
+add_layer {GIRaw GIRaw.red GIRaw.green GIRaw.blue GIRaw.alpha}
+Shuffle {
+ in GIRaw
+ name Shuffle21
+ label "\[value in]"
+ selected true
+ xpos 8420
+ ypos -3607
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge32
+ selected true
+ xpos 8420
+ ypos -3483
+}
+Dot {
+ name Dot84
+ selected true
+ xpos 8454
+ ypos -3438
+}
+push $N790bf000
+push $N790a1c00
+add_layer {DiffuseLightingRaw DiffuseLightingRaw.red DiffuseLightingRaw.green DiffuseLightingRaw.blue DiffuseLightingRaw.alpha}
+Shuffle {
+ in DiffuseLightingRaw
+ name Shuffle20
+ label "\[value in]"
+ selected true
+ xpos 8310
+ ypos -3605
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge27
+ selected true
+ xpos 8310
+ ypos -3483
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Merge31
+ selected true
+ xpos 8310
+ ypos -3442
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Merge3
+ selected true
+ xpos 8310
+ ypos -3399
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Merge34
+ selected true
+ xpos 8310
+ ypos -3355
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Merge28
+ selected true
+ xpos 8310
+ ypos -3304
+}
+Dot {
+ name Dot8
+ selected true
+ xpos 8344
+ ypos -3241
+}

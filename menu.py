@@ -8,7 +8,7 @@ import createProjectorCam
 import readLastRender
 import setPathTab
 import animatedSnap3D
-
+import readFromWrite
 
 ## Nodes Menu
 topMenu = nuke.menu("Nuke")
@@ -18,7 +18,7 @@ primaryMenu = topMenu.addMenu("PrimaryVFX")
 
 primaryMenu.addCommand('Open Explorer', 'opendir.openInExplorer()', 'shift+e')
 primaryMenu.addCommand('Render Path Tab', 'setPathTab.setPathTab()', 'shift+w') 
-#primaryMenu.addCommand('Load Render', 'readLastRender.getSequence()', 'alt+r')
+primaryMenu.addCommand('Read from Write','readFromWrite.ReadFromWrite()','shift+r')
 primaryMenu.addCommand('Utils/Backdrop With Label', 'backdropWithLabel.customBackdrop()', 'alt+b', icon='Backdrop.png')  
 primaryMenu.addCommand('Utils/Create Projector Camera', 'createProjectorCam.createProjectorCam()')
 
