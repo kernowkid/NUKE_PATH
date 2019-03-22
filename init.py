@@ -21,7 +21,7 @@ nuke.knobDefault('Root.format', 'HD_1080')
 #nuke.knobDefault("Viewer.freezeGuiWhenPlayBack", "1")  
 
 ## Write > Default for EXR files: 16bit Half, No Compression. 'Create directories' checked as default   
-nuke.knobDefault("Write.exr.compression","0")
+#nuke.knobDefault("Write.exr.compression","0")
 nuke.knobDefault("Write.create_directories","1") 
 
 ## Exposure Tool > Use stops instead of densities  
@@ -33,10 +33,12 @@ nuke.knobDefault("EXPTool.mode", "0")
 #{ clone ltt 0}
 #}''')
 nuke.knobDefault("RotoPaint.feather_type", "smooth")
+nuke.knobDefault("RotoPaint.cliptype", "no clip")
 nuke.knobDefault('RotoPaint.toolbox','createBezier')
 
 ##Roto feather setting to smooth 
 nuke.knobDefault("Roto.feather_type", "smooth")
+nuke.knobDefault("Roto.cliptype", "no clip")
 
 ##shuffle add 'value in' dispay to comment field 
 nuke.knobDefault("Shuffle.label", '[value in]')
