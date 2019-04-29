@@ -10,6 +10,9 @@ import setPathTab
 import animatedSnap3D
 import readFromWrite
 
+#import pixel fudger gizmos  
+import pixelfudger
+
 ## Nodes Menu
 topMenu = nuke.menu("Nuke")
 primaryMenu = topMenu.addMenu("PrimaryVFX")

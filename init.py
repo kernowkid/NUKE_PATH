@@ -1,6 +1,7 @@
 import nuke
 
 nuke.pluginAddPath("./gizmos")
+nuke.pluginAddPath("./gizmos/pixelfudger")
 nuke.pluginAddPath("./icons")
 nuke.pluginAddPath("./python")
 nuke.pluginAddPath("./tcl")
