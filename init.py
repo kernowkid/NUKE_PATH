@@ -5,6 +5,7 @@ nuke.pluginAddPath("./gizmos/pixelfudger")
 nuke.pluginAddPath("./icons")
 nuke.pluginAddPath("./python")
 nuke.pluginAddPath("./tcl")
+nuke.pluginAddPath("./python/StartupUI/Localization_Panel/")
 
 
 ##rollingautosave

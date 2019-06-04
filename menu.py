@@ -9,6 +9,7 @@ import readLastRender
 import setPathTab
 import animatedSnap3D
 import readFromWrite
+import TrackToRoto
 
 #import pixel fudger gizmos  
 import pixelfudger
@@ -23,8 +24,8 @@ primaryMenu.addCommand('Open Explorer', 'opendir.openInExplorer()', 'shift+e')
 primaryMenu.addCommand('Render Path Tab', 'setPathTab.setPathTab()', 'shift+w') 
 primaryMenu.addCommand('Read from Write','readFromWrite.ReadFromWrite()','shift+r')
 primaryMenu.addCommand('Utils/Backdrop With Label', 'backdropWithLabel.customBackdrop()', 'alt+b', icon='Backdrop.png')  
+primaryMenu.addCommand('Utils/Track To Roto', 'TrackToRoto.TrackToRoto()','alt+t')
 primaryMenu.addCommand('Utils/Create Projector Camera', 'createProjectorCam.createProjectorCam()')
-
 
 # DJV is a copyleft flipbook
 os.environ['DJV_VIEW_EXECUTABLE'] = 'C:/Program Files/DJV-1.2.5-win64/bin/djv_view.exe'

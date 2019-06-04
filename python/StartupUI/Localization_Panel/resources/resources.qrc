@@ -1,0 +1,18 @@
+<RCC>
+  <qresource>
+    <file>clear_unused_local_files.png</file>
+    <file>disabled_un_pause.png</file>
+    <file>disabled_pause.png</file>
+    <file>filter.png</file>
+    <file>pause.png</file>
+    <file>preference.png</file>
+    <file>un_pause.png</file>
+    <file>thumb_3D.png</file>
+    <file>thumb_audio.png</file>
+    <file>thumb_image.png</file>
+    <file>thumb_video.png</file>
+    <file>thumb_misc.png</file>
+    <file>thumb_error.png</file>
+    <file>thumb_nuke.png</file>
+  </qresource>
+</RCC>
