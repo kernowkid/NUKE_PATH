@@ -1,0 +1,27 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+push $cut_paste_input
+Transform {
+ scale 0.9
+ center {960 540}
+ shutteroffset centred
+ name Transform4
+ selected true
+ xpos 929
+ ypos 131
+}
+Reformat {
+ name Reformat4
+ selected true
+ xpos 929
+ ypos 185
+}
+push 0
+Merge2 {
+ inputs 2
+ operation difference
+ name Merge1
+ selected true
+ xpos 929
+ ypos 1093
+}

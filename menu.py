@@ -10,6 +10,8 @@ import setPathTab
 import animatedSnap3D
 import readFromWrite
 import TrackToRoto
+import openRV
+import openDJV
 
 #import pixel fudger gizmos  
 import pixelfudger
@@ -23,6 +25,8 @@ primaryMenu = topMenu.addMenu("PrimaryVFX")
 primaryMenu.addCommand('Open Explorer', 'opendir.openInExplorer()', 'shift+e')
 primaryMenu.addCommand('Render Path Tab', 'setPathTab.setPathTab()', 'shift+w') 
 primaryMenu.addCommand('Read from Write','readFromWrite.ReadFromWrite()','shift+r')
+primaryMenu.addCommand('Open in RV','openRV.openReadInRV()','alt+r')
+primaryMenu.addCommand('Open in DJV','openDJV.openReadInDJV()','alt+d')
 primaryMenu.addCommand('Utils/Backdrop With Label', 'backdropWithLabel.customBackdrop()', 'alt+b', icon='Backdrop.png')  
 primaryMenu.addCommand('Utils/Track To Roto', 'TrackToRoto.TrackToRoto()','alt+t')
 primaryMenu.addCommand('Utils/Create Projector Camera', 'createProjectorCam.createProjectorCam()')
@@ -31,6 +35,12 @@ primaryMenu.addCommand('Utils/Create Projector Camera', 'createProjectorCam.crea
 os.environ['DJV_VIEW_EXECUTABLE'] = 'C:/Program Files/DJV-1.2.5-win64/bin/djv_view.exe'
 import DJV
 nukescripts.setFlipbookDefaultOption('flipbook', 'DJV')
+
+##DEADLINE
+import DeadlineNukeClient
+menubar = nuke.menu("Nuke")
+tbmenu = menubar.addMenu("&Thinkbox")
+tbmenu.addCommand("Submit Nuke To Deadline", DeadlineNukeClient.main, "")
 
 
 ## shared_toolsets
@@ -43,7 +53,7 @@ if nuke.GUI:
   
   sharedToolSetsPaths = {
     "linux2" : "/mnt/some/nice/place/SharedToolSets",   #LINUX
-    "win32"  : "C:/appLibrary/nuke/NUKE_PATH/SharedToolSets",     #WINDOWS
+    "win32"  : "P:/Studio/software/appLibrary/nuke/NUKE_PATH/SharedToolSets",     #WINDOWS
     "darwin" : "/Volume/some/nice/place/SharedToolSets" #MACOS
   }
 

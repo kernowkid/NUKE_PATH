@@ -1,0 +1,441 @@
+#! /Applications/Nuke5.0v1/Nuke5.0v1.app/Contents/MacOS/Nuke5.0 -nx
+version 5.0100
+Gizmo {
+ inputs 2
+ help "==========================================\nShake iDilateErode for Nuke\n==========================================\n\nFUNCTION\n\nThe IDilateErode function isolates each channel and cuts or adds pixels to the edge of that channel. For example, to chew into your mask, set your channels to \"alpha\" and then set the xPixels and yPixels values to -1.\n\n\nChannels\t\nThe effected channels.\n\nx/y Pixels\t\nThe amount of pixels added or taken on an edge. Positive values add to the edge, negative values eat away at the edge.\n\nBorder (Not Implemented Yet)\nThis tells Nuke to consider or ignore the border pixels.\n\nSoften (Not Implemented Yet)\nThis toggle turns on softening, or effecting the sub-pixel. If this is turned on, it will considerably slow down the software at high x/yPixel values.\n\nSharpness (Not Implemented Yet)\nThe sharpness factor for the softening. A value of 0 gives a smooth gradation, whereas 2 will give you a sharp cutoff.\n\nSteps\t\nThis is the amount of regions that the image is divided up into. The intensity of the control image is divided up X amount of zones, with X being equal to regions. After setting the number of steps, press the \"Create Steps\" button in order to get the effect (Nuke doesnt execute TCL scripts \nin knob changes :( ).\n\nStepBlend\t\nThis controls the blending between the amount of regions (see below). If you put this at 0, each step will have a constant dilate value. If this is 1, there is a continuous blend between the different regions.\n\nControlChannel\t\nThe channel of the second image to use to control the amount of dilate.\n\nInvert (Not Implemented Yet)\nInverts the controlChannel.\n\n\n==========================================\nCuco Burés - 2008   ||   cucobures@gmail.com\n=========================================="
+ lock_connections true
+ addUserKnob {20 Controls}
+ addUserKnob {41 channels l Channels T Step1.channels}
+ addUserKnob {26 "" l "  " T "  "}
+ addUserKnob {14 Size l Pixels R -100 100}
+ Size 100
+ addUserKnob {7 Steps R 1 5}
+ Steps 1
+ addUserKnob {26 "" l "  " T "  "}
+ addUserKnob {26 "" l "  " T "  "}
+ addUserKnob {32 StepsExecute l "Create Steps" T "set steps \[knob this.Steps]\nset steps \[expr int (\$steps)]\nset oldSteps \[knob Img.label]\nset StepOut \"Output1\"\n\nif \{\$steps < 1\} \{\n   set steps \"1\"\n\}\n\ncatch \{\n\n  if \{\$oldSteps > 1\} \{\n\n     for \{set i 2\} \{\$i<=\$oldSteps\} \{incr i\} \{\n       set Step \"Step\$i\"\n       knob \$Step.selected true\n     \}\n        _node_delete\n   \}\n\}\n\nknob Img.label \$steps\nknob Img.selected false\ncatch \{ input \$StepOut 0 \"Step1\" \}\n\nfor \{set i 2\} \{\$i<=\$steps\} \{incr i\} \{\n  set origen1 \"Img\"\n  set origen2 \"Step\[expr \$i-1]\"\n  set origen3 \"Controller\"\n  set Step \"Step\$i\"\n  set StepOut \"Output1\"\n  set Node2Clone \"Step1\"\n  if \{\$i==2\} \{\n    knob \$Node2Clone.selected true\n    catch \{ node_copy \"%clipboard%\" \}\n  \}\n  catch \{ node_paste \"%clipboard%\" \}\n  \n  catch \{ input \$Step 0 \$origen1 \}\n  catch \{ input \$Step 1 \$origen2 \}\n  catch \{ input \$Step 2 \$origen3 \}\n  catch \{ knob \$Step.StepNumber \[expr \$i-1] \}\n  catch \{ input \$StepOut 0 \$Step \}\n\}"}
+ addUserKnob {26 "" l "  " T "  "}
+ addUserKnob {7 StepBlend}
+ StepBlend 1
+ addUserKnob {26 "" l "  " T "  "}
+ addUserKnob {41 from0_1 l Controller T Controller.from0}
+}
+ Input {
+  inputs 0
+  name ControlImg
+  xpos -328
+  ypos -214
+  number 1
+ }
+set N54f5b220 [stack 0]
+push $N54f5b220
+ Copy {
+  inputs 2
+  from0 rgba.red
+  to0 depth.Z
+  name Controller
+  xpos -328
+  ypos -97
+ }
+ Input {
+  inputs 0
+  name Img
+  label 1
+  xpos -524
+  ypos -223
+ }
+set N54f81180 [stack 0]
+push $N54f81180
+ Group {
+  inputs 3
+  name Step1
+  xpos -524
+  ypos 36
+  addUserKnob {20 User}
+  addUserKnob {7 begin}
+  begin 0
+  addUserKnob {7 DEStepX}
+  DEStepX {{parent.Size.w/parent.Steps x1 8.00568753}}
+  addUserKnob {7 DEStepY}
+  DEStepY {{parent.Size.h/parent.Steps}}
+  addUserKnob {7 regionStep}
+  regionStep {{1/parent.Steps x1 0.31147505}}
+  addUserKnob {7 stepBlend}
+  stepBlend {{parent.StepBlend}}
+  addUserKnob {3 StepNumber}
+  StepNumber 0
+  addUserKnob {41 channels T DE_1.channels}
+  addUserKnob {41 channel l "knob channels \$value" T DE_1.channel}
+ }
+  Input {
+   inputs 0
+   name Input3
+   xpos -205
+   ypos 49
+   number 2
+  }
+set N39628c50 [stack 0]
+  Group {
+   name DepthSlice2
+   xpos -91
+   ypos 190
+   help "Creates a slice in the alpha channel based on Z, as defined by a center point, and a drop-off range.\n\n\nCenter\nThe center z depth from which the slice is measured.\n\nLo, Hi\nThe distance included in the slice away from the center. lo adds distance towards the camera, hi add thickness away from the camera.\n\nGrad\t\nWhen this is turned on, there is a gradation from hi to lo. Beyond the slice is still black.\n\nMirror\nWhen this is on, the effect is mirrored in z.\n\nMatteMult\t\nWhen this is on, the rgb channels are pre-multiplied by the new mask."
+   lock_connections true
+   addUserKnob {20 "" l DepthSlice}
+   addUserKnob {7 Center}
+   Center 0
+   addUserKnob {7 Lo}
+   Lo {{begin+(StepNumber*regionStep)+(stepBlend*regionStep)}}
+   addUserKnob {7 Hi}
+   Hi {{begin+((StepNumber+1)*regionStep)+(stepBlend*regionStep)}}
+   addUserKnob {26 "" l "  " T "  "}
+   addUserKnob {6 Grad}
+   addUserKnob {26 "" l "  " T "  "}
+   addUserKnob {6 Mirror}
+   addUserKnob {26 "" l "  " T "  "}
+   addUserKnob {6 MatteMult}
+  }
+   Input {
+    inputs 0
+    name Img
+    xpos 293
+    ypos -113
+   }
+set N3962c210 [stack 0]
+   Colorspace {
+    layer depth
+    illuminant_in D75
+    colorspace_out sRGB
+    illuminant_out C
+    name Colorspace1
+    xpos 120
+    ypos -52
+   }
+   Shuffle {
+    in depth
+    in2 alpha
+    out alpha
+    name Shuffle2
+    xpos 120
+    ypos 2
+   }
+set N54f56c60 [stack 0]
+   Grade {
+    channels {-rgba.alpha none none rgba.alpha}
+    blackpoint {{parent.Center-parent.Lo i x1 0.1}}
+    whitepoint {{parent.Center-parent.Hi i x1 0.3}}
+    black_clamp false
+    maskChannel -rgba.alpha
+    name Grade2
+    xpos 214
+    ypos 121
+   }
+push $N3962c210
+   Colorspace {
+    layer depth
+    colorspace_out sRGB
+    name Colorspace2
+    xpos -27
+    ypos -49
+   }
+   Shuffle {
+    in depth
+    in2 alpha
+    out alpha
+    name Shuffle1
+    xpos -27
+    ypos 5
+   }
+set N54f7ac10 [stack 0]
+   Expression {
+    temp_name0 na
+    temp_expr0 "(a>=(parent.Center-max(parent.Lo,parent.Hi)) && a<=(parent.Center-min(parent.Lo,parent.Hi)))?1:0"
+    channel0 alpha
+    expr0 na
+    channel1 none
+    channel2 none
+    channel3 {none none none -rgba.alpha}
+    name Expression1
+    xpos 91
+    ypos 129
+   }
+   Merge2 {
+    inputs 2
+    operation min
+    name Min1
+    xpos 152
+    ypos 265
+    disable {{1-parent.Grad i}}
+   }
+push $N54f56c60
+   Grade {
+    channels {-rgba.alpha none none rgba.alpha}
+    blackpoint {{parent.Lo+parent.Center i x1 0.2}}
+    whitepoint {{parent.Hi+parent.Center i x1 1}}
+    black_clamp false
+    maskChannel -rgba.alpha
+    name Grade1
+    xpos -40
+    ypos 120
+   }
+push $N54f7ac10
+   Expression {
+    temp_name0 na
+    temp_expr0 "(a>=(min(parent.Lo,parent.Hi) + parent.Center) && a<=(max(parent.Lo,parent.Hi) + parent.Center))? 1 : 0"
+    channel0 alpha
+    expr0 na
+    channel1 none
+    channel2 none
+    channel3 {none none none -rgba.alpha}
+    name Expression2
+    xpos -156
+    ypos 128
+   }
+   Merge2 {
+    inputs 2
+    operation min
+    name Min
+    xpos -98
+    ypos 270
+    disable {{1-parent.Grad i}}
+   }
+   Merge2 {
+    inputs 2
+    operation max
+    name Max
+    xpos 26
+    ypos 393
+    disable {{1-parent.Mirror i}}
+   }
+push $N3962c210
+   Copy {
+    inputs 2
+    from0 rgba.alpha
+    to0 rgba.alpha
+    name Copy1
+    xpos 293
+    ypos 522
+   }
+   Premult {
+    name Premult1
+    xpos 293
+    ypos 591
+    disable {{1-parent.MatteMult i}}
+   }
+   Output {
+    name Output1
+    xpos 293
+    ypos 668
+   }
+  end_group
+  Input {
+   inputs 0
+   name Img
+   selected true
+   xpos -349
+   ypos 49
+  }
+  FilterErode {
+   channels all
+   size {{-DEStepX*(StepNumber+1) i x1 -8.00568753} {-DEStepY*(StepNumber+1) i x1 -8.00568753}}
+   name DE_1
+   xpos -208
+   ypos 180
+  }
+set N54f7df70 [stack 0]
+push $N39628c50
+  Group {
+   name DepthSlice1
+   xpos -334
+   ypos 193
+   help "Creates a slice in the alpha channel based on Z, as defined by a center point, and a drop-off range.\n\n\nCenter\nThe center z depth from which the slice is measured.\n\nLo, Hi\nThe distance included in the slice away from the center. lo adds distance towards the camera, hi add thickness away from the camera.\n\nGrad\t\nWhen this is turned on, there is a gradation from hi to lo. Beyond the slice is still black.\n\nMirror\nWhen this is on, the effect is mirrored in z.\n\nMatteMult\t\nWhen this is on, the rgb channels are pre-multiplied by the new mask."
+   lock_connections true
+   addUserKnob {20 "" l DepthSlice}
+   addUserKnob {7 Center}
+   Center 0
+   addUserKnob {7 Lo}
+   Lo {{begin+(StepNumber*regionStep)}}
+   addUserKnob {7 Hi}
+   Hi {{begin+(StepNumber*regionStep)+(stepBlend*regionStep)}}
+   addUserKnob {26 "" l "  " T "  "}
+   addUserKnob {6 Grad}
+   Grad true
+   addUserKnob {26 "" l "  " T "  "}
+   addUserKnob {6 Mirror}
+   addUserKnob {26 "" l "  " T "  "}
+   addUserKnob {6 MatteMult}
+  }
+   Input {
+    inputs 0
+    name Img
+    xpos 293
+    ypos -111
+   }
+set N54f57160 [stack 0]
+   Colorspace {
+    layer depth
+    illuminant_in D75
+    colorspace_out sRGB
+    illuminant_out C
+    name Colorspace1
+    selected true
+    xpos 120
+    ypos -51
+   }
+   Shuffle {
+    in depth
+    in2 alpha
+    out alpha
+    name Shuffle2
+    xpos 120
+    ypos 2
+   }
+set N54f5a220 [stack 0]
+   Grade {
+    channels {-rgba.alpha none none rgba.alpha}
+    blackpoint {{parent.Center-parent.Lo i x1 0.1}}
+    whitepoint {{parent.Center-parent.Hi i x1 0.3}}
+    black_clamp false
+    maskChannel -rgba.alpha
+    name Grade2
+    xpos 214
+    ypos 121
+   }
+push $N54f57160
+   Colorspace {
+    layer depth
+    colorspace_out sRGB
+    name Colorspace2
+    selected true
+    xpos -27
+    ypos -49
+   }
+   Shuffle {
+    in depth
+    in2 alpha
+    out alpha
+    name Shuffle1
+    xpos -27
+    ypos 5
+   }
+set N54ffa0b0 [stack 0]
+   Expression {
+    temp_name0 na
+    temp_expr0 "(a>=(parent.Center-max(parent.Lo,parent.Hi)) && a<=(parent.Center-min(parent.Lo,parent.Hi)))?1:0"
+    channel0 alpha
+    expr0 na
+    channel1 none
+    channel2 none
+    channel3 {none none none -rgba.alpha}
+    name Expression1
+    xpos 91
+    ypos 129
+   }
+   Merge2 {
+    inputs 2
+    operation min
+    name Min1
+    xpos 152
+    ypos 265
+    disable {{1-parent.Grad i}}
+   }
+push $N54f5a220
+   Grade {
+    channels {-rgba.alpha none none rgba.alpha}
+    blackpoint {{parent.Lo+parent.Center i x1 0.2}}
+    whitepoint {{parent.Hi+parent.Center i x1 1}}
+    black_clamp false
+    maskChannel -rgba.alpha
+    name Grade1
+    xpos -40
+    ypos 120
+   }
+push $N54ffa0b0
+   Expression {
+    temp_name0 na
+    temp_expr0 "(a>=(min(parent.Lo,parent.Hi) + parent.Center) && a<=(max(parent.Lo,parent.Hi) + parent.Center))? 1 : 0"
+    channel0 alpha
+    expr0 na
+    channel1 none
+    channel2 none
+    channel3 {none none none -rgba.alpha}
+    name Expression2
+    xpos -155
+    ypos 129
+   }
+   Merge2 {
+    inputs 2
+    operation min
+    name Min
+    xpos -96
+    ypos 272
+    disable {{1-parent.Grad i}}
+   }
+   Merge2 {
+    inputs 2
+    operation max
+    name Max
+    xpos 26
+    ypos 393
+    disable {{1-parent.Mirror i}}
+   }
+push $N54f57160
+   Copy {
+    inputs 2
+    from0 rgba.alpha
+    to0 rgba.alpha
+    name Copy1
+    xpos 293
+    ypos 522
+   }
+   Premult {
+    name Premult1
+    xpos 293
+    ypos 591
+    disable {{1-parent.MatteMult i}}
+   }
+   Output {
+    name Output1
+    xpos 293
+    ypos 669
+   }
+  end_group
+push $N54f7df70
+  Input {
+   inputs 0
+   name ControlImg
+   xpos -484
+   ypos 49
+   number 1
+  }
+  Keymix {
+   inputs 3
+   name Keymix1_1
+   xpos -334
+   ypos 323
+  }
+  Keymix {
+   inputs 3
+   name Keymix2_1
+   xpos -174
+   ypos 425
+  }
+set N39609480 [stack 0]
+  Output {
+   name Output1
+   xpos -174
+   ypos 525
+  }
+push $N39609480
+  Viewer {
+   name Viewer1
+   xpos -479
+   ypos 526
+  }
+ end_group
+ Output {
+  name Output1
+  xpos -524
+  ypos 4001
+ }
+end_group

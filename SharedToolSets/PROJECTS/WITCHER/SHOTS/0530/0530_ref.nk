@@ -1,0 +1,61 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+push $cut_paste_input
+OCIOCDLTransform {
+slope {1.009799957 1.02760005 1.054999948}
+offset {-0.07620000094 -0.07069999725 -0.06899999827}
+power {0.9036999941 0.8731999993 0.8298000097}
+working_space "ACES - ACEScg"
+read_from_file true
+file P:/Projects/theWitcher/ingest/20190906_primary_TO_003/CDLs/1133_bla_0530_main.ccc
+version 3
+cccid 1133_bla_0530_main
+name VIEWER_INPUT
+selected true
+xpos 321
+ypos 3822
+}
+Read {
+inputs 0
+file_type mov
+file P:/Projects/theWitcher/ingest/20190906_primary_TO_003/Offline/WW_FRS_cutref_Sc_1-33_35_bla_190829_colour_transform_.mov
+localizationPolicy on
+format "1920 1080 0 0 1920 1080 1 HD_1080"
+last 7627
+origlast 7627
+origset true
+version 5
+colorspace "Output - sRGB"
+name Read2
+selected true
+xpos 322
+ypos 3568
+}
+Retime {
+input.first 2482
+input.first_lock true
+input.last 7627
+output.first 1017
+output.first_lock true
+output.last 6162
+time ""
+name Retime1
+selected true
+xpos 322
+ypos 3676
+}
+OCIOCDLTransform {
+slope {1.009799957 1.02760005 1.054999948}
+offset {-0.07620000094 -0.07069999725 -0.06899999827}
+power {0.9036999941 0.8731999993 0.8298000097}
+direction inverse
+working_space "ACES - ACEScg"
+read_from_file true
+file P:/Projects/theWitcher/ingest/20190906_primary_TO_003/CDLs/1133_bla_0530_main.ccc
+version 3
+cccid 1133_bla_0530_main
+name LUT_INVERSE
+selected true
+xpos 322
+ypos 3702
+}

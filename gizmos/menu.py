@@ -3,7 +3,7 @@ import nuke
 
 
 toolbar = nuke.toolbar("Nodes")
-moonrakerMenu = toolbar.addMenu("moonrakerMenu", icon="moonraker_plain.png")
+primaryGizmosMenu = toolbar.addMenu("Primary Gizmos", icon="primaryvfx_ICON_Nuke_v01.png")
 
 # this gets the folder name that contains this menu.py file
 here = os.path.dirname(__file__)
@@ -18,5 +18,5 @@ for filename in os.listdir(here):
     gizmo_name = filename.split(".")[0]
 
     # add this to the menu
-    moonrakerMenu.addCommand(gizmo_name, 'nuke.createNode("%s")' % gizmo_name)
+    primaryGizmosMenu.addCommand(gizmo_name, 'nuke.createNode("%s")' % gizmo_name)
 

@@ -1,0 +1,61 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+push $cut_paste_input
+OCIOCDLTransform {
+ slope {0.893599987 0.9356999993 0.9707999825}
+ offset {-0.002899999963 -0.002899999963 -0.002899999963}
+ power {1.016600013 1.004099965 0.996900022}
+ working_space "Input - Canon - Canon-Log - Cinema Gamut Daylight"
+ read_from_file true
+ file P:/Projects/theWitcher/ingest/20190906_primary_TO_003/CDLs/1133_bla_0770_bg_v1.ccc
+ version 3
+ cccid 1133_bla_0770_bg_v1
+ name VIEWER_INPUT
+ selected true
+ xpos -1609
+ ypos -175
+}
+Read {
+ inputs 0
+ file_type mov
+ file P:/Projects/theWitcher/ingest/20190906_primary_TO_003/Offline/WW_FRS_cutref_Sc_1-33_35_bla_190829_colour_transform_.mov
+ localizationPolicy on
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ last 7627
+ origlast 7627
+ origset true
+ version 14
+ colorspace "Output - sRGB"
+ name Read2
+ selected true
+ xpos -1489
+ ypos -273
+}
+Retime {
+ input.first 5974
+ input.first_lock true
+ input.last 7627
+ output.first 1017
+ output.first_lock true
+ output.last 2670
+ time ""
+ name Retime2
+ selected true
+ xpos -1489
+ ypos -175
+}
+OCIOCDLTransform {
+ slope {0.893599987 0.9356999993 0.9707999825}
+ offset {-0.002899999963 -0.002899999963 -0.002899999963}
+ power {1.016600013 1.004099965 0.996900022}
+ direction inverse
+ working_space "Input - Canon - Canon-Log - Cinema Gamut Daylight"
+ read_from_file true
+ file P:/Projects/theWitcher/ingest/20190906_primary_TO_003/CDLs/1133_bla_0770_bg_v1.ccc
+ version 3
+ cccid 1133_bla_0770_bg_v1
+ name LUT_inverse
+ selected true
+ xpos -1489
+ ypos -134
+}

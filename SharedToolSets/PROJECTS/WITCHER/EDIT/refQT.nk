@@ -1,0 +1,18 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+Read {
+ inputs 0
+ file_type mov
+ file P:/Projects/theWitcher/ingest/20190906_primary_TO_003/Offline/WW_FRS_cutref_Sc_1-33_35_bla_190829_colour_transform_.mov
+ localizationPolicy on
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ last 7627
+ origlast 7627
+ origset true
+ version 1
+ colorspace "Output - sRGB"
+ name Read2
+ selected true
+ xpos -532
+ ypos -502
+}

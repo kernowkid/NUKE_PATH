@@ -35,4 +35,4 @@ def openReadInDJV():
 				print imgPath
 
 					
-				subprocess.call('C:/Program Files/DJV-1.2.5-win64/bin/djv_view.exe %s' % imgPath)
+				subprocess.call('C:/Program Files/DJV/bin/djv_view.exe %s' % imgPath)

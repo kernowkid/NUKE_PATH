@@ -59,4 +59,17 @@ def killViewers():
         nuke.delete(v)
 nuke.addOnScriptLoad(killViewers)
 
+##Project Settings
+def setProjsettings():
+    ##theWitcher
+    n = nuke.root()
+    if 'theWitcher' in n['name'].value():
+        n['fps'].setValue(24)
+        n['colorManagement'].setValue('OCIO')
+        n['OCIO_config'].setValue('custom')
+        n['customOCIOConfigPath'].setValue('P:/Projects/theWitcher/ingest/20190906_primary_TO_003/the_witcher_2100024_baked_ocio_configuration_2019-04-29/the_witcher_2100024_baked_ocio_configuration_2019-04-29/baked_config-win.ocio')
+        theWitcher4k = '4268 2400 theWitcher 4k'
+        nuke.addFormat( theWitcher4k )
+        n['format'].setValue('theWitcher 4k')
+nuke.addOnScriptSave(setProjsettings)
 

@@ -1,0 +1,125 @@
+#! z:/job/SWDEVL/SOFTWARE/w2k_intel/nuke4.3/20/nuke4.3.20.exe -nx
+version 4.302
+Gizmo {
+ inputs 1
+ addUserKnob { 20 "" User } 
+ addUserKnob { 19 Grade2_black Threshold R -1 1 } 
+ addUserKnob { 14 Blur2_size "Edge Size" } 
+ addUserKnob { 19 Grade3_white "Edge Mult" R 0 4 } 
+ addUserKnob { 14 Blur4_size "Image Blur" } 
+ addUserKnob { 7 Merge2_mix mix R 0 1 } 
+ name EdgeBlender
+ window {532 135 649 552 0 -341 -168 0.665}
+ Grade2_black 0.05
+ Blur2_size 5
+ Grade3_white 1.25
+ Blur4_size 10
+ Merge2_mix 1
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos -220
+  ypos -159
+ }
+ Dot {
+  name Dot1
+  tile_color 0x9597bf00
+  xpos -186
+  ypos -66
+ }
+set N7371370 [stack 0]
+push $N7371370
+push $N7371370
+ Grade {
+  black {{parent.Grade2_black.r} {parent.Grade2_black.g} {parent.Grade2_black.b} {parent.Grade2_black.a}}
+  unpremult -rgba.alpha
+  name Grade2
+  tile_color 0x7aa9ff00
+  xpos 20
+  ypos -69
+ }
+ Blur {
+  size {{parent.Blur2_size.w} {parent.Blur2_size.h}}
+  name Blur2
+  tile_color 0xcc804e00
+  label (all)
+  xpos 140
+  ypos -76
+ }
+ Merge {
+  inputs 2
+  operation minus
+  mix {{parent.Merge2_mix}}
+  name Merge2
+  tile_color 0x4b5ec600
+  xpos 140
+  ypos -9
+ }
+ Saturation {
+  saturation 0
+  mode Maximum
+  name Saturation2
+  tile_color 0x7aa9ff00
+  xpos 140
+  ypos 51
+ }
+ Grade {
+  white {{parent.Grade3_white.r} {parent.Grade3_white.g} {parent.Grade3_white.b} {parent.Grade3_white.a}}
+  unpremult -rgba.alpha
+  name Grade3
+  tile_color 0x7aa9ff00
+  xpos 140
+  ypos 111
+ }
+ Blur {
+  name Blur3
+  tile_color 0xcc804e00
+  label (all)
+  xpos 140
+  ypos 134
+ }
+push $N7371370
+ ChannelCopy {
+  inputs 2
+  srcchan rgba.red
+  name ChannelCopy2
+  tile_color 0x9e3c6300
+  label "(red -> alpha)"
+  xpos 80
+  ypos 224
+ }
+ Blur {
+  size {{parent.Blur4_size.w} {parent.Blur4_size.h}}
+  name Blur4
+  tile_color 0xcc804e00
+  label (all)
+  xpos 80
+  ypos 284
+ }
+ Premult {
+  name Premult1
+  xpos 80
+  ypos 351
+ }
+push $N7371370
+ Merge {
+  inputs 2
+  name Merge1
+  tile_color 0x4b5ec600
+  xpos -100
+  ypos 351
+ }
+ ChannelCopy {
+  inputs 2
+  name ChannelCopy1
+  tile_color 0x9e3c6300
+  xpos -220
+  ypos 351
+ }
+ Output {
+  name Output1
+  xpos -220
+  ypos 381
+ }
+end_group

@@ -1,0 +1,188 @@
+#! C:/Program Files/Nuke11.3v4/nuke-11.3.4.dll -nx
+version 11.3 v4
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="2512" h="1283" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="2468" stretch="1"/>
+            <splitter orientation="2">
+                <split size="1124"/>
+                <splitter orientation="1">
+                    <split size="1360"/>
+                    <dock id="" activePageId="Viewer.1">
+                        <page id="Viewer.1"/>
+                    </dock>
+                    <split size="1104"/>
+                    <splitter orientation="2">
+                        <split size="902"/>
+                        <dock id="" activePageId="Properties.1" focus="true">
+                            <page id="Properties.1"/>
+                        </dock>
+                        <split size="218"/>
+                        <dock id=""/>
+                    </splitter>
+                </splitter>
+                <split size="111"/>
+                <dock id="" activePageId="Curve Editor.1">
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+        </splitter>
+    </window>
+    <window x="2552" y="0" w="1920" h="1160" maximized="1" screen="1">
+        <splitter orientation="1">
+            <split size="1266"/>
+            <dock id="" activePageId="DAG.2">
+                <page id="DAG.1"/>
+                <page id="DAG.2"/>
+            </dock>
+            <split size="650"/>
+            <dock id="" activePageId="uk.co.thefoundry.scripteditor.1">
+                <page id="uk.co.thefoundry.scripteditor.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/appLibrary/nuke/NUKE_PATH/SharedToolSets/TOOLS/filters/ConvolveBlur.nk
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Group {
+ inputs 0
+ name ConvolveBlur
+ selected true
+ xpos 1405
+ ypos -1213
+ addUserKnob {20 User}
+ addUserKnob {41 scale T Reformat4.scale}
+ addUserKnob {4 kernal l bokeh M {1 2 3 4 5 6 7 "" ""}}
+}
+ Read {
+  inputs 0
+  file_type jpeg
+  file C:/appLibrary/nuke/NUKE_PATH/imgs/bokehImg/bokeh_21.jpg
+  format "250 250 0 0 250 250 1 "
+  origset true
+  name Read49
+  xpos 240
+  ypos -628
+ }
+ Read {
+  inputs 0
+  file_type jpeg
+  file C:/appLibrary/nuke/NUKE_PATH/imgs/bokehImg/bokeh_23.jpg
+  format "250 250 0 0 250 250 1 "
+  origset true
+  name Read50
+  xpos 350
+  ypos -629
+ }
+ Read {
+  inputs 0
+  file_type jpeg
+  file C:/appLibrary/nuke/NUKE_PATH/imgs/bokehImg/bokeh_18.jpg
+  format "250 250 0 0 250 250 1 "
+  origset true
+  name Read51
+  xpos 457
+  ypos -629
+ }
+ Read {
+  inputs 0
+  file_type jpeg
+  file C:/appLibrary/nuke/NUKE_PATH/imgs/bokehImg/bokeh_03.jpg
+  format "250 250 0 0 250 250 1 "
+  origset true
+  name Read52
+  xpos 569
+  ypos -626
+ }
+ Read {
+  inputs 0
+  file_type jpeg
+  file C:/appLibrary/nuke/NUKE_PATH/imgs/bokehImg/bokeh_08.jpg
+  format "250 250 0 0 250 250 1 "
+  origset true
+  name Read53
+  xpos 689
+  ypos -631
+ }
+ Read {
+  inputs 0
+  file_type jpeg
+  file C:/appLibrary/nuke/NUKE_PATH/imgs/bokehImg/bokeh_13.jpg
+  format "250 250 0 0 250 250 1 "
+  origset true
+  name Read54
+  xpos 796
+  ypos -627
+ }
+ Read {
+  inputs 0
+  file_type jpeg
+  file C:/appLibrary/nuke/NUKE_PATH/imgs/bokehImg/bokeh_20.jpg
+  format "250 250 0 0 250 250 1 "
+  origset true
+  name Read55
+  selected true
+  xpos 903
+  ypos -628
+ }
+ Switch {
+  inputs 7
+  which {{parent.kernal}}
+  name Switch2
+  label "\[value which]"
+  xpos 605
+  ypos -401
+ }
+ Shuffle {
+  green black
+  blue black
+  alpha black
+  name Shuffle8
+  label "\[value red]/\[value green]/\[value blue]/\[value alpha]"
+  xpos 605
+  ypos -354
+  disable true
+ }
+ Reformat {
+  type scale
+  scale 0.01
+  name Reformat4
+  xpos 605
+  ypos -202
+ }
+ Input {
+  inputs 0
+  name Input1
+  xpos 1057
+  ypos -391
+ }
+ Convolve2 {
+  inputs 2
+  filter_channel rgba.red
+  name Convolve1
+  xpos 1057
+  ypos -206
+ }
+ Output {
+  name Output1
+  xpos 1057
+  ypos 15
+ }
+end_group
