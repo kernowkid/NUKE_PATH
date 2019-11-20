@@ -1,0 +1,404 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+Roto {
+ inputs 0
+ cliptype none
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x45056000 x44960000}
+    {a fx x41a00000 fy x41a00000 pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Ellipse1 512 bezier
+     {{cc
+       {f 8192}
+       {px x448b6000
+        {xc0cb5100 0}
+        {x449d4d93 x43f01c8f}
+        {x40cb5100 0}
+        {0 xc0cb5080}
+        {x449ebdb6 x43f5dd18}
+        {0 x40cb50c0}
+        {x40cb5100 0}
+        {x449d4d93 x43fb9da1}
+        {xc0cb5100 0}
+        {0 x40cb50c0}
+        {x449bdd70 x43f5dd18}
+        {0 xc0cb5080}}}
+      {cc
+       {f 8192}
+       {px x448b6000
+        {xc0cb5100 0}
+        {0 0}
+        {x40cb5100 0}
+        {0 xc0cb5080}
+        {0 0}
+        {0 x40cb50c0}
+        {x40cb5100 0}
+        {0 0}
+        {xc0cb5100 0}
+        {0 x40cb50c0}
+        {0 0}
+        {0 xc0cb5080}}}}
+     {tx x448b6000 x449d0000 x43f48000}
+     {a ft x40400000 osw x41200000 osf 0 str 1 spx x45056000 spy x44960000 sb 1 ltn x448b6000 ltm x448b6000 tt x40e00000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 tt 7 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {2134 1200}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 1115
+ lifetime_end 1115
+ view {}
+ motionblur_on true
+ motionblur_shutter_offset_type centred
+ feather 20
+ source_black_outside true
+ name Roto7
+ selected true
+ xpos -5731
+ ypos -1294
+}
+Blur {
+ size 25
+ name Blur8
+ selected true
+ xpos -5731
+ ypos -1236
+}
+Grade {
+ whitepoint 0.16
+ name Grade13
+ selected true
+ xpos -5731
+ ypos -1161
+}
+set N52408000 [stack 0]
+push $N52408000
+push $cut_paste_input
+Dot {
+ name Dot54
+ selected true
+ xpos -5874
+ ypos -1152
+}
+Group {
+ inputs 2
+ name PxF_Distort
+ help "Fake refraction using an 'edge-detected' deformation map. Useful to simulate glass-like refractions. Can also be used to grow edges on tricky chroma keys by distorting the RGB channels using the Alpha as the deformation map."
+ tile_color 0x733520ff
+ selected true
+ xpos -5801
+ ypos -1077
+ addUserKnob {20 User}
+ addUserKnob {41 channels t "Which channels are distorted." T IDistort1.channels}
+ addUserKnob {7 amount t "Amount of distortion." R -2 2}
+ amount -0.72
+ addUserKnob {6 fine t "Makes the effect easier to dial when trying to achieve really subtle results." +STARTLINE}
+ fine true
+ addUserKnob {7 blurLens t "Blur the deformation map, post edge detection." R 0 100}
+ blurLens 1
+ addUserKnob {6 wrap t "Flips, flops and tiles the image around the frame. Useful when the distortion is strong enough to fetch pixels that are outside of frame.\n(Warning: This makes everything 9x slower!)" +STARTLINE}
+ addUserKnob {4 lensChannel t "Which channel from the 'lens' input is used as a deformation map." M {red green blue alpha ""}}
+ lensChannel alpha
+ addUserKnob {41 filter t "Which kind of standard Nuke pixel filtering to use for the deformation." T IDistort1.filter}
+ addUserKnob {26 ""}
+ addUserKnob {26 t l "" +STARTLINE T "PxF_Distort 2.0.4 - (c) 2014 - Xavier Bourque - www.pixelfudger.com"}
+}
+ Input {
+  inputs 0
+  name mask
+  xpos 168
+  ypos 357
+  number 2
+ }
+ Input {
+  inputs 0
+  name img
+  xpos -133
+  ypos -626
+ }
+ Dot {
+  name Dot3
+  xpos -99
+  ypos -503
+ }
+set Neae3ac00 [stack 0]
+ Dot {
+  name Dot2
+  xpos -435
+  ypos -121
+ }
+set Neae3a400 [stack 0]
+ Input {
+  inputs 0
+  name lens
+  xpos 108
+  ypos -608
+  number 1
+ }
+ Dot {
+  name Dot4
+  xpos 142
+  ypos -538
+ }
+set Neae3a000 [stack 0]
+ Shuffle {
+  red black
+  green black
+  blue black
+  name Shuffle4
+  label alpha
+  xpos 245
+  ypos -401
+ }
+push $Neae3a000
+ Shuffle {
+  red black
+  green black
+  blue black
+  alpha blue
+  name Shuffle3
+  label blue
+  xpos 152
+  ypos -399
+ }
+push $Neae3a000
+ Shuffle {
+  red black
+  green black
+  blue black
+  alpha green
+  name Shuffle2
+  label green
+  xpos 63
+  ypos -401
+ }
+push $Neae3a000
+ Shuffle {
+  red black
+  green black
+  blue black
+  alpha red
+  name Shuffle1
+  label red
+  xpos -30
+  ypos -403
+ }
+ Switch {
+  inputs 4
+  which {{parent.lensChannel}}
+  name Switch1
+  xpos 106
+  ypos -334
+ }
+ Dot {
+  name Dot1
+  xpos 140
+  ypos -272
+ }
+set N7619d800 [stack 0]
+push $N7619d800
+ Position {
+  translate {1 0}
+  name Position1
+  xpos 19
+  ypos -209
+ }
+ Merge2 {
+  inputs 2
+  operation minus
+  name Merge15
+  xpos 80
+  ypos -167
+ }
+push $N7619d800
+push $N7619d800
+ Position {
+  translate {0 1}
+  name Position2
+  xpos 223
+  ypos -212
+ }
+ Merge2 {
+  inputs 2
+  operation minus
+  name Merge21
+  xpos 179
+  ypos -167
+ }
+ ShuffleCopy {
+  inputs 2
+  red alpha
+  green alpha2
+  blue blue
+  name ShuffleCopy3
+  xpos 116
+  ypos -116
+ }
+ Blur {
+  size {{"parent.blurLens * (parent.width/2048) * 2.75"}}
+  name Blur13
+  xpos 116
+  ypos -78
+ }
+ Multiply {
+  value {{"fine ? pow(parent.blurLens,0.395) * parent.amount * parent.width * 3.597 / 10 : pow(parent.blurLens,0.395) * parent.amount * parent.width * 3.597"}}
+  name Multiply5
+  xpos 116
+  ypos -43
+ }
+set N34698800 [stack 0]
+ Expression {
+  channel3 {-rgba.red -rgba.green -rgba.blue rgba.alpha}
+  expr3 "r == 0 && g == 0 ? 1 : 0"
+  name Expression1
+  xpos 127
+  ypos 123
+ }
+push $Neae3a400
+push $Neae3ac00
+ Dot {
+  name Dot5
+  xpos -303
+  ypos -146
+ }
+push $N34698800
+push $Neae3ac00
+ Mirror {
+  Horizontal true
+  Vertical true
+  name Mirror2
+  xpos -121
+  ypos -251
+  disable {{"1 - parent.wrap"}}
+ }
+ Reformat {
+  type scale
+  scale 3
+  filter Impulse
+  name Reformat2
+  xpos -121
+  ypos -224
+  disable {{"1 - parent.wrap"}}
+ }
+ Tile {
+  rows 3
+  mirrorRows true
+  columns 3
+  mirrorCols true
+  filter Impulse
+  name Tile1
+  xpos -121
+  ypos -200
+  disable {{"1 - parent.wrap"}}
+ }
+ Reformat {
+  type scale
+  scale 0.333333
+  resize none
+  filter Impulse
+  name Reformat3
+  xpos -121
+  ypos -176
+  disable {{"1 - parent.wrap"}}
+ }
+ Transform {
+  translate {-1 -1}
+  center {3072 2334}
+  black_outside false
+  name Transform1
+  xpos -121
+  ypos -142
+  disable {{"1 - parent.wrap"}}
+ }
+set N5a9bf800 [stack 0]
+ Copy {
+  inputs 2
+  from0 rgba.red
+  to0 forward.u
+  from1 rgba.green
+  to1 forward.v
+  name Copy1
+  xpos -113
+  ypos -50
+ }
+ IDistort {
+  channels rgb
+  uv forward
+  uv_scale {{(parent.width/2048)}}
+  blur -depth.Z
+  name IDistort1
+  xpos -113
+  ypos 83
+ }
+ Remove {
+  channels forward
+  name Remove1
+  xpos -113
+  ypos 136
+ }
+ CopyBBox {
+  inputs 2
+  name CopyBBox1
+  selected true
+  xpos -113
+  ypos 213
+ }
+ Keymix {
+  inputs 3
+  name Keymix1
+  xpos -113
+  ypos 286
+ }
+ Keymix {
+  inputs 3
+  invertMask true
+  bbox B
+  name Keymix2
+  xpos -113
+  ypos 405
+  disable {{"\[exists parent.input2] ? 0 : 1" x1 0}}
+ }
+ Output {
+  name Output1
+  xpos -113
+  ypos 515
+ }
+push $N5a9bf800
+push $Neae3ac00
+ Viewer {
+  inputs 2
+  input_process false
+  name Viewer1
+  xpos 226
+  ypos -46
+ }
+end_group
+Blur {
+ inputs 1+1
+ size 10
+ name Blur9
+ selected true
+ xpos -5731
+ ypos -999
+}

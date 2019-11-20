@@ -1,5 +1,18 @@
 set cut_paste_input [stack 0]
-version 10.5 v5
+version 11.3 v5
+BackdropNode {
+inputs 0
+name BackdropNode14
+tile_color 0x3a444900
+label "PROJECTION EXTEND"
+note_font "Verdana Bold Bold"
+note_font_size 44
+selected true
+xpos -223
+ypos 3003
+bdwidth 634
+bdheight 232
+}
 push $cut_paste_input
 Reformat {
 type scale
@@ -7,20 +20,29 @@ box_width 8000
 box_height 8000
 scale 1.54
 resize none
-name Reformat3
+name Reformat8
 selected true
-xpos 7263
-ypos -1097
+xpos -192
+ypos 3140
 }
 Camera2 {
 inputs 0
-focal {{1/Reformat3.scale*58.86}}
+focal {{1/Reformat8.scale*58.86}}
 frame_rate 25
-name Camera4
+name Camera2
 selected true
-xpos 7379
-ypos -1118
+xpos -78
+ypos 3121
 addUserKnob {20 plus}
 addUserKnob {22 BKUP l Bake -STARTLINE T BakeUnderParent()}
 addUserKnob {22 stereoRig l "Stereo Rig" T stereoRig() +STARTLINE}
+}
+StickyNote {
+inputs 0
+name StickyNote1
+label "reformat before projection, using scale parameter, \nand link that value to the focal length of the projector camera, \nusing the expression (assuming the original \nfocal length of projection camera was say 25mm):\n1/Reformat1.scale*25"
+note_font "Verdana Bold"
+selected true
+xpos 57
+ypos 3091
 }

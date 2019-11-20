@@ -1,0 +1,1324 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode2
+ tile_color 0x3f0f0400
+ label "BLOOD BURST"
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 4566
+ ypos 7182
+ bdwidth 679
+ bdheight 832
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode3
+ tile_color 0x56110700
+ label "BLOOD HITS"
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 5281
+ ypos 7184
+ bdwidth 683
+ bdheight 477
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode4
+ tile_color 0x35110e00
+ label "BLOOD SPLAT"
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 6010
+ ypos 7185
+ bdwidth 568
+ bdheight 494
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode5
+ tile_color 0x561a0000
+ label "BLOOD SPLATTER"
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 6640
+ ypos 7186
+ bdwidth 494
+ bdheight 494
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode6
+ tile_color 0x4f030000
+ label "BLOOD SQUIRT UP"
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 7179
+ ypos 7190
+ bdwidth 509
+ bdheight 489
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_16/frames/Blood_Burst_16.%04d.sgi
+ localizationPolicy on
+ format "2048 956 0 0 2048 956 1 "
+ last 80
+ origlast 80
+ origset true
+ version 8
+ name Read19
+ selected true
+ xpos 4914
+ ypos 7805
+}
+Retime {
+ input.last 80
+ output.first 1001
+ output.first_lock true
+ output.last 1080
+ time ""
+ name Retime17
+ selected true
+ xpos 4914
+ ypos 7903
+}
+Grade {
+ gamma 2.2
+ name Grade26
+ selected true
+ xpos 4914
+ ypos 7929
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_15/frames/Blood_Burst_15.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 47
+ origlast 47
+ origset true
+ version 4
+ name Read18
+ selected true
+ xpos 4803
+ ypos 7805
+}
+Retime {
+ input.last 47
+ output.first 1001
+ output.first_lock true
+ output.last 1047
+ time ""
+ name Retime16
+ selected true
+ xpos 4803
+ ypos 7903
+}
+Grade {
+ gamma 2.2
+ name Grade25
+ selected true
+ xpos 4803
+ ypos 7929
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_14/frames/Blood_Burst_14.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 82
+ origlast 82
+ origset true
+ version 4
+ name Read17
+ selected true
+ xpos 4687
+ ypos 7801
+}
+Retime {
+ input.last 82
+ output.first 1001
+ output.first_lock true
+ output.last 1082
+ time ""
+ name Retime15
+ selected true
+ xpos 4687
+ ypos 7899
+}
+Grade {
+ gamma 2.2
+ name Grade24
+ selected true
+ xpos 4687
+ ypos 7925
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_13/frames/Blood_Burst_13.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 68
+ origlast 68
+ origset true
+ version 4
+ name Read16
+ selected true
+ xpos 4577
+ ypos 7801
+}
+Retime {
+ input.last 68
+ output.first 1001
+ output.first_lock true
+ output.last 1068
+ time ""
+ name Retime14
+ selected true
+ xpos 4577
+ ypos 7899
+}
+Grade {
+ gamma 2.2
+ name Grade23
+ selected true
+ xpos 4577
+ ypos 7925
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_12/frames/Blood_Burst_12.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 33
+ origlast 33
+ origset true
+ version 2
+ name Read15
+ selected true
+ xpos 4899
+ ypos 7623
+}
+Retime {
+ input.last 33
+ output.first 1001
+ output.first_lock true
+ output.last 1033
+ time ""
+ name Retime13
+ selected true
+ xpos 4899
+ ypos 7721
+}
+Grade {
+ gamma 2.2
+ name Grade22
+ selected true
+ xpos 4899
+ ypos 7747
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_11/frames/Blood_Burst_11.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 33
+ origlast 33
+ origset true
+ version 2
+ name Read14
+ selected true
+ xpos 4789
+ ypos 7624
+}
+Retime {
+ input.last 33
+ output.first 1001
+ output.first_lock true
+ output.last 1033
+ time ""
+ name Retime12
+ selected true
+ xpos 4789
+ ypos 7722
+}
+Grade {
+ gamma 2.2
+ name Grade21
+ selected true
+ xpos 4789
+ ypos 7748
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_10/frames/Blood_Burst_10.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 33
+ origlast 33
+ origset true
+ version 4
+ name Read13
+ selected true
+ xpos 4687
+ ypos 7627
+}
+Retime {
+ input.last 33
+ output.first 1001
+ output.first_lock true
+ output.last 1033
+ time ""
+ name Retime11
+ selected true
+ xpos 4687
+ ypos 7725
+}
+Grade {
+ gamma 2.2
+ name Grade20
+ selected true
+ xpos 4687
+ ypos 7751
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_09/frames/Blood_Burst_09.%05d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 104
+ origlast 104
+ origset true
+ version 6
+ name Read12
+ selected true
+ xpos 4576
+ ypos 7631
+}
+Retime {
+ input.last 104
+ output.first 1001
+ output.first_lock true
+ output.last 1104
+ time ""
+ name Retime10
+ selected true
+ xpos 4576
+ ypos 7729
+}
+Grade {
+ gamma 2.2
+ name Grade19
+ selected true
+ xpos 4576
+ ypos 7755
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_08/frames/Blood_Burst_07.%05d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 122
+ origlast 122
+ origset true
+ version 10
+ name Read11
+ selected true
+ xpos 4916
+ ypos 7431
+}
+Retime {
+ input.last 122
+ output.first 1001
+ output.first_lock true
+ output.last 1122
+ time ""
+ name Retime9
+ selected true
+ xpos 4916
+ ypos 7529
+}
+Grade {
+ gamma 2.2
+ name Grade18
+ selected true
+ xpos 4916
+ ypos 7555
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_07/frames/Blood_Burst__07.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 67
+ origlast 67
+ origset true
+ version 4
+ name Read8
+ selected true
+ xpos 4797
+ ypos 7430
+}
+Retime {
+ input.last 67
+ output.first 1001
+ output.first_lock true
+ output.last 1067
+ time ""
+ name Retime8
+ selected true
+ xpos 4797
+ ypos 7528
+}
+Grade {
+ gamma 2.2
+ name Grade17
+ selected true
+ xpos 4797
+ ypos 7554
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_06/frames/Blood_Burst.06.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ first 601
+ last 647
+ origfirst 601
+ origlast 647
+ origset true
+ version 4
+ name Read10
+ selected true
+ xpos 4686
+ ypos 7430
+}
+Retime {
+ input.first 601
+ input.last 647
+ output.first 1001
+ output.first_lock true
+ output.last 1047
+ time ""
+ name Retime7
+ selected true
+ xpos 4686
+ ypos 7528
+}
+Grade {
+ gamma 2.2
+ name Grade16
+ selected true
+ xpos 4686
+ ypos 7554
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_05/frames/Blood_Burst.05.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ first 501
+ last 584
+ origfirst 501
+ origlast 584
+ origset true
+ version 8
+ name Read9
+ selected true
+ xpos 4576
+ ypos 7430
+}
+Retime {
+ input.first 501
+ input.last 584
+ output.first 1001
+ output.first_lock true
+ output.last 1084
+ time ""
+ name Retime6
+ selected true
+ xpos 4576
+ ypos 7528
+}
+Grade {
+ gamma 2.2
+ name Grade15
+ selected true
+ xpos 4576
+ ypos 7554
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_04/frames/Blood_Burst.04.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ first 401
+ last 476
+ origfirst 401
+ origlast 476
+ origset true
+ version 8
+ name Read7
+ selected true
+ xpos 4910
+ ypos 7263
+}
+Retime {
+ input.first 101
+ input.last 154
+ output.first 1001
+ output.first_lock true
+ output.last 1054
+ time ""
+ name Retime5
+ selected true
+ xpos 4910
+ ypos 7361
+}
+Grade {
+ gamma 2.2
+ name Grade14
+ selected true
+ xpos 4910
+ ypos 7387
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_03/frames/Blood_Burst.03.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ first 301
+ last 382
+ origfirst 301
+ origlast 382
+ origset true
+ version 6
+ name Read6
+ selected true
+ xpos 4802
+ ypos 7263
+}
+Retime {
+ input.first 301
+ input.last 382
+ output.first 1001
+ output.first_lock true
+ output.last 1082
+ time ""
+ name Retime4
+ selected true
+ xpos 4802
+ ypos 7361
+}
+Grade {
+ gamma 2.2
+ name Grade13
+ selected true
+ xpos 4802
+ ypos 7387
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_02/frames/Blood_Burst.02.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ first 201
+ last 227
+ origfirst 201
+ origlast 227
+ origset true
+ version 2
+ name Read5
+ selected true
+ xpos 4691
+ ypos 7264
+}
+Retime {
+ input.first 201
+ input.last 227
+ output.first 1001
+ output.first_lock true
+ output.last 1027
+ time ""
+ name Retime3
+ selected true
+ xpos 4691
+ ypos 7362
+}
+Grade {
+ gamma 2.2
+ name Grade12
+ selected true
+ xpos 4691
+ ypos 7388
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bburst_01/frames/Blood_Burst_01.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ first 101
+ last 154
+ origfirst 101
+ origlast 154
+ origset true
+ version 2
+ name Read3
+ selected true
+ xpos 4580
+ ypos 7262
+}
+Retime {
+ input.first 101
+ input.last 154
+ output.first 1001
+ output.first_lock true
+ output.last 1054
+ time ""
+ name Retime2
+ selected true
+ xpos 4580
+ ypos 7360
+}
+Grade {
+ gamma 2.2
+ name Grade11
+ selected true
+ xpos 4580
+ ypos 7386
+}
+ContactSheet {
+ inputs 16
+ rows 4
+ gap 5
+ center true
+ roworder TopBottom
+ name BLOOD_BURSTS
+ note_font "Verdana Bold"
+ note_font_size 30
+ selected true
+ xpos 5110
+ ypos 7861
+ hide_input true
+ postage_stamp true
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bhit_08/frames/Blood_Hit_08.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 40
+ origlast 40
+ origset true
+ version 8
+ name Read27
+ selected true
+ xpos 5585
+ ypos 7450
+}
+Retime {
+ input.last 40
+ output.first 1001
+ output.first_lock true
+ output.last 1040
+ time ""
+ name Retime25
+ selected true
+ xpos 5585
+ ypos 7548
+}
+Grade {
+ gamma 2.2
+ name Grade34
+ selected true
+ xpos 5585
+ ypos 7574
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bhit_07/frames/Blood_Hit_07.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 23
+ origlast 23
+ origset true
+ version 4
+ name Read26
+ selected true
+ xpos 5488
+ ypos 7448
+}
+Retime {
+ input.last 23
+ output.first 1001
+ output.first_lock true
+ output.last 1023
+ time ""
+ name Retime24
+ selected true
+ xpos 5488
+ ypos 7546
+}
+Grade {
+ gamma 2.2
+ name Grade33
+ selected true
+ xpos 5488
+ ypos 7572
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bhit_06/frames/Blood_Hit_06.%05d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 110
+ origlast 110
+ origset true
+ version 14
+ name Read25
+ selected true
+ xpos 5389
+ ypos 7449
+}
+Retime {
+ input.last 110
+ output.first 1001
+ output.first_lock true
+ output.last 1110
+ time ""
+ name Retime23
+ selected true
+ xpos 5389
+ ypos 7547
+}
+Grade {
+ gamma 2.2
+ name Grade32
+ selected true
+ xpos 5389
+ ypos 7573
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bhit_05/frames/Blood_Hit_%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ first 501
+ last 542
+ origfirst 501
+ origlast 542
+ origset true
+ version 6
+ name Read24
+ selected true
+ xpos 5291
+ ypos 7452
+}
+Retime {
+ input.first 501
+ input.last 542
+ output.first 1001
+ output.first_lock true
+ output.last 1042
+ time ""
+ name Retime22
+ selected true
+ xpos 5291
+ ypos 7550
+}
+Grade {
+ gamma 2.2
+ name Grade31
+ selected true
+ xpos 5291
+ ypos 7576
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bhit_04/frames/Blood_Hit_04.%05d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 101
+ origlast 101
+ origset true
+ version 18
+ name Read23
+ selected true
+ xpos 5587
+ ypos 7265
+}
+Retime {
+ input.last 101
+ output.first 1001
+ output.first_lock true
+ output.last 1101
+ time ""
+ name Retime21
+ selected true
+ xpos 5587
+ ypos 7363
+}
+Grade {
+ gamma 2.2
+ name Grade30
+ selected true
+ xpos 5587
+ ypos 7389
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bhit_03/frames/Blood_Hit_03.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 20
+ origlast 20
+ origset true
+ version 4
+ name Read22
+ selected true
+ xpos 5486
+ ypos 7268
+}
+Retime {
+ input.last 20
+ output.first 1001
+ output.first_lock true
+ output.last 1020
+ time ""
+ name Retime20
+ selected true
+ xpos 5486
+ ypos 7366
+}
+Grade {
+ gamma 2.2
+ name Grade29
+ selected true
+ xpos 5486
+ ypos 7392
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bhit_02/frames/Blood_Hit_02.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 32
+ origlast 32
+ origset true
+ version 4
+ name Read21
+ selected true
+ xpos 5388
+ ypos 7267
+}
+Retime {
+ input.last 32
+ output.first 1001
+ output.first_lock true
+ output.last 1032
+ time ""
+ name Retime19
+ selected true
+ xpos 5388
+ ypos 7365
+}
+Grade {
+ gamma 2.2
+ name Grade28
+ selected true
+ xpos 5388
+ ypos 7391
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bhit_01/frames/Blood_Hit_01.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 21
+ origlast 21
+ origset true
+ version 4
+ name Read20
+ selected true
+ xpos 5294
+ ypos 7264
+}
+Retime {
+ input.last 21
+ output.first 1001
+ output.first_lock true
+ output.last 1021
+ time ""
+ name Retime18
+ selected true
+ xpos 5294
+ ypos 7362
+}
+Grade {
+ gamma 2.2
+ name Grade27
+ selected true
+ xpos 5294
+ ypos 7388
+}
+ContactSheet {
+ inputs 8
+ rows 2
+ gap 5
+ center true
+ roworder TopBottom
+ name BLOOD_HIT
+ note_font "Verdana Bold"
+ note_font_size 30
+ selected true
+ xpos 5818
+ ypos 7538
+ hide_input true
+ postage_stamp true
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsplat_05/frames/Blood_Splat_05.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 203
+ origlast 203
+ origset true
+ version 32
+ name Read32
+ selected true
+ xpos 6126
+ ypos 7461
+}
+Retime {
+ input.last 203
+ output.first 1001
+ output.first_lock true
+ output.last 1203
+ time ""
+ name Retime30
+ selected true
+ xpos 6126
+ ypos 7559
+}
+Grade {
+ gamma 2.2
+ name Grade39
+ selected true
+ xpos 6126
+ ypos 7585
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsplat_04/frames/Blood_Splat_04.%03d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 72
+ origlast 72
+ origset true
+ version 8
+ name Read31
+ selected true
+ xpos 6025
+ ypos 7461
+}
+Retime {
+ input.last 72
+ output.first 1001
+ output.first_lock true
+ output.last 1072
+ time ""
+ name Retime29
+ selected true
+ xpos 6025
+ ypos 7559
+}
+Grade {
+ gamma 2.2
+ name Grade38
+ selected true
+ xpos 6025
+ ypos 7585
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsplat_03/frames/Blood_Splat_03.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 403
+ origlast 403
+ origset true
+ version 84
+ name Read30
+ selected true
+ xpos 6222
+ ypos 7267
+}
+Retime {
+ input.last 403
+ output.first 1001
+ output.first_lock true
+ output.last 1403
+ time ""
+ name Retime28
+ selected true
+ xpos 6222
+ ypos 7365
+}
+Grade {
+ gamma 2.2
+ name Grade37
+ selected true
+ xpos 6222
+ ypos 7391
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsplat_02/frames/Blood_Splat_%05d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ first 2001
+ last 2202
+ origfirst 2001
+ origlast 2202
+ origset true
+ version 42
+ name Read29
+ selected true
+ xpos 6122
+ ypos 7266
+}
+Retime {
+ input.first 2001
+ input.last 2202
+ output.first 1001
+ output.first_lock true
+ output.last 1202
+ time ""
+ name Retime27
+ selected true
+ xpos 6122
+ ypos 7364
+}
+Grade {
+ gamma 2.2
+ name Grade36
+ selected true
+ xpos 6122
+ ypos 7390
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsplat_01/frames/Blood_Splat_01.%04d.sgi
+ localizationPolicy on
+ format "2048 1024 0 0 2048 1024 1 "
+ last 183
+ origlast 183
+ origset true
+ version 32
+ name Read28
+ selected true
+ xpos 6022
+ ypos 7267
+}
+Retime {
+ input.last 183
+ output.first 1001
+ output.first_lock true
+ output.last 1183
+ time ""
+ name Retime26
+ selected true
+ xpos 6022
+ ypos 7365
+}
+Grade {
+ gamma 2.2
+ name Grade35
+ selected true
+ xpos 6022
+ ypos 7391
+}
+ContactSheet {
+ inputs 5
+ rows 2
+ columns 3
+ gap 5
+ center true
+ roworder TopBottom
+ name BLOOD_SPLAT
+ note_font "Verdana Bold"
+ note_font_size 30
+ selected true
+ xpos 6421
+ ypos 7551
+ hide_input true
+ postage_stamp true
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsplatter_03/frames/Blood_Splatter_03.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 22
+ origlast 22
+ origset true
+ version 6
+ name Read35
+ selected true
+ xpos 6845
+ ypos 7267
+}
+Retime {
+ input.last 22
+ output.first 1001
+ output.first_lock true
+ output.last 1022
+ time ""
+ name Retime33
+ selected true
+ xpos 6845
+ ypos 7365
+}
+Grade {
+ gamma 2.2
+ name Grade42
+ selected true
+ xpos 6845
+ ypos 7391
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsplatter_02/frames/Blood_Splatter_02.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 20
+ origlast 20
+ origset true
+ version 6
+ name Read34
+ selected true
+ xpos 6748
+ ypos 7266
+}
+Retime {
+ input.last 20
+ output.first 1001
+ output.first_lock true
+ output.last 1020
+ time ""
+ name Retime32
+ selected true
+ xpos 6748
+ ypos 7364
+}
+Grade {
+ gamma 2.2
+ name Grade41
+ selected true
+ xpos 6748
+ ypos 7390
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsplatter_01/frames/Blood_Splatter_01.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 18
+ origlast 18
+ origset true
+ version 4
+ name Read33
+ selected true
+ xpos 6650
+ ypos 7267
+}
+Retime {
+ input.last 18
+ output.first 1001
+ output.first_lock true
+ output.last 1018
+ time ""
+ name Retime31
+ selected true
+ xpos 6650
+ ypos 7365
+}
+Grade {
+ gamma 2.2
+ name Grade40
+ selected true
+ xpos 6650
+ ypos 7391
+}
+ContactSheet {
+ inputs 3
+ rows 1
+ columns 3
+ gap 5
+ center true
+ roworder TopBottom
+ name BLOOD_SPLATTER
+ note_font "Verdana Bold"
+ note_font_size 30
+ selected true
+ xpos 6990
+ ypos 7556
+ hide_input true
+ postage_stamp true
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsquirt_03/frames/Blood_Squirt_Up_03.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 65
+ origlast 65
+ origset true
+ version 8
+ name Read40
+ selected true
+ xpos 7440
+ ypos 7277
+}
+Retime {
+ input.last 68
+ output.first 1001
+ output.first_lock true
+ output.last 1068
+ time ""
+ name Retime36
+ selected true
+ xpos 7440
+ ypos 7375
+}
+Grade {
+ gamma 2.2
+ name Grade45
+ selected true
+ xpos 7440
+ ypos 7401
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsquirt_02/frames/Blood_Squirt_Up_02.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 69
+ origlast 69
+ origset true
+ version 8
+ name Read38
+ selected true
+ xpos 7312
+ ypos 7276
+}
+Retime {
+ input.last 68
+ output.first 1001
+ output.first_lock true
+ output.last 1068
+ time ""
+ name Retime35
+ selected true
+ xpos 7312
+ ypos 7374
+}
+Grade {
+ gamma 2.2
+ name Grade44
+ selected true
+ xpos 7312
+ ypos 7400
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Blood/bsquirt_01/frames/Blood_Squirt_Up_01.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 51
+ origlast 51
+ origset true
+ version 6
+ name Read36
+ selected true
+ xpos 7200
+ ypos 7275
+}
+Retime {
+ input.last 68
+ output.first 1001
+ output.first_lock true
+ output.last 1068
+ time ""
+ name Retime34
+ selected true
+ xpos 7200
+ ypos 7373
+}
+Grade {
+ gamma 2.2
+ name Grade43
+ selected true
+ xpos 7200
+ ypos 7399
+}
+ContactSheet {
+ inputs 3
+ rows 1
+ columns 3
+ gap 5
+ center true
+ roworder TopBottom
+ name BLOOD_SQUIRT_UP
+ note_font "Verdana Bold Bold"
+ note_font_size 30
+ selected true
+ xpos 7525
+ ypos 7549
+ hide_input true
+ postage_stamp true
+}

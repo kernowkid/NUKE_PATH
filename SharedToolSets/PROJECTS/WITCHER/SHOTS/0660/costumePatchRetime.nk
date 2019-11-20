@@ -1,0 +1,16 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+push $cut_paste_input
+Retime {
+input.first 5695
+input.first_lock true
+input.last 7627
+output.first 1017
+output.first_lock true
+output.last 2949
+time ""
+name Retime4
+selected true
+xpos -79
+ypos 1489
+}

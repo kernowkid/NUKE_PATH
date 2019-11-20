@@ -1,6 +1,7 @@
 #! C:/Program Files/Nuke9.0v6/nuke-9.0.6.dll -nx
 version 9.0 v6
-Gizmo {
+Group {
+ name Metadata_show
  addUserKnob {20 User}
  addUserKnob {26 meta l metadata T "Here you have your metadata"}
 }

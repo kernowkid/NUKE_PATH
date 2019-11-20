@@ -1,6 +1,7 @@
 #! C:/Program Files/Nuke8.0v5/nuke-8.0.v5.dll -nx
 version 8.0 v5
-Gizmo {
+Group {
+ name Position_Noise3D
 help "Generates a 3D noise pattern on a given position pass.\nSupports fBm (Fractional Brownian Noise) and Turbulent Noise algorithms."
 tile_color 0xff0000ff
 addUserKnob {20 User}

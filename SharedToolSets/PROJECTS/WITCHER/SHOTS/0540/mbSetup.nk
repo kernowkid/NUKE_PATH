@@ -1,0 +1,61 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+Read {
+ inputs 0
+ file_type exr
+ file P:/Projects/theWitcher/sequences/1133_bla/1133_bla_0540/prep/work/images/1133_bla_0540_prep_v001_nohornBeheadBG/1133_bla_0540_prep_v001_nohornBeheadBG.####.exr
+ localizationPolicy on
+ format "4268 2400 0 0 4268 2400 1 theWitcher 4k"
+ first 1890
+ last 1981
+ origfirst 1890
+ origlast 1981
+ origset true
+ version 80
+ colorspace "ACES - ACEScg"
+ name Read3
+ selected true
+ xpos 1955
+ ypos 156
+}
+VectorGenerator {
+ motionEstimation Regularized
+ name VectorGenerator1
+ selected true
+ xpos 1998
+ ypos 395
+}
+push 0
+Read {
+ inputs 0
+ file_type exr
+ file P:/Projects/theWitcher/sequences/1133_bla/1133_bla_0540/prep/work/images/1133_bla_0540_prep_v001_doorPlate/1133_bla_0540_prep_v001_doorPlate.####.exr
+ localizationPolicy on
+ first 1700
+ last 1710
+ origfirst 1700
+ origlast 1710
+ origset true
+ version 13
+ colorspace "ACES - ACEScg"
+ name Read5
+ selected true
+ xpos 2187
+ ypos 152
+}
+FrameHold {
+ first_frame 1704
+ name FrameHold1
+ selected true
+ xpos 2187
+ ypos 303
+}
+MotionBlur {
+ inputs 3
+ shutterTime 0.5
+ motionEstimation Regularized
+ name MotionBlur1
+ selected true
+ xpos 2187
+ ypos 401
+}

@@ -1,6 +1,7 @@
 #! z:/job/SWDEVL/SOFTWARE/w2k_intel/nuke4.3/20/nuke4.3.20.exe -nx
 version 4.302
-Gizmo {
+Group {
+ name EdgeBlender
  inputs 1
  addUserKnob { 20 "" User } 
  addUserKnob { 19 Grade2_black Threshold R -1 1 } 

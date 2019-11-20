@@ -1,4 +1,5 @@
 import nuke
+import sgtk
 
 nuke.pluginAddPath("./gizmos")
 nuke.pluginAddPath("./gizmos/pixelfudger")
@@ -53,23 +54,43 @@ nuke.knobDefault("Shuffle.label", '[value in]')
 #nuke.knobDefault("ScanlineRender.MB_channel","none")
 nuke.knobDefault("ScanlineRender.motion_vectors_type","off")
 
-##delete viewers on startup
-def killViewers():
-    for v in nuke.allNodes("Viewer"):
-        nuke.delete(v)
-nuke.addOnScriptLoad(killViewers)
-
-##Project Settings
 def setProjsettings():
-    ##theWitcher
+
+    #get context from shotgun 
+    # get the engine we are currently running in
+    currentEngine = sgtk.platform.current_engine()
+
+    # get the current context so we can find the highest version in relation to the context
+    ctx = currentEngine.context
+    
+    # Get a template object using the name of the template
+    template = currentEngine.sgtk.templates["nuke_shot_work"]
+
+    # Now resolve the fields needed to build the template path using the context
+    fields = ctx.as_template_fields(template,validate=True)
+
+    setLUT = 'Shot_%s' %fields['Shot']
+
+    #Set proj settings
     n = nuke.root()
     if 'theWitcher' in n['name'].value():
         n['fps'].setValue(24)
         n['colorManagement'].setValue('OCIO')
-        n['OCIO_config'].setValue('custom')
-        n['customOCIOConfigPath'].setValue('P:/Projects/theWitcher/ingest/20190906_primary_TO_003/the_witcher_2100024_baked_ocio_configuration_2019-04-29/the_witcher_2100024_baked_ocio_configuration_2019-04-29/baked_config-win.ocio')
         theWitcher4k = '4268 2400 theWitcher 4k'
         nuke.addFormat( theWitcher4k )
         n['format'].setValue('theWitcher 4k')
+    #Set VIEWER_INPUT
+        vi = nuke.toNode('VIEWER_INPUT')
+        vi['out_colorspace'].setValue(setLUT)
+
+
 nuke.addOnScriptSave(setProjsettings)
+
+
+
+##delete viewers on startup
+def killViewers():
+    for v in nuke.allNodes("Viewer"):
+        nuke.delete(v) 
+nuke.addOnScriptLoad(killViewers)
 

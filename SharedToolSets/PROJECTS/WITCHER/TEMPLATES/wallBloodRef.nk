@@ -1,0 +1,19 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+Read {
+ inputs 0
+ file_type exr
+ file P:/Projects/theWitcher/sequences/1139_cit/1139_cit_0010/comp/work/images/1139_cit_0010_comp_v001_output/1139_cit_0010_comp_v001_output.####.exr
+ localizationPolicy on
+ format "4268 2400 0 0 4268 2400 1 theWitcher 4k"
+ first 1009
+ last 1059
+ origfirst 1009
+ origlast 1059
+ origset true
+ version 2
+ name Read3
+ selected true
+ xpos 1499
+ ypos 760
+}

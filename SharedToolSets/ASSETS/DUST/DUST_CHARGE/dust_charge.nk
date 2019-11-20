@@ -1,0 +1,788 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode7
+ tile_color 0x383d3a00
+ label "DUST CHARGE"
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 4537
+ ypos 4947
+ bdwidth 999
+ bdheight 944
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch23/frames/Dirt_Charge_23.%03d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 151
+ origlast 151
+ origset true
+ version 34
+ name Read63
+ selected true
+ xpos 5132
+ ypos 5624
+}
+Retime {
+ input.last 151
+ output.first 1001
+ output.first_lock true
+ output.last 1151
+ time ""
+ name Retime59
+ selected true
+ xpos 5132
+ ypos 5722
+}
+Grade {
+ gamma 2.2
+ name Grade68
+ selected true
+ xpos 5132
+ ypos 5748
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch22/frames/Dirt_Charge_22.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 206
+ origlast 206
+ origset true
+ version 48
+ name Read62
+ selected true
+ xpos 4975
+ ypos 5625
+}
+Retime {
+ input.last 206
+ output.first 1001
+ output.first_lock true
+ output.last 1206
+ time ""
+ name Retime58
+ selected true
+ xpos 4975
+ ypos 5723
+}
+Grade {
+ gamma 2.2
+ name Grade67
+ selected true
+ xpos 4975
+ ypos 5749
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch21/frames/Dirt_Charge_21.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 256
+ origlast 256
+ origset true
+ version 40
+ name Read61
+ selected true
+ xpos 4826
+ ypos 5623
+}
+Retime {
+ input.last 256
+ output.first 1001
+ output.first_lock true
+ output.last 1256
+ time ""
+ name Retime57
+ selected true
+ xpos 4826
+ ypos 5721
+}
+Grade {
+ gamma 2.2
+ name Grade66
+ selected true
+ xpos 4826
+ ypos 5747
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch20/frames/Dirt_Charge_20.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 237
+ origlast 237
+ origset true
+ name Read59
+ selected true
+ xpos 4686
+ ypos 5631
+}
+Retime {
+ input.last 237
+ output.first 1001
+ output.first_lock true
+ output.last 1237
+ time ""
+ name Retime56
+ selected true
+ xpos 4686
+ ypos 5729
+}
+Grade {
+ gamma 2.2
+ name Grade65
+ selected true
+ xpos 4686
+ ypos 5755
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch19/frames/Dirt_Charge_19.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 131
+ origlast 131
+ origset true
+ name Read58
+ selected true
+ xpos 4547
+ ypos 5624
+}
+Retime {
+ input.last 131
+ output.first 1001
+ output.first_lock true
+ output.last 1131
+ time ""
+ name Retime55
+ selected true
+ xpos 4547
+ ypos 5722
+}
+Grade {
+ gamma 2.2
+ name Grade64
+ selected true
+ xpos 4547
+ ypos 5748
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch18/frames/Dirt_Charge_18.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 127
+ origlast 127
+ origset true
+ version 26
+ name Read56
+ selected true
+ xpos 5260
+ ypos 5416
+}
+Retime {
+ input.last 127
+ output.first 1001
+ output.first_lock true
+ output.last 1127
+ time ""
+ name Retime54
+ selected true
+ xpos 5260
+ ypos 5514
+}
+Grade {
+ gamma 2.2
+ name Grade63
+ selected true
+ xpos 5260
+ ypos 5540
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch17/frames/Dirt_Charge_17.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 111
+ origlast 111
+ origset true
+ version 18
+ name Read55
+ selected true
+ xpos 5127
+ ypos 5412
+}
+Retime {
+ input.last 111
+ output.first 1001
+ output.first_lock true
+ output.last 1111
+ time ""
+ name Retime53
+ selected true
+ xpos 5127
+ ypos 5510
+}
+Grade {
+ gamma 2.2
+ name Grade62
+ selected true
+ xpos 5127
+ ypos 5536
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch16/frames/Dirt_Charge_16.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 284
+ origlast 284
+ origset true
+ version 48
+ name Read54
+ selected true
+ xpos 4968
+ ypos 5417
+}
+Retime {
+ input.last 284
+ output.first 1001
+ output.first_lock true
+ output.last 1284
+ time ""
+ name Retime52
+ selected true
+ xpos 4968
+ ypos 5515
+}
+Grade {
+ gamma 2.2
+ name Grade61
+ selected true
+ xpos 4968
+ ypos 5541
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch15/frames/Dirt_Charge_15.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 208
+ origlast 208
+ origset true
+ version 38
+ name Read53
+ selected true
+ xpos 4827
+ ypos 5416
+}
+Retime {
+ input.last 208
+ output.first 1001
+ output.first_lock true
+ output.last 1208
+ time ""
+ name Retime51
+ selected true
+ xpos 4827
+ ypos 5514
+}
+Grade {
+ gamma 2.2
+ name Grade60
+ selected true
+ xpos 4827
+ ypos 5540
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch14/frames/Dirt_Charge_14.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 141
+ origlast 141
+ origset true
+ version 28
+ name Read52
+ selected true
+ xpos 4673
+ ypos 5416
+}
+Retime {
+ input.last 141
+ output.first 1001
+ output.first_lock true
+ output.last 1141
+ time ""
+ name Retime50
+ selected true
+ xpos 4673
+ ypos 5514
+}
+Grade {
+ gamma 2.2
+ name Grade59
+ selected true
+ xpos 4673
+ ypos 5540
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch13/frames/Dirt_Charge_13.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 139
+ origlast 139
+ origset true
+ version 24
+ name Read51
+ selected true
+ xpos 4553
+ ypos 5416
+}
+Retime {
+ input.last 139
+ output.first 1001
+ output.first_lock true
+ output.last 1139
+ time ""
+ name Retime49
+ selected true
+ xpos 4553
+ ypos 5514
+}
+Grade {
+ gamma 2.2
+ name Grade58
+ selected true
+ xpos 4553
+ ypos 5540
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch12/frames/Dirt_Charge_12.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 125
+ origlast 125
+ origset true
+ version 22
+ name Read50
+ selected true
+ xpos 5264
+ ypos 5232
+}
+Retime {
+ input.last 125
+ output.first 1001
+ output.first_lock true
+ output.last 1125
+ time ""
+ name Retime48
+ selected true
+ xpos 5264
+ ypos 5330
+}
+Grade {
+ gamma 2.2
+ name Grade57
+ selected true
+ xpos 5264
+ ypos 5356
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch11/frames/Dirt_Charge_11.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 41
+ origlast 41
+ origset true
+ version 10
+ name Read49
+ selected true
+ xpos 5122
+ ypos 5227
+}
+Retime {
+ input.last 41
+ output.first 1001
+ output.first_lock true
+ output.last 1041
+ time ""
+ name Retime47
+ selected true
+ xpos 5122
+ ypos 5325
+}
+Grade {
+ gamma 2.2
+ name Grade56
+ selected true
+ xpos 5122
+ ypos 5351
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch10/frames/Dirt_Charge_10.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 62
+ origlast 62
+ origset true
+ version 12
+ name Read48
+ selected true
+ xpos 4983
+ ypos 5225
+}
+Retime {
+ input.last 62
+ output.first 1001
+ output.first_lock true
+ output.last 1062
+ time ""
+ name Retime46
+ selected true
+ xpos 4983
+ ypos 5323
+}
+Grade {
+ gamma 2.2
+ name Grade55
+ selected true
+ xpos 4983
+ ypos 5349
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch09/frames/Dirt_Charge_09.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 118
+ origlast 118
+ origset true
+ version 24
+ name Read47
+ selected true
+ xpos 4824
+ ypos 5224
+}
+Retime {
+ input.last 118
+ output.first 1001
+ output.first_lock true
+ output.last 1118
+ time ""
+ name Retime45
+ selected true
+ xpos 4824
+ ypos 5322
+}
+Grade {
+ gamma 2.2
+ name Grade54
+ selected true
+ xpos 4824
+ ypos 5348
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch08/frames/Dirt_Charge_08.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 94
+ origlast 94
+ origset true
+ version 16
+ name Read45
+ selected true
+ xpos 4676
+ ypos 5223
+}
+Retime {
+ input.last 94
+ output.first 1001
+ output.first_lock true
+ output.last 1094
+ time ""
+ name Retime44
+ selected true
+ xpos 4676
+ ypos 5321
+}
+Grade {
+ gamma 2.2
+ name Grade53
+ selected true
+ xpos 4676
+ ypos 5347
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch07/frames/Dirt_Charge_07.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 74
+ origlast 74
+ origset true
+ version 14
+ name Read44
+ selected true
+ xpos 4557
+ ypos 5221
+}
+Retime {
+ input.last 74
+ output.first 1001
+ output.first_lock true
+ output.last 1074
+ time ""
+ name Retime43
+ selected true
+ xpos 4557
+ ypos 5319
+}
+Grade {
+ gamma 2.2
+ name Grade52
+ selected true
+ xpos 4557
+ ypos 5345
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch06/frames/Dirt_Charge_06.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 71
+ origlast 71
+ origset true
+ version 12
+ name Read46
+ selected true
+ xpos 5259
+ ypos 5033
+}
+Retime {
+ input.last 71
+ output.first 1001
+ output.first_lock true
+ output.last 1071
+ time ""
+ name Retime42
+ selected true
+ xpos 5259
+ ypos 5131
+}
+Grade {
+ gamma 2.2
+ name Grade51
+ selected true
+ xpos 5259
+ ypos 5157
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch05/frames/Dirt_Charge_05.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 85
+ origlast 85
+ origset true
+ version 14
+ name Read43
+ selected true
+ xpos 5113
+ ypos 5032
+}
+Retime {
+ input.last 85
+ output.first 1001
+ output.first_lock true
+ output.last 1085
+ time ""
+ name Retime41
+ selected true
+ xpos 5113
+ ypos 5130
+}
+Grade {
+ gamma 2.2
+ name Grade50
+ selected true
+ xpos 5113
+ ypos 5156
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch04/frames/Dirt_Charge_04.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 76
+ origlast 76
+ origset true
+ version 14
+ name Read42
+ selected true
+ xpos 4980
+ ypos 5032
+}
+Retime {
+ input.last 76
+ output.first 1001
+ output.first_lock true
+ output.last 1076
+ time ""
+ name Retime40
+ selected true
+ xpos 4980
+ ypos 5130
+}
+Grade {
+ gamma 2.2
+ name Grade49
+ selected true
+ xpos 4980
+ ypos 5156
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch03/frames/Dirt_Charge_03.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 101
+ origlast 101
+ origset true
+ version 24
+ name Read41
+ selected true
+ xpos 4827
+ ypos 5028
+}
+Retime {
+ input.last 101
+ output.first 1001
+ output.first_lock true
+ output.last 1101
+ time ""
+ name Retime39
+ selected true
+ xpos 4827
+ ypos 5126
+}
+Grade {
+ gamma 2.2
+ name Grade48
+ selected true
+ xpos 4827
+ ypos 5152
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch02/frames/Dirt_Charge_02.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 80
+ origlast 80
+ origset true
+ version 18
+ name Read39
+ selected true
+ xpos 4696
+ ypos 5027
+}
+Retime {
+ input.last 80
+ output.first 1001
+ output.first_lock true
+ output.last 1080
+ time ""
+ name Retime38
+ selected true
+ xpos 4696
+ ypos 5125
+}
+Grade {
+ gamma 2.2
+ name Grade47
+ selected true
+ xpos 4696
+ ypos 5151
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dirtch01/frames/Dirt_Charge_01.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 93
+ origlast 93
+ origset true
+ version 4
+ name Read37
+ selected true
+ xpos 4565
+ ypos 5030
+}
+Retime {
+ input.last 93
+ output.first 1001
+ output.first_lock true
+ output.last 1093
+ time ""
+ name Retime37
+ selected true
+ xpos 4565
+ ypos 5128
+}
+Grade {
+ gamma 2.2
+ name Grade46
+ selected true
+ xpos 4565
+ ypos 5154
+}
+ContactSheet {
+ inputs 23
+ rows 4
+ columns 6
+ gap 5
+ center true
+ roworder TopBottom
+ name DUST_CHARGE
+ note_font "Verdana Bold"
+ note_font_size 30
+ selected true
+ xpos 5421
+ ypos 5743
+ hide_input true
+ postage_stamp true
+}

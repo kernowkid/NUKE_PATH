@@ -1,0 +1,70 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+push 0
+Dot {
+ name Dot81
+ label "patch alpha"
+ selected true
+ xpos 3607
+ ypos 9194
+}
+add_layer {edgematte edgematte.a edgematte.r}
+EdgeBlur {
+ size 37.5
+ output edgematte.a
+ name EdgeBlur1
+ selected true
+ xpos 3112
+ ypos 9184
+}
+Shuffle {
+ in edgematte
+ alpha red
+ name Shuffle10
+ label "\[value in]"
+ selected true
+ xpos 3112
+ ypos 9222
+}
+push $cut_paste_input
+Dot {
+ name Dot83
+ label comp
+ selected true
+ xpos 2967
+ ypos 9056
+}
+Dot {
+ name Dot82
+ selected true
+ xpos 2967
+ ypos 9103
+}
+set Ncd1e0800 [stack 0]
+Grain2 {
+ name Grain2_1
+ label "Kodak 5248"
+ selected true
+ xpos 2999
+ ypos 9150
+ red_size 3.8
+ green_size 3.2
+ blue_size 3.5
+ red_i 0.285
+ green_i 0.32
+ blue_i 0.185
+ red_m 0.16
+ green_m 0.03
+ blue_m 0.012
+ black {0.01 0.006 0.016}
+ minimum {0 0 0}
+ maskgrain false
+}
+push $Ncd1e0800
+Keymix {
+ inputs 3
+ name Keymix4
+ selected true
+ xpos 2933
+ ypos 9222
+}

@@ -1,6 +1,7 @@
 #! /mill3d/server/apps/FOUNDRY/linux-x86-64/Nuke6.2v1/Nuke6.2 -nx
 version 6.2 v1
-Gizmo {
+Group {
+ name ColourEdge
  inputs 2
  addUserKnob {20 User l ColourEdge}
  addUserKnob {14 blurGrain l "Blur Grain" t "Preblur the image to smooth out grain if necessary" R 0 100}

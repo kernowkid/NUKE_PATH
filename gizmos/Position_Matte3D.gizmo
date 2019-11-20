@@ -1,6 +1,7 @@
 #! C:/Program Files/Nuke8.0v5/nuke-8.0.v5.dll -nx
 version 8.0 v5
-Gizmo {
+Group {
+ name Position_Matte3D
 help "<b>P_Matte</b> creates a sphere or cube shaped 3D matte based on a pass/layer containing position data"
 knobChanged "\nn = nuke.thisNode()\nk = nuke.thisKnob()\ns = nuke.toNode('SphereMatte')\nr = nuke.toNode('Start_End')\n\nif k.name() == \"falloffType\":\n    n\['falloff'].setVisible( k.value() != 'None' )\n    n\['exp'].setVisible( k.value() == 'Exponential' )\n\n"
 tile_color 0xff00ff

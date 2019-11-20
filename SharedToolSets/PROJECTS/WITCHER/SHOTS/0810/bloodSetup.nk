@@ -1,0 +1,147 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+push 0
+Dot {
+name Dot50
+label "spec pass"
+selected true
+xpos -3320
+ypos 120
+}
+push 0
+Dot {
+name Dot51
+label "blood matte"
+selected true
+xpos -3327
+ypos -418
+}
+Defocus {
+defocus 1.7
+name Defocus2
+selected true
+xpos -3360
+ypos -341
+}
+Dot {
+name Dot52
+selected true
+xpos -3327
+ypos -225
+}
+set Ndbe1a400 [stack 0]
+Dot {
+name Dot53
+selected true
+xpos -3327
+ypos -79
+}
+push $Ndbe1a400
+Dilate {
+size -4.6
+name Dilate2
+selected true
+xpos -3482
+ypos -235
+}
+Blur {
+size 4.3
+name Blur14
+selected true
+xpos -3482
+ypos -190
+}
+Noise {
+inputs 0
+size 2.75
+gain 0.745
+gamma 0.285
+center {2134 1200}
+name Noise2
+selected true
+xpos -3703
+ypos -315
+}
+Blur {
+size 2.4
+name Blur12
+selected true
+xpos -3713
+ypos -285
+}
+push $cut_paste_input
+Dot {
+name Dot57
+label "plate in"
+selected true
+xpos -3798
+ypos -515
+}
+Dot {
+name Dot48
+selected true
+xpos -3798
+ypos -380
+}
+set N401ff400 [stack 0]
+Dot {
+name Dot55
+selected true
+xpos -3912
+ypos -380
+}
+Blur {
+size 24
+name Blur15
+selected true
+xpos -3946
+ypos -345
+}
+Grade {
+white {0.6228889227 0.2958889306 0.2148889303 0.349999994}
+gamma {0.9789999723 0.8673190475 0.755638063 0.9599999785}
+name Grade17
+selected true
+xpos -3946
+ypos -307
+}
+Grade {
+inputs 1+1
+white 0.02
+name Grade18
+selected true
+xpos -3946
+ypos -273
+}
+Grade {
+inputs 1+1
+white 0.99
+gamma 0.73
+name Grade19
+selected true
+xpos -3946
+ypos -184
+}
+Dot {
+name Dot56
+selected true
+xpos -3912
+ypos -79
+}
+push $N401ff400
+Keymix {
+inputs 3
+name Keymix3
+selected true
+xpos -3832
+ypos -89
+}
+Merge2 {
+inputs 2
+operation plus
+name Merge18
+label spec
+selected true
+xpos -3832
+ypos 110
+}

@@ -1,0 +1,302 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+push $cut_paste_input
+Dot {
+name Dot113
+selected true
+xpos -2200
+ypos -1165
+}
+set N64332400 [stack 0]
+Dot {
+name Dot114
+selected true
+xpos -2392
+ypos -1165
+}
+ChromaKeyer {
+_screenColor {2.072265625 0.5161132813 0.1290283203}
+_screenGain 1.07
+_screenBalance 0.748
+_chromaGain 1.905
+_whitePoint 0
+_blackPoint 0.514
+_alphaBias {0.5 0.5 0.5}
+_overrideDespillBias true
+_despillBias {1.63592577 0.3968615234 0.09388113022}
+_replace "edge soft color"
+_replaceColor {0.1480457485 0.1547689885 0.1267157644}
+_replaceAmount 1.2
+name ChromaKeyer3
+selected true
+xpos -2426
+ypos -1108
+}
+Grade {
+channels rgba
+blackpoint 0.5
+white_clamp true
+name Grade46
+selected true
+xpos -2426
+ypos -1058
+}
+Dilate {
+size -2
+name Dilate5
+selected true
+xpos -2426
+ypos -1027
+}
+Dilate {
+size 7
+name Dilate6
+selected true
+xpos -2426
+ypos -979
+}
+Blur {
+size 3.8
+name Blur27
+selected true
+xpos -2426
+ypos -910
+}
+set Nfcd9a000 [stack 0]
+Dot {
+name Dot115
+selected true
+xpos -2392
+ypos -841
+}
+push $Nfcd9a000
+push $N64332400
+HueShift {
+inputs 1+1
+saturation 0.36
+hue_rotation 24
+brightness 0.69
+name HueShift1
+selected true
+xpos -2234
+ypos -904
+}
+Group {
+inputs 2
+name pixelChew4
+label v03
+selected true
+xpos -2234
+ypos -851
+postage_stamp_frame 1017
+addUserKnob {20 User}
+addUserKnob {4 chewMode l "Chew mode" M {"Chew out" "Chew in" "" "" "" ""}}
+chewMode "Chew in"
+addUserKnob {41 size l "Dilate matte" T Dilate7.size}
+addUserKnob {41 size_2 l Chew T Blur31.size}
+addUserKnob {41 size_3 l "Post process blur" T Blur32.size}
+addUserKnob {41 size_1 l "Blur premult matte" T Blur34.size}
+addUserKnob {6 showPlate l "Mult by original alpha" +STARTLINE}
+}
+Input {
+inputs 0
+name matte
+xpos -795
+ypos 432
+number 1
+}
+Dot {
+name Dot316
+xpos -761
+ypos 488
+}
+Invert {
+channels rgba
+name Invert1
+xpos -720
+ypos 483
+disable {{parent.chewMode i}}
+}
+Dilate {
+channels rgba
+size 2
+name Dilate7
+xpos -610
+ypos 483
+}
+set N306d7000 [stack 0]
+Input {
+inputs 0
+name plate
+xpos -427
+ypos 310
+}
+Dot {
+name Dot7
+xpos -393
+ypos 349
+}
+set N90fd6000 [stack 0]
+Shuffle {
+alpha white
+name Shuffle39
+xpos -427
+ypos 443
+}
+set N90fd7000 [stack 0]
+Merge2 {
+inputs 2
+operation stencil
+name Merge133
+xpos -427
+ypos 483
+}
+Blur {
+channels rgba
+size 5
+name Blur31
+xpos -427
+ypos 557
+}
+set N585d8800 [stack 0]
+Shuffle {
+red alpha
+green alpha
+blue alpha
+name Shuffle1
+label "\[value in]"
+xpos -238
+ypos 551
+postage_stamp_frame 983
+}
+Unpremult {
+name Unpremult2
+xpos -238
+ypos 595
+}
+Blur {
+size {{parent.Blur32.size}}
+name Blur1
+xpos -238
+ypos 621
+}
+Shuffle {
+alpha red
+name Shuffle2
+label "\[value in]"
+xpos -238
+ypos 702
+postage_stamp_frame 983
+}
+Dot {
+name Dot3
+xpos -204
+ypos 782
+}
+push $N306d7000
+Blur {
+channels {-rgba.red -rgba.green -rgba.blue rgba.alpha}
+name Blur34
+xpos -610
+ypos 572
+}
+push $N90fd7000
+Dot {
+name Dot317
+xpos -503
+ypos 447
+}
+Merge2 {
+inputs 2
+operation stencil
+name Merge140
+xpos -537
+ypos 638
+}
+Dot {
+name Dot319
+xpos -503
+ypos 747
+}
+push $N585d8800
+Unpremult {
+name Unpremult1
+xpos -427
+ypos 595
+}
+Blur {
+channels rgba
+name Blur32
+xpos -427
+ypos 621
+}
+Merge2 {
+inputs 2
+name Merge139
+xpos -427
+ypos 743
+}
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+name Copy7
+xpos -427
+ypos 772
+}
+set N365bfc00 [stack 0]
+push $N90fd6000
+Dot {
+name Dot5
+xpos -120
+ypos 349
+}
+Dot {
+name Dot2
+xpos -120
+ypos 972
+}
+push $N365bfc00
+Unpremult {
+name Unpremult3
+xpos -345
+ypos 928
+}
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+name Copy1
+xpos -345
+ypos 962
+}
+Premult {
+name Premult1
+xpos -345
+ypos 1012
+}
+Switch {
+inputs 2
+which {{1-parent.showPlate}}
+name Switch2
+xpos -427
+ypos 1100
+}
+Output {
+name Output1
+xpos -427
+ypos 1227
+}
+push $N90fd6000
+push $N365bfc00
+Viewer {
+inputs 2
+frame_range 128-128
+center_fstop 0
+gl_buffer_depth float
+viewerInputOrder "after viewer process"
+name Viewer2
+xpos -627
+ypos 922
+}
+end_group

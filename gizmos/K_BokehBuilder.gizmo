@@ -1,6 +1,7 @@
 #! C:/Program Files/Nuke9.0v6/nuke-9.0.6.dll -nx
 version 9.0 v6
-Gizmo {
+Group {
+ name K_BokehBuilder
  inputs 0
  addUserKnob {20 mainSettings l main}
  addUserKnob {26 header l "" +STARTLINE T "<font color=#8cb5ff><font size=7>Bokeh Builder</font> v1.0 </font>"}

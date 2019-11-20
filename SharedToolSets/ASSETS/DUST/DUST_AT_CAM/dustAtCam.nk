@@ -1,0 +1,196 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode9
+ tile_color 0x3c393bff
+ label "DUST AT CAM"
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 5818
+ ypos 5019
+ bdwidth 814
+ bdheight 567
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dustcam05/frames/Dust_AtCam_05.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 112
+ origlast 112
+ origset true
+ version 22
+ name Read80
+ selected true
+ xpos 6013
+ ypos 5295
+}
+Retime {
+ input.last 112
+ output.first 1001
+ output.first_lock true
+ output.last 1112
+ time ""
+ name Retime73
+ selected true
+ xpos 6013
+ ypos 5393
+}
+Grade {
+ gamma 2.2
+ name Grade82
+ selected true
+ xpos 6013
+ ypos 5419
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dustcam04/frames/Dust_AtCam_04.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 202
+ origlast 202
+ origset true
+ version 68
+ name Read79
+ selected true
+ xpos 5901
+ ypos 5294
+}
+Retime {
+ input.last 202
+ output.first 1001
+ output.first_lock true
+ output.last 1202
+ time ""
+ name Retime72
+ selected true
+ xpos 5901
+ ypos 5392
+}
+Grade {
+ gamma 2.2
+ name Grade81
+ selected true
+ xpos 5901
+ ypos 5418
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dustcam03/frames/Dust_AtCam_03.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 252
+ origlast 252
+ origset true
+ version 126
+ name Read78
+ selected true
+ xpos 6126
+ ypos 5138
+}
+Retime {
+ input.last 252
+ output.first 1001
+ output.first_lock true
+ output.last 1252
+ time ""
+ name Retime71
+ selected true
+ xpos 6126
+ ypos 5236
+}
+Grade {
+ gamma 2.2
+ name Grade80
+ selected true
+ xpos 6126
+ ypos 5262
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dustcam02/frames/Dust_AtCam_02.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 401
+ origlast 401
+ origset true
+ version 203
+ name Read77
+ selected true
+ xpos 6009
+ ypos 5139
+}
+Retime {
+ input.last 401
+ output.first 1001
+ output.first_lock true
+ output.last 1401
+ time ""
+ name Retime70
+ selected true
+ xpos 6009
+ ypos 5237
+}
+Grade {
+ gamma 2.2
+ name Grade79
+ selected true
+ xpos 6009
+ ypos 5263
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dustcam01/frames/Dust_AtCam_01.%04d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 227
+ origlast 227
+ origset true
+ version 84
+ name Read76
+ selected true
+ xpos 5902
+ ypos 5138
+}
+Retime {
+ input.last 227
+ output.first 1001
+ output.first_lock true
+ output.last 1227
+ time ""
+ name Retime69
+ selected true
+ xpos 5902
+ ypos 5236
+}
+Grade {
+ gamma 2.2
+ name Grade78
+ selected true
+ xpos 5902
+ ypos 5262
+}
+ContactSheet {
+ inputs 5
+ rows 2
+ columns 3
+ gap 5
+ center true
+ roworder TopBottom
+ name DUST_AT_CAM
+ note_font "Verdana Bold"
+ note_font_size 30
+ selected true
+ xpos 6339
+ ypos 5452
+ hide_input true
+ postage_stamp true
+}

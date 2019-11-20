@@ -1,0 +1,163 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode13
+ tile_color 0x3f474200
+ label "PARTICLE STREAM"
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 9815
+ ypos 5323
+ bdwidth 377
+ bdheight 479
+}
+Read {
+ inputs 0
+ file_type png
+ file P:/Assets/2D_Elements/Dust/Partical_stream_04/frames/particle_stream_04.%03d.png
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 111
+ origlast 111
+ origset true
+ version 8
+ name Read94
+ selected true
+ xpos 9948
+ ypos 5572
+}
+Retime {
+ input.last 158
+ output.first 1001
+ output.first_lock true
+ output.last 1158
+ time ""
+ name Retime85
+ selected true
+ xpos 9948
+ ypos 5670
+}
+Grade {
+ gamma 2.2
+ name Grade94
+ selected true
+ xpos 9948
+ ypos 5696
+}
+Read {
+ inputs 0
+ file_type png
+ file P:/Assets/2D_Elements/Dust/Partical_stream_03/frames/particle_stream_03.%03d.png
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 101
+ origlast 101
+ origset true
+ version 8
+ name Read92
+ selected true
+ xpos 9828
+ ypos 5573
+}
+Retime {
+ input.last 158
+ output.first 1001
+ output.first_lock true
+ output.last 1158
+ time ""
+ name Retime84
+ selected true
+ xpos 9828
+ ypos 5671
+}
+Grade {
+ gamma 2.2
+ name Grade93
+ selected true
+ xpos 9828
+ ypos 5697
+}
+Read {
+ inputs 0
+ file_type png
+ file P:/Assets/2D_Elements/Dust/Partical_stream_02/frames/particle_stream_02.%03d.png
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 151
+ origlast 151
+ origset true
+ version 10
+ name Read90
+ selected true
+ xpos 9942
+ ypos 5403
+}
+Retime {
+ input.last 158
+ output.first 1001
+ output.first_lock true
+ output.last 1158
+ time ""
+ name Retime83
+ selected true
+ xpos 9942
+ ypos 5501
+}
+Grade {
+ gamma 2.2
+ name Grade92
+ selected true
+ xpos 9942
+ ypos 5527
+}
+Read {
+ inputs 0
+ file_type png
+ file P:/Assets/2D_Elements/Dust/Partical_stream_01/frames/particle_stream_01.%03d.png
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 151
+ origlast 151
+ origset true
+ version 12
+ name Read81
+ selected true
+ xpos 9825
+ ypos 5403
+}
+Retime {
+ input.last 158
+ output.first 1001
+ output.first_lock true
+ output.last 1158
+ time ""
+ name Retime82
+ selected true
+ xpos 9825
+ ypos 5501
+}
+Grade {
+ gamma 2.2
+ name Grade91
+ selected true
+ xpos 9825
+ ypos 5527
+}
+ContactSheet {
+ inputs 4
+ rows 2
+ columns 2
+ gap 5
+ center true
+ roworder TopBottom
+ name PARTICLE_STREAM
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 30
+ selected true
+ xpos 10102
+ ypos 5704
+ hide_input true
+ postage_stamp true
+}

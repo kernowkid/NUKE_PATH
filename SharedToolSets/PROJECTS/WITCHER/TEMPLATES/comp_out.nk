@@ -18,7 +18,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                     </dock>
                 </splitter>
                 <split size="741"/>
-                <dock id="" activePageId="Properties.1">
+                <dock id="" activePageId="Properties.1" focus="true">
                     <page id="Properties.1"/>
                 </dock>
             </splitter>
@@ -29,7 +29,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             <split size="1360"/>
             <splitter orientation="2">
                 <split size="1061"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                 </dock>
                 <split size="135"/>
@@ -73,25 +73,13 @@ BackdropNode {
 }
 Dot {
  inputs 0
- name Dot281
- xpos 2306
- ypos 4129
-}
-NoOp {
- name connect_to_plate
- note_font "Verdana Bold Bold"
- xpos 1902
- ypos 4126
-}
-Dot {
- inputs 0
  name Dot3
  xpos 1652
  ypos 3318
 }
 NoOp {
  name comp_in
- note_font "Verdana Bold Bold Bold"
+ note_font "Verdana Bold Bold Bold Bold"
  xpos 1618
  ypos 3741
 }
@@ -126,20 +114,12 @@ Reformat {
  xpos 1618
  ypos 3998
 }
-CopyMetaData {
- inputs 2
- mergeMode "Meta only"
- name CopyMetaData4
- label "copy source metadata"
- xpos 1618
- ypos 4119
-}
 Dot {
  name Dot33
  xpos 1652
  ypos 4283
 }
-set Nd1887c00 [stack 0]
+set Nd61b7c00 [stack 0]
 Dot {
  name Dot285
  label "MASTERCOMP UNCOMPRESSED OUTPUT"
@@ -147,12 +127,12 @@ Dot {
  xpos 1652
  ypos 4538
 }
-push $Nd1887c00
+push $Nd61b7c00
 Group {
  name Quality_Control_Tool
  knobChanged "\n\ne = nuke.thisNode().knobs()\['extraControls'].value()\nv = nuke.thisNode().knobs()\['qhview'].getValue()\ng = nuke.thisNode().knobs()\['value']\ns = nuke.thisNode().knobs()\['size']\nc = nuke.thisNode().knobs()\['colours']\nebg = nuke.thisNode().knobs()\['edgebleedgamma']\n\nif e == 1:\n    if v == 0:\n        g.setVisible(True)\n        s.setVisible(False)\n        c.setVisible(False)\n        ebg.setVisible(False)\n    elif v == 1:\n        g.setVisible(False)\n        s.setVisible(True)\n        c.setVisible(False)\n        ebg.setVisible(False)\n    elif v == 2:\n        g.setVisible(False)\n        s.setVisible(False)\n        c.setVisible(True)\n        ebg.setVisible(True)\nelse:\n    g.setVisible(False)\n    s.setVisible(False)\n    c.setVisible(False)\n    ebg.setVisible(False)\n\nif v == 3:\n    nuke.thisNode().knobs()\['extraControls'].setVisible(False)\n    g.setVisible(False)\n    s.setVisible(False)\n    c.setVisible(False)\n    ebg.setVisible(False)\nelse:\n    nuke.thisNode().knobs()\['extraControls'].setVisible(True)\n\n"
  tile_color 0x989898ff
- note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
  note_font_color 0xaaff55ff
  xpos 1479
  ypos 4280
@@ -226,19 +206,19 @@ Group {
   xpos 1043
   ypos 191
  }
-set Nd18e5400 [stack 0]
+set Nd61de800 [stack 0]
  Dot {
   name Dot5
   xpos 629
   ypos 184
  }
-set Nd18e5000 [stack 0]
+set Nd61de400 [stack 0]
  Dot {
   name Dot7
   xpos 231
   ypos 184
  }
-set Nd18e4c00 [stack 0]
+set Nd61de000 [stack 0]
  Dot {
   name Dot8
   xpos -567
@@ -275,7 +255,7 @@ set Nd18e4c00 [stack 0]
   xpos -601
   ypos 538
  }
- set Cd1905800 [stack 0]
+ set Cd61f5000 [stack 0]
  Text2 {
   font_size_toolbar 100
   font_width_toolbar 100
@@ -308,7 +288,7 @@ set Nd18e4c00 [stack 0]
   xpos -567
   ypos 664
  }
-push $Nd18e4c00
+push $Nd61de000
  Shuffle {
   alpha white
   name Shuffle1
@@ -412,7 +392,7 @@ push $Nd18e4c00
   xpos 197
   ypos 558
  }
-clone $Cd1905800 {
+clone $Cd61f5000 {
   xpos 197
   ypos 622
   selected false
@@ -449,7 +429,7 @@ clone $Cd1905800 {
   xpos 231
   ypos 688
  }
-push $Nd18e5000
+push $Nd61de400
  Blur {
   channels rgb
   size 2
@@ -457,7 +437,7 @@ push $Nd18e5000
   xpos 705
   ypos 442
  }
-push $Nd18e5000
+push $Nd61de400
  Merge2 {
   inputs 2
   operation minus
@@ -472,7 +452,7 @@ push $Nd18e5000
   xpos 595
   ypos 468
  }
-clone $Cd1905800 {
+clone $Cd61f5000 {
   xpos 595
   ypos 588
   selected false
@@ -509,7 +489,7 @@ clone $Cd1905800 {
   xpos 629
   ypos 695
  }
-push $Nd18e5400
+push $Nd61de800
  Gamma {
   channels rgb
   value 2
@@ -518,7 +498,7 @@ push $Nd18e5400
   xpos 1009
   ypos 421
  }
-clone $Cd1905800 {
+clone $Cd61f5000 {
   xpos 1009
   ypos 590
   selected false

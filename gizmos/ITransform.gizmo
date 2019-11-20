@@ -1,6 +1,7 @@
 #! C:/Program Files/Nuke9.0v6/nuke-9.0.6.dll -nx
 version 9.0 v6
-Gizmo {
+Group {
+ name ITransform
  inputs 2
  addUserKnob {20 "" l Transform}
  addUserKnob {41 matrix T Transform1.matrix}

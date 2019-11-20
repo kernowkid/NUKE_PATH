@@ -10,12 +10,12 @@ def getFilePathInfo():
 
     fullPath = nuke.Root().knob('name').getValue()
     pathFragments = fullPath.split('/')
-    baseDir = '/'.join(pathFragments[:-2])+'/renders/'
+    baseDir = '/'.join(pathFragments[:-2])+'/images/'
     basename = os.path.basename(fullPath)
     name = os.path.splitext(basename)[0]
     nameFragments = name.split('_')
 
-    #get show,scene,shot,layer,version from script name
+    #get show,scene,shot,step,layer,version from script name
     try:
         if len(nameFragments) == 3:
             show,shot,version = name.split('_')
@@ -29,10 +29,13 @@ def getFilePathInfo():
         elif len(nameFragments) == 5:
             show,scene,shot,layer,version = name.split('_')
 
-        return baseDir,show,scene,shot,layer,version
+        elif len(nameFragments) == 6:
+            show,scene,shot,step,layer,version = name.split('_')
+
+        return baseDir,show,scene,shot,step,layer,version
 
     except:
-        nuke.message('Script not saved in proper format\n\nRequires script to named in one of the following formats:\n\n "show_scene_shot_layer_version"\n "show_shot_layer_version"\n "show_shot_version"')
+        nuke.message('Script not saved in proper format\n\nRequires script to named in one of the following formats:\n\n "show_scene_shot_step_layer_version"\n "show_scene_shot_layer_version"\n "show_shot_layer_version"\n "show_shot_version"')
           
 
 def createPathTab(selection):    
@@ -47,13 +50,15 @@ def createPathTab(selection):
             lockScene = nuke.Boolean_Knob('lockScene', 'lock')
             shotKnob = nuke.EvalString_Knob('shotKnob', 'shot')
             lockShot = nuke.Boolean_Knob('lockShot', 'lock')
+            stepKnob = nuke.EvalString_Knob('stepKnob', 'step')
+            lockStep = nuke.Boolean_Knob('lockStep', 'lock')
             layerKnob = nuke.EvalString_Knob('layerKnob', 'layer')
             lockLayer = nuke.Boolean_Knob('lockLayer', 'lock')
             versionKnob = nuke.EvalString_Knob('versionKnob', 'version')
             lockVersion = nuke.Boolean_Knob('lockVersion', 'lock')
             fileTypeKnob = nuke.Enumeration_Knob('fileTypeKnob', 'file type', ['cin', 'dpx', 'exr', 'hdr', 'jpeg', 'mov', 'null', 'pic', 'png', 'sgi', 'targa', 'tiff', 'xpm', 'yuv'])
             lockFileType = nuke.Boolean_Knob('lockFileType', 'lock')
-            folderKnob = nuke.Enumeration_Knob('folderKnob', 'folder', ['none', 'OUT', 'WIP', 'PRECOMP', 'PLATES','CUSTOM'])
+            folderKnob = nuke.Enumeration_Knob('folderKnob', 'folder', ['none', 'out', 'wip', 'precomp', 'plates','custom'])
             customFolderKnob = nuke.EvalString_Knob('customFolderKnob', 'custom')
             lockFolder = nuke.Boolean_Knob('lockFolder', 'lock')
             baseDirKnob = nuke.File_Knob('baseDirKnob', 'base directory')
@@ -65,12 +70,15 @@ def createPathTab(selection):
             dividerFolderKnob = nuke.Text_Knob('','<b>folder options','')
             dividerPathKnob = nuke.Text_Knob('','<b>generated path','')
     
-            for k in [tabKnob, showKnob, lockShow, sceneKnob, lockScene, shotKnob, lockShot, layerKnob, lockLayer, versionKnob, lockVersion, fileTypeKnob, lockFileType, dividerFolderKnob, folderKnob, customFolderKnob, lockFolder, subFolder, baseDirKnob, lockDir, dividerPathKnob, pathKnob, lockPath, resetButtonKnob]:
+            for k in [tabKnob, showKnob, lockShow, sceneKnob, lockScene, shotKnob, lockShot, stepKnob, lockStep, layerKnob, lockLayer, versionKnob, lockVersion, fileTypeKnob, lockFileType, dividerFolderKnob, folderKnob, customFolderKnob, lockFolder, subFolder, baseDirKnob, lockDir, dividerPathKnob, pathKnob, lockPath, resetButtonKnob]:
                 n.addKnob(k)
 
             #make custom folder knob invisible. Made visible if folderKnob is set to 'CUSTOM'
             n['customFolderKnob'].setVisible(False)
             n['customFolderKnob'].clearFlag(nuke.STARTLINE)
+
+            #make 'save in sub folder' knob set to True'
+            n['subFolder'].setValue(True)
             
             #move these to new lines
             n['subFolder'].setFlag(nuke.STARTLINE)
@@ -80,10 +88,10 @@ def createPathTab(selection):
     
 ### set path fragments 
 def setPathTab():
-    baseDir,show,scene,shot,layer,version = getFilePathInfo()
+    baseDir,show,scene,shot,step,layer,version = getFilePathInfo()
 
     # standard values for creation
-    fileType = "dpx"
+    fileType = "exr"
     folder = "none"
 
     selection = nuke.selectedNodes('Write')
@@ -102,6 +110,9 @@ def setPathTab():
 
             if n['lockShot'].value() == 0:
                 n['shotKnob'].setValue(shot)
+
+            if n['lockStep'].value() == 0:
+                n['stepKnob'].setValue(step)
 
             if n['lockLayer'].value() == 0:
                 n['layerKnob'].setValue(layer)
@@ -130,11 +141,11 @@ def updatePath(n):
 
     #folderknob -- if set to custom show custom text knob otherwise hide it
     if n['folderKnob'].value() != 'none':
-        if n['folderKnob'].value() == 'CUSTOM':
+        if n['folderKnob'].value() == 'custom':
             n['customFolderKnob'].setVisible(True)
             n['customFolderKnob'].setFlag(nuke.STARTLINE)
             rFolder = n['customFolderKnob'].value()+'/'
-        elif n['folderKnob'].value() != 'CUSTOM':
+        elif n['folderKnob'].value() != 'custom':
             n['customFolderKnob'].setVisible(False)
             n['customFolderKnob'].clearFlag(nuke.STARTLINE)
             rFolder = n['folderKnob'].value()+'/'
@@ -162,6 +173,12 @@ def updatePath(n):
     else:
         rShot = n['shotKnob'].value()
 
+    #step
+    if n['stepKnob'].value() != '':
+        rStep = n['stepKnob'].value() + '_' 
+    else:
+        rStep = n['stepKnob'].value()
+
     #layer
     if n['layerKnob'].value() != '':
         rLayer = n['layerKnob'].value() + '_' 
@@ -187,14 +204,14 @@ def updatePath(n):
     if n['lockPath'].value() == 0:
         if n['fileTypeKnob'].value().lower() != 'mov':
             if n['subFolder'].value() == 0:
-                rPath = renderDir + rFolder + rShow + rScene + rShot + rLayer + rVersion + numberFormat + '.' + rFileType
+                rPath = renderDir + rFolder + rShow + rScene + rShot + rStep + rLayer + rVersion + numberFormat + '.' + rFileType
             else:
-                rPath = renderDir + rFolder + rShow + rScene + rShot + rLayer + rfVersion + '/' + rShow + rScene + rShot + rLayer + rVersion + numberFormat + '.' + rFileType
+                rPath = renderDir + rFolder + rShow + rScene + rShot + rStep + rLayer + rfVersion + '/' + rShow + rScene + rShot + rStep + rLayer + rVersion + numberFormat + '.' + rFileType
         else:
             if n['subFolder'].value() == 0:
-                rPath = renderDir + rFolder + rShow + rScene + rShot + rLayer + rVersion + '.' + rFileType
+                rPath = renderDir + rFolder + rShow + rScene + rShot + rStep + rLayer + rVersion + '.' + rFileType
             else:
-                rPath = renderDir + rFolder + rShow + rScene + rShot + rLayer + rfVersion + '/' + rShow + rScene + rShot + rLayer + rVersion + '.' + rFileType
+                rPath = renderDir + rFolder + rShow + rScene + rShot + rStep + rLayer + rfVersion + '/' + rShow + rScene + rShot + rStep + rLayer + rVersion + '.' + rFileType
     
     n['pathKnob'].setValue(rPath)
     n['file'].setValue(rPath)
@@ -210,7 +227,7 @@ def updatePathFragments():
 def autoUpdatePath():
     n = nuke.thisNode()
     tk = nuke.thisKnob().name()
-    pathFrags = ['showKnob', 'sceneKnob', 'shotKnob', 'layerKnob', 'versionKnob',  'fileTypeKnob', 'folderKnob', 'customFolderKnob', 'subFolder', 'baseDirKnob', 'lockDir']
+    pathFrags = ['showKnob', 'sceneKnob', 'shotKnob','stepKnob', 'layerKnob', 'versionKnob',  'fileTypeKnob', 'folderKnob', 'customFolderKnob', 'subFolder', 'baseDirKnob', 'lockDir']
     if tk in pathFrags:
         updatePath(n)
 

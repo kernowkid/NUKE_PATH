@@ -1,4 +1,5 @@
-Gizmo {
+Group {
+ name P_Matte
  help "<b>P_Matte</b> creates a sphere or cube shaped 3D matte based on a pass/layer containing position data"
  knobChanged "\nn = nuke.thisNode()\nk = nuke.thisKnob()\ns = nuke.toNode('SphereMatte')\nr = nuke.toNode('Start_End')\n\nif k.name() == \"falloffType\":\n    n\['falloff'].setVisible( k.value() != 'None' )\n    n\['exp'].setVisible( k.value() == 'Exponential' )\n\n"
  addUserKnob {20 User}

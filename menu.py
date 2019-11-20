@@ -12,6 +12,7 @@ import readFromWrite
 import TrackToRoto
 import openRV
 import openDJV
+import sgWriteConvert
 
 #import pixel fudger gizmos  
 import pixelfudger
@@ -23,6 +24,7 @@ primaryMenu = topMenu.addMenu("PrimaryVFX")
 ##PrimaryVFX plugz
 
 primaryMenu.addCommand('Open Explorer', 'opendir.openInExplorer()', 'shift+e')
+primaryMenu.addCommand('Convert SG Write Node ', 'sgWriteConvert.sgWriteConvert()', 'alt+w') 
 primaryMenu.addCommand('Render Path Tab', 'setPathTab.setPathTab()', 'shift+w') 
 primaryMenu.addCommand('Read from Write','readFromWrite.ReadFromWrite()','shift+r')
 primaryMenu.addCommand('Open in RV','openRV.openReadInRV()','alt+r')

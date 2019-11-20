@@ -1,0 +1,81 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode11
+ tile_color 0x35383a00
+ label "FALLING DUST"
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 8153
+ ypos 5285
+ bdwidth 397
+ bdheight 346
+}
+Read {
+ inputs 0
+ file_type png
+ file P:/Assets/2D_Elements/Dust/Dust_falling_02/frames/Dust_Falling_02.%03d.png
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 187
+ origlast 187
+ origset true
+ version 16
+ name Read72
+ selected true
+ xpos 8343
+ ypos 5402
+}
+Retime {
+ input.last 187
+ output.first 1001
+ output.first_lock true
+ output.last 1187
+ time ""
+ name Retime68
+ selected true
+ xpos 8343
+ ypos 5500
+}
+Grade {
+ gamma 2.2
+ name Grade77
+ selected true
+ xpos 8343
+ ypos 5526
+}
+Read {
+ inputs 0
+ file_type png
+ file P:/Assets/2D_Elements/Dust/Dust_falling_01/frames/Dust_Falling_01.%03d.png
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 235
+ origlast 235
+ origset true
+ version 22
+ name Read69
+ selected true
+ xpos 8227
+ ypos 5401
+}
+Retime {
+ input.last 235
+ output.first 1001
+ output.first_lock true
+ output.last 1235
+ time ""
+ name Retime67
+ selected true
+ xpos 8227
+ ypos 5499
+}
+Grade {
+ gamma 2.2
+ name Grade76
+ selected true
+ xpos 8227
+ ypos 5525
+}

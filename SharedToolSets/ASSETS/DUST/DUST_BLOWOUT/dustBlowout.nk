@@ -1,0 +1,81 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode10
+ tile_color 0x3a384400
+ label "DUST BLOWOUT"
+ note_font "Verdana Bold"
+ note_font_size 44
+ selected true
+ xpos 7074
+ ypos 5169
+ bdwidth 405
+ bdheight 336
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/dustblow/frames/Dust_Blowout_%02d.sgi
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 72
+ origlast 72
+ origset true
+ version 16
+ name Read75
+ selected true
+ xpos 7303
+ ypos 5285
+}
+Retime {
+ input.last 71
+ output.first 1001
+ output.first_lock true
+ output.last 1071
+ time ""
+ name Retime65
+ selected true
+ xpos 7303
+ ypos 5393
+}
+Grade {
+ gamma 2.2
+ name Grade74
+ selected true
+ xpos 7303
+ ypos 5419
+}
+Read {
+ inputs 0
+ file_type png
+ file P:/Assets/2D_Elements/Dust/Dust_Blowout/frames/Dust_Blowout_%02d.png
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 70
+ origlast 70
+ origset true
+ version 10
+ name Read64
+ selected true
+ xpos 7160
+ ypos 5290
+}
+Retime {
+ input.last 71
+ output.first 1001
+ output.first_lock true
+ output.last 1071
+ time ""
+ name Retime60
+ selected true
+ xpos 7160
+ ypos 5388
+}
+Grade {
+ gamma 2.2
+ name Grade69
+ selected true
+ xpos 7160
+ ypos 5414
+}

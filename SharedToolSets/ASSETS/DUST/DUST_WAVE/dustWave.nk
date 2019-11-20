@@ -1,0 +1,294 @@
+set cut_paste_input [stack 0]
+version 11.3 v5
+BackdropNode {
+ inputs 0
+ name BackdropNode12
+ tile_color 0x38384c00
+ label "DUST WAVE"
+ note_font "Verdana Bold Bold"
+ note_font_size 44
+ selected true
+ xpos 8878
+ ypos 5295
+ bdwidth 633
+ bdheight 577
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/DustWave_08/frames/dust_wave_08.%03d.sgi
+ localizationPolicy on
+ format "1024 576 0 0 1024 576 1 "
+ last 158
+ origlast 158
+ origset true
+ version 21
+ name Read89
+ selected true
+ xpos 9229
+ ypos 5578
+}
+Retime {
+ input.last 158
+ output.first 1001
+ output.first_lock true
+ output.last 1158
+ time ""
+ name Retime81
+ selected true
+ xpos 9229
+ ypos 5676
+}
+Grade {
+ gamma 2.2
+ name Grade90
+ selected true
+ xpos 9229
+ ypos 5702
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/DustWave_07/frames/dust_wave_07.%03d.sgi
+ localizationPolicy on
+ format "1024 576 0 0 1024 576 1 "
+ last 158
+ origlast 158
+ origset true
+ version 24
+ name Read88
+ selected true
+ xpos 9117
+ ypos 5579
+}
+Retime {
+ input.last 158
+ output.first 1001
+ output.first_lock true
+ output.last 1158
+ time ""
+ name Retime80
+ selected true
+ xpos 9117
+ ypos 5677
+}
+Grade {
+ gamma 2.2
+ name Grade89
+ selected true
+ xpos 9117
+ ypos 5703
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/DustWave_06/frames/dust_wave_06.%03d.sgi
+ localizationPolicy on
+ format "1024 576 0 0 1024 576 1 "
+ last 158
+ origlast 158
+ origset true
+ version 30
+ name Read87
+ selected true
+ xpos 9007
+ ypos 5580
+}
+Retime {
+ input.last 158
+ output.first 1001
+ output.first_lock true
+ output.last 1158
+ time ""
+ name Retime79
+ selected true
+ xpos 9007
+ ypos 5678
+}
+Grade {
+ gamma 2.2
+ name Grade88
+ selected true
+ xpos 9007
+ ypos 5704
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/DustWave_05/frames/dust_wave_05.%03d.sgi
+ localizationPolicy on
+ format "1024 576 0 0 1024 576 1 "
+ last 236
+ origlast 236
+ origset true
+ version 38
+ name Read86
+ selected true
+ xpos 8888
+ ypos 5579
+}
+Retime {
+ input.last 236
+ output.first 1001
+ output.first_lock true
+ output.last 1236
+ time ""
+ name Retime78
+ selected true
+ xpos 8888
+ ypos 5677
+}
+Grade {
+ gamma 2.2
+ name Grade87
+ selected true
+ xpos 8888
+ ypos 5703
+}
+Read {
+ inputs 0
+ file_type png
+ file P:/Assets/2D_Elements/Dust/DustWave_04/frames/Dust_Wave_04.%03d.png
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 170
+ origlast 170
+ origset true
+ version 24
+ name Read84
+ selected true
+ xpos 9225
+ ypos 5375
+}
+Retime {
+ input.last 170
+ output.first 1001
+ output.first_lock true
+ output.last 1170
+ time ""
+ name Retime77
+ selected true
+ xpos 9225
+ ypos 5473
+}
+Grade {
+ gamma 2.2
+ name Grade86
+ selected true
+ xpos 9225
+ ypos 5499
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/DustWave_03/frames/Dust_Wave_03.%03d.sgi
+ localizationPolicy on
+ format "1024 576 0 0 1024 576 1 "
+ last 210
+ origlast 210
+ origset true
+ version 36
+ name Read83
+ selected true
+ xpos 9113
+ ypos 5375
+}
+Retime {
+ input.last 210
+ output.first 1001
+ output.first_lock true
+ output.last 1210
+ time ""
+ name Retime76
+ selected true
+ xpos 9113
+ ypos 5473
+}
+Grade {
+ gamma 2.2
+ name Grade85
+ selected true
+ xpos 9113
+ ypos 5499
+}
+Read {
+ inputs 0
+ file_type sgi
+ file P:/Assets/2D_Elements/Dust/DustWave_02/frames/Dust_Wave_02.%03d.sgi
+ localizationPolicy on
+ format "1024 576 0 0 1024 576 1 "
+ last 100
+ origlast 100
+ origset true
+ version 17
+ name Read82
+ selected true
+ xpos 9003
+ ypos 5377
+}
+Retime {
+ output.first 1001
+ output.first_lock true
+ output.last 1100
+ time ""
+ name Retime75
+ selected true
+ xpos 9003
+ ypos 5475
+}
+Grade {
+ gamma 2.2
+ name Grade84
+ selected true
+ xpos 9003
+ ypos 5501
+}
+Read {
+ inputs 0
+ file_type jpeg
+ file P:/Assets/2D_Elements/Dust/DustWave_01/frames/Dust_Wave_01.%03d.jpg
+ localizationPolicy on
+ format "2048 1152 0 0 2048 1152 1 "
+ last 376
+ origlast 376
+ origset true
+ version 30
+ name Read74
+ selected true
+ xpos 8889
+ ypos 5376
+}
+Retime {
+ input.last 376
+ output.first 1001
+ output.first_lock true
+ output.last 1376
+ time ""
+ name Retime74
+ selected true
+ xpos 8889
+ ypos 5474
+}
+Grade {
+ gamma 2.2
+ name Grade83
+ selected true
+ xpos 8889
+ ypos 5500
+}
+ContactSheet {
+ inputs 8
+ rows 2
+ columns 3
+ gap 5
+ center true
+ roworder TopBottom
+ name DUST_WAVE
+ note_font "Verdana Bold Bold"
+ note_font_size 30
+ selected true
+ xpos 9385
+ ypos 5743
+ hide_input true
+ postage_stamp true
+}

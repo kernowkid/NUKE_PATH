@@ -1,6 +1,7 @@
 #! /lot/s22/SWDEVL/SOFTWARE/linuxfc4_intel/nuke4.5/30/nuke4.5.30 -nx
 version 4.5030
-Gizmo {
+Group {
+ name EdgeExtend
  inputs 2
  help "EdgeExtend repeatedly blurs and unpremuliplies the image to extend edges outward while trying to preserve the original source colour"
  addUserKnob {20 "" User}

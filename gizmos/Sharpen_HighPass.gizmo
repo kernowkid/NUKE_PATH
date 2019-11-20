@@ -1,6 +1,7 @@
 #! C:/Program Files/Nuke8.0v2/nuke-8.0.v2.dll -nx
 version 8.0 v2
-Gizmo {
+Group {
+ name Sharpen_HightPass
  addUserKnob {20 User}
  addUserKnob {6 HighPassMaP l "High Pass Map" +STARTLINE}
  addUserKnob {41 size l Size T Blur1.size}

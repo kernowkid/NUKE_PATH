@@ -1,6 +1,7 @@
 #! ./Contents/MacOS/Nuke6.1v2 -nx
 version 6.1 v2
-Gizmo {
+Group {
+ name VectorExtendEdge
  inputs 2
  help "Push rgb pixels outwards using vectors  generated perpedicular to a control matte edge."
  addUserKnob {20 User}
