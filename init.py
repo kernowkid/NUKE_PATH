@@ -69,7 +69,9 @@ def setProjsettings():
     # Now resolve the fields needed to build the template path using the context
     fields = ctx.as_template_fields(template,validate=True)
 
-    setLUT = 'Shot_%s' %fields['Shot']
+    #setLUT = 'Shot_%s' %fields['Shot']
+
+    setEnv = os.environ["SHOT"] = fields['Shot']
 
     #Set proj settings
     n = nuke.root()
@@ -80,11 +82,14 @@ def setProjsettings():
         nuke.addFormat( theWitcher4k )
         n['format'].setValue('theWitcher 4k')
     #Set VIEWER_INPUT
-        vi = nuke.toNode('VIEWER_INPUT')
-        vi['out_colorspace'].setValue(setLUT)
+        try:
+            vi = nuke.toNode('VIEWER_INPUT')
+            vi['out_colorspace'].setValue(ShotGrades)
+        except:
+            nuke.message("'VIEWER_INPUT' node not found")
 
 
-nuke.addOnScriptSave(setProjsettings)
+nuke.addOnScriptLoad(setProjsettings)
 
 
 
