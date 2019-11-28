@@ -71,7 +71,7 @@ def setProjsettings():
 
     #setLUT = 'Shot_%s' %fields['Shot']
 
-    setEnv = os.environ["SHOT"] = fields['Shot']
+    os.environ["SHOT"] = fields['Shot']
 
     #Set proj settings
     n = nuke.root()
@@ -84,9 +84,9 @@ def setProjsettings():
     #Set VIEWER_INPUT
         try:
             vi = nuke.toNode('VIEWER_INPUT')
-            vi['out_colorspace'].setValue(ShotGrades)
+            vi['out_colorspace'].setValue('ShotGrades')
         except:
-            nuke.message("'VIEWER_INPUT' node not found")
+            pass
 
 
 nuke.addOnScriptLoad(setProjsettings)
