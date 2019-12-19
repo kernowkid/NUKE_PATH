@@ -1,5 +1,4 @@
 import nuke
-import sgtk
 
 nuke.pluginAddPath("./gizmos")
 nuke.pluginAddPath("./gizmos/pixelfudger")
@@ -55,38 +54,42 @@ nuke.knobDefault("Shuffle.label", '[value in]')
 nuke.knobDefault("ScanlineRender.motion_vectors_type","off")
 
 def setProjsettings():
+    try:
+        import sgtk
+        #get context from shotgun 
+        # get the engine we are currently running in
+        currentEngine = sgtk.platform.current_engine()
 
-    #get context from shotgun 
-    # get the engine we are currently running in
-    currentEngine = sgtk.platform.current_engine()
+        # get the current context so we can find the highest version in relation to the context
+        ctx = currentEngine.context
+        
+        # Get a template object using the name of the template
+        template = currentEngine.sgtk.templates["nuke_shot_work"]
 
-    # get the current context so we can find the highest version in relation to the context
-    ctx = currentEngine.context
+        # Now resolve the fields needed to build the template path using the context
+        fields = ctx.as_template_fields(template,validate=True)
+
+        #setLUT = 'Shot_%s' %fields['Shot']
+
+        os.environ["SHOT"] = fields['Shot']
+
+        #Set proj settings
+        n = nuke.root()
+        if 'theWitcher' in n['name'].value():
+            n['fps'].setValue(24)
+            n['colorManagement'].setValue('OCIO')
+            theWitcher4k = '4268 2400 theWitcher 4k'
+            nuke.addFormat( theWitcher4k )
+            n['format'].setValue('theWitcher 4k')
+        #Set VIEWER_INPUT
+            try:
+                vi = nuke.toNode('VIEWER_INPUT')
+                vi['out_colorspace'].setValue('ShotGrades')
+            except:
+                pass
+    except:
+        pass
     
-    # Get a template object using the name of the template
-    template = currentEngine.sgtk.templates["nuke_shot_work"]
-
-    # Now resolve the fields needed to build the template path using the context
-    fields = ctx.as_template_fields(template,validate=True)
-
-    #setLUT = 'Shot_%s' %fields['Shot']
-
-    os.environ["SHOT"] = fields['Shot']
-
-    #Set proj settings
-    n = nuke.root()
-    if 'theWitcher' in n['name'].value():
-        n['fps'].setValue(24)
-        n['colorManagement'].setValue('OCIO')
-        theWitcher4k = '4268 2400 theWitcher 4k'
-        nuke.addFormat( theWitcher4k )
-        n['format'].setValue('theWitcher 4k')
-    #Set VIEWER_INPUT
-        try:
-            vi = nuke.toNode('VIEWER_INPUT')
-            vi['out_colorspace'].setValue('ShotGrades')
-        except:
-            pass
 
 
 nuke.addOnScriptLoad(setProjsettings)
